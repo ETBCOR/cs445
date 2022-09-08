@@ -1,0 +1,56 @@
+Line 2 Token: INT
+Line 2 Token: ID Value: gcd
+Line 2 Token: (
+Line 2 Token: INT
+Line 2 Token: ID Value: u
+Line 2 Token: ,
+Line 2 Token: ID Value: v
+Line 2 Token: )
+Line 3 Token: {
+Line 4 Token: IF
+Line 4 Token: ID Value: v
+Line 4 Token: EQ
+Line 4 Token: NUMCONST Value: 0  Input: 0
+Line 4 Token: THEN
+Line 4 Token: RETURN
+Line 4 Token: ID Value: u
+Line 4 Token: ;
+Line 5 Token: ELSE
+Line 5 Token: RETURN
+Line 5 Token: ID Value: gcd
+Line 5 Token: (
+Line 5 Token: ID Value: v
+Line 5 Token: ,
+Line 5 Token: ID Value: u
+Line 5 Token: -
+Line 5 Token: ID Value: u
+Line 5 Token: /
+Line 5 Token: ID Value: v
+Line 5 Token: *
+Line 5 Token: ID Value: v
+Line 5 Token: )
+Line 5 Token: ;
+Line 6 Token: }
+Line 8 Token: ID Value: main
+Line 8 Token: (
+Line 8 Token: )
+Line 9 Token: {
+Line 10 Token: ID Value: output
+Line 10 Token: (
+Line 10 Token: ID Value: gcd
+Line 10 Token: (
+Line 10 Token: ID Value: input
+Line 10 Token: (
+Line 10 Token: )
+Line 10 Token: ,
+Line 10 Token: ID Value: input
+Line 10 Token: (
+Line 10 Token: )
+Line 10 Token: )
+Line 10 Token: )
+Line 10 Token: ;
+Line 11 Token: ID Value: outnl
+Line 11 Token: (
+Line 11 Token: )
+Line 11 Token: ;
+Line 12 Token: }

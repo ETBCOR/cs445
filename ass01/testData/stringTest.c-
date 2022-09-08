@@ -1,0 +1,39 @@
+"DOUBLE QUOTES"
+"dog"
+""
+"123"
+" 	"
+"'"
+"\'\"\\\^"
+"\\\^"
+"\\\x"
+"\\x"
+"\x"
+"a\d\o\g\'\"\\\^"
+"dog cat"
+"dogs^Icats^Jrats"
+"dogs""cats""rats"
+"dogs\""cats"\"rats"
+"SINGLE QUOTES"
+'d'
+'1'
+' '
+'	'
+'"'
+'\"'
+'\\'
+'\^'
+'\x'
+'\@'
+'a'
+'\d'
+'^I'
+'^J'
+'\t'
+'\n'
+'\0'
+'\''
+"dogs" "and" "cats"
+'O' 'M' 'G'
+'meerkats are great'
+"THE END"

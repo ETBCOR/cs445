@@ -1,0 +1,23 @@
+Line 1 Token: STRINGCONST Value: "dog"  Len: 3  Input: "dog"
+Line 2 Token: STRINGCONST Value: ""  Len: 0  Input: ""
+Line 3 Token: STRINGCONST Value: "dog"  Len: 3  Input: "\dog"
+Line 4 Token: STRINGCONST Value: "dog"cat"  Len: 7  Input: "dog\"cat"
+Line 5 Token: STRINGCONST Value: ""dog""  Len: 5  Input: "\"dog\""
+Line 6 Token: STRINGCONST Value: ""dog"cat""  Len: 9  Input: "\"dog\"cat\""
+Line 7 Token: STRINGCONST Value: ""dog""cat""  Len: 10  Input: "\"dog\"\"cat\""
+Line 8 Token: STRINGCONST Value: "dog\cat"  Len: 7  Input: "dog\\cat"
+Line 9 Token: STRINGCONST Value: "\dog\cat"  Len: 8  Input: "\\dog\\cat"
+Line 10 Token: STRINGCONST Value: "\dog\cat\"  Len: 9  Input: "\\dog\\cat\\"
+Line 11 Token: STRINGCONST Value: "dog\"  Len: 4  Input: "dog\\"
+Line 12 Token: STRINGCONST Value: "dog"  Len: 3  Input: "dog"
+Line 12 Token: STRINGCONST Value: "cat"  Len: 3  Input: "cat"
+Line 13 Token: STRINGCONST Value: ""dog""  Len: 5  Input: "\"dog\""
+Line 14 Token: STRINGCONST Value: "abc""  Len: 4  Input: "\a\b\c\""
+Line 15 Token: CHARCONST Value: 'a'  Input: 'a'
+Line 16 Token: CHARCONST Value: '"'  Input: '"'
+Line 17 Token: CHARCONST Value: '
+'  Input: '\n'
+Line 18 Token: CHARCONST Value: '\'  Input: '\\'
+Line 19 Token: CHARCONST Value: '''  Input: '\''
+WARNING(20): character is 3 characters long and not a single character: ''abc''.  The first char will be used.
+Line 20 Token: CHARCONST Value: 'a'  Input: 'abc'

@@ -1,0 +1,171 @@
+Line 2 Token: BOOL
+Line 2 Token: ID Value: gb
+Line 2 Token: ;
+Line 3 Token: CHAR
+Line 3 Token: ID Value: gc
+Line 3 Token: ;
+Line 4 Token: INT
+Line 4 Token: ID Value: gi
+Line 4 Token: ;
+Line 7 Token: INT
+Line 7 Token: ID Value: main
+Line 7 Token: (
+Line 7 Token: )
+Line 8 Token: {
+Line 9 Token: BOOL
+Line 9 Token: ID Value: b
+Line 9 Token: ;
+Line 10 Token: CHAR
+Line 10 Token: ID Value: c
+Line 10 Token: ;
+Line 11 Token: INT
+Line 11 Token: ID Value: i
+Line 11 Token: ,
+Line 11 Token: ID Value: shuri
+Line 11 Token: ,
+Line 11 Token: ID Value: tchalla
+Line 11 Token: ,
+Line 11 Token: ID Value: X23
+Line 11 Token: ;
+Line 12 Token: STATIC
+Line 12 Token: BOOL
+Line 12 Token: ID Value: sb
+Line 12 Token: :
+Line 12 Token: NUMCONST Value: 44  Input: 44
+Line 12 Token: >
+Line 12 Token: NUMCONST Value: 22  Input: 22
+Line 12 Token: ;
+Line 13 Token: STATIC
+Line 13 Token: CHAR
+Line 13 Token: ID Value: sc
+Line 13 Token: :
+Line 13 Token: CHARCONST Value: 'x'  Input: 'x'
+Line 13 Token: ;
+Line 14 Token: STATIC
+Line 14 Token: INT
+Line 14 Token: ID Value: si
+Line 14 Token: :
+Line 14 Token: NUMCONST Value: 676  Input: 676
+Line 14 Token: ;
+Line 15 Token: BOOL
+Line 15 Token: ID Value: ba
+Line 15 Token: [
+Line 15 Token: NUMCONST Value: 6  Input: 6
+Line 15 Token: ]
+Line 15 Token: :
+Line 15 Token: NUMCONST Value: 89  Input: 89
+Line 15 Token: <
+Line 15 Token: NUMCONST Value: 34  Input: 34
+Line 15 Token: ;
+Line 16 Token: CHAR
+Line 16 Token: ID Value: ca
+Line 16 Token: [
+Line 16 Token: NUMCONST Value: 6  Input: 6
+Line 16 Token: ]
+Line 16 Token: :
+Line 16 Token: STRINGCONST Value: "vibranium"  Len: 9  Input: "vibranium"
+Line 16 Token: ;
+Line 17 Token: INT
+Line 17 Token: ID Value: ia
+Line 17 Token: [
+Line 17 Token: NUMCONST Value: 6  Input: 6
+Line 17 Token: ]
+Line 17 Token: ;
+Line 20 Token: ID Value: b
+Line 20 Token: =
+Line 20 Token: ID Value: b
+Line 20 Token: AND
+Line 20 Token: ID Value: b
+Line 20 Token: OR
+Line 20 Token: BOOLCONST Value: 1  Input: true
+Line 20 Token: AND
+Line 20 Token: NOT
+Line 20 Token: BOOLCONST Value: 0  Input: false
+Line 20 Token: ;
+Line 21 Token: FOR
+Line 21 Token: ID Value: wakanda
+Line 21 Token: =
+Line 21 Token: ID Value: ia
+Line 21 Token: TO
+Line 21 Token: NUMCONST Value: 666  Input: 666
+Line 21 Token: BY
+Line 21 Token: NUMCONST Value: 42  Input: 42
+Line 21 Token: DO
+Line 21 Token: {
+Line 21 Token: IF
+Line 21 Token: ID Value: wakanda
+Line 21 Token: EQ
+Line 21 Token: NUMCONST Value: 42  Input: 42
+Line 21 Token: THEN
+Line 21 Token: BREAK
+Line 21 Token: ;
+Line 21 Token: ELSE
+Line 21 Token: ID Value: i
+Line 21 Token: INC
+Line 21 Token: ;
+Line 21 Token: }
+Line 22 Token: ID Value: i
+Line 22 Token: =
+Line 22 Token: NUMCONST Value: 3  Input: 3
+Line 22 Token: *
+Line 22 Token: *
+Line 22 Token: ID Value: ca
+Line 22 Token: +
+Line 22 Token: NUMCONST Value: 56  Input: 56
+Line 22 Token: %
+Line 22 Token: ID Value: i
+Line 22 Token: /
+Line 22 Token: NUMCONST Value: 3  Input: 3
+Line 22 Token: -
+Line 22 Token: ?
+Line 22 Token: NUMCONST Value: 6  Input: 6
+Line 22 Token: +
+Line 22 Token: ?
+Line 22 Token: ID Value: ia
+Line 22 Token: DEC
+Line 22 Token: ID Value: si
+Line 22 Token: ;
+Line 23 Token: WHILE
+Line 23 Token: ID Value: shuri
+Line 23 Token: GEQ
+Line 23 Token: NUMCONST Value: 10  Input: 10
+Line 23 Token: AND
+Line 23 Token: ID Value: i
+Line 23 Token: LEQ
+Line 23 Token: NUMCONST Value: 2  Input: 2
+Line 23 Token: AND
+Line 23 Token: ID Value: c
+Line 23 Token: EQ
+Line 23 Token: CHARCONST Value: 'z'  Input: 'z'
+Line 23 Token: OR
+Line 23 Token: ID Value: ba
+Line 23 Token: [
+Line 23 Token: NUMCONST Value: 3  Input: 3
+Line 23 Token: ]
+Line 23 Token: NEQ
+Line 23 Token: BOOLCONST Value: 1  Input: true
+Line 23 Token: DO
+Line 23 Token: ID Value: shuri
+Line 23 Token: DEC
+Line 23 Token: ;
+Line 25 Token: RETURN
+Line 25 Token: NUMCONST Value: 1284  Input: 1284
+Line 25 Token: ;
+Line 26 Token: }
+Line 28 Token: INT
+Line 28 Token: ID Value: forever
+Line 28 Token: ,
+Line 28 Token: ID Value: in
+Line 28 Token: ,
+Line 28 Token: ID Value: foreach
+Line 28 Token: ,
+Line 28 Token: ID Value: loop
+Line 28 Token: ,
+Line 28 Token: ID Value: elsif
+Line 28 Token: ,
+Line 28 Token: ID Value: range
+Line 28 Token: ,
+Line 28 Token: ID Value: with
+Line 28 Token: ,
+Line 28 Token: ID Value: xor
+Line 28 Token: ;

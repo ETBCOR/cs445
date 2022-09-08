@@ -1,0 +1,11 @@
+ABOUT
+=====
+This is a little project copied almost verbatim from the O'Reilly "Lex & Yacc"
+book (pp 68-70).
+
+To build the project, do the following:
+    1. yacc -d calc.y
+    2. lex calc.l
+    3. gcc lex.yy.c y.tab.c -ly -o calc
+the output will of course be placed in "calc".
+

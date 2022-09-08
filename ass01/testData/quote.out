@@ -1,0 +1,17 @@
+Line 2 Token: ID Value: The
+Line 2 Token: ID Value: art
+Line 2 Token: ID Value: of
+Line 2 Token: ID Value: programming
+Line 2 Token: ID Value: is
+Line 2 Token: ID Value: the
+Line 2 Token: ID Value: art
+Line 2 Token: ID Value: of
+Line 2 Token: ID Value: organizing
+Line 2 Token: ID Value: complexity
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+Line 3 Token: DEC
+Line 3 Token: ID Value: E
+ERROR(3): Invalid or misplaced input character: '.'. Character Ignored.
+Line 3 Token: ID Value: W
+ERROR(3): Invalid or misplaced input character: '.'. Character Ignored.
+Line 3 Token: ID Value: Dijkstra

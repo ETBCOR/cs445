@@ -1,0 +1,158 @@
+Line 1 Token: <
+Line 1 Token: ?
+Line 1 Token: ID Value: xml
+Line 1 Token: ID Value: version
+Line 1 Token: =
+Line 1 Token: STRINGCONST Value: "1.0"  Len: 3  Input: "1.0"
+Line 1 Token: ?
+Line 1 Token: >
+Line 2 Token: <
+ERROR(2): Invalid or misplaced input character: '!'. Character Ignored.
+Line 2 Token: ID Value: DOCTYPE
+Line 2 Token: ID Value: html
+Line 2 Token: ID Value: PUBLIC
+Line 2 Token: STRINGCONST Value: "-//W3C//DTD XHTML 1.0 Transitional//EN"  Len: 38  Input: "-//W3C//DTD XHTML 1.0 Transitional//EN"
+Line 2 Token: STRINGCONST Value: "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"  Len: 55  Input: "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+Line 2 Token: >
+Line 3 Token: <
+Line 3 Token: ID Value: html
+Line 3 Token: ID Value: xmlns
+Line 3 Token: =
+Line 3 Token: STRINGCONST Value: "http://www.w3.org/1999/xhtml"  Len: 28  Input: "http://www.w3.org/1999/xhtml"
+Line 3 Token: >
+Line 4 Token: <
+Line 4 Token: ID Value: head
+Line 4 Token: >
+Line 5 Token: <
+Line 5 Token: ID Value: title
+Line 5 Token: >
+Line 5 Token: ID Value: Quotes
+Line 5 Token: ID Value: I
+Line 5 Token: ID Value: Have
+Line 5 Token: ID Value: Enjoyed
+Line 5 Token: <
+Line 5 Token: /
+Line 5 Token: ID Value: title
+Line 5 Token: >
+Line 6 Token: <
+Line 6 Token: ID Value: meta
+Line 6 Token: ID Value: name
+Line 6 Token: =
+Line 6 Token: STRINGCONST Value: "keywords"  Len: 8  Input: "keywords"
+Line 6 Token: ID Value: content
+Line 6 Token: =
+Line 6 Token: STRINGCONST Value: ""  Len: 0  Input: ""
+Line 6 Token: /
+Line 6 Token: >
+Line 7 Token: <
+Line 7 Token: ID Value: meta
+Line 7 Token: ID Value: name
+Line 7 Token: =
+Line 7 Token: STRINGCONST Value: "description"  Len: 11  Input: "description"
+Line 7 Token: ID Value: content
+Line 7 Token: =
+Line 7 Token: STRINGCONST Value: ""  Len: 0  Input: ""
+Line 7 Token: /
+Line 7 Token: >
+Line 8 Token: <
+Line 8 Token: ID Value: meta
+Line 8 Token: ID Value: http
+Line 8 Token: -
+Line 8 Token: ID Value: equiv
+Line 8 Token: =
+Line 8 Token: STRINGCONST Value: "content-type"  Len: 12  Input: "content-type"
+Line 8 Token: ID Value: content
+Line 8 Token: =
+Line 8 Token: STRINGCONST Value: "text/html; charset=utf-8"  Len: 24  Input: "text/html; charset=utf-8"
+Line 8 Token: /
+Line 8 Token: >
+Line 9 Token: <
+Line 9 Token: ID Value: meta
+Line 9 Token: ID Value: http
+Line 9 Token: -
+Line 9 Token: ID Value: equiv
+Line 9 Token: =
+Line 9 Token: STRINGCONST Value: "content-language"  Len: 16  Input: "content-language"
+Line 9 Token: ID Value: content
+Line 9 Token: =
+Line 9 Token: STRINGCONST Value: ""  Len: 0  Input: ""
+Line 9 Token: /
+Line 9 Token: >
+Line 10 Token: <
+Line 10 Token: ID Value: link
+Line 10 Token: ID Value: href
+Line 10 Token: =
+Line 10 Token: STRINGCONST Value: "[[home]]style.css"  Len: 17  Input: "[[home]]style.css"
+Line 10 Token: ID Value: rel
+Line 10 Token: =
+Line 10 Token: STRINGCONST Value: "stylesheet"  Len: 10  Input: "stylesheet"
+Line 10 Token: ID Value: type
+Line 10 Token: =
+Line 10 Token: STRINGCONST Value: "text/css"  Len: 8  Input: "text/css"
+Line 10 Token: /
+Line 10 Token: >
+Line 11 Token: <
+Line 11 Token: ID Value: link
+Line 11 Token: ID Value: rel
+Line 11 Token: =
+Line 11 Token: ID Value: icon
+Line 11 Token: ID Value: type
+Line 11 Token: =
+Line 11 Token: ID Value: image
+Line 11 Token: /
+Line 11 Token: ID Value: gif
+Line 11 Token: ID Value: href
+Line 11 Token: =
+Line 11 Token: [
+Line 11 Token: [
+Line 11 Token: ID Value: home
+Line 11 Token: ]
+Line 11 Token: ]
+Line 11 Token: ID Value: Media
+Line 11 Token: /
+Line 11 Token: ID Value: Pics
+Line 11 Token: /
+Line 11 Token: ID Value: favicon
+ERROR(11): Invalid or misplaced input character: '.'. Character Ignored.
+Line 11 Token: ID Value: gif
+Line 11 Token: >
+Line 12 Token: <
+Line 12 Token: /
+Line 12 Token: ID Value: head
+Line 12 Token: >
+Line 14 Token: <
+Line 14 Token: ID Value: body
+Line 14 Token: >
+Line 15 Token: <
+Line 15 Token: ID Value: div
+Line 15 Token: ID Value: id
+Line 15 Token: =
+Line 15 Token: STRINGCONST Value: "page"  Len: 4  Input: "page"
+Line 15 Token: >
+Line 16 Token: <
+Line 16 Token: ID Value: div
+Line 16 Token: ID Value: id
+Line 16 Token: =
+Line 16 Token: STRINGCONST Value: "header"  Len: 6  Input: "header"
+Line 16 Token: >
+Line 17 Token: <
+Line 17 Token: ID Value: h1
+Line 17 Token: >
+Line 17 Token: <
+Line 17 Token: ID Value: a
+Line 17 Token: ID Value: href
+Line 17 Token: =
+Line 17 Token: STRINGCONST Value: "#"  Len: 1  Input: "#"
+Line 17 Token: >
+Line 17 Token: ID Value: Quotes
+Line 17 Token: ID Value: I
+Line 17 Token: ID Value: Have
+Line 17 Token: ID Value: Enjoyed
+Line 17 Token: <
+Line 17 Token: /
+Line 17 Token: ID Value: a
+Line 17 Token: >
+Line 17 Token: <
+Line 17 Token: /
+Line 17 Token: ID Value: h1
+Line 17 Token: >

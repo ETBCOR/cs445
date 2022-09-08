@@ -1,0 +1,27 @@
+Line 1 Token: ID Value: Professor
+Line 1 Token: ID Value: Farnsworth
+Line 1 Token: :
+ERROR(1): Invalid or misplaced input character: '"'. Character Ignored.
+Line 1 Token: ID Value: Amy
+Line 1 Token: ,
+Line 1 Token: ID Value: technology
+Line 1 Token: ID Value: isn
+ERROR(1): Invalid or misplaced input character: '''. Character Ignored.
+Line 1 Token: ID Value: t
+Line 1 Token: ID Value: intrinsically
+Line 1 Token: ID Value: good
+Line 1 Token: OR
+Line 2 Token: ID Value: evil
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+Line 2 Token: ID Value: It
+WARNING(2): character is 8 characters long and not a single character: ''s how it''.  The first char will be used.
+Line 2 Token: CHARCONST Value: 's'  Input: 's how it'
+Line 2 Token: ID Value: s
+Line 2 Token: ID Value: used
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+Line 2 Token: ID Value: Like
+Line 2 Token: ID Value: the
+Line 2 Token: ID Value: Death
+Line 2 Token: ID Value: Ray
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+ERROR(2): Invalid or misplaced input character: '"'. Character Ignored.

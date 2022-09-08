@@ -1,0 +1,28 @@
+ERROR(1): Invalid or misplaced input character: '!'. Character Ignored.
+ERROR(1): Invalid or misplaced input character: '@'. Character Ignored.
+ERROR(1): Invalid or misplaced input character: '#'. Character Ignored.
+ERROR(1): Invalid or misplaced input character: '$'. Character Ignored.
+Line 1 Token: %
+ERROR(1): Invalid or misplaced input character: '^'. Character Ignored.
+ERROR(1): Invalid or misplaced input character: '&'. Character Ignored.
+Line 1 Token: *
+Line 1 Token: (
+Line 1 Token: )
+ERROR(1): Invalid or misplaced input character: '_'. Character Ignored.
+Line 1 Token: ADDASS
+Line 1 Token: -
+Line 2 Token: {
+Line 2 Token: }
+ERROR(2): Invalid or misplaced input character: '|'. Character Ignored.
+Line 2 Token: [
+Line 2 Token: ]
+ERROR(2): Invalid or misplaced input character: '\'. Character Ignored.
+Line 2 Token: :
+Line 2 Token: ;
+Line 2 Token: <
+Line 2 Token: >
+Line 2 Token: ?
+Line 2 Token: ,
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+Line 2 Token: /
+ERROR(2): Invalid or misplaced input character: '~'. Character Ignored.

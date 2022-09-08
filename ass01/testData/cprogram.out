@@ -1,0 +1,45 @@
+ERROR(1): Invalid or misplaced input character: '#'. Character Ignored.
+Line 1 Token: ID Value: include
+Line 1 Token: <
+Line 1 Token: ID Value: stdio
+ERROR(1): Invalid or misplaced input character: '.'. Character Ignored.
+Line 1 Token: ID Value: h
+Line 1 Token: >
+ERROR(2): Invalid or misplaced input character: '#'. Character Ignored.
+Line 2 Token: ID Value: include
+Line 2 Token: <
+Line 2 Token: ID Value: stdlib
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+Line 2 Token: ID Value: h
+Line 2 Token: >
+Line 4 Token: INT
+Line 4 Token: ID Value: main
+Line 4 Token: (
+Line 4 Token: )
+Line 5 Token: {
+Line 6 Token: INT
+Line 6 Token: ID Value: x
+Line 6 Token: =
+Line 6 Token: NUMCONST Value: 666  Input: 666
+Line 6 Token: ;
+Line 8 Token: IF
+Line 8 Token: (
+Line 8 Token: ID Value: x
+Line 8 Token: EQ
+Line 8 Token: NUMCONST Value: 666  Input: 666
+Line 8 Token: )
+Line 8 Token: ID Value: printf
+Line 8 Token: (
+Line 8 Token: STRINGCONST Value: "hog\"  Len: 4  Input: "hog\\"
+Line 8 Token: )
+Line 8 Token: ;
+Line 9 Token: ID Value: printf
+Line 9 Token: (
+Line 9 Token: STRINGCONST Value: "
+"  Len: 1  Input: "\n"
+Line 9 Token: )
+Line 9 Token: ;
+Line 10 Token: RETURN
+Line 10 Token: NUMCONST Value: 0  Input: 0
+Line 10 Token: ;
+Line 11 Token: }
