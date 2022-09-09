@@ -1,0 +1,1430 @@
+=================================================
+Output of Building User Code
+Exploding tar files
+20220909002921-corg7983-CS445-F22-A1.tar
+parser.l
+parser.y
+scanType.h
+makefile
+Undossing tarred files assumes all files are ascii and not binary
+undosing parser.l
+undosing parser.y
+undosing scanType.h
+undosing makefile
+Extracting test files
+badchar.c-
+cprogram.c-
+f22.c-
+gcd.c-
+htmlTest.c-
+quote.c-
+quoteTest.c-
+stringTest.c-
+textTest2.c-
+textTest.c-
+remove Tmp dir contents
+Now start the build process
+
+find makefile (lowercase)
+makefile
+A makefile is here and you compiler will be built with it
+make the program
+Alter compiler with special development tool set including g++ 4.9
+Output from build is 3 lines long
+Output from build will be trimmed to 1000 lines if it is too long.
+yacc -d parser.y
+lex  parser.l
+g++ lex.yy.c y.tab.c y.tab.h -Wall -O3 -o c-
+was a program called c- built?
+c- is here and you compiler will now be tested
+-rwx--x--x. 1 rs-cs-heckendo domain_users 37552 Sep  9 00:32 c-
+
+END OF BUILD
+=================================================
+Complete Output of Testing
+Run Tests
+Limited to 5 seconds total run time and 3000 lines of output
+/home/rs-cs-heckendo/TestWorld
+./c- < gcd.c-
+Line 2 Token: INT
+Line 2 Token: ID Value: gcd
+Line 2 Token: (
+Line 2 Token: INT
+Line 2 Token: ID Value: u
+Line 2 Token: ,
+Line 2 Token: ID Value: v
+Line 2 Token: )
+Line 3 Token: {
+Line 4 Token: IF
+Line 4 Token: ID Value: v
+Line 4 Token: EQ
+Line 4 Token: NUMCONST Value: 0  Input: 0
+Line 4 Token: THEN
+Line 4 Token: RETURN
+Line 4 Token: ID Value: u
+Line 4 Token: ;
+Line 5 Token: ELSE
+Line 5 Token: RETURN
+Line 5 Token: ID Value: gcd
+Line 5 Token: (
+Line 5 Token: ID Value: v
+Line 5 Token: ,
+Line 5 Token: ID Value: u
+Line 5 Token: -
+Line 5 Token: ID Value: u
+Line 5 Token: /
+Line 5 Token: ID Value: v
+Line 5 Token: *
+Line 5 Token: ID Value: v
+Line 5 Token: )
+Line 5 Token: ;
+Line 6 Token: }
+Line 8 Token: ID Value: main
+Line 8 Token: (
+Line 8 Token: )
+Line 9 Token: {
+Line 10 Token: ID Value: output
+Line 10 Token: (
+Line 10 Token: ID Value: gcd
+Line 10 Token: (
+Line 10 Token: ID Value: input
+Line 10 Token: (
+Line 10 Token: )
+Line 10 Token: ,
+Line 10 Token: ID Value: input
+Line 10 Token: (
+Line 10 Token: )
+Line 10 Token: )
+Line 10 Token: )
+Line 10 Token: ;
+Line 11 Token: ID Value: outnl
+Line 11 Token: (
+Line 11 Token: )
+Line 11 Token: ;
+Line 12 Token: }
+
+==============
+==============
+./c- badchar.c-
+ERROR(1): Invalid or misplaced input character: '!'. Character Ignored.
+ERROR(1): Invalid or misplaced input character: '@'. Character Ignored.
+ERROR(1): Invalid or misplaced input character: '#'. Character Ignored.
+ERROR(1): Invalid or misplaced input character: '$'. Character Ignored.
+Line 1 Token: %
+ERROR(1): Invalid or misplaced input character: '^'. Character Ignored.
+ERROR(1): Invalid or misplaced input character: '&'. Character Ignored.
+Line 1 Token: *
+Line 1 Token: (
+Line 1 Token: )
+ERROR(1): Invalid or misplaced input character: '_'. Character Ignored.
+Line 1 Token: ADDASS
+Line 1 Token: -
+Line 2 Token: {
+Line 2 Token: }
+ERROR(2): Invalid or misplaced input character: '|'. Character Ignored.
+Line 2 Token: [
+Line 2 Token: ]
+ERROR(2): Invalid or misplaced input character: '\'. Character Ignored.
+Line 2 Token: :
+Line 2 Token: ;
+Line 2 Token: <
+Line 2 Token: >
+Line 2 Token: ?
+Line 2 Token: ,
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+Line 2 Token: /
+ERROR(2): Invalid or misplaced input character: '~'. Character Ignored.
+
+==============
+==============
+./c- cprogram.c-
+ERROR(1): Invalid or misplaced input character: '#'. Character Ignored.
+Line 1 Token: ID Value: include
+Line 1 Token: <
+Line 1 Token: ID Value: stdio
+ERROR(1): Invalid or misplaced input character: '.'. Character Ignored.
+Line 1 Token: ID Value: h
+Line 1 Token: >
+ERROR(2): Invalid or misplaced input character: '#'. Character Ignored.
+Line 2 Token: ID Value: include
+Line 2 Token: <
+Line 2 Token: ID Value: stdlib
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+Line 2 Token: ID Value: h
+Line 2 Token: >
+Line 4 Token: INT
+Line 4 Token: ID Value: main
+Line 4 Token: (
+Line 4 Token: )
+Line 5 Token: {
+Line 6 Token: INT
+Line 6 Token: ID Value: x
+Line 6 Token: =
+Line 6 Token: NUMCONST Value: 666  Input: 666
+Line 6 Token: ;
+Line 8 Token: IF
+Line 8 Token: (
+Line 8 Token: ID Value: x
+Line 8 Token: EQ
+Line 8 Token: NUMCONST Value: 666  Input: 666
+Line 8 Token: )
+Line 8 Token: ID Value: printf
+Line 8 Token: (
+Line 8 Token: STRINGCONST Value: "hog\"  Len: 4  Input: "hog\\"
+Line 8 Token: )
+Line 8 Token: ;
+Line 9 Token: ID Value: printf
+Line 9 Token: (
+Line 9 Token: STRINGCONST Value: "
+"  Len: 1  Input: "\n"
+Line 9 Token: )
+Line 9 Token: ;
+Line 10 Token: RETURN
+Line 10 Token: NUMCONST Value: 0  Input: 0
+Line 10 Token: ;
+Line 11 Token: }
+
+==============
+==============
+./c- f22.c-
+Line 2 Token: BOOL
+Line 2 Token: ID Value: gb
+Line 2 Token: ;
+Line 3 Token: CHAR
+Line 3 Token: ID Value: gc
+Line 3 Token: ;
+Line 4 Token: INT
+Line 4 Token: ID Value: gi
+Line 4 Token: ;
+Line 7 Token: INT
+Line 7 Token: ID Value: main
+Line 7 Token: (
+Line 7 Token: )
+Line 8 Token: {
+Line 9 Token: BOOL
+Line 9 Token: ID Value: b
+Line 9 Token: ;
+Line 10 Token: CHAR
+Line 10 Token: ID Value: c
+Line 10 Token: ;
+Line 11 Token: INT
+Line 11 Token: ID Value: i
+Line 11 Token: ,
+Line 11 Token: ID Value: shuri
+Line 11 Token: ,
+Line 11 Token: ID Value: tchalla
+Line 11 Token: ,
+Line 11 Token: ID Value: X23
+Line 11 Token: ;
+Line 12 Token: STATIC
+Line 12 Token: BOOL
+Line 12 Token: ID Value: sb
+Line 12 Token: :
+Line 12 Token: NUMCONST Value: 44  Input: 44
+Line 12 Token: >
+Line 12 Token: NUMCONST Value: 22  Input: 22
+Line 12 Token: ;
+Line 13 Token: STATIC
+Line 13 Token: CHAR
+Line 13 Token: ID Value: sc
+Line 13 Token: :
+Line 13 Token: CHARCONST Value: 'x'  Input: 'x'
+Line 13 Token: ;
+Line 14 Token: STATIC
+Line 14 Token: INT
+Line 14 Token: ID Value: si
+Line 14 Token: :
+Line 14 Token: NUMCONST Value: 676  Input: 676
+Line 14 Token: ;
+Line 15 Token: BOOL
+Line 15 Token: ID Value: ba
+Line 15 Token: [
+Line 15 Token: NUMCONST Value: 6  Input: 6
+Line 15 Token: ]
+Line 15 Token: :
+Line 15 Token: NUMCONST Value: 89  Input: 89
+Line 15 Token: <
+Line 15 Token: NUMCONST Value: 34  Input: 34
+Line 15 Token: ;
+Line 16 Token: CHAR
+Line 16 Token: ID Value: ca
+Line 16 Token: [
+Line 16 Token: NUMCONST Value: 6  Input: 6
+Line 16 Token: ]
+Line 16 Token: :
+Line 16 Token: STRINGCONST Value: "vibranium"  Len: 9  Input: "vibranium"
+Line 16 Token: ;
+Line 17 Token: INT
+Line 17 Token: ID Value: ia
+Line 17 Token: [
+Line 17 Token: NUMCONST Value: 6  Input: 6
+Line 17 Token: ]
+Line 17 Token: ;
+Line 20 Token: ID Value: b
+Line 20 Token: =
+Line 20 Token: ID Value: b
+Line 20 Token: AND
+Line 20 Token: ID Value: b
+Line 20 Token: OR
+Line 20 Token: BOOLCONST Value: 1  Input: true
+Line 20 Token: AND
+Line 20 Token: NOT
+Line 20 Token: BOOLCONST Value: 0  Input: false
+Line 20 Token: ;
+Line 21 Token: FOR
+Line 21 Token: ID Value: wakanda
+Line 21 Token: =
+Line 21 Token: ID Value: ia
+Line 21 Token: TO
+Line 21 Token: NUMCONST Value: 666  Input: 666
+Line 21 Token: BY
+Line 21 Token: NUMCONST Value: 42  Input: 42
+Line 21 Token: DO
+Line 21 Token: {
+Line 21 Token: IF
+Line 21 Token: ID Value: wakanda
+Line 21 Token: EQ
+Line 21 Token: NUMCONST Value: 42  Input: 42
+Line 21 Token: THEN
+Line 21 Token: BREAK
+Line 21 Token: ;
+Line 21 Token: ELSE
+Line 21 Token: ID Value: i
+Line 21 Token: INC
+Line 21 Token: ;
+Line 21 Token: }
+Line 22 Token: ID Value: i
+Line 22 Token: =
+Line 22 Token: NUMCONST Value: 3  Input: 3
+Line 22 Token: *
+Line 22 Token: *
+Line 22 Token: ID Value: ca
+Line 22 Token: +
+Line 22 Token: NUMCONST Value: 56  Input: 56
+Line 22 Token: %
+Line 22 Token: ID Value: i
+Line 22 Token: /
+Line 22 Token: NUMCONST Value: 3  Input: 3
+Line 22 Token: -
+Line 22 Token: ?
+Line 22 Token: NUMCONST Value: 6  Input: 6
+Line 22 Token: +
+Line 22 Token: ?
+Line 22 Token: ID Value: ia
+Line 22 Token: DEC
+Line 22 Token: ID Value: si
+Line 22 Token: ;
+Line 23 Token: WHILE
+Line 23 Token: ID Value: shuri
+Line 23 Token: GEQ
+Line 23 Token: NUMCONST Value: 10  Input: 10
+Line 23 Token: AND
+Line 23 Token: ID Value: i
+Line 23 Token: LEQ
+Line 23 Token: NUMCONST Value: 2  Input: 2
+Line 23 Token: AND
+Line 23 Token: ID Value: c
+Line 23 Token: EQ
+Line 23 Token: CHARCONST Value: 'z'  Input: 'z'
+Line 23 Token: OR
+Line 23 Token: ID Value: ba
+Line 23 Token: [
+Line 23 Token: NUMCONST Value: 3  Input: 3
+Line 23 Token: ]
+Line 23 Token: NEQ
+Line 23 Token: BOOLCONST Value: 1  Input: true
+Line 23 Token: DO
+Line 23 Token: ID Value: shuri
+Line 23 Token: DEC
+Line 23 Token: ;
+Line 25 Token: RETURN
+Line 25 Token: NUMCONST Value: 1284  Input: 1284
+Line 25 Token: ;
+Line 26 Token: }
+Line 28 Token: INT
+Line 28 Token: ID Value: forever
+Line 28 Token: ,
+Line 28 Token: ID Value: in
+Line 28 Token: ,
+Line 28 Token: ID Value: foreach
+Line 28 Token: ,
+Line 28 Token: ID Value: loop
+Line 28 Token: ,
+Line 28 Token: ID Value: elsif
+Line 28 Token: ,
+Line 28 Token: ID Value: range
+Line 28 Token: ,
+Line 28 Token: ID Value: with
+Line 28 Token: ,
+Line 28 Token: ID Value: xor
+Line 28 Token: ;
+
+==============
+==============
+./c- gcd.c-
+Line 2 Token: INT
+Line 2 Token: ID Value: gcd
+Line 2 Token: (
+Line 2 Token: INT
+Line 2 Token: ID Value: u
+Line 2 Token: ,
+Line 2 Token: ID Value: v
+Line 2 Token: )
+Line 3 Token: {
+Line 4 Token: IF
+Line 4 Token: ID Value: v
+Line 4 Token: EQ
+Line 4 Token: NUMCONST Value: 0  Input: 0
+Line 4 Token: THEN
+Line 4 Token: RETURN
+Line 4 Token: ID Value: u
+Line 4 Token: ;
+Line 5 Token: ELSE
+Line 5 Token: RETURN
+Line 5 Token: ID Value: gcd
+Line 5 Token: (
+Line 5 Token: ID Value: v
+Line 5 Token: ,
+Line 5 Token: ID Value: u
+Line 5 Token: -
+Line 5 Token: ID Value: u
+Line 5 Token: /
+Line 5 Token: ID Value: v
+Line 5 Token: *
+Line 5 Token: ID Value: v
+Line 5 Token: )
+Line 5 Token: ;
+Line 6 Token: }
+Line 8 Token: ID Value: main
+Line 8 Token: (
+Line 8 Token: )
+Line 9 Token: {
+Line 10 Token: ID Value: output
+Line 10 Token: (
+Line 10 Token: ID Value: gcd
+Line 10 Token: (
+Line 10 Token: ID Value: input
+Line 10 Token: (
+Line 10 Token: )
+Line 10 Token: ,
+Line 10 Token: ID Value: input
+Line 10 Token: (
+Line 10 Token: )
+Line 10 Token: )
+Line 10 Token: )
+Line 10 Token: ;
+Line 11 Token: ID Value: outnl
+Line 11 Token: (
+Line 11 Token: )
+Line 11 Token: ;
+Line 12 Token: }
+
+==============
+==============
+./c- htmlTest.c-
+Line 1 Token: <
+Line 1 Token: ?
+Line 1 Token: ID Value: xml
+Line 1 Token: ID Value: version
+Line 1 Token: =
+Line 1 Token: STRINGCONST Value: "1.0"  Len: 3  Input: "1.0"
+Line 1 Token: ?
+Line 1 Token: >
+Line 2 Token: <
+ERROR(2): Invalid or misplaced input character: '!'. Character Ignored.
+Line 2 Token: ID Value: DOCTYPE
+Line 2 Token: ID Value: html
+Line 2 Token: ID Value: PUBLIC
+Line 2 Token: STRINGCONST Value: "-//W3C//DTD XHTML 1.0 Transitional//EN"  Len: 38  Input: "-//W3C//DTD XHTML 1.0 Transitional//EN"
+Line 2 Token: STRINGCONST Value: "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"  Len: 55  Input: "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+Line 2 Token: >
+Line 3 Token: <
+Line 3 Token: ID Value: html
+Line 3 Token: ID Value: xmlns
+Line 3 Token: =
+Line 3 Token: STRINGCONST Value: "http://www.w3.org/1999/xhtml"  Len: 28  Input: "http://www.w3.org/1999/xhtml"
+Line 3 Token: >
+Line 4 Token: <
+Line 4 Token: ID Value: head
+Line 4 Token: >
+Line 5 Token: <
+Line 5 Token: ID Value: title
+Line 5 Token: >
+Line 5 Token: ID Value: Quotes
+Line 5 Token: ID Value: I
+Line 5 Token: ID Value: Have
+Line 5 Token: ID Value: Enjoyed
+Line 5 Token: <
+Line 5 Token: /
+Line 5 Token: ID Value: title
+Line 5 Token: >
+Line 6 Token: <
+Line 6 Token: ID Value: meta
+Line 6 Token: ID Value: name
+Line 6 Token: =
+Line 6 Token: STRINGCONST Value: "keywords"  Len: 8  Input: "keywords"
+Line 6 Token: ID Value: content
+Line 6 Token: =
+Line 6 Token: STRINGCONST Value: ""  Len: 0  Input: ""
+Line 6 Token: /
+Line 6 Token: >
+Line 7 Token: <
+Line 7 Token: ID Value: meta
+Line 7 Token: ID Value: name
+Line 7 Token: =
+Line 7 Token: STRINGCONST Value: "description"  Len: 11  Input: "description"
+Line 7 Token: ID Value: content
+Line 7 Token: =
+Line 7 Token: STRINGCONST Value: ""  Len: 0  Input: ""
+Line 7 Token: /
+Line 7 Token: >
+Line 8 Token: <
+Line 8 Token: ID Value: meta
+Line 8 Token: ID Value: http
+Line 8 Token: -
+Line 8 Token: ID Value: equiv
+Line 8 Token: =
+Line 8 Token: STRINGCONST Value: "content-type"  Len: 12  Input: "content-type"
+Line 8 Token: ID Value: content
+Line 8 Token: =
+Line 8 Token: STRINGCONST Value: "text/html; charset=utf-8"  Len: 24  Input: "text/html; charset=utf-8"
+Line 8 Token: /
+Line 8 Token: >
+Line 9 Token: <
+Line 9 Token: ID Value: meta
+Line 9 Token: ID Value: http
+Line 9 Token: -
+Line 9 Token: ID Value: equiv
+Line 9 Token: =
+Line 9 Token: STRINGCONST Value: "content-language"  Len: 16  Input: "content-language"
+Line 9 Token: ID Value: content
+Line 9 Token: =
+Line 9 Token: STRINGCONST Value: ""  Len: 0  Input: ""
+Line 9 Token: /
+Line 9 Token: >
+Line 10 Token: <
+Line 10 Token: ID Value: link
+Line 10 Token: ID Value: href
+Line 10 Token: =
+Line 10 Token: STRINGCONST Value: "[[home]]style.css"  Len: 17  Input: "[[home]]style.css"
+Line 10 Token: ID Value: rel
+Line 10 Token: =
+Line 10 Token: STRINGCONST Value: "stylesheet"  Len: 10  Input: "stylesheet"
+Line 10 Token: ID Value: type
+Line 10 Token: =
+Line 10 Token: STRINGCONST Value: "text/css"  Len: 8  Input: "text/css"
+Line 10 Token: /
+Line 10 Token: >
+Line 11 Token: <
+Line 11 Token: ID Value: link
+Line 11 Token: ID Value: rel
+Line 11 Token: =
+Line 11 Token: ID Value: icon
+Line 11 Token: ID Value: type
+Line 11 Token: =
+Line 11 Token: ID Value: image
+Line 11 Token: /
+Line 11 Token: ID Value: gif
+Line 11 Token: ID Value: href
+Line 11 Token: =
+Line 11 Token: [
+Line 11 Token: [
+Line 11 Token: ID Value: home
+Line 11 Token: ]
+Line 11 Token: ]
+Line 11 Token: ID Value: Media
+Line 11 Token: /
+Line 11 Token: ID Value: Pics
+Line 11 Token: /
+Line 11 Token: ID Value: favicon
+ERROR(11): Invalid or misplaced input character: '.'. Character Ignored.
+Line 11 Token: ID Value: gif
+Line 11 Token: >
+Line 12 Token: <
+Line 12 Token: /
+Line 12 Token: ID Value: head
+Line 12 Token: >
+Line 14 Token: <
+Line 14 Token: ID Value: body
+Line 14 Token: >
+Line 15 Token: <
+Line 15 Token: ID Value: div
+Line 15 Token: ID Value: id
+Line 15 Token: =
+Line 15 Token: STRINGCONST Value: "page"  Len: 4  Input: "page"
+Line 15 Token: >
+Line 16 Token: <
+Line 16 Token: ID Value: div
+Line 16 Token: ID Value: id
+Line 16 Token: =
+Line 16 Token: STRINGCONST Value: "header"  Len: 6  Input: "header"
+Line 16 Token: >
+Line 17 Token: <
+Line 17 Token: ID Value: h1
+Line 17 Token: >
+Line 17 Token: <
+Line 17 Token: ID Value: a
+Line 17 Token: ID Value: href
+Line 17 Token: =
+Line 17 Token: STRINGCONST Value: "#"  Len: 1  Input: "#"
+Line 17 Token: >
+Line 17 Token: ID Value: Quotes
+Line 17 Token: ID Value: I
+Line 17 Token: ID Value: Have
+Line 17 Token: ID Value: Enjoyed
+Line 17 Token: <
+Line 17 Token: /
+Line 17 Token: ID Value: a
+Line 17 Token: >
+Line 17 Token: <
+Line 17 Token: /
+Line 17 Token: ID Value: h1
+Line 17 Token: >
+
+==============
+==============
+./c- quote.c-
+Line 2 Token: ID Value: The
+Line 2 Token: ID Value: art
+Line 2 Token: ID Value: of
+Line 2 Token: ID Value: programming
+Line 2 Token: ID Value: is
+Line 2 Token: ID Value: the
+Line 2 Token: ID Value: art
+Line 2 Token: ID Value: of
+Line 2 Token: ID Value: organizing
+Line 2 Token: ID Value: complexity
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+Line 3 Token: DEC
+Line 3 Token: ID Value: E
+ERROR(3): Invalid or misplaced input character: '.'. Character Ignored.
+Line 3 Token: ID Value: W
+ERROR(3): Invalid or misplaced input character: '.'. Character Ignored.
+Line 3 Token: ID Value: Dijkstra
+
+==============
+==============
+./c- quoteTest.c-
+Line 1 Token: STRINGCONST Value: "dog"  Len: 3  Input: "dog"
+Line 2 Token: STRINGCONST Value: ""  Len: 0  Input: ""
+Line 3 Token: STRINGCONST Value: "dog"  Len: 3  Input: "\dog"
+Line 4 Token: STRINGCONST Value: "dog"cat"  Len: 7  Input: "dog\"cat"
+Line 5 Token: STRINGCONST Value: ""dog""  Len: 5  Input: "\"dog\""
+Line 6 Token: STRINGCONST Value: ""dog"cat""  Len: 9  Input: "\"dog\"cat\""
+Line 7 Token: STRINGCONST Value: ""dog""cat""  Len: 10  Input: "\"dog\"\"cat\""
+Line 8 Token: STRINGCONST Value: "dog\cat"  Len: 7  Input: "dog\\cat"
+Line 9 Token: STRINGCONST Value: "\dog\cat"  Len: 8  Input: "\\dog\\cat"
+Line 10 Token: STRINGCONST Value: "\dog\cat\"  Len: 9  Input: "\\dog\\cat\\"
+Line 11 Token: STRINGCONST Value: "dog\"  Len: 4  Input: "dog\\"
+Line 12 Token: STRINGCONST Value: "dog"  Len: 3  Input: "dog"
+Line 12 Token: STRINGCONST Value: "cat"  Len: 3  Input: "cat"
+Line 13 Token: STRINGCONST Value: ""dog""  Len: 5  Input: "\"dog\""
+Line 14 Token: STRINGCONST Value: "abc""  Len: 4  Input: "\a\b\c\""
+Line 15 Token: CHARCONST Value: 'a'  Input: 'a'
+Line 16 Token: CHARCONST Value: '"'  Input: '"'
+Line 17 Token: CHARCONST Value: '
+'  Input: '\n'
+Line 18 Token: CHARCONST Value: '\'  Input: '\\'
+Line 19 Token: CHARCONST Value: '''  Input: '\''
+WARNING(20): character is 3 characters long and not a single character: ''abc''.  The first char will be used.
+Line 20 Token: CHARCONST Value: 'a'  Input: 'abc'
+
+==============
+==============
+./c- stringTest.c-
+Line 1 Token: STRINGCONST Value: "DOUBLE QUOTES"  Len: 13  Input: "DOUBLE QUOTES"
+Line 2 Token: STRINGCONST Value: "dog"  Len: 3  Input: "dog"
+Line 3 Token: STRINGCONST Value: ""  Len: 0  Input: ""
+Line 4 Token: STRINGCONST Value: "123"  Len: 3  Input: "123"
+Line 5 Token: STRINGCONST Value: " 	"  Len: 2  Input: " 	"
+Line 6 Token: STRINGCONST Value: "'"  Len: 1  Input: "'"
+Line 7 Token: STRINGCONST Value: "'"\^"  Len: 4  Input: "\'\"\\\^"
+Line 8 Token: STRINGCONST Value: "\^"  Len: 2  Input: "\\\^"
+Line 9 Token: STRINGCONST Value: "\x"  Len: 2  Input: "\\\x"
+Line 10 Token: STRINGCONST Value: "\x"  Len: 2  Input: "\\x"
+Line 11 Token: STRINGCONST Value: "x"  Len: 1  Input: "\x"
+Line 12 Token: STRINGCONST Value: "adog'"\^"  Len: 8  Input: "a\d\o\g\'\"\\\^"
+Line 13 Token: STRINGCONST Value: "dog cat"  Len: 7  Input: "dog cat"
+Line 14 Token: STRINGCONST Value: "dogs^Icats^Jrats"  Len: 16  Input: "dogs^Icats^Jrats"
+Line 15 Token: STRINGCONST Value: "dogs"  Len: 4  Input: "dogs"
+Line 15 Token: STRINGCONST Value: "cats"  Len: 4  Input: "cats"
+Line 15 Token: STRINGCONST Value: "rats"  Len: 4  Input: "rats"
+Line 16 Token: STRINGCONST Value: "dogs""  Len: 5  Input: "dogs\""
+Line 16 Token: ID Value: cats
+Line 16 Token: STRINGCONST Value: ""rats"  Len: 5  Input: "\"rats"
+Line 17 Token: STRINGCONST Value: "SINGLE QUOTES"  Len: 13  Input: "SINGLE QUOTES"
+Line 18 Token: CHARCONST Value: 'd'  Input: 'd'
+Line 19 Token: CHARCONST Value: '1'  Input: '1'
+Line 20 Token: CHARCONST Value: ' '  Input: ' '
+Line 21 Token: CHARCONST Value: '	'  Input: '	'
+Line 22 Token: CHARCONST Value: '"'  Input: '"'
+Line 23 Token: CHARCONST Value: '"'  Input: '\"'
+Line 24 Token: CHARCONST Value: '\'  Input: '\\'
+Line 25 Token: CHARCONST Value: '^'  Input: '\^'
+Line 26 Token: CHARCONST Value: 'x'  Input: '\x'
+Line 27 Token: CHARCONST Value: '@'  Input: '\@'
+Line 28 Token: CHARCONST Value: 'a'  Input: 'a'
+Line 29 Token: CHARCONST Value: 'd'  Input: '\d'
+WARNING(30): character is 2 characters long and not a single character: ''^I''.  The first char will be used.
+Line 30 Token: CHARCONST Value: '^'  Input: '^I'
+WARNING(31): character is 2 characters long and not a single character: ''^J''.  The first char will be used.
+Line 31 Token: CHARCONST Value: '^'  Input: '^J'
+Line 32 Token: CHARCONST Value: 't'  Input: '\t'
+Line 33 Token: CHARCONST Value: '
+'  Input: '\n'
+Line 34 Token: CHARCONST Value: ' '  Input: '\0'
+Line 35 Token: CHARCONST Value: '''  Input: '\''
+Line 36 Token: STRINGCONST Value: "dogs"  Len: 4  Input: "dogs"
+Line 36 Token: STRINGCONST Value: "and"  Len: 3  Input: "and"
+Line 36 Token: STRINGCONST Value: "cats"  Len: 4  Input: "cats"
+Line 37 Token: CHARCONST Value: 'O'  Input: 'O'
+Line 37 Token: CHARCONST Value: 'M'  Input: 'M'
+Line 37 Token: CHARCONST Value: 'G'  Input: 'G'
+WARNING(38): character is 18 characters long and not a single character: ''meerkats are great''.  The first char will be used.
+Line 38 Token: CHARCONST Value: 'm'  Input: 'meerkats are great'
+Line 39 Token: STRINGCONST Value: "THE END"  Len: 7  Input: "THE END"
+
+==============
+==============
+./c- textTest2.c-
+Line 1 Token: ID Value: Professor
+Line 1 Token: ID Value: Farnsworth
+Line 1 Token: :
+Line 1 Token: STRINGCONST Value: "Amy, technology isn't intrinsically good or evil. It's how it's used. Like the Death Ray."  Len: 89  Input: "Amy, technology isn't intrinsically good or evil. It's how it's used. Like the Death Ray."
+
+==============
+==============
+./c- textTest.c-
+Line 1 Token: ID Value: Professor
+Line 1 Token: ID Value: Farnsworth
+Line 1 Token: :
+ERROR(1): Invalid or misplaced input character: '"'. Character Ignored.
+Line 1 Token: ID Value: Amy
+Line 1 Token: ,
+Line 1 Token: ID Value: technology
+Line 1 Token: ID Value: isn
+ERROR(1): Invalid or misplaced input character: '''. Character Ignored.
+Line 1 Token: ID Value: t
+Line 1 Token: ID Value: intrinsically
+Line 1 Token: ID Value: good
+Line 1 Token: OR
+Line 2 Token: ID Value: evil
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+Line 2 Token: ID Value: It
+WARNING(2): character is 8 characters long and not a single character: ''s how it''.  The first char will be used.
+Line 2 Token: CHARCONST Value: 's'  Input: 's how it'
+Line 2 Token: ID Value: s
+Line 2 Token: ID Value: used
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+Line 2 Token: ID Value: Like
+Line 2 Token: ID Value: the
+Line 2 Token: ID Value: Death
+Line 2 Token: ID Value: Ray
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+ERROR(2): Invalid or misplaced input character: '"'. Character Ignored.
+
+* End of testing
+Kill all remaining c- processes
+=================================================
+Output Comparison
+ztest zexpected differ: char 1, line 1
+
+Your output differs from the expected output.
+digits in the day and time were changed to # for comparison.
+This is a two column comparison with YOUR OUTPUT ON THE LEFT
+with the EXPECTED OUTPUT ON THE RIGHT.
+
+NOTE: In the case of stochastic algorithms like Neural Network training
+we can only expect that you will be qualitatively the same.  You
+should hand check that your output seems reasonable.
+Run Tests                                                                                                         <
+Limited to 5 seconds total run time and 3000 lines of output                                                            Limited to 5 seconds total run time and 3000 lines of output
+/home/rs-cs-heckendo/TestWorld                                                                                          /home/rs-cs-heckendo/TestWorld
+./c- < gcd.c-                                                                                                           ./c- < gcd.c-
+Line 2 Token: INT                                                                                                       Line 2 Token: INT
+Line 2 Token: ID Value: gcd                                                                                             Line 2 Token: ID Value: gcd
+Line 2 Token: (                                                                                                         Line 2 Token: (
+Line 2 Token: INT                                                                                                       Line 2 Token: INT
+Line 2 Token: ID Value: u                                                                                               Line 2 Token: ID Value: u
+Line 2 Token: ,                                                                                                         Line 2 Token: ,
+Line 2 Token: ID Value: v                                                                                               Line 2 Token: ID Value: v
+Line 2 Token: )                                                                                                         Line 2 Token: )
+Line 3 Token: {                                                                                                         Line 3 Token: {
+Line 4 Token: IF                                                                                                        Line 4 Token: IF
+Line 4 Token: ID Value: v                                                                                               Line 4 Token: ID Value: v
+Line 4 Token: EQ                                                                                                        Line 4 Token: EQ
+Line 4 Token: NUMCONST Value: 0 Input: 0                                                                                Line 4 Token: NUMCONST Value: 0 Input: 0
+Line 4 Token: THEN                                                                                                      Line 4 Token: THEN
+Line 4 Token: RETURN                                                                                                    Line 4 Token: RETURN
+Line 4 Token: ID Value: u                                                                                               Line 4 Token: ID Value: u
+Line 4 Token: ;                                                                                                         Line 4 Token: ;
+Line 5 Token: ELSE                                                                                                      Line 5 Token: ELSE
+Line 5 Token: RETURN                                                                                                    Line 5 Token: RETURN
+Line 5 Token: ID Value: gcd                                                                                             Line 5 Token: ID Value: gcd
+Line 5 Token: (                                                                                                         Line 5 Token: (
+Line 5 Token: ID Value: v                                                                                               Line 5 Token: ID Value: v
+Line 5 Token: ,                                                                                                         Line 5 Token: ,
+Line 5 Token: ID Value: u                                                                                               Line 5 Token: ID Value: u
+Line 5 Token: -                                                                                                         Line 5 Token: -
+Line 5 Token: ID Value: u                                                                                               Line 5 Token: ID Value: u
+Line 5 Token: /                                                                                                         Line 5 Token: /
+Line 5 Token: ID Value: v                                                                                               Line 5 Token: ID Value: v
+Line 5 Token: *                                                                                                         Line 5 Token: *
+Line 5 Token: ID Value: v                                                                                               Line 5 Token: ID Value: v
+Line 5 Token: )                                                                                                         Line 5 Token: )
+Line 5 Token: ;                                                                                                         Line 5 Token: ;
+Line 6 Token: }                                                                                                         Line 6 Token: }
+Line 8 Token: ID Value: main                                                                                            Line 8 Token: ID Value: main
+Line 8 Token: (                                                                                                         Line 8 Token: (
+Line 8 Token: )                                                                                                         Line 8 Token: )
+Line 9 Token: {                                                                                                         Line 9 Token: {
+Line 10 Token: ID Value: output                                                                                         Line 10 Token: ID Value: output
+Line 10 Token: (                                                                                                        Line 10 Token: (
+Line 10 Token: ID Value: gcd                                                                                            Line 10 Token: ID Value: gcd
+Line 10 Token: (                                                                                                        Line 10 Token: (
+Line 10 Token: ID Value: input                                                                                          Line 10 Token: ID Value: input
+Line 10 Token: (                                                                                                        Line 10 Token: (
+Line 10 Token: )                                                                                                        Line 10 Token: )
+Line 10 Token: ,                                                                                                        Line 10 Token: ,
+Line 10 Token: ID Value: input                                                                                          Line 10 Token: ID Value: input
+Line 10 Token: (                                                                                                        Line 10 Token: (
+Line 10 Token: )                                                                                                        Line 10 Token: )
+Line 10 Token: )                                                                                                        Line 10 Token: )
+Line 10 Token: )                                                                                                        Line 10 Token: )
+Line 10 Token: ;                                                                                                        Line 10 Token: ;
+Line 11 Token: ID Value: outnl                                                                                          Line 11 Token: ID Value: outnl
+Line 11 Token: (                                                                                                        Line 11 Token: (
+Line 11 Token: )                                                                                                        Line 11 Token: )
+Line 11 Token: ;                                                                                                        Line 11 Token: ;
+Line 12 Token: }                                                                                                        Line 12 Token: }
+
+==============                                                                                                          ==============
+==============                                                                                                          ==============
+./c- badchar.c-                                                                                                         ./c- badchar.c-
+ERROR(1): Invalid or misplaced input character: '!'. Character Ignored.                                                 ERROR(1): Invalid or misplaced input character: '!'. Character Ignored.
+ERROR(1): Invalid or misplaced input character: '@'. Character Ignored.                                                 ERROR(1): Invalid or misplaced input character: '@'. Character Ignored.
+ERROR(1): Invalid or misplaced input character: '#'. Character Ignored.                                                 ERROR(1): Invalid or misplaced input character: '#'. Character Ignored.
+ERROR(1): Invalid or misplaced input character: '$'. Character Ignored.                                                 ERROR(1): Invalid or misplaced input character: '$'. Character Ignored.
+Line 1 Token: %                                                                                                         Line 1 Token: %
+ERROR(1): Invalid or misplaced input character: '^'. Character Ignored.                                                 ERROR(1): Invalid or misplaced input character: '^'. Character Ignored.
+ERROR(1): Invalid or misplaced input character: '&'. Character Ignored.                                                 ERROR(1): Invalid or misplaced input character: '&'. Character Ignored.
+Line 1 Token: *                                                                                                         Line 1 Token: *
+Line 1 Token: (                                                                                                         Line 1 Token: (
+Line 1 Token: )                                                                                                         Line 1 Token: )
+ERROR(1): Invalid or misplaced input character: '_'. Character Ignored.                                                 ERROR(1): Invalid or misplaced input character: '_'. Character Ignored.
+Line 1 Token: ADDASS                                                                                                    Line 1 Token: ADDASS
+Line 1 Token: -                                                                                                         Line 1 Token: -
+Line 2 Token: {                                                                                                         Line 2 Token: {
+Line 2 Token: }                                                                                                         Line 2 Token: }
+ERROR(2): Invalid or misplaced input character: '|'. Character Ignored.                                                 ERROR(2): Invalid or misplaced input character: '|'. Character Ignored.
+Line 2 Token: [                                                                                                         Line 2 Token: [
+Line 2 Token: ]                                                                                                         Line 2 Token: ]
+ERROR(2): Invalid or misplaced input character: '\'. Character Ignored.                                                 ERROR(2): Invalid or misplaced input character: '\'. Character Ignored.
+Line 2 Token: :                                                                                                         Line 2 Token: :
+Line 2 Token: ;                                                                                                         Line 2 Token: ;
+Line 2 Token: <                                                                                                         Line 2 Token: <
+Line 2 Token: >                                                                                                         Line 2 Token: >
+Line 2 Token: ?                                                                                                         Line 2 Token: ?
+Line 2 Token: ,                                                                                                         Line 2 Token: ,
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.                                                 ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+Line 2 Token: /                                                                                                         Line 2 Token: /
+ERROR(2): Invalid or misplaced input character: '~'. Character Ignored.                                                 ERROR(2): Invalid or misplaced input character: '~'. Character Ignored.
+
+==============                                                                                                          ==============
+==============                                                                                                          ==============
+./c- cprogram.c-                                                                                                        ./c- cprogram.c-
+ERROR(1): Invalid or misplaced input character: '#'. Character Ignored.                                                 ERROR(1): Invalid or misplaced input character: '#'. Character Ignored.
+Line 1 Token: ID Value: include                                                                                         Line 1 Token: ID Value: include
+Line 1 Token: <                                                                                                         Line 1 Token: <
+Line 1 Token: ID Value: stdio                                                                                           Line 1 Token: ID Value: stdio
+ERROR(1): Invalid or misplaced input character: '.'. Character Ignored.                                                 ERROR(1): Invalid or misplaced input character: '.'. Character Ignored.
+Line 1 Token: ID Value: h                                                                                               Line 1 Token: ID Value: h
+Line 1 Token: >                                                                                                         Line 1 Token: >
+ERROR(2): Invalid or misplaced input character: '#'. Character Ignored.                                                 ERROR(2): Invalid or misplaced input character: '#'. Character Ignored.
+Line 2 Token: ID Value: include                                                                                         Line 2 Token: ID Value: include
+Line 2 Token: <                                                                                                         Line 2 Token: <
+Line 2 Token: ID Value: stdlib                                                                                          Line 2 Token: ID Value: stdlib
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.                                                 ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+Line 2 Token: ID Value: h                                                                                               Line 2 Token: ID Value: h
+Line 2 Token: >                                                                                                         Line 2 Token: >
+Line 4 Token: INT                                                                                                       Line 4 Token: INT
+Line 4 Token: ID Value: main                                                                                            Line 4 Token: ID Value: main
+Line 4 Token: (                                                                                                         Line 4 Token: (
+Line 4 Token: )                                                                                                         Line 4 Token: )
+Line 5 Token: {                                                                                                         Line 5 Token: {
+Line 6 Token: INT                                                                                                       Line 6 Token: INT
+Line 6 Token: ID Value: x                                                                                               Line 6 Token: ID Value: x
+Line 6 Token: =                                                                                                         Line 6 Token: =
+Line 6 Token: NUMCONST Value: 666 Input: 666                                                                            Line 6 Token: NUMCONST Value: 666 Input: 666
+Line 6 Token: ;                                                                                                         Line 6 Token: ;
+Line 8 Token: IF                                                                                                        Line 8 Token: IF
+Line 8 Token: (                                                                                                         Line 8 Token: (
+Line 8 Token: ID Value: x                                                                                               Line 8 Token: ID Value: x
+Line 8 Token: EQ                                                                                                        Line 8 Token: EQ
+Line 8 Token: NUMCONST Value: 666 Input: 666                                                                            Line 8 Token: NUMCONST Value: 666 Input: 666
+Line 8 Token: )                                                                                                         Line 8 Token: )
+Line 8 Token: ID Value: printf                                                                                          Line 8 Token: ID Value: printf
+Line 8 Token: (                                                                                                         Line 8 Token: (
+Line 8 Token: STRINGCONST Value: "hog\" Len: 4 Input: "hog\\"                                                           Line 8 Token: STRINGCONST Value: "hog\" Len: 4 Input: "hog\\"
+Line 8 Token: )                                                                                                         Line 8 Token: )
+Line 8 Token: ;                                                                                                         Line 8 Token: ;
+Line 9 Token: ID Value: printf                                                                                          Line 9 Token: ID Value: printf
+Line 9 Token: (                                                                                                         Line 9 Token: (
+Line 9 Token: STRINGCONST Value: "                                                                                      Line 9 Token: STRINGCONST Value: "
+" Len: 1 Input: "\n"                                                                                                    " Len: 1 Input: "\n"
+Line 9 Token: )                                                                                                         Line 9 Token: )
+Line 9 Token: ;                                                                                                         Line 9 Token: ;
+Line 10 Token: RETURN                                                                                                   Line 10 Token: RETURN
+Line 10 Token: NUMCONST Value: 0 Input: 0                                                                               Line 10 Token: NUMCONST Value: 0 Input: 0
+Line 10 Token: ;                                                                                                        Line 10 Token: ;
+Line 11 Token: }                                                                                                        Line 11 Token: }
+
+==============                                                                                                          ==============
+==============                                                                                                          ==============
+./c- f22.c-                                                                                                             ./c- f22.c-
+Line 2 Token: BOOL                                                                                                      Line 2 Token: BOOL
+Line 2 Token: ID Value: gb                                                                                              Line 2 Token: ID Value: gb
+Line 2 Token: ;                                                                                                         Line 2 Token: ;
+Line 3 Token: CHAR                                                                                                      Line 3 Token: CHAR
+Line 3 Token: ID Value: gc                                                                                              Line 3 Token: ID Value: gc
+Line 3 Token: ;                                                                                                         Line 3 Token: ;
+Line 4 Token: INT                                                                                                       Line 4 Token: INT
+Line 4 Token: ID Value: gi                                                                                              Line 4 Token: ID Value: gi
+Line 4 Token: ;                                                                                                         Line 4 Token: ;
+Line 7 Token: INT                                                                                                       Line 7 Token: INT
+Line 7 Token: ID Value: main                                                                                            Line 7 Token: ID Value: main
+Line 7 Token: (                                                                                                         Line 7 Token: (
+Line 7 Token: )                                                                                                         Line 7 Token: )
+Line 8 Token: {                                                                                                         Line 8 Token: {
+Line 9 Token: BOOL                                                                                                      Line 9 Token: BOOL
+Line 9 Token: ID Value: b                                                                                               Line 9 Token: ID Value: b
+Line 9 Token: ;                                                                                                         Line 9 Token: ;
+Line 10 Token: CHAR                                                                                                     Line 10 Token: CHAR
+Line 10 Token: ID Value: c                                                                                              Line 10 Token: ID Value: c
+Line 10 Token: ;                                                                                                        Line 10 Token: ;
+Line 11 Token: INT                                                                                                      Line 11 Token: INT
+Line 11 Token: ID Value: i                                                                                              Line 11 Token: ID Value: i
+Line 11 Token: ,                                                                                                        Line 11 Token: ,
+Line 11 Token: ID Value: shuri                                                                                          Line 11 Token: ID Value: shuri
+Line 11 Token: ,                                                                                                        Line 11 Token: ,
+Line 11 Token: ID Value: tchalla                                                                                        Line 11 Token: ID Value: tchalla
+Line 11 Token: ,                                                                                                        Line 11 Token: ,
+Line 11 Token: ID Value: X23                                                                                            Line 11 Token: ID Value: X23
+Line 11 Token: ;                                                                                                        Line 11 Token: ;
+Line 12 Token: STATIC                                                                                                   Line 12 Token: STATIC
+Line 12 Token: BOOL                                                                                                     Line 12 Token: BOOL
+Line 12 Token: ID Value: sb                                                                                             Line 12 Token: ID Value: sb
+Line 12 Token: :                                                                                                        Line 12 Token: :
+Line 12 Token: NUMCONST Value: 44 Input: 44                                                                             Line 12 Token: NUMCONST Value: 44 Input: 44
+Line 12 Token: >                                                                                                        Line 12 Token: >
+Line 12 Token: NUMCONST Value: 22 Input: 22                                                                             Line 12 Token: NUMCONST Value: 22 Input: 22
+Line 12 Token: ;                                                                                                        Line 12 Token: ;
+Line 13 Token: STATIC                                                                                                   Line 13 Token: STATIC
+Line 13 Token: CHAR                                                                                                     Line 13 Token: CHAR
+Line 13 Token: ID Value: sc                                                                                             Line 13 Token: ID Value: sc
+Line 13 Token: :                                                                                                        Line 13 Token: :
+Line 13 Token: CHARCONST Value: 'x' Input: 'x'                                                                          Line 13 Token: CHARCONST Value: 'x' Input: 'x'
+Line 13 Token: ;                                                                                                        Line 13 Token: ;
+Line 14 Token: STATIC                                                                                                   Line 14 Token: STATIC
+Line 14 Token: INT                                                                                                      Line 14 Token: INT
+Line 14 Token: ID Value: si                                                                                             Line 14 Token: ID Value: si
+Line 14 Token: :                                                                                                        Line 14 Token: :
+Line 14 Token: NUMCONST Value: 676 Input: 676                                                                           Line 14 Token: NUMCONST Value: 676 Input: 676
+Line 14 Token: ;                                                                                                        Line 14 Token: ;
+Line 15 Token: BOOL                                                                                                     Line 15 Token: BOOL
+Line 15 Token: ID Value: ba                                                                                             Line 15 Token: ID Value: ba
+Line 15 Token: [                                                                                                        Line 15 Token: [
+Line 15 Token: NUMCONST Value: 6 Input: 6                                                                               Line 15 Token: NUMCONST Value: 6 Input: 6
+Line 15 Token: ]                                                                                                        Line 15 Token: ]
+Line 15 Token: :                                                                                                        Line 15 Token: :
+Line 15 Token: NUMCONST Value: 89 Input: 89                                                                             Line 15 Token: NUMCONST Value: 89 Input: 89
+Line 15 Token: <                                                                                                        Line 15 Token: <
+Line 15 Token: NUMCONST Value: 34 Input: 34                                                                             Line 15 Token: NUMCONST Value: 34 Input: 34
+Line 15 Token: ;                                                                                                        Line 15 Token: ;
+Line 16 Token: CHAR                                                                                                     Line 16 Token: CHAR
+Line 16 Token: ID Value: ca                                                                                             Line 16 Token: ID Value: ca
+Line 16 Token: [                                                                                                        Line 16 Token: [
+Line 16 Token: NUMCONST Value: 6 Input: 6                                                                               Line 16 Token: NUMCONST Value: 6 Input: 6
+Line 16 Token: ]                                                                                                        Line 16 Token: ]
+Line 16 Token: :                                                                                                        Line 16 Token: :
+Line 16 Token: STRINGCONST Value: "vibranium" Len: 9 Input: "vibranium"                                                 Line 16 Token: STRINGCONST Value: "vibranium" Len: 9 Input: "vibranium"
+Line 16 Token: ;                                                                                                        Line 16 Token: ;
+Line 17 Token: INT                                                                                                      Line 17 Token: INT
+Line 17 Token: ID Value: ia                                                                                             Line 17 Token: ID Value: ia
+Line 17 Token: [                                                                                                        Line 17 Token: [
+Line 17 Token: NUMCONST Value: 6 Input: 6                                                                               Line 17 Token: NUMCONST Value: 6 Input: 6
+Line 17 Token: ]                                                                                                        Line 17 Token: ]
+Line 17 Token: ;                                                                                                        Line 17 Token: ;
+Line 20 Token: ID Value: b                                                                                              Line 20 Token: ID Value: b
+Line 20 Token: =                                                                                                        Line 20 Token: =
+Line 20 Token: ID Value: b                                                                                              Line 20 Token: ID Value: b
+Line 20 Token: AND                                                                                                      Line 20 Token: AND
+Line 20 Token: ID Value: b                                                                                              Line 20 Token: ID Value: b
+Line 20 Token: OR                                                                                                       Line 20 Token: OR
+Line 20 Token: BOOLCONST Value: 1 Input: true                                                                           Line 20 Token: BOOLCONST Value: 1 Input: true
+Line 20 Token: AND                                                                                                      Line 20 Token: AND
+Line 20 Token: NOT                                                                                                      Line 20 Token: NOT
+Line 20 Token: BOOLCONST Value: 0 Input: false                                                                          Line 20 Token: BOOLCONST Value: 0 Input: false
+Line 20 Token: ;                                                                                                        Line 20 Token: ;
+Line 21 Token: FOR                                                                                                      Line 21 Token: FOR
+Line 21 Token: ID Value: wakanda                                                                                        Line 21 Token: ID Value: wakanda
+Line 21 Token: =                                                                                                        Line 21 Token: =
+Line 21 Token: ID Value: ia                                                                                             Line 21 Token: ID Value: ia
+Line 21 Token: TO                                                                                                       Line 21 Token: TO
+Line 21 Token: NUMCONST Value: 666 Input: 666                                                                           Line 21 Token: NUMCONST Value: 666 Input: 666
+Line 21 Token: BY                                                                                                       Line 21 Token: BY
+Line 21 Token: NUMCONST Value: 42 Input: 42                                                                             Line 21 Token: NUMCONST Value: 42 Input: 42
+Line 21 Token: DO                                                                                                       Line 21 Token: DO
+Line 21 Token: {                                                                                                        Line 21 Token: {
+Line 21 Token: IF                                                                                                       Line 21 Token: IF
+Line 21 Token: ID Value: wakanda                                                                                        Line 21 Token: ID Value: wakanda
+Line 21 Token: EQ                                                                                                       Line 21 Token: EQ
+Line 21 Token: NUMCONST Value: 42 Input: 42                                                                             Line 21 Token: NUMCONST Value: 42 Input: 42
+Line 21 Token: THEN                                                                                                     Line 21 Token: THEN
+Line 21 Token: BREAK                                                                                                    Line 21 Token: BREAK
+Line 21 Token: ;                                                                                                        Line 21 Token: ;
+Line 21 Token: ELSE                                                                                                     Line 21 Token: ELSE
+Line 21 Token: ID Value: i                                                                                              Line 21 Token: ID Value: i
+Line 21 Token: INC                                                                                                      Line 21 Token: INC
+Line 21 Token: ;                                                                                                        Line 21 Token: ;
+Line 21 Token: }                                                                                                        Line 21 Token: }
+Line 22 Token: ID Value: i                                                                                              Line 22 Token: ID Value: i
+Line 22 Token: =                                                                                                        Line 22 Token: =
+Line 22 Token: NUMCONST Value: 3 Input: 3                                                                               Line 22 Token: NUMCONST Value: 3 Input: 3
+Line 22 Token: *                                                                                                        Line 22 Token: *
+Line 22 Token: *                                                                                                        Line 22 Token: *
+Line 22 Token: ID Value: ca                                                                                             Line 22 Token: ID Value: ca
+Line 22 Token: +                                                                                                        Line 22 Token: +
+Line 22 Token: NUMCONST Value: 56 Input: 56                                                                             Line 22 Token: NUMCONST Value: 56 Input: 56
+Line 22 Token: %                                                                                                        Line 22 Token: %
+Line 22 Token: ID Value: i                                                                                              Line 22 Token: ID Value: i
+Line 22 Token: /                                                                                                        Line 22 Token: /
+Line 22 Token: NUMCONST Value: 3 Input: 3                                                                               Line 22 Token: NUMCONST Value: 3 Input: 3
+Line 22 Token: -                                                                                                        Line 22 Token: -
+Line 22 Token: ?                                                                                                        Line 22 Token: ?
+Line 22 Token: NUMCONST Value: 6 Input: 6                                                                               Line 22 Token: NUMCONST Value: 6 Input: 6
+Line 22 Token: +                                                                                                        Line 22 Token: +
+Line 22 Token: ?                                                                                                        Line 22 Token: ?
+Line 22 Token: ID Value: ia                                                                                             Line 22 Token: ID Value: ia
+Line 22 Token: DEC                                                                                                      Line 22 Token: DEC
+Line 22 Token: ID Value: si                                                                                             Line 22 Token: ID Value: si
+Line 22 Token: ;                                                                                                        Line 22 Token: ;
+Line 23 Token: WHILE                                                                                                    Line 23 Token: WHILE
+Line 23 Token: ID Value: shuri                                                                                          Line 23 Token: ID Value: shuri
+Line 23 Token: GEQ                                                                                                      Line 23 Token: GEQ
+Line 23 Token: NUMCONST Value: 10 Input: 10                                                                             Line 23 Token: NUMCONST Value: 10 Input: 10
+Line 23 Token: AND                                                                                                      Line 23 Token: AND
+Line 23 Token: ID Value: i                                                                                              Line 23 Token: ID Value: i
+Line 23 Token: LEQ                                                                                                      Line 23 Token: LEQ
+Line 23 Token: NUMCONST Value: 2 Input: 2                                                                               Line 23 Token: NUMCONST Value: 2 Input: 2
+Line 23 Token: AND                                                                                                      Line 23 Token: AND
+Line 23 Token: ID Value: c                                                                                              Line 23 Token: ID Value: c
+Line 23 Token: EQ                                                                                                       Line 23 Token: EQ
+Line 23 Token: CHARCONST Value: 'z' Input: 'z'                                                                          Line 23 Token: CHARCONST Value: 'z' Input: 'z'
+Line 23 Token: OR                                                                                                       Line 23 Token: OR
+Line 23 Token: ID Value: ba                                                                                             Line 23 Token: ID Value: ba
+Line 23 Token: [                                                                                                        Line 23 Token: [
+Line 23 Token: NUMCONST Value: 3 Input: 3                                                                               Line 23 Token: NUMCONST Value: 3 Input: 3
+Line 23 Token: ]                                                                                                        Line 23 Token: ]
+Line 23 Token: NEQ                                                                                                      Line 23 Token: NEQ
+Line 23 Token: BOOLCONST Value: 1 Input: true                                                                           Line 23 Token: BOOLCONST Value: 1 Input: true
+Line 23 Token: DO                                                                                                       Line 23 Token: DO
+Line 23 Token: ID Value: shuri                                                                                          Line 23 Token: ID Value: shuri
+Line 23 Token: DEC                                                                                                      Line 23 Token: DEC
+Line 23 Token: ;                                                                                                        Line 23 Token: ;
+Line 25 Token: RETURN                                                                                                   Line 25 Token: RETURN
+Line 25 Token: NUMCONST Value: 1284 Input: 1284                                                                         Line 25 Token: NUMCONST Value: 1284 Input: 1284
+Line 25 Token: ;                                                                                                        Line 25 Token: ;
+Line 26 Token: }                                                                                                        Line 26 Token: }
+Line 28 Token: INT                                                                                                      Line 28 Token: INT
+Line 28 Token: ID Value: forever                                                                                        Line 28 Token: ID Value: forever
+Line 28 Token: ,                                                                                                        Line 28 Token: ,
+Line 28 Token: ID Value: in                                                                                             Line 28 Token: ID Value: in
+Line 28 Token: ,                                                                                                        Line 28 Token: ,
+Line 28 Token: ID Value: foreach                                                                                        Line 28 Token: ID Value: foreach
+Line 28 Token: ,                                                                                                        Line 28 Token: ,
+Line 28 Token: ID Value: loop                                                                                           Line 28 Token: ID Value: loop
+Line 28 Token: ,                                                                                                        Line 28 Token: ,
+Line 28 Token: ID Value: elsif                                                                                          Line 28 Token: ID Value: elsif
+Line 28 Token: ,                                                                                                        Line 28 Token: ,
+Line 28 Token: ID Value: range                                                                                          Line 28 Token: ID Value: range
+Line 28 Token: ,                                                                                                        Line 28 Token: ,
+Line 28 Token: ID Value: with                                                                                           Line 28 Token: ID Value: with
+Line 28 Token: ,                                                                                                        Line 28 Token: ,
+Line 28 Token: ID Value: xor                                                                                            Line 28 Token: ID Value: xor
+Line 28 Token: ;                                                                                                        Line 28 Token: ;
+
+==============                                                                                                          ==============
+==============                                                                                                          ==============
+./c- gcd.c-                                                                                                             ./c- gcd.c-
+Line 2 Token: INT                                                                                                       Line 2 Token: INT
+Line 2 Token: ID Value: gcd                                                                                             Line 2 Token: ID Value: gcd
+Line 2 Token: (                                                                                                         Line 2 Token: (
+Line 2 Token: INT                                                                                                       Line 2 Token: INT
+Line 2 Token: ID Value: u                                                                                               Line 2 Token: ID Value: u
+Line 2 Token: ,                                                                                                         Line 2 Token: ,
+Line 2 Token: ID Value: v                                                                                               Line 2 Token: ID Value: v
+Line 2 Token: )                                                                                                         Line 2 Token: )
+Line 3 Token: {                                                                                                         Line 3 Token: {
+Line 4 Token: IF                                                                                                        Line 4 Token: IF
+Line 4 Token: ID Value: v                                                                                               Line 4 Token: ID Value: v
+Line 4 Token: EQ                                                                                                        Line 4 Token: EQ
+Line 4 Token: NUMCONST Value: 0 Input: 0                                                                                Line 4 Token: NUMCONST Value: 0 Input: 0
+Line 4 Token: THEN                                                                                                      Line 4 Token: THEN
+Line 4 Token: RETURN                                                                                                    Line 4 Token: RETURN
+Line 4 Token: ID Value: u                                                                                               Line 4 Token: ID Value: u
+Line 4 Token: ;                                                                                                         Line 4 Token: ;
+Line 5 Token: ELSE                                                                                                      Line 5 Token: ELSE
+Line 5 Token: RETURN                                                                                                    Line 5 Token: RETURN
+Line 5 Token: ID Value: gcd                                                                                             Line 5 Token: ID Value: gcd
+Line 5 Token: (                                                                                                         Line 5 Token: (
+Line 5 Token: ID Value: v                                                                                               Line 5 Token: ID Value: v
+Line 5 Token: ,                                                                                                         Line 5 Token: ,
+Line 5 Token: ID Value: u                                                                                               Line 5 Token: ID Value: u
+Line 5 Token: -                                                                                                         Line 5 Token: -
+Line 5 Token: ID Value: u                                                                                               Line 5 Token: ID Value: u
+Line 5 Token: /                                                                                                         Line 5 Token: /
+Line 5 Token: ID Value: v                                                                                               Line 5 Token: ID Value: v
+Line 5 Token: *                                                                                                         Line 5 Token: *
+Line 5 Token: ID Value: v                                                                                               Line 5 Token: ID Value: v
+Line 5 Token: )                                                                                                         Line 5 Token: )
+Line 5 Token: ;                                                                                                         Line 5 Token: ;
+Line 6 Token: }                                                                                                         Line 6 Token: }
+Line 8 Token: ID Value: main                                                                                            Line 8 Token: ID Value: main
+Line 8 Token: (                                                                                                         Line 8 Token: (
+Line 8 Token: )                                                                                                         Line 8 Token: )
+Line 9 Token: {                                                                                                         Line 9 Token: {
+Line 10 Token: ID Value: output                                                                                         Line 10 Token: ID Value: output
+Line 10 Token: (                                                                                                        Line 10 Token: (
+Line 10 Token: ID Value: gcd                                                                                            Line 10 Token: ID Value: gcd
+Line 10 Token: (                                                                                                        Line 10 Token: (
+Line 10 Token: ID Value: input                                                                                          Line 10 Token: ID Value: input
+Line 10 Token: (                                                                                                        Line 10 Token: (
+Line 10 Token: )                                                                                                        Line 10 Token: )
+Line 10 Token: ,                                                                                                        Line 10 Token: ,
+Line 10 Token: ID Value: input                                                                                          Line 10 Token: ID Value: input
+Line 10 Token: (                                                                                                        Line 10 Token: (
+Line 10 Token: )                                                                                                        Line 10 Token: )
+Line 10 Token: )                                                                                                        Line 10 Token: )
+Line 10 Token: )                                                                                                        Line 10 Token: )
+Line 10 Token: ;                                                                                                        Line 10 Token: ;
+Line 11 Token: ID Value: outnl                                                                                          Line 11 Token: ID Value: outnl
+Line 11 Token: (                                                                                                        Line 11 Token: (
+Line 11 Token: )                                                                                                        Line 11 Token: )
+Line 11 Token: ;                                                                                                        Line 11 Token: ;
+Line 12 Token: }                                                                                                        Line 12 Token: }
+
+==============                                                                                                          ==============
+==============                                                                                                          ==============
+./c- htmlTest.c-                                                                                                        ./c- htmlTest.c-
+Line 1 Token: <                                                                                                         Line 1 Token: <
+Line 1 Token: ?                                                                                                         Line 1 Token: ?
+Line 1 Token: ID Value: xml                                                                                             Line 1 Token: ID Value: xml
+Line 1 Token: ID Value: version                                                                                         Line 1 Token: ID Value: version
+Line 1 Token: =                                                                                                         Line 1 Token: =
+Line 1 Token: STRINGCONST Value: "1.0" Len: 3 Input: "1.0"                                                              Line 1 Token: STRINGCONST Value: "1.0" Len: 3 Input: "1.0"
+Line 1 Token: ?                                                                                                         Line 1 Token: ?
+Line 1 Token: >                                                                                                         Line 1 Token: >
+Line 2 Token: <                                                                                                         Line 2 Token: <
+ERROR(2): Invalid or misplaced input character: '!'. Character Ignored.                                                 ERROR(2): Invalid or misplaced input character: '!'. Character Ignored.
+Line 2 Token: ID Value: DOCTYPE                                                                                         Line 2 Token: ID Value: DOCTYPE
+Line 2 Token: ID Value: html                                                                                            Line 2 Token: ID Value: html
+Line 2 Token: ID Value: PUBLIC                                                                                          Line 2 Token: ID Value: PUBLIC
+Line 2 Token: STRINGCONST Value: "-//W3C//DTD XHTML 1.0 Transitional//EN" Len: 38 Input: "-//W3C//DTD XHTML 1.          Line 2 Token: STRINGCONST Value: "-//W3C//DTD XHTML 1.0 Transitional//EN" Len: 38 Input: "-//W3C//DTD XHTML 1.
+Line 2 Token: STRINGCONST Value: "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" Len: 55 Input: "htt          Line 2 Token: STRINGCONST Value: "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" Len: 55 Input: "htt
+Line 2 Token: >                                                                                                         Line 2 Token: >
+Line 3 Token: <                                                                                                         Line 3 Token: <
+Line 3 Token: ID Value: html                                                                                            Line 3 Token: ID Value: html
+Line 3 Token: ID Value: xmlns                                                                                           Line 3 Token: ID Value: xmlns
+Line 3 Token: =                                                                                                         Line 3 Token: =
+Line 3 Token: STRINGCONST Value: "http://www.w3.org/1999/xhtml" Len: 28 Input: "http://www.w3.org/1999/xhtml"           Line 3 Token: STRINGCONST Value: "http://www.w3.org/1999/xhtml" Len: 28 Input: "http://www.w3.org/1999/xhtml"
+Line 3 Token: >                                                                                                         Line 3 Token: >
+Line 4 Token: <                                                                                                         Line 4 Token: <
+Line 4 Token: ID Value: head                                                                                            Line 4 Token: ID Value: head
+Line 4 Token: >                                                                                                         Line 4 Token: >
+Line 5 Token: <                                                                                                         Line 5 Token: <
+Line 5 Token: ID Value: title                                                                                           Line 5 Token: ID Value: title
+Line 5 Token: >                                                                                                         Line 5 Token: >
+Line 5 Token: ID Value: Quotes                                                                                          Line 5 Token: ID Value: Quotes
+Line 5 Token: ID Value: I                                                                                               Line 5 Token: ID Value: I
+Line 5 Token: ID Value: Have                                                                                            Line 5 Token: ID Value: Have
+Line 5 Token: ID Value: Enjoyed                                                                                         Line 5 Token: ID Value: Enjoyed
+Line 5 Token: <                                                                                                         Line 5 Token: <
+Line 5 Token: /                                                                                                         Line 5 Token: /
+Line 5 Token: ID Value: title                                                                                           Line 5 Token: ID Value: title
+Line 5 Token: >                                                                                                         Line 5 Token: >
+Line 6 Token: <                                                                                                         Line 6 Token: <
+Line 6 Token: ID Value: meta                                                                                            Line 6 Token: ID Value: meta
+Line 6 Token: ID Value: name                                                                                            Line 6 Token: ID Value: name
+Line 6 Token: =                                                                                                         Line 6 Token: =
+Line 6 Token: STRINGCONST Value: "keywords" Len: 8 Input: "keywords"                                                    Line 6 Token: STRINGCONST Value: "keywords" Len: 8 Input: "keywords"
+Line 6 Token: ID Value: content                                                                                         Line 6 Token: ID Value: content
+Line 6 Token: =                                                                                                         Line 6 Token: =
+Line 6 Token: STRINGCONST Value: "" Len: 0 Input: ""                                                                    Line 6 Token: STRINGCONST Value: "" Len: 0 Input: ""
+Line 6 Token: /                                                                                                         Line 6 Token: /
+Line 6 Token: >                                                                                                         Line 6 Token: >
+Line 7 Token: <                                                                                                         Line 7 Token: <
+Line 7 Token: ID Value: meta                                                                                            Line 7 Token: ID Value: meta
+Line 7 Token: ID Value: name                                                                                            Line 7 Token: ID Value: name
+Line 7 Token: =                                                                                                         Line 7 Token: =
+Line 7 Token: STRINGCONST Value: "description" Len: 11 Input: "description"                                             Line 7 Token: STRINGCONST Value: "description" Len: 11 Input: "description"
+Line 7 Token: ID Value: content                                                                                         Line 7 Token: ID Value: content
+Line 7 Token: =                                                                                                         Line 7 Token: =
+Line 7 Token: STRINGCONST Value: "" Len: 0 Input: ""                                                                    Line 7 Token: STRINGCONST Value: "" Len: 0 Input: ""
+Line 7 Token: /                                                                                                         Line 7 Token: /
+Line 7 Token: >                                                                                                         Line 7 Token: >
+Line 8 Token: <                                                                                                         Line 8 Token: <
+Line 8 Token: ID Value: meta                                                                                            Line 8 Token: ID Value: meta
+Line 8 Token: ID Value: http                                                                                            Line 8 Token: ID Value: http
+Line 8 Token: -                                                                                                         Line 8 Token: -
+Line 8 Token: ID Value: equiv                                                                                           Line 8 Token: ID Value: equiv
+Line 8 Token: =                                                                                                         Line 8 Token: =
+Line 8 Token: STRINGCONST Value: "content-type" Len: 12 Input: "content-type"                                           Line 8 Token: STRINGCONST Value: "content-type" Len: 12 Input: "content-type"
+Line 8 Token: ID Value: content                                                                                         Line 8 Token: ID Value: content
+Line 8 Token: =                                                                                                         Line 8 Token: =
+Line 8 Token: STRINGCONST Value: "text/html; charset=utf-8" Len: 24 Input: "text/html; charset=utf-8"                   Line 8 Token: STRINGCONST Value: "text/html; charset=utf-8" Len: 24 Input: "text/html; charset=utf-8"
+Line 8 Token: /                                                                                                         Line 8 Token: /
+Line 8 Token: >                                                                                                         Line 8 Token: >
+Line 9 Token: <                                                                                                         Line 9 Token: <
+Line 9 Token: ID Value: meta                                                                                            Line 9 Token: ID Value: meta
+Line 9 Token: ID Value: http                                                                                            Line 9 Token: ID Value: http
+Line 9 Token: -                                                                                                         Line 9 Token: -
+Line 9 Token: ID Value: equiv                                                                                           Line 9 Token: ID Value: equiv
+Line 9 Token: =                                                                                                         Line 9 Token: =
+Line 9 Token: STRINGCONST Value: "content-language" Len: 16 Input: "content-language"                                   Line 9 Token: STRINGCONST Value: "content-language" Len: 16 Input: "content-language"
+Line 9 Token: ID Value: content                                                                                         Line 9 Token: ID Value: content
+Line 9 Token: =                                                                                                         Line 9 Token: =
+Line 9 Token: STRINGCONST Value: "" Len: 0 Input: ""                                                                    Line 9 Token: STRINGCONST Value: "" Len: 0 Input: ""
+Line 9 Token: /                                                                                                         Line 9 Token: /
+Line 9 Token: >                                                                                                         Line 9 Token: >
+Line 10 Token: <                                                                                                        Line 10 Token: <
+Line 10 Token: ID Value: link                                                                                           Line 10 Token: ID Value: link
+Line 10 Token: ID Value: href                                                                                           Line 10 Token: ID Value: href
+Line 10 Token: =                                                                                                        Line 10 Token: =
+Line 10 Token: STRINGCONST Value: "[[home]]style.css" Len: 17 Input: "[[home]]style.css"                                Line 10 Token: STRINGCONST Value: "[[home]]style.css" Len: 17 Input: "[[home]]style.css"
+Line 10 Token: ID Value: rel                                                                                            Line 10 Token: ID Value: rel
+Line 10 Token: =                                                                                                        Line 10 Token: =
+Line 10 Token: STRINGCONST Value: "stylesheet" Len: 10 Input: "stylesheet"                                              Line 10 Token: STRINGCONST Value: "stylesheet" Len: 10 Input: "stylesheet"
+Line 10 Token: ID Value: type                                                                                           Line 10 Token: ID Value: type
+Line 10 Token: =                                                                                                        Line 10 Token: =
+Line 10 Token: STRINGCONST Value: "text/css" Len: 8 Input: "text/css"                                                   Line 10 Token: STRINGCONST Value: "text/css" Len: 8 Input: "text/css"
+Line 10 Token: /                                                                                                        Line 10 Token: /
+Line 10 Token: >                                                                                                        Line 10 Token: >
+Line 11 Token: <                                                                                                        Line 11 Token: <
+Line 11 Token: ID Value: link                                                                                           Line 11 Token: ID Value: link
+Line 11 Token: ID Value: rel                                                                                            Line 11 Token: ID Value: rel
+Line 11 Token: =                                                                                                        Line 11 Token: =
+Line 11 Token: ID Value: icon                                                                                           Line 11 Token: ID Value: icon
+Line 11 Token: ID Value: type                                                                                           Line 11 Token: ID Value: type
+Line 11 Token: =                                                                                                        Line 11 Token: =
+Line 11 Token: ID Value: image                                                                                          Line 11 Token: ID Value: image
+Line 11 Token: /                                                                                                        Line 11 Token: /
+Line 11 Token: ID Value: gif                                                                                            Line 11 Token: ID Value: gif
+Line 11 Token: ID Value: href                                                                                           Line 11 Token: ID Value: href
+Line 11 Token: =                                                                                                        Line 11 Token: =
+Line 11 Token: [                                                                                                        Line 11 Token: [
+Line 11 Token: [                                                                                                        Line 11 Token: [
+Line 11 Token: ID Value: home                                                                                           Line 11 Token: ID Value: home
+Line 11 Token: ]                                                                                                        Line 11 Token: ]
+Line 11 Token: ]                                                                                                        Line 11 Token: ]
+Line 11 Token: ID Value: Media                                                                                          Line 11 Token: ID Value: Media
+Line 11 Token: /                                                                                                        Line 11 Token: /
+Line 11 Token: ID Value: Pics                                                                                           Line 11 Token: ID Value: Pics
+Line 11 Token: /                                                                                                        Line 11 Token: /
+Line 11 Token: ID Value: favicon                                                                                        Line 11 Token: ID Value: favicon
+ERROR(11): Invalid or misplaced input character: '.'. Character Ignored.                                                ERROR(11): Invalid or misplaced input character: '.'. Character Ignored.
+Line 11 Token: ID Value: gif                                                                                            Line 11 Token: ID Value: gif
+Line 11 Token: >                                                                                                        Line 11 Token: >
+Line 12 Token: <                                                                                                        Line 12 Token: <
+Line 12 Token: /                                                                                                        Line 12 Token: /
+Line 12 Token: ID Value: head                                                                                           Line 12 Token: ID Value: head
+Line 12 Token: >                                                                                                        Line 12 Token: >
+Line 14 Token: <                                                                                                        Line 14 Token: <
+Line 14 Token: ID Value: body                                                                                           Line 14 Token: ID Value: body
+Line 14 Token: >                                                                                                        Line 14 Token: >
+Line 15 Token: <                                                                                                        Line 15 Token: <
+Line 15 Token: ID Value: div                                                                                            Line 15 Token: ID Value: div
+Line 15 Token: ID Value: id                                                                                             Line 15 Token: ID Value: id
+Line 15 Token: =                                                                                                        Line 15 Token: =
+Line 15 Token: STRINGCONST Value: "page" Len: 4 Input: "page"                                                           Line 15 Token: STRINGCONST Value: "page" Len: 4 Input: "page"
+Line 15 Token: >                                                                                                        Line 15 Token: >
+Line 16 Token: <                                                                                                        Line 16 Token: <
+Line 16 Token: ID Value: div                                                                                            Line 16 Token: ID Value: div
+Line 16 Token: ID Value: id                                                                                             Line 16 Token: ID Value: id
+Line 16 Token: =                                                                                                        Line 16 Token: =
+Line 16 Token: STRINGCONST Value: "header" Len: 6 Input: "header"                                                       Line 16 Token: STRINGCONST Value: "header" Len: 6 Input: "header"
+Line 16 Token: >                                                                                                        Line 16 Token: >
+Line 17 Token: <                                                                                                        Line 17 Token: <
+Line 17 Token: ID Value: h1                                                                                             Line 17 Token: ID Value: h1
+Line 17 Token: >                                                                                                        Line 17 Token: >
+Line 17 Token: <                                                                                                        Line 17 Token: <
+Line 17 Token: ID Value: a                                                                                              Line 17 Token: ID Value: a
+Line 17 Token: ID Value: href                                                                                           Line 17 Token: ID Value: href
+Line 17 Token: =                                                                                                        Line 17 Token: =
+Line 17 Token: STRINGCONST Value: "#" Len: 1 Input: "#"                                                                 Line 17 Token: STRINGCONST Value: "#" Len: 1 Input: "#"
+Line 17 Token: >                                                                                                        Line 17 Token: >
+Line 17 Token: ID Value: Quotes                                                                                         Line 17 Token: ID Value: Quotes
+Line 17 Token: ID Value: I                                                                                              Line 17 Token: ID Value: I
+Line 17 Token: ID Value: Have                                                                                           Line 17 Token: ID Value: Have
+Line 17 Token: ID Value: Enjoyed                                                                                        Line 17 Token: ID Value: Enjoyed
+Line 17 Token: <                                                                                                        Line 17 Token: <
+Line 17 Token: /                                                                                                        Line 17 Token: /
+Line 17 Token: ID Value: a                                                                                              Line 17 Token: ID Value: a
+Line 17 Token: >                                                                                                        Line 17 Token: >
+Line 17 Token: <                                                                                                        Line 17 Token: <
+Line 17 Token: /                                                                                                        Line 17 Token: /
+Line 17 Token: ID Value: h1                                                                                             Line 17 Token: ID Value: h1
+Line 17 Token: >                                                                                                        Line 17 Token: >
+
+==============                                                                                                          ==============
+==============                                                                                                          ==============
+./c- quote.c-                                                                                                           ./c- quote.c-
+Line 2 Token: ID Value: The                                                                                             Line 2 Token: ID Value: The
+Line 2 Token: ID Value: art                                                                                             Line 2 Token: ID Value: art
+Line 2 Token: ID Value: of                                                                                              Line 2 Token: ID Value: of
+Line 2 Token: ID Value: programming                                                                                     Line 2 Token: ID Value: programming
+Line 2 Token: ID Value: is                                                                                              Line 2 Token: ID Value: is
+Line 2 Token: ID Value: the                                                                                             Line 2 Token: ID Value: the
+Line 2 Token: ID Value: art                                                                                             Line 2 Token: ID Value: art
+Line 2 Token: ID Value: of                                                                                              Line 2 Token: ID Value: of
+Line 2 Token: ID Value: organizing                                                                                      Line 2 Token: ID Value: organizing
+Line 2 Token: ID Value: complexity                                                                                      Line 2 Token: ID Value: complexity
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.                                                 ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+Line 3 Token: DEC                                                                                                       Line 3 Token: DEC
+Line 3 Token: ID Value: E                                                                                               Line 3 Token: ID Value: E
+ERROR(3): Invalid or misplaced input character: '.'. Character Ignored.                                                 ERROR(3): Invalid or misplaced input character: '.'. Character Ignored.
+Line 3 Token: ID Value: W                                                                                               Line 3 Token: ID Value: W
+ERROR(3): Invalid or misplaced input character: '.'. Character Ignored.                                                 ERROR(3): Invalid or misplaced input character: '.'. Character Ignored.
+Line 3 Token: ID Value: Dijkstra                                                                                        Line 3 Token: ID Value: Dijkstra
+
+==============                                                                                                          ==============
+==============                                                                                                          ==============
+./c- quoteTest.c-                                                                                                       ./c- quoteTest.c-
+Line 1 Token: STRINGCONST Value: "dog" Len: 3 Input: "dog"                                                              Line 1 Token: STRINGCONST Value: "dog" Len: 3 Input: "dog"
+Line 2 Token: STRINGCONST Value: "" Len: 0 Input: ""                                                                    Line 2 Token: STRINGCONST Value: "" Len: 0 Input: ""
+Line 3 Token: STRINGCONST Value: "dog" Len: 3 Input: "\dog"                                                             Line 3 Token: STRINGCONST Value: "dog" Len: 3 Input: "\dog"
+Line 4 Token: STRINGCONST Value: "dog"cat" Len: 7 Input: "dog\"cat"                                                     Line 4 Token: STRINGCONST Value: "dog"cat" Len: 7 Input: "dog\"cat"
+Line 5 Token: STRINGCONST Value: ""dog"" Len: 5 Input: "\"dog\""                                                        Line 5 Token: STRINGCONST Value: ""dog"" Len: 5 Input: "\"dog\""
+Line 6 Token: STRINGCONST Value: ""dog"cat"" Len: 9 Input: "\"dog\"cat\""                                               Line 6 Token: STRINGCONST Value: ""dog"cat"" Len: 9 Input: "\"dog\"cat\""
+Line 7 Token: STRINGCONST Value: ""dog""cat"" Len: 10 Input: "\"dog\"\"cat\""                                           Line 7 Token: STRINGCONST Value: ""dog""cat"" Len: 10 Input: "\"dog\"\"cat\""
+Line 8 Token: STRINGCONST Value: "dog\cat" Len: 7 Input: "dog\\cat"                                                     Line 8 Token: STRINGCONST Value: "dog\cat" Len: 7 Input: "dog\\cat"
+Line 9 Token: STRINGCONST Value: "\dog\cat" Len: 8 Input: "\\dog\\cat"                                                  Line 9 Token: STRINGCONST Value: "\dog\cat" Len: 8 Input: "\\dog\\cat"
+Line 10 Token: STRINGCONST Value: "\dog\cat\" Len: 9 Input: "\\dog\\cat\\"                                              Line 10 Token: STRINGCONST Value: "\dog\cat\" Len: 9 Input: "\\dog\\cat\\"
+Line 11 Token: STRINGCONST Value: "dog\" Len: 4 Input: "dog\\"                                                          Line 11 Token: STRINGCONST Value: "dog\" Len: 4 Input: "dog\\"
+Line 12 Token: STRINGCONST Value: "dog" Len: 3 Input: "dog"                                                             Line 12 Token: STRINGCONST Value: "dog" Len: 3 Input: "dog"
+Line 12 Token: STRINGCONST Value: "cat" Len: 3 Input: "cat"                                                             Line 12 Token: STRINGCONST Value: "cat" Len: 3 Input: "cat"
+Line 13 Token: STRINGCONST Value: ""dog"" Len: 5 Input: "\"dog\""                                                       Line 13 Token: STRINGCONST Value: ""dog"" Len: 5 Input: "\"dog\""
+Line 14 Token: STRINGCONST Value: "abc"" Len: 4 Input: "\a\b\c\""                                                       Line 14 Token: STRINGCONST Value: "abc"" Len: 4 Input: "\a\b\c\""
+Line 15 Token: CHARCONST Value: 'a' Input: 'a'                                                                          Line 15 Token: CHARCONST Value: 'a' Input: 'a'
+Line 16 Token: CHARCONST Value: '"' Input: '"'                                                                          Line 16 Token: CHARCONST Value: '"' Input: '"'
+Line 17 Token: CHARCONST Value: '                                                                                       Line 17 Token: CHARCONST Value: '
+' Input: '\n'                                                                                                           ' Input: '\n'
+Line 18 Token: CHARCONST Value: '\' Input: '\\'                                                                         Line 18 Token: CHARCONST Value: '\' Input: '\\'
+Line 19 Token: CHARCONST Value: ''' Input: '\''                                                                         Line 19 Token: CHARCONST Value: ''' Input: '\''
+WARNING(20): character is 3 characters long and not a single character: ''abc''. The first char will be used.           WARNING(20): character is 3 characters long and not a single character: ''abc''. The first char will be used.
+Line 20 Token: CHARCONST Value: 'a' Input: 'abc'                                                                        Line 20 Token: CHARCONST Value: 'a' Input: 'abc'
+
+==============                                                                                                          ==============
+==============                                                                                                          ==============
+./c- stringTest.c-                                                                                                      ./c- stringTest.c-
+Line 1 Token: STRINGCONST Value: "DOUBLE QUOTES" Len: 13 Input: "DOUBLE QUOTES"                                         Line 1 Token: STRINGCONST Value: "DOUBLE QUOTES" Len: 13 Input: "DOUBLE QUOTES"
+Line 2 Token: STRINGCONST Value: "dog" Len: 3 Input: "dog"                                                              Line 2 Token: STRINGCONST Value: "dog" Len: 3 Input: "dog"
+Line 3 Token: STRINGCONST Value: "" Len: 0 Input: ""                                                                    Line 3 Token: STRINGCONST Value: "" Len: 0 Input: ""
+Line 4 Token: STRINGCONST Value: "123" Len: 3 Input: "123"                                                              Line 4 Token: STRINGCONST Value: "123" Len: 3 Input: "123"
+Line 5 Token: STRINGCONST Value: " " Len: 2 Input: " "                                                                  Line 5 Token: STRINGCONST Value: " " Len: 2 Input: " "
+Line 6 Token: STRINGCONST Value: "'" Len: 1 Input: "'"                                                                  Line 6 Token: STRINGCONST Value: "'" Len: 1 Input: "'"
+Line 7 Token: STRINGCONST Value: "'"\^" Len: 4 Input: "\'\"\\\^"                                                        Line 7 Token: STRINGCONST Value: "'"\^" Len: 4 Input: "\'\"\\\^"
+Line 8 Token: STRINGCONST Value: "\^" Len: 2 Input: "\\\^"                                                              Line 8 Token: STRINGCONST Value: "\^" Len: 2 Input: "\\\^"
+Line 9 Token: STRINGCONST Value: "\x" Len: 2 Input: "\\\x"                                                              Line 9 Token: STRINGCONST Value: "\x" Len: 2 Input: "\\\x"
+Line 10 Token: STRINGCONST Value: "\x" Len: 2 Input: "\\x"                                                              Line 10 Token: STRINGCONST Value: "\x" Len: 2 Input: "\\x"
+Line 11 Token: STRINGCONST Value: "x" Len: 1 Input: "\x"                                                                Line 11 Token: STRINGCONST Value: "x" Len: 1 Input: "\x"
+Line 12 Token: STRINGCONST Value: "adog'"\^" Len: 8 Input: "a\d\o\g\'\"\\\^"                                            Line 12 Token: STRINGCONST Value: "adog'"\^" Len: 8 Input: "a\d\o\g\'\"\\\^"
+Line 13 Token: STRINGCONST Value: "dog cat" Len: 7 Input: "dog cat"                                                     Line 13 Token: STRINGCONST Value: "dog cat" Len: 7 Input: "dog cat"
+Line 14 Token: STRINGCONST Value: "dogs^Icats^Jrats" Len: 16 Input: "dogs^Icats^Jrats"                                  Line 14 Token: STRINGCONST Value: "dogs^Icats^Jrats" Len: 16 Input: "dogs^Icats^Jrats"
+Line 15 Token: STRINGCONST Value: "dogs" Len: 4 Input: "dogs"                                                           Line 15 Token: STRINGCONST Value: "dogs" Len: 4 Input: "dogs"
+Line 15 Token: STRINGCONST Value: "cats" Len: 4 Input: "cats"                                                           Line 15 Token: STRINGCONST Value: "cats" Len: 4 Input: "cats"
+Line 15 Token: STRINGCONST Value: "rats" Len: 4 Input: "rats"                                                           Line 15 Token: STRINGCONST Value: "rats" Len: 4 Input: "rats"
+Line 16 Token: STRINGCONST Value: "dogs"" Len: 5 Input: "dogs\""                                                        Line 16 Token: STRINGCONST Value: "dogs"" Len: 5 Input: "dogs\""
+Line 16 Token: ID Value: cats                                                                                           Line 16 Token: ID Value: cats
+Line 16 Token: STRINGCONST Value: ""rats" Len: 5 Input: "\"rats"                                                        Line 16 Token: STRINGCONST Value: ""rats" Len: 5 Input: "\"rats"
+Line 17 Token: STRINGCONST Value: "SINGLE QUOTES" Len: 13 Input: "SINGLE QUOTES"                                        Line 17 Token: STRINGCONST Value: "SINGLE QUOTES" Len: 13 Input: "SINGLE QUOTES"
+Line 18 Token: CHARCONST Value: 'd' Input: 'd'                                                                          Line 18 Token: CHARCONST Value: 'd' Input: 'd'
+Line 19 Token: CHARCONST Value: '1' Input: '1'                                                                          Line 19 Token: CHARCONST Value: '1' Input: '1'
+Line 20 Token: CHARCONST Value: ' ' Input: ' '                                                                          Line 20 Token: CHARCONST Value: ' ' Input: ' '
+Line 21 Token: CHARCONST Value: ' ' Input: ' '                                                                          Line 21 Token: CHARCONST Value: ' ' Input: ' '
+Line 22 Token: CHARCONST Value: '"' Input: '"'                                                                          Line 22 Token: CHARCONST Value: '"' Input: '"'
+Line 23 Token: CHARCONST Value: '"' Input: '\"'                                                                         Line 23 Token: CHARCONST Value: '"' Input: '\"'
+Line 24 Token: CHARCONST Value: '\' Input: '\\'                                                                         Line 24 Token: CHARCONST Value: '\' Input: '\\'
+Line 25 Token: CHARCONST Value: '^' Input: '\^'                                                                         Line 25 Token: CHARCONST Value: '^' Input: '\^'
+Line 26 Token: CHARCONST Value: 'x' Input: '\x'                                                                         Line 26 Token: CHARCONST Value: 'x' Input: '\x'
+Line 27 Token: CHARCONST Value: '@' Input: '\@'                                                                         Line 27 Token: CHARCONST Value: '@' Input: '\@'
+Line 28 Token: CHARCONST Value: 'a' Input: 'a'                                                                          Line 28 Token: CHARCONST Value: 'a' Input: 'a'
+Line 29 Token: CHARCONST Value: 'd' Input: '\d'                                                                         Line 29 Token: CHARCONST Value: 'd' Input: '\d'
+WARNING(30): character is 2 characters long and not a single character: ''^I''. The first char will be used.            WARNING(30): character is 2 characters long and not a single character: ''^I''. The first char will be used.
+Line 30 Token: CHARCONST Value: '^' Input: '^I'                                                                         Line 30 Token: CHARCONST Value: '^' Input: '^I'
+WARNING(31): character is 2 characters long and not a single character: ''^J''. The first char will be used.            WARNING(31): character is 2 characters long and not a single character: ''^J''. The first char will be used.
+Line 31 Token: CHARCONST Value: '^' Input: '^J'                                                                         Line 31 Token: CHARCONST Value: '^' Input: '^J'
+Line 32 Token: CHARCONST Value: 't' Input: '\t'                                                                         Line 32 Token: CHARCONST Value: 't' Input: '\t'
+Line 33 Token: CHARCONST Value: '                                                                                       Line 33 Token: CHARCONST Value: '
+' Input: '\n'                                                                                                           ' Input: '\n'
+Line 34 Token: CHARCONST Value: ' ' Input: '\0'                                                                          Line 34 Token: CHARCONST Value: ' ' Input: '\0'
+Line 35 Token: CHARCONST Value: ''' Input: '\''                                                                         Line 35 Token: CHARCONST Value: ''' Input: '\''
+Line 36 Token: STRINGCONST Value: "dogs" Len: 4 Input: "dogs"                                                           Line 36 Token: STRINGCONST Value: "dogs" Len: 4 Input: "dogs"
+Line 36 Token: STRINGCONST Value: "and" Len: 3 Input: "and"                                                             Line 36 Token: STRINGCONST Value: "and" Len: 3 Input: "and"
+Line 36 Token: STRINGCONST Value: "cats" Len: 4 Input: "cats"                                                           Line 36 Token: STRINGCONST Value: "cats" Len: 4 Input: "cats"
+Line 37 Token: CHARCONST Value: 'O' Input: 'O'                                                                          Line 37 Token: CHARCONST Value: 'O' Input: 'O'
+Line 37 Token: CHARCONST Value: 'M' Input: 'M'                                                                          Line 37 Token: CHARCONST Value: 'M' Input: 'M'
+Line 37 Token: CHARCONST Value: 'G' Input: 'G'                                                                          Line 37 Token: CHARCONST Value: 'G' Input: 'G'
+WARNING(38): character is 18 characters long and not a single character: ''meerkats are great''. The first cha          WARNING(38): character is 18 characters long and not a single character: ''meerkats are great''. The first cha
+Line 38 Token: CHARCONST Value: 'm' Input: 'meerkats are great'                                                         Line 38 Token: CHARCONST Value: 'm' Input: 'meerkats are great'
+Line 39 Token: STRINGCONST Value: "THE END" Len: 7 Input: "THE END"                                                     Line 39 Token: STRINGCONST Value: "THE END" Len: 7 Input: "THE END"
+
+==============                                                                                                          ==============
+==============                                                                                                          ==============
+./c- textTest2.c-                                                                                                 <
+Line 1 Token: ID Value: Professor                                                                                 <
+Line 1 Token: ID Value: Farnsworth                                                                                <
+Line 1 Token: :                                                                                                   <
+Line 1 Token: STRINGCONST Value: "Amy, technology isn't intrinsically good or evil. It's how it's used. Like t    <
+                                                                                                                  <
+==============                                                                                                    <
+==============                                                                                                    <
+./c- textTest.c-                                                                                                        ./c- textTest.c-
+Line 1 Token: ID Value: Professor                                                                                       Line 1 Token: ID Value: Professor
+Line 1 Token: ID Value: Farnsworth                                                                                      Line 1 Token: ID Value: Farnsworth
+Line 1 Token: :                                                                                                         Line 1 Token: :
+ERROR(1): Invalid or misplaced input character: '"'. Character Ignored.                                                 ERROR(1): Invalid or misplaced input character: '"'. Character Ignored.
+Line 1 Token: ID Value: Amy                                                                                             Line 1 Token: ID Value: Amy
+Line 1 Token: ,                                                                                                         Line 1 Token: ,
+Line 1 Token: ID Value: technology                                                                                      Line 1 Token: ID Value: technology
+Line 1 Token: ID Value: isn                                                                                             Line 1 Token: ID Value: isn
+ERROR(1): Invalid or misplaced input character: '''. Character Ignored.                                                 ERROR(1): Invalid or misplaced input character: '''. Character Ignored.
+Line 1 Token: ID Value: t                                                                                               Line 1 Token: ID Value: t
+Line 1 Token: ID Value: intrinsically                                                                                   Line 1 Token: ID Value: intrinsically
+Line 1 Token: ID Value: good                                                                                            Line 1 Token: ID Value: good
+Line 1 Token: OR                                                                                                        Line 1 Token: OR
+Line 2 Token: ID Value: evil                                                                                            Line 2 Token: ID Value: evil
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.                                                 ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+Line 2 Token: ID Value: It                                                                                              Line 2 Token: ID Value: It
+WARNING(2): character is 8 characters long and not a single character: ''s how it''. The first char will be us          WARNING(2): character is 8 characters long and not a single character: ''s how it''. The first char will be us
+Line 2 Token: CHARCONST Value: 's' Input: 's how it'                                                                    Line 2 Token: CHARCONST Value: 's' Input: 's how it'
+Line 2 Token: ID Value: s                                                                                               Line 2 Token: ID Value: s
+Line 2 Token: ID Value: used                                                                                            Line 2 Token: ID Value: used
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.                                                 ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+Line 2 Token: ID Value: Like                                                                                            Line 2 Token: ID Value: Like
+Line 2 Token: ID Value: the                                                                                             Line 2 Token: ID Value: the
+Line 2 Token: ID Value: Death                                                                                           Line 2 Token: ID Value: Death
+Line 2 Token: ID Value: Ray                                                                                             Line 2 Token: ID Value: Ray
+ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.                                                 ERROR(2): Invalid or misplaced input character: '.'. Character Ignored.
+ERROR(2): Invalid or misplaced input character: '"'. Character Ignored.                                                 ERROR(2): Invalid or misplaced input character: '"'. Character Ignored.
+
+                                                                                                                  >     ==============
+                                                                                                                  >     ==============
+                                                                                                                  >     ./c- textTest2.c-
+                                                                                                                  >     Line 1 Token: ID Value: Professor
+                                                                                                                  >     Line 1 Token: ID Value: Farnsworth
+                                                                                                                  >     Line 1 Token: :
+                                                                                                                  >     Line 1 Token: STRINGCONST Value: "Amy, technology isn't intrinsically good or evil. It's how it's used. Like t
+                                                                                                                  >
+* End of testing                                                                                                        * End of testing
+Kill all remaining c- processes                                                                                         Kill all remaining c- processes

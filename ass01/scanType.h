@@ -1,16 +1,8 @@
 #ifndef SCANTYPE_H
 #define SCANTYPE_H
 
-enum TokenClass {
-    ID_,
-    NUMCONST_,
-    CHARCONST_,
-    STRINGCONST_,
-    BOOLCONST_
-};
-
 struct TokenData {
-   TokenClass tokenclass; // token class
+   int tokenclass; // token class
    int linenum;    // line where found
    char *tokenstr; // what string was actually read
    char cvalue;    // any character value
