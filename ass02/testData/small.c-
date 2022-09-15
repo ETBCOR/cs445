@@ -1,0 +1,9 @@
+int x[666], y, z;
+int dog(int a[], b; char c) {return b;                                                                                                                                                                                                                                                                                        }
+int fox(int civet) {
+    int i;
+
+    if civet > 3 then return x; else return y;
+    i=0;
+    while i<10 do i++;
+}

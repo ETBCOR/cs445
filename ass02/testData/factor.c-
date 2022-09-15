@@ -1,0 +1,24 @@
+main()
+{
+      int n;
+
+      while true do {
+          n = input();
+          if n<2 then break;
+
+          while n%2==0 do {
+              output(2);
+              n /= 2;
+          }
+
+          for i = 3 to n by 2 do {
+              if i*i>n then break;
+              while n%i==0 do {
+                  output(i);
+                  n /= i;
+              }
+          }
+          if n>1 then output(n);
+          outnl();
+      }
+}

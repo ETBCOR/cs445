@@ -1,0 +1,19 @@
+// C-F22
+int g;
+
+main() {
+    int a;
+    {
+        int b;
+        {
+            int c;
+        }
+    }
+    {
+        int d;
+        {
+            int e;
+            int f;
+        }
+    }
+}

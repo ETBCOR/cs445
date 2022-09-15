@@ -1,0 +1,21 @@
+// C-F22
+int w;
+
+int dog(int x) {
+    int y, z;
+
+    y = x * 111 + 222;   // left to right
+
+    z = y + 333 * (444 + 555);   // right to left
+
+    w = (111 + 222) * (333 + 444);
+
+    w = dog(3) * dog(3);
+
+    return z;
+}
+
+main() {
+    dog(666);
+}
+

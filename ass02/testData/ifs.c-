@@ -1,0 +1,23 @@
+ant()
+{ 
+   bool x, y;
+
+   if x then 999;
+
+   if x then 999; else 111;
+
+   if x then 999;
+   else if y then 888;
+   else 555;
+
+   if x then 999;
+   else if y then 888;
+
+   if x then if y then 222;
+
+   if x then 222; else if y then 333;
+
+   if x then if y then 222; else 444;
+
+}
+

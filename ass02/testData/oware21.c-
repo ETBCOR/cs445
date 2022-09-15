@@ -1,0 +1,350 @@
+// C-F22
+// Game Title: Oware
+// Author: Bryce M. Wheeler
+// Date Created: December 25, 2010   "Merry Christmas!"
+// Class: CS445 Compiler Design
+// References: http://en.wikipedia.org/wiki/Oware
+//
+// THE GAME:
+//
+// The game requires an oware board and 48 seeds. A typical oware
+// board has two straight rows of six pits, called "houses".
+// Each player controls the six houses on their side of the board. The
+// game begins with four seeds in each of the twelve houses.
+// The object of the game is to capture more seeds than one's
+// opponent. Since the game has only 48 seeds, capturing 25 is
+// sufficient to accomplish this.
+// Since there is an even number of seeds, it is possible for the game
+// to end in a draw, where each player has captured 24.
+//
+// TURN:
+// 
+// Players take turns moving the seeds. On a turn, a player chooses
+// one of the six houses under their control. The player removes all
+// seeds from that house, and distributes them,
+// dropping one in each house counter-clockwise from this house, in a
+// process called sowing. Seeds are not distributed into the house
+// drawn from. That is, the starting house is left empty;
+// if it contained 12 seeds, it is skipped, and the twelfth seed is
+// placed in the next house.
+//
+// Knowing the number of seeds in each house is, of course, important
+// to game play. So the board is printed after each players turn. When
+// there are many seeds in a house,
+// sometimes enough to make a full lap of the board or more, they
+// cannot easily be counted by eye.
+//
+// SCORING:
+// 
+// After a turn, if the last seed placed into an opponent's house
+// brought the house's total to exactly two or three, all the seeds in
+// that house are captured and added to the player's score.  If the
+// previous-to-last seed also brought an opponent's house to two or
+// three, these are captured as well, and so on.  Therefore, seeds may
+// be captured from every consecutive house on the opponent's side
+// whose seed total was brought to two or three on the player's
+// current turn.  Typically, if a move would capture all an opponent's
+// seeds, the capture is forfeited, and the seeds are instead left on
+// the board, since this would prevent the opponent from continuing
+// the game.  However, in this game it IS possible to capture all of
+// an opponent's seeds.  Not allowing this to happen could be an
+// improvement to this game.
+//
+// If an opponent's houses are all empty, the current player must make
+// a move that gives the opponent seeds. If no such move is possible,
+// the current player captures all seeds in his/her own territory,
+// ending the game.
+//
+// WINNING:
+// 
+// The game is over when one player has captured 25 or more seeds, or
+// each player has taken 24 seeds (draw). If both players agree that
+// the game has been reduced to an endless cycle,
+// each player captures the seeds on their side of the board.
+//
+// BOARD LAYOUT:
+// T 0 T 4 4 4 4 4 4       
+// 
+// Cups are numbered left-to-right: 1 2 3 4 5 6 The first three
+// characters represent the Player 'T' with his score in the
+// middle. The remaining six numbers are the number of seeds in that
+// cup.
+// 
+// F 0 F 4 4 4 4 4 4 
+// 
+// Cups are numbered left-to-right: 1 2 3 4 5 6
+// The first three characters represent the Player 'F' with his score
+// in the middle. The remaining six numbers are the number of seeds in
+// that cup.
+//
+// COMPILING THE GAME:
+// ./c- oware.c-
+//
+// EXECUTING THE GAME:
+// ./tm oware.tm       // Run the game using the TM machine
+// a 500000            // Needs abort limit of 500,000
+// g                   // Starts the game
+//
+// PLAYING THIS GAME:
+// 
+// Player T starts the game.  Enter an integer from 1 to 6 for the cup
+// you want dispersed.  The updated board and score are printed at the
+// beginning of each turn.  A player has won when their player letter,
+// 
+// T or F
+// 
+// is displayed to the screen four times followed by their final
+// score.  The loser's letter is displayed twice along with their
+// score on the line following the winner.  Have fun! 
+
+int cups[12];
+int sumPlayerT;
+int sumPlayerF;
+bool winnerPlayerT;
+bool winnerPlayerF;
+bool winner;
+bool turn;
+
+debug(bool type){
+    int count;
+    count = 10;
+    while count > 0 do {
+        outputb(type);
+        count--;
+        if count==0 then  outnl();
+    }
+}
+
+initGame(){
+    int index;
+    index = 0;
+    
+    //Initialize the board to have 4 seeds per cup.
+    while index < 12 do {
+        cups[index] = 4;
+        index++;
+    }
+    return;
+}
+
+printBoard(){
+    int index;
+    index = 5;
+    // Print out Player T's cups
+    while index >= 0 do {
+        if index == 5 then {
+            outputb(true);
+            output(sumPlayerT);
+            outputb(true);
+        }
+        output(cups[index]);
+        index--;
+    }
+    
+    outnl();
+    index = 6;
+    
+    // Print out Player F's cups
+    while index < 12 do {
+        if index == 6 then {
+            outputb(false);
+            output(sumPlayerF);
+            outputb(false);
+        }
+        output(cups[index]);
+        index++;
+    }
+    outnl();
+    return;
+}
+
+tryPlayerT(){
+    //int index;
+    //index = 0;
+    //while index < 6 do {
+    //    sumPlayerT += cups[index];
+    //    index++;
+    //}
+    if sumPlayerT > 24 then {
+       winnerPlayerT = true;
+       winner = true;
+    }
+    return;
+}
+
+tryPlayerF(){
+    //int index;
+    //index = 6;
+    //while index < 12 do {
+    //    sumPlayerF += cups[index];
+    //    index++;
+    //}
+    if sumPlayerF > 24 then {
+       winnerPlayerF = true;
+       winner = true;
+    }
+    return;
+}
+
+moveSeeds(int cup; bool player){
+    int index, numSeeds, numSeeds2;
+    bool consecutive;
+    
+    consecutive = true;
+    numSeeds = numSeeds2 = cups[cup];
+    cups[cup] = 0;                      // Set cup to empty.
+    index = cup;                        // Move to the next cup because you can't put seeds into the cup you take seeds from.
+    // Disperse the seeds over the cups.
+    while numSeeds != 0 do {
+        index++;
+        if index > 11 or index < 0 then {
+            index = 0;
+        }
+        
+        if index != cup then {
+            cups[index]++;
+        }
+        
+        numSeeds--;
+    }
+    
+    // Claim the seeds
+    while numSeeds2 > 0 and consecutive do {
+        if turn then {                                               // If Player T's turn and
+            if index >= 6 and index < 12 then {                        // stopped on opponents side
+                if cups[index] == 2 or cups[index] == 3 then {       // and the seeds in the cup is 2 or 3
+                    if consecutive then {                            // and it is consecutive
+                        sumPlayerT += cups[index];              // claim the seeds
+                        cups[index] = 0;                        // set the cup with the claimed seeds to 0
+                        consecutive = true;
+                    }
+                }
+                else{
+                    consecutive = false;
+                }
+            }
+            else{
+                consecutive = false;
+            }
+        }
+        else{                                                   // If Player F's turn
+            if index >= 0 and index < 6 then {                         // stopped on opponents side
+                if cups[index] == 2 or cups[index] == 3 then {       // and the seeds in the cup is 2 or 3
+                    if consecutive then {                            // and it is consecutive
+                        sumPlayerF += cups[index];              // claim the seeds
+                        cups[index] = 0;                        // set the cup with the claimed seeds to 0
+                        consecutive = true;
+                    }
+                }
+                else
+                {
+                    consecutive = false;
+                }
+            }
+            else{
+                consecutive = false;
+            }
+        }
+        
+        index--;                                                // Move to the next previous cup.
+        if index < 0 then {
+            index = 11;                                         // If we get to the end start back over at the beginning.
+        }
+        
+        numSeeds2--;
+    }
+}
+
+main(){
+    int play;
+    bool playConverted;
+
+    // Initialize variable values
+    play = 0;                                   // Player's move, aka cup they want to move seeds from.
+    playConverted = false;                      // Used in the conversion of Player T's cup choice.
+    turn = true;                                // Who's turn it is
+    winner = false;
+    sumPlayerT = 0;
+    sumPlayerF = 0;
+    winnerPlayerT = false;
+    winnerPlayerF = false;
+    
+    initGame();
+    
+    // Play until someone wins
+    while not winner do {
+        printBoard();
+        if turn then {
+            outputb(true);
+        }
+        else{
+            outputb(false);
+        }
+        
+        play = input();
+        while play > 6 or play < 1 do {           // Player's move has to be within the numbers 1 - 6
+            play = input();
+        }
+        
+        play -= 1;                             // Adjust for 0 indexing.
+        
+        if turn then {
+            if play == 0 and not playConverted then {
+                play = 5;            // Convert the user cup number to the index numbering for Player T's cup range.
+                playConverted = true;
+            }
+            if play == 1 and not playConverted then {
+                play = 4;
+                playConverted = true;
+            }
+            if play == 2 and not playConverted then {
+                play = 3;
+                playConverted = true;
+            }
+            if play == 3 and not playConverted then {
+                play = 2;
+                playConverted = true;
+            }
+            if play == 4 and not playConverted then {
+                play = 1;
+                playConverted = true;
+            }
+            if play == 5 and not playConverted then {
+                play = 0;
+                playConverted = true;
+            }
+            playConverted = false;                  // Reset the play conversion flag to false after the play has been converted.
+            moveSeeds(play, true);
+            turn = false;
+        }
+        else{
+            play = play + 6;                   // Adjust user specified cup number to Player F's cup range.
+            moveSeeds(play, false);
+            turn = true;
+        }
+        tryPlayerT();
+        tryPlayerF();
+    }
+    
+    // Player T (true) wins!
+    if winnerPlayerT then {
+        outnl();
+        outputb(true);
+        output(sumPlayerT);
+        outnl();
+        outputb(false);
+        output(sumPlayerF);
+        outnl();
+    }
+    // Player F (false) wins!
+    else{
+        outnl();
+        outputb(false);
+        output(sumPlayerF);
+        outnl();
+        outputb(true);
+        output(sumPlayerT);
+        outnl();
+    }
+    return;
+}

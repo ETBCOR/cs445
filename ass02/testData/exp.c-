@@ -1,0 +1,12 @@
+main()
+{
+    bool x;
+    int array[23];
+
+    {
+        false or true and 111 < 222 + 333*444;
+        444*333 + 222 > 111 and true or false;
+        (444*(333 + 222) > 111) and (true or false);
+    }
+    x = true or not - ? array[11+-8] - - 42 / 13 % 5 + 31 - 331 == 12 and 7 < 9;
+}
