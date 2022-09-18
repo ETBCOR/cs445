@@ -1,12 +1,13 @@
 %{
 #include <string>
-#include "y.tab.h"
-#include "scanType.h"
 #include <float.h>
+#include "scanType.h"
+#include "tree.h"
+#include "y.tab.h"
 
 int curline = 1;
 
-static int setValue(int linenum, int tokenclass, char *tokenstr)
+static int setValue(int linenum, int tokenclass, char * tokenstr)
 {
     yylval.tokenData = new TokenData;    // declare the token that will be returned
     yylval.tokenData->linenum = linenum; // record what line the token was found on

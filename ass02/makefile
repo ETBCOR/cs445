@@ -10,10 +10,10 @@ prj = parser
 bin = c-
 arc = corg02
 
-tst = factor
+tst = ifs
 
-$(bin): $(lexgens) $(yaccgens)
-	$(cc) $(lexgens) $(yaccgens) $(ccopts) -o $(bin)
+$(bin): $(lexgens) $(yaccgens) tree.o tree.h
+	$(cc) tree.o tree.h $(lexgens) $(yaccgens) $(ccopts) -o $(bin)
 
 $(yaccgens): $(prj).y
 	$(yacc) $(yaccopts) $(prj).y
@@ -21,11 +21,14 @@ $(yaccgens): $(prj).y
 $(lexgens): $(prj).l $(yaccgens)
 	$(lex) $(lexopts) $(prj).l
 
+tree.o: tree.cpp tree.h
+	$(cc) tree.cpp -c -o tree.o
+
 clean:
 	rm -f $(lexgens) $(yaccgens) $(bin) $(prj).tab.h $(prj).tab.c myout
 
 edit:
-	vim $(prj).l $(prj).y scanType.h makefile
+	vim $(prj).l $(prj).y scanType.h tree.h tree.cpp makefile
 
 run: $(bin)
 	./$(bin) testData/$(tst).c-
@@ -35,4 +38,4 @@ test: $(bin)
 	sdiff -a myout testData/$(tst).out
 
 tar:
-	tar -cf $(arc).tar $(prj).l $(prj).y scanType.h makefile 
+	tar -cf $(arc).tar $(prj).l $(prj).y scanType.h tree.h tree.cpp makefile 
