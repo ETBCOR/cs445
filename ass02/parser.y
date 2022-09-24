@@ -10,11 +10,11 @@
 |*                              *|
 \********************************/
 
-#include "scanType.h"
-#include "tree.h"
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>
+#include "scanType.h"
+#include "node.h"
 
 extern int yylex();
 extern FILE * yyin;
@@ -22,295 +22,405 @@ extern int curline;
 extern void yyerror(const char *);
 
 bool printTreeFlag = true;
-TreeNode * syntaxTree;
+Node * AST;
 %}
 
+ /*%code requires {
+   #include "node.h" 
+}*/
+
+/* possible "terminal" values */
 %union {
     class TokenData * tokenData; // for terminals. yylex()'s $ vars give token data
-    class TreeNode * node;       // for nonterminals.
-    ExpType type;                // for passing types (i.e pass a type in a decl like int or bool)
+    class Node * node;           // for nonterminals.
 }
 
-%token <terminal> STATIC BOOL CHAR INT
-%token <terminal> IF THEN ELSE WHILE FOR DO TO BY RETURN BREAK
-%token <terminal> AND OR PLUS MINUS EQ NEQ LEQ GEQ LESS GRTR ASS ADDASS SUBASS MULASS DIVASS DEC INC NOT ASTR SLASH PERC QUEST
-%token <terminal> PARENL PARENR BRACEL BRACER BRACKL BRACKR
-%token <terminal> SEMCOL COL COMMA 
-%token <terminal> BOOLCONST ID NUMCONST CHARCONST STRINGCONST
+/* terminals */
+%token <tokenData> STATIC BOOL CHAR INT
+%token <tokenData> IF THEN ELSE WHILE FOR DO TO BY RETURN BREAK
+%token <tokenData> AND OR PLUS MINUS EQ NEQ LEQ GEQ LESS GRTR
+%token <tokenData> ASS ADDASS SUBASS MULASS DIVASS DEC INC NOT ASTR SLASH PERC QUEST
+%token <tokenData> PARENL PARENR BRACKL BRACKR BRACEL BRACER
+%token <tokenData> SEMCOL COL COMMA 
+%token <tokenData> BOOLCONST ID NUMCONST CHARCONST STRINGCONST
+
+/* nonterminals */
+%type <tokenData> typeSpec assignop relop sumop mulop unaryop constant
+%type <node> program declList decl varDecl scopedVarDecl varDeclList varDeclInit varDeclId funDecl parms parmList parmTypeList parmIdList parmId
+%type <node> stmt stmtClosed stmtOpen expStmt compoundStmt localDecls stmtList iterStmtClosed iterStmtOpen iterRange returnStmt breakStmt
+%type <node> exp simpleExp andExp unaryRelExp relExp sumExp mulExp unaryExp factor mutable immutable call args argList
+
+/* start symbol */
+%start program
 
 %%
+
 program
-    : declList { /*syntaxTree = $1;*/ }
+    : declList {
+        $$ = $1;
+    }
     ;
 
 declList
     : declList decl
     {
-        /*YYSTYPE t = $1;
-        if (t != NULL) {
-            while (t->sibling != NULL) t = t->sibling;
-            t->sibling = $2;
-        } else {
-            $$ = $2; 
-        }*/
+        AST->add($2);
     }
-    | decl { /*$$ = $1;*/ }
+    | decl {
+        //AST->add($1);
+        AST = $1;
+        if ($1) $1->isRoot = true;
+        $$ = $1;
+    }
     ;
 
 decl
-    : varDecl { /*$$ = $1;*/ }
-    | funcDecl { /*$$ = $1;*/ }
+    : varDecl { $$ = $1; }
+    | funDecl { $$ = $1; }
     ;
 
 varDecl
     : typeSpec varDeclList SEMCOL {
-        
+        $$ = $2;
+
+        if ($2) {
+            ((VarDecl *)$$)->setType($1->tokenstr, false);
+            ((VarDecl *)$$)->init();
+        }
     }
-    ;
 
 scopedVarDecl
-    : STATIC typeSpec varDeclList SEMCOL {}
-    | typeSpec varDeclList SEMCOL {}
+    : STATIC typeSpec varDeclList SEMCOL {
+        $$ = $3;
+
+        if ($3) {
+            ((VarDecl *)$$)->setType($2->tokenstr, true);
+            ((VarDecl *)$$)->init();
+        }
+    }
+    | typeSpec varDeclList SEMCOL {
+        $$ = $2;
+
+        if ($2) {
+            ((VarDecl *)$$)->setType($1->tokenstr, false);
+            ((VarDecl *)$$)->init();
+        }
+    }
     ;
 
 varDeclList
     : varDeclList COMMA varDeclInit {
-        /*YYSTEPE t = $1;
-        if (t != NULL) {
-            while(t->sibling != NULL) t = t->sibling;
-            t->sibling = $3;
-        } else {
-            $$ = $3;
-        }*/
+        if($$) $$->add($3);
     }
-    | varDeclInit { /*$$ = $1;*/ }
+    | varDeclInit { $$ = $1; }
     ;
 
 varDeclInit
-    : varDeclId {
+    : varDeclId { $$ = $1; }
+    | varDeclId COL simpleExp {
+        $$ = $1;
+        if ($1) {
+            ((VarDecl *)$$)->isInited = true;
+            $$->addChild(0, $3);
+        }
     }
-    | varDeclId COL simpleExp {}
     ;
 
 varDeclId
     : ID {
-        //$$->node = newDeclNode(VarK, $1);
+        $$ = new VarDecl($1);
     }
-    | ID BRACEL NUMCONST BRACER {
-    //    $$->node = newDeclNode(VarK, $1, $2->tokenData->);
+    | ID BRACKL NUMCONST BRACKR {
+        $$ = new VarDecl($1, $3);
     }
-
     ;
 
-typeSpec
-    : BOOL { /*$$->type->expType = BOOL;*/ }
-    | CHAR { }
-    | INT {}
+typeSpec /* uses terminal type TokenData */
+    : BOOL { $$ = $1; }
+    | CHAR { $$ = $1; }
+    | INT  { $$ = $1; }
     ;
 
-funcDecl
-    : typeSpec ID PARENL parms PARENR compoundStmt {}
-    | ID PARENL parms PARENR compoundStmt {}
+funDecl
+    : typeSpec ID PARENL parms PARENR compoundStmt {
+        $$ = new FunDecl($1, $2, $4, $6);
+    }
+    | ID PARENL parms PARENR compoundStmt { 
+        $$ = new FunDecl($1, $3, $5);
+    }
     ;
-
+ 
 parms
-    : parmList {}
-    | /* empty */
+    : parmList { $$ = $1; }
+    | %empty { $$ = NULL; }
     ; 
 
 parmList
-    : parmList SEMCOL parmTypeList {}
-    | parmTypeList {}
+    : parmList SEMCOL parmTypeList {
+        if ($$) $$->add($3);
+    }
+    | parmTypeList { $$ = $1; }
     ;
 
 parmTypeList
-    : typeSpec parmIdList {}
+    : typeSpec parmIdList {
+        $$ = $2;
+        if ($2) ((VarDecl *)$$)->setType($1->tokenstr, false);
+    }
     ;
 
 parmIdList
-    : parmIdList COMMA parmId {}
-    | parmId {}
+    : parmIdList COMMA parmId {
+        if ($$) $$->add($3);
+    }
+    | parmId { $$ = $1; }
     ;
 
 parmId
-    : ID {}
-    | ID BRACEL BRACER {}
+    : ID {
+        $$ = new Parm($1);
+    }
+    | ID BRACKL BRACKR {
+        $$ = new Parm($1, true);
+    }
     ;
 
 stmt
-    : stmtClosed {}
-    | stmtOpen {}
+    : stmtClosed { $$ = $1; }
+    | stmtOpen   { $$ = $1; }
     ;
 
 stmtClosed
-    : IF simpleExp THEN stmtClosed ELSE stmtClosed {}
-    | iterStmtClosed {}
-    | expStmt {}
-    | compoundStmt {}
-    | returnStmt {}
-    | breakStmt {}
+    : IF simpleExp THEN stmtClosed ELSE stmtClosed {
+        $$ = new IfStmt(curline, $2, $4, $6);
+    }
+    | iterStmtClosed { $$ = $1; }
+    | expStmt        { $$ = $1; }
+    | compoundStmt   { $$ = $1; }
+    | returnStmt     { $$ = $1; }
+    | breakStmt      { $$ = $1; }
     ;
 
 stmtOpen
-    : IF simpleExp THEN stmt {}
-    | IF simpleExp THEN stmtClosed ELSE stmtOpen {}
-    | iterStmtOpen {}
+    : IF simpleExp THEN stmt {
+        $$ = new IfStmt(curline, $2, $4);
+    }
+    | IF simpleExp THEN stmtClosed ELSE stmtOpen {
+        $$ = new IfStmt(curline, $2, $4, $6);
+    }
+    | iterStmtOpen { $$ = $1; }
     ;
 
 expStmt
-    : exp SEMCOL {}
-    | SEMCOL {}
+    : exp SEMCOL { $$ = $1; }
+    | SEMCOL { $$ = NULL; }
     ;
 
 compoundStmt
-    : BRACKL localDecls stmtList BRACKR {}
+    : BRACEL localDecls stmtList BRACER {
+        $$ = new CompoundStmt(curline, $2, $3);
+    }
     ;
 
 localDecls
-    : localDecls scopedVarDecl {}
-    | /* empty */
+    : localDecls scopedVarDecl {
+        $$->add($2);
+    }
+    | %empty { $$ = new Node(); }
     ;
 
 stmtList
-    : stmtList stmt {}
-    | /* empty */
+    : stmtList stmt {
+        $$->add($2);
+    }
+    | %empty { $$ = new Node(); }
     ;
 
 iterStmtClosed
-    : WHILE simpleExp DO stmtClosed {}
-    | FOR ID ASS iterRange DO stmtClosed {}
+    : WHILE simpleExp DO stmtClosed {
+        $$ = new WhileStmt(curline, $2, $4);
+    }
+    | FOR ID ASS iterRange DO stmtClosed {
+        $$ = new ForStmt(curline, $2, $4, $6);
+    }
     ;
 
 iterStmtOpen
-    : WHILE simpleExp DO stmtOpen {}
-    | FOR ID ASS iterRange DO stmtOpen {}
+    : WHILE simpleExp DO stmtOpen {
+        $$ = new WhileStmt(curline, $2, $4);
+    }
+    | FOR ID ASS iterRange DO stmtOpen {
+        $$ = new ForStmt(curline, $2, $4, $6);
+    }
     ;
 
 iterRange
-    : simpleExp TO simpleExp {}
-    | simpleExp TO simpleExp BY simpleExp {}
+    : simpleExp TO simpleExp {
+        $$ = new IterRange(curline, $1, $3);
+    }
+    | simpleExp TO simpleExp BY simpleExp {
+        $$ = new IterRange(curline, $1, $3, $5);
+    }
     ;
 
 returnStmt
-    : RETURN SEMCOL {}
-    | RETURN exp SEMCOL {}
+    : RETURN SEMCOL {
+        $$ = new ReturnStmt(curline);
+    }
+    | RETURN exp SEMCOL {
+        $$ = new ReturnStmt(curline, $2);
+    }
     ;
 
 breakStmt
-   : BREAK SEMCOL {}
-   ;
+    : BREAK SEMCOL {
+        $$ = new BreakStmt(curline);
+    }
+    ;
 
 exp
-    : mutable assignop exp {}
-    | mutable INC {}
-    | mutable DEC {}
-    | simpleExp {}
+    : mutable assignop exp {
+        $$ = new Assign($2, $1, $3);
+    }
+    | mutable INC {
+        $$ = new Assign($2, $1);
+    }
+    | mutable DEC {
+        $$ = new Assign($2, $1);
+    }
+    | simpleExp {
+        $$ = $1;
+    }
     ;
 
 assignop
-    : ASS {}
-    | ADDASS {}
-    | SUBASS {}
-    | MULASS {}
-    | DIVASS {}
+    :    ASS { $$ = $1; }
+    | ADDASS { $$ = $1; }
+    | SUBASS { $$ = $1; }
+    | MULASS { $$ = $1; }
+    | DIVASS { $$ = $1; }
     ;
 
 simpleExp
-    : simpleExp OR andExp {}
-    | andExp {}
+    : simpleExp OR andExp {
+        $$ = new Op($2, $1, $3);
+    }
+    | andExp { $$ = $1; }
     ;
 
 andExp
-    : andExp AND unaryRelExp {}
-    | unaryRelExp {}
+    : andExp AND unaryRelExp {
+        $$ = new Op($2, $1, $3);
+        }
+    | unaryRelExp { $$ = $1; }
     ;
 
 unaryRelExp
-    : NOT unaryRelExp {}
-    | relExp {}
+    : NOT unaryRelExp {
+        $$ = new Op($1, $2);
+    }
+    | relExp { $$ = $1; }
     ;
 
 relExp
-    : sumExp relop sumExp {}
-    | sumExp {}
+    : sumExp relop sumExp {
+        $$ = new Op($2, $1, $3);
+    }
+    | sumExp { $$ = $1; }
     ;
 
 relop
-    : LESS {}
-    | LEQ {}
-    | GRTR {}
-    | GEQ {}
-    | EQ {}
-    | NEQ {}
+    : LESS { $$ = $1; }
+    | LEQ  { $$ = $1; }
+    | GRTR { $$ = $1; }
+    | GEQ  { $$ = $1; }
+    | EQ   { $$ = $1; }
+    | NEQ  { $$ = $1; }
     ;
 
 sumExp
-    : sumExp sumop mulExp {}
-    | mulExp {}
+    : sumExp sumop mulExp {
+        $$ = new Op($2, $1, $3);
+    }
+    | mulExp { $$ = $1; }
     ;
 
 sumop
-    : PLUS {}
-    | MINUS {}
+    : PLUS  { $$ = $1; }
+    | MINUS { $$ = $1; }
     ;
 
 mulExp
-    : mulExp mulop unaryExp {}
-    | unaryExp {}
+    : mulExp mulop unaryExp {
+        $$ = new Op($2, $1, $3);
+    }
+    | unaryExp { $$ = $1; }
     ;
 
 mulop
-    : ASTR {}
-    | SLASH {}
-    | PERC {}
+    : ASTR  { $$ = $1; }
+    | SLASH { $$ = $1; }
+    | PERC  { $$ = $1; }
     ;
 
 unaryExp
-    : unaryop unaryExp {}
-    | factor {}
+    : unaryop unaryExp {
+        $$ = new Op($1, $2);
+    }
+    | factor { $$ = $1; }
     ;
 
 unaryop
-    : MINUS {}
-    | ASTR {}
-    | QUEST {}
+    : MINUS { $$ = $1; }
+    | ASTR  { $$ = $1; }
+    | QUEST { $$ = $1; }
     ;
 
 factor
-    : mutable {}
-    | immutable {}
+    : mutable   { $$ = $1; }
+    | immutable { $$ = $1; }
     ;
 
 mutable
-    : ID {}
-    | ID BRACEL exp BRACER {}
+    : ID {
+        $$ = new Id($1);
+    }
+    | ID BRACKL exp BRACKR {
+        $$ = new Op($2, new Id($1), $3);
+    }
     ;
 
 immutable
-    : PARENL exp PARENR {}
-    | call {}
-    | constant {}
+    : PARENL exp PARENR { $$ = $2; }
+    | call              { $$ = $1; }
+    | constant {
+        $$ = new Const($1);
+    }
     ;
 
 call
-    : ID PARENL args PARENR {}
+    : ID PARENL args PARENR {
+        $$ = new Call($1, $3);
+    }
     ;
 
 args
-    : argList {}
-    | /* empty */
+    : argList { $$ = $1;   }
+    | %empty  { $$ = NULL; }
     ;
 
 argList
-    : argList COMMA exp {}
-    | exp {}
+    : argList COMMA exp {
+        if ($$) $$->add($3);
+    }
+    | exp { $$ = $1; }
     ;
 
 constant
-    : NUMCONST {}
-    | CHARCONST {}
-    | STRINGCONST {}
-    | BOOLCONST {}
+    : NUMCONST    { $$ = $1; }
+    | CHARCONST   { $$ = $1; }
+    | STRINGCONST { $$ = $1; }
+    | BOOLCONST   { $$ = $1; }
     ;
 
 %%
@@ -331,12 +441,14 @@ int main (int argc, char *argv[])
         }
     }
 
-    // call parse to build the AST and put its address in the global var syntaxTree
+    // call parse to build the AST and put its address in the global var AST
     yyparse();
 
-    if(printTreeFlag)
-        // Print the AST to stdout
-        syntaxTree->printTree(stdout);
+    if(printTreeFlag) {
+        // attempt to print the AST to stdout
+        if(AST) AST->print();
+        else printf("Error attempting to print AST that is NULL.\n");
+    }
 
     return 0;
 }
