@@ -1,0 +1,48 @@
+char zev[10]:"corgis";
+int x:42, y:666;
+char yurt[20];
+
+
+// note that functions are defined using a statement
+int max(int a, b) {
+if a>b then return a; else return b;}
+
+int fred(
+    int x, // first arg
+    y // lolwat
+    ){
+    if y !=-x then return y; return x--;
+}
+int ant(int bat, cat[]; bool dog, elk; int fox; char gnu) 
+{ 
+    int goat, hog[100];
+
+    gnu = 'W';
+    goat = hog[2] = 3**cat;    // hog is 3 times the size of array passed to cat 
+    if dog and elk or bat > cat[3] then dog = not dog; 
+    else fox++;
+    if bat <= fox then {
+        while dog do {
+            static int hog;          // hog in new scope
+$$
+            hog = fox;
+            dog = fred(fox++, cat[1])>666;
+            if hog>bat then break;
+            else if fox!=0 then fox += 7;;
+        }
+     }
+
+     for i=1 to 10 by 3 do {  // i is an int local to the loop
+         if x==1 then cat[i] = bat;
+         else if x==2 then cat[i] = bat%17;
+         else if x==3 then cat[i] = 78;
+         else x++;
+     }
+
+     while true do if x>333 then break; else x++;
+
+     yurt = zev;
+     yurt[3] = zev[?*zev];
+
+     return (fox+bat*cat[bat])/-fox;
+}
