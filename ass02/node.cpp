@@ -28,7 +28,7 @@ void Node::add(Node * n)
 void Node::addChild(int c, Node * n)
 {
     child[c] = n;
-    if (child) {
+    if (n) {
         n->index = c;
         n->isChild = true;
     }
@@ -42,6 +42,7 @@ void Node::updateLoc()
     }
 
     if (sibling) {
+        sibling->depth = depth;
         if (!isChild) sibling->index = index + 1;
         sibling->updateLoc();
     }
@@ -95,7 +96,7 @@ void VarDecl::print()
 {
     printSelf();
     printf(
-        "Var %s: %s%stype %s [line: %d]\n",
+        "Var: %s of %s%stype %s [line: %d]\n",
         name,
         isStatic ? "static " : "",
         isArray ? "array of " : "",
@@ -121,8 +122,8 @@ FunDecl::FunDecl(TokenData * retType, TokenData * tkn,
 void FunDecl::print()
 {
     printSelf();
-    printf( "Func %s: returns type %s [line: %d]\n",
-                 name,            type,    linenum);
+    printf( "Func: %s returns type %s [line: %d]\n",
+                  name,           type,    linenum);
     Node::print();
 }
 
@@ -136,7 +137,7 @@ void Parm::print()
 {
     printSelf();
     printf(
-        "Parm %s: %stype %s [line: %d]\n",
+        "Parm: %s of %stype %s [line: %d]\n",
         name,
         isArray ? "array of " : "",
         type, linenum
@@ -147,14 +148,14 @@ void Parm::print()
 CompoundStmt::CompoundStmt(int line, Node * decls, Node * stmt)
 {
     linenum = line;
-    addChild(0, decls/*->sibling*/);
-    addChild(1, stmt/*->sibling*/);
+    addChild(0, decls->sibling);
+    addChild(1, stmt->sibling);
 }
 
 void CompoundStmt::print()
 {
     printSelf();
-    printf("Compound [line %d]\n", linenum);
+    printf("Compound [line: %d]\n", linenum);
     Node::print();
 }
 
@@ -173,7 +174,7 @@ IfStmt::IfStmt(int line, Node * cond, Node * stmt, Node * alt) : IfStmt(line, co
 void IfStmt::print()
 {
     printSelf();
-    printf("If [line: %d]\n");
+    printf("If [line: %d]\n", linenum);
     Node::print();
 }
 
@@ -195,6 +196,7 @@ ForStmt::ForStmt(int line, TokenData * itr, Node * rng, Node * stmt)
 {
     linenum = line;
     VarDecl * itrVar = new VarDecl(itr);
+    itrVar->type = (char *)"int";
     itrVar->isInited = true;
     addChild(0, itrVar);
     addChild(1, rng);
@@ -240,7 +242,7 @@ ReturnStmt::ReturnStmt(int line, Node * retVal) : ReturnStmt(line)
 void ReturnStmt::print()
 {
     printSelf();
-    printf("Return [line %d]\n", linenum);
+    printf("Return [line: %d]\n", linenum);
     Node::print();
 }
 
@@ -260,26 +262,24 @@ Op::Op(TokenData * tkn, Node * lhs)
 {
    addChild(0, lhs);
    linenum = tkn->linenum;
-   opName = strdup(tkn->tokenstr);
    opId = tkn->tokenclass;
+   if      (!strcmp(tkn->tokenstr, "-")) opName = (char *)"chsign";
+   else if (!strcmp(tkn->tokenstr, "*")) opName = (char *)"sizeof";
+   else                             opName = strdup(tkn->tokenstr);
 }
 
 Op::Op(TokenData * tkn, Node * lhs, Node * rhs) : Op(tkn, lhs)
 {
     addChild(1, rhs);
+    opName = strdup(tkn->tokenstr);
 }
 
 void Op::print()
 {
     printSelf();
-    bool def = strcmp(type, "undefined");
     printf(
-        "Op %s : %stype %s%s[line: %d]\n",
-        opName,
-        def ? "" : "undefined ",
-        def ? type : "",
-        def ? (char *)" " : "",
-        linenum
+        "Op: %s [line: %d]\n",
+           opName,  linenum
     );
     Node::print();
 }
@@ -291,15 +291,9 @@ Assign::Assign(TokenData * tkn, Node * lhs, Node * rhs) : Op(tkn, lhs, rhs) {}
 void Assign::print()
 {
     printSelf();
-    bool def = strcmp(type, "undefined");
     printf(
-        "Assign %s : %s%stype %s%s[line: %d]\n",
-        opName,
-        def ? "" : "undefined ",
-        isArray ? "array of" : "",
-        def ? type : "",
-        def ? (char *)" " : "",
-        linenum
+        "Assign: %s [line: %d]\n",
+               opName,  linenum
     );
     Node::print();
 }
@@ -310,12 +304,8 @@ void Id::print()
 {
     printSelf();
     printf(
-        "Id %s: %s%s%stype %s [line: %d]\n",
-        name,
-        isStatic ? "static " : "",
-        isArray ? "array of " : "",
-        strcmp(type, "undefined") ? "" : "undefined",
-        type, linenum
+        "Id: %s [line: %d]\n",
+            name,    linenum
     );
     Node::print();
 }
@@ -331,20 +321,16 @@ Call::Call(TokenData * tkn, Node * args)
 void Call::print()
 {
     printSelf();
-    bool def = strcmp(type, "undefined");
     printf(
-        "Call %s: %stype %s%s[line: %d]\n",
-        name,
-        def ? "" : "undefined ",
-        def ? type : "",
-        def ? (char *)" " : "",
-        linenum
+        "Call: %s [line: %d]\n",
+              name,    linenum
     );
     Node::print();
 }
 
 Const::Const(TokenData * tkn)
 {
+    linenum = tkn->linenum;
     isConst = true;
     token = tkn;
     switch(token->tokenclass) {

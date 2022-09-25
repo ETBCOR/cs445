@@ -9,9 +9,10 @@ int curline = 1;
 
 static int setValue(int linenum, int tokenclass, char * tokenstr)
 {
-    yylval.tokenData = new TokenData;    // declare the token that will be returned
-    yylval.tokenData->linenum = linenum; // record what line the token was found on
-    yylval.tokenData->tokenstr = strdup(tokenstr); // record the token's literal string
+    yylval.tokenData = new TokenData;               // declare the token that will be returned
+    yylval.tokenData->tokenclass = tokenclass;      // record the token's class
+    yylval.tokenData->linenum = linenum;            // record what line the token was found on
+    yylval.tokenData->tokenstr = strdup(tokenstr);  // record the token's literal string
 
     std::string s; // used to construct a stringconst
     int l; // used for storing the length of stringconst

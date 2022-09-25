@@ -1,21 +1,21 @@
 cc = g++
-ccopts = -Wall -O3
+ccopts = -Wall -O3 -g -std=c++11
 lex = lex
 lexopts =
 lexgens = lex.yy.c
 yacc = bison
 yaccopts = -d
 yaccgens = parser.tab.c parser.tab.h
-libs = scanType.h node.h
-objs = node.o
+libs = scanType.h node.h ourgetopt.h
+gens = node.o ourgetopt.o
 bin = parser
 out = c-
 arc = corg02
 
-tst = i
+tst = cover
 
-$(out): $(lexgens) $(yaccgens) $(objs)
-	$(cc) $(ccopts) $(objs) $(lexgens) $(yaccgens) -o $(out)
+$(out): $(lexgens) $(yaccgens) $(gens)
+	$(cc) $(ccopts) $(gens) $(lexgens) $(yaccgens) -o $(out)
 
 $(yaccgens): $(bin).y
 	$(yacc) $(yaccopts) $(bin).y
@@ -27,7 +27,7 @@ $(lexgens): $(bin).l $(yaccgens)
 	$(cc) $(ccopts) -c $<
 
 clean:
-	rm -f $(lexgens) $(yaccgens) $(out) $(bin).tab.h $(bin).tab.c $(objs) myout
+	rm -f $(lexgens) $(yaccgens) $(out) $(bin).tab.h $(bin).tab.c $(gens) myout
 
 edit:
 	vim $(bin).l $(bin).y node.h node.cpp scanType.h makefile

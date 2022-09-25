@@ -13,21 +13,21 @@
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>
+#include "ourgetopt.h"
 #include "scanType.h"
 #include "node.h"
 
 extern int yylex();
 extern FILE * yyin;
 extern int curline;
+extern int yydebug;
+extern int optind;
 extern void yyerror(const char *);
 
-bool printTreeFlag = true;
 Node * AST;
 %}
 
- /*%code requires {
-   #include "node.h" 
-}*/
+%debug
 
 /* possible "terminal" values */
 %union {
@@ -57,7 +57,7 @@ Node * AST;
 
 program
     : declList {
-        $$ = $1;
+        // $$ = $1;
     }
     ;
 
@@ -67,10 +67,10 @@ declList
         AST->add($2);
     }
     | decl {
-        //AST->add($1);
-        AST = $1;
+        AST->add($1);
+        //AST = $1;
         if ($1) $1->isRoot = true;
-        $$ = $1;
+        //$$ = $1;
     }
     ;
 
@@ -192,7 +192,7 @@ stmt
 
 stmtClosed
     : IF simpleExp THEN stmtClosed ELSE stmtClosed {
-        $$ = new IfStmt(curline, $2, $4, $6);
+        $$ = new IfStmt($1->linenum, $2, $4, $6);
     }
     | iterStmtClosed { $$ = $1; }
     | expStmt        { $$ = $1; }
@@ -203,10 +203,10 @@ stmtClosed
 
 stmtOpen
     : IF simpleExp THEN stmt {
-        $$ = new IfStmt(curline, $2, $4);
+        $$ = new IfStmt($1->linenum, $2, $4);
     }
     | IF simpleExp THEN stmtClosed ELSE stmtOpen {
-        $$ = new IfStmt(curline, $2, $4, $6);
+        $$ = new IfStmt($1->linenum, $2, $4, $6);
     }
     | iterStmtOpen { $$ = $1; }
     ;
@@ -218,7 +218,7 @@ expStmt
 
 compoundStmt
     : BRACEL localDecls stmtList BRACER {
-        $$ = new CompoundStmt(curline, $2, $3);
+        $$ = new CompoundStmt($1->linenum, $2, $3);
     }
     ;
 
@@ -238,43 +238,43 @@ stmtList
 
 iterStmtClosed
     : WHILE simpleExp DO stmtClosed {
-        $$ = new WhileStmt(curline, $2, $4);
+        $$ = new WhileStmt($1->linenum, $2, $4);
     }
     | FOR ID ASS iterRange DO stmtClosed {
-        $$ = new ForStmt(curline, $2, $4, $6);
+        $$ = new ForStmt($1->linenum, $2, $4, $6);
     }
     ;
 
 iterStmtOpen
     : WHILE simpleExp DO stmtOpen {
-        $$ = new WhileStmt(curline, $2, $4);
+        $$ = new WhileStmt($1->linenum, $2, $4);
     }
     | FOR ID ASS iterRange DO stmtOpen {
-        $$ = new ForStmt(curline, $2, $4, $6);
+        $$ = new ForStmt($1->linenum, $2, $4, $6);
     }
     ;
 
 iterRange
     : simpleExp TO simpleExp {
-        $$ = new IterRange(curline, $1, $3);
+        $$ = new IterRange($1->linenum, $1, $3);
     }
     | simpleExp TO simpleExp BY simpleExp {
-        $$ = new IterRange(curline, $1, $3, $5);
+        $$ = new IterRange($1->linenum, $1, $3, $5);
     }
     ;
 
 returnStmt
     : RETURN SEMCOL {
-        $$ = new ReturnStmt(curline);
+        $$ = new ReturnStmt($1->linenum);
     }
     | RETURN exp SEMCOL {
-        $$ = new ReturnStmt(curline, $2);
+        $$ = new ReturnStmt($1->linenum, $2);
     }
     ;
 
 breakStmt
     : BREAK SEMCOL {
-        $$ = new BreakStmt(curline);
+        $$ = new BreakStmt($1->linenum);
     }
     ;
 
@@ -425,26 +425,40 @@ constant
 
 %%
 
-extern int yydebug;
 int main (int argc, char *argv[])
 {
-    // if there is a file to be read
-    if (argc > 1) {
-        // attemp to read the file
-        if ((yyin = fopen(argv[1], "r"))) {
-            // file opened successfully
+    AST = new Node();
+    AST->index = -1;
+
+    int pFlag = 0, dFlag = 0;
+    int flg;
+    while ((flg = ourGetopt(argc, argv, (char *)"pd")) != EOF) {
+        switch (flg) {
+            case 'p': pFlag = 1; break;
+            case 'd': dFlag = 1; break;
         }
-        else {
+    }
+
+    if(dFlag) yydebug = 1;
+
+    // if there is a file to be read
+    if (optind < argc) {
+        // attemp to read the file
+        if ((yyin = fopen(argv[optind], "r"))) {
+            yyparse();
+            fclose(yyin);
+            AST->updateLoc();
+        } else {
             // failed to open file
             printf("ERROR: failed to open \'%s\'\n", argv[1]);
             exit(1);
         }
+    } else {
+        yyparse();
+        AST->updateLoc();
     }
 
-    // call parse to build the AST and put its address in the global var AST
-    yyparse();
-
-    if(printTreeFlag) {
+    if(pFlag) {
         // attempt to print the AST to stdout
         if(AST) AST->print();
         else printf("Error attempting to print AST that is NULL.\n");
