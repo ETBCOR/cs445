@@ -1,0 +1,22 @@
+// C-F22
+main()
+{
+   int x;
+
+   if 111 then 
+      for x = x to x by x do
+         if 333 then 
+            for x = 1 to  x do 555;
+         else 666;
+   else 777;
+
+   if 111 then 
+      for x = 1 to 2 by x*x do 333;
+   else
+      for x = 1 to x do 555;
+
+   if 111 then 
+      for x = 1 to 10 do
+         for x = x to 10 do 555;
+   else 666;
+}

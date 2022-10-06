@@ -1,0 +1,54 @@
+Var: a is array of type int [line: 2]
+Sibling: 1  Var: x of type int [line: 3]
+.   Child: 0  Op: + [line: 3]
+.   .   Child: 0  Const 666 [line: 3]
+.   .   Child: 1  Op: * [line: 3]
+.   .   .   Child: 0  Const 777 [line: 3]
+.   .   .   Child: 1  Const 888 [line: 3]
+Sibling: 2  Func: main returns type void [line: 5]
+.   Child: 1  Compound [line: 6]
+.   .   Child: 0  Var: b is array of type int [line: 7]
+.   .   Sibling: 1  Var: y of type int [line: 8]
+.   .   .   Child: 0  Op: + [line: 8]
+.   .   .   .   Child: 0  Const 777 [line: 8]
+.   .   .   .   Child: 1  Op: * [line: 8]
+.   .   .   .   .   Child: 0  Const 666 [line: 8]
+.   .   .   .   .   Child: 1  Const 888 [line: 8]
+.   .   Sibling: 2  Var: c is array of type int [line: 9]
+.   .   Sibling: 3  Var: z of type int [line: 10]
+.   .   .   Child: 0  Op: + [line: 10]
+.   .   .   .   Child: 0  Const 888 [line: 10]
+.   .   .   .   Child: 1  Op: * [line: 10]
+.   .   .   .   .   Child: 0  Const 777 [line: 10]
+.   .   .   .   .   Child: 1  Const 666 [line: 10]
+.   .   Child: 1  Call: output [line: 12]
+.   .   .   Child: 0  Op: sizeof [line: 12]
+.   .   .   .   Child: 0  Id: a [line: 12]
+.   .   Sibling: 1  Call: output [line: 13]
+.   .   .   Child: 0  Op: sizeof [line: 13]
+.   .   .   .   Child: 0  Id: b [line: 13]
+.   .   Sibling: 2  Call: output [line: 14]
+.   .   .   Child: 0  Op: sizeof [line: 14]
+.   .   .   .   Child: 0  Id: c [line: 14]
+.   .   Sibling: 3  Call: outnl [line: 15]
+.   .   Sibling: 4  Call: output [line: 17]
+.   .   .   Child: 0  Id: x [line: 17]
+.   .   Sibling: 5  Call: output [line: 18]
+.   .   .   Child: 0  Id: y [line: 18]
+.   .   Sibling: 6  Call: output [line: 19]
+.   .   .   Child: 0  Id: z [line: 19]
+.   .   Sibling: 7  Call: outnl [line: 20]
+.   .   Sibling: 8  Assign: = [line: 22]
+.   .   .   Child: 0  Id: z [line: 22]
+.   .   .   Child: 1  Const 999 [line: 22]
+ERROR(12): Symbol 'output' is not declared.
+ERROR(13): Symbol 'output' is not declared.
+WARNING(13): Variable 'b' may be uninitialized when used here.
+ERROR(14): Symbol 'output' is not declared.
+ERROR(15): Symbol 'outnl' is not declared.
+ERROR(17): Symbol 'output' is not declared.
+ERROR(18): Symbol 'output' is not declared.
+ERROR(19): Symbol 'output' is not declared.
+ERROR(20): Symbol 'outnl' is not declared.
+Number of warnings: 1
+Number of errors: 8

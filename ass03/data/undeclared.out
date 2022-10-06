@@ -1,0 +1,35 @@
+Func: main returns type void [line: 1]
+.   Child: 0  Parm: x of type int [line: 1]
+.   Child: 1  Compound [line: 2]
+.   .   Child: 1  Assign: = [line: 3]
+.   .   .   Child: 0  Id: z [line: 3]
+.   .   .   Child: 1  Id: i [line: 3]
+.   .   Sibling: 1  Assign: = [line: 4]
+.   .   .   Child: 0  Id: z [line: 4]
+.   .   .   Child: 1  Id: i [line: 4]
+.   .   Sibling: 2  Assign: = [line: 5]
+.   .   .   Child: 0  Id: i [line: 5]
+.   .   .   Child: 1  Op: + [line: 5]
+.   .   .   .   Child: 0  Id: i [line: 5]
+.   .   .   .   Child: 1  Const 3 [line: 5]
+.   .   Sibling: 3  Assign: ++ [line: 6]
+.   .   .   Child: 0  Id: j [line: 6]
+.   .   Sibling: 4  Id: l [line: 7]
+.   .   Sibling: 5  Op: chsign [line: 8]
+.   .   .   Child: 0  Id: m [line: 8]
+.   .   Sibling: 6  Call: main [line: 9]
+.   .   .   Child: 0  Id: k [line: 9]
+ERROR(3): Symbol 'z' is not declared.
+ERROR(3): Symbol 'i' is not declared.
+ERROR(4): Symbol 'z' is not declared.
+ERROR(4): Symbol 'i' is not declared.
+ERROR(5): Symbol 'i' is not declared.
+ERROR(5): Symbol 'i' is not declared.
+ERROR(6): Symbol 'j' is not declared.
+ERROR(7): Symbol 'l' is not declared.
+ERROR(8): Symbol 'm' is not declared.
+ERROR(9): Symbol 'k' is not declared.
+WARNING(1): The variable 'x' seems not to be used.
+ERROR(LINKER): A function named 'main()' must be defined.
+Number of warnings: 1
+Number of errors: 11

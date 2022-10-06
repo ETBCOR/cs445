@@ -1,0 +1,18 @@
+main()
+{
+   int a, b, c, d;
+   int aa[2], bb[3], cc[5], dd[7], ee[11];
+
+   a = b;
+   a = b;
+   a = aa[3];
+   a = bb[cc[3]];
+   cc[c] = a;
+   cc[c+d] = a;
+   cc[dd[3]];
+   cc[ee[3]] = 284;
+   }
+
+
+
+   

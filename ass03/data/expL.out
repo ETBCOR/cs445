@@ -1,0 +1,13 @@
+Func: main returns type void [line: 2]
+.   Child: 1  Compound [line: 3]
+.   .   Child: 0  Var: x of type int [line: 4]
+.   .   Child: 1  Op: > [line: 6]
+.   .   .   Child: 0  Op: + [line: 6]
+.   .   .   .   Child: 0  Op: * [line: 6]
+.   .   .   .   .   Child: 0  Const 555 [line: 6]
+.   .   .   .   .   Child: 1  Const 666 [line: 6]
+.   .   .   .   Child: 1  Id: x [line: 6]
+.   .   .   Child: 1  Const 777 [line: 6]
+WARNING(6): Variable 'x' may be uninitialized when used here.
+Number of warnings: 1
+Number of errors: 0

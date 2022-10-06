@@ -1,0 +1,70 @@
+Func: main returns type void [line: 1]
+.   Child: 0  Parm: x of type int [line: 1]
+.   Child: 1  Compound [line: 2]
+.   .   Child: 0  Var: z of type int [line: 3]
+.   .   Sibling: 1  Var: g of type int [line: 3]
+.   .   Sibling: 2  Var: h of type int [line: 3]
+.   .   Sibling: 3  Var: i of type int [line: 3]
+.   .   Sibling: 4  Var: j of type int [line: 3]
+.   .   Sibling: 5  Var: k of type int [line: 3]
+.   .   Sibling: 6  Var: l of type int [line: 3]
+.   .   Sibling: 7  Var: m of type int [line: 3]
+.   .   Sibling: 8  Var: z of type int [line: 3]
+.   .   Sibling: 9  Var: z of type int [line: 3]
+.   .   Child: 1  Assign: = [line: 5]
+.   .   .   Child: 0  Id: z [line: 5]
+.   .   .   Child: 1  Id: i [line: 5]
+.   .   Sibling: 1  Assign: = [line: 6]
+.   .   .   Child: 0  Id: z [line: 6]
+.   .   .   Child: 1  Id: i [line: 6]
+.   .   Sibling: 2  Assign: = [line: 7]
+.   .   .   Child: 0  Id: i [line: 7]
+.   .   .   Child: 1  Op: + [line: 7]
+.   .   .   .   Child: 0  Id: g [line: 7]
+.   .   .   .   Child: 1  Const 3 [line: 7]
+.   .   Sibling: 3  Assign: = [line: 8]
+.   .   .   Child: 0  Id: i [line: 8]
+.   .   .   Child: 1  Op: + [line: 8]
+.   .   .   .   Child: 0  Const 4 [line: 8]
+.   .   .   .   Child: 1  Id: h [line: 8]
+.   .   Sibling: 4  Assign: ++ [line: 9]
+.   .   .   Child: 0  Id: j [line: 9]
+.   .   Sibling: 5  Call: main [line: 10]
+.   .   .   Child: 0  Id: k [line: 10]
+.   .   Sibling: 6  Id: l [line: 11]
+.   .   Sibling: 7  Op: chsign [line: 12]
+.   .   .   Child: 0  Id: m [line: 12]
+.   .   Sibling: 8  Call: dog [line: 13]
+.   .   Sibling: 9  Assign: = [line: 14]
+.   .   .   Child: 0  Id: main [line: 14]
+.   .   .   Child: 1  Const 3 [line: 14]
+.   .   Sibling: 10  Op: + [line: 15]
+.   .   .   Child: 0  Op: + [line: 15]
+.   .   .   .   Child: 0  Op: + [line: 15]
+.   .   .   .   .   Child: 0  Op: + [line: 15]
+.   .   .   .   .   .   Child: 0  Op: + [line: 15]
+.   .   .   .   .   .   .   Child: 0  Op: + [line: 15]
+.   .   .   .   .   .   .   .   Child: 0  Op: + [line: 15]
+.   .   .   .   .   .   .   .   .   Child: 0  Id: g [line: 15]
+.   .   .   .   .   .   .   .   .   Child: 1  Id: h [line: 15]
+.   .   .   .   .   .   .   .   Child: 1  Id: i [line: 15]
+.   .   .   .   .   .   .   Child: 1  Id: j [line: 15]
+.   .   .   .   .   .   Child: 1  Id: k [line: 15]
+.   .   .   .   .   Child: 1  Id: l [line: 15]
+.   .   .   .   Child: 1  Id: m [line: 15]
+.   .   .   Child: 1  Id: z [line: 15]
+ERROR(3): Symbol 'z' is already declared at line 3.
+ERROR(3): Symbol 'z' is already declared at line 3.
+WARNING(5): Variable 'i' may be uninitialized when used here.
+WARNING(7): Variable 'g' may be uninitialized when used here.
+WARNING(8): Variable 'h' may be uninitialized when used here.
+WARNING(9): Variable 'j' may be uninitialized when used here.
+WARNING(10): Variable 'k' may be uninitialized when used here.
+WARNING(11): Variable 'l' may be uninitialized when used here.
+WARNING(12): Variable 'm' may be uninitialized when used here.
+ERROR(13): Symbol 'dog' is not declared.
+ERROR(14): Cannot use function 'main' as a variable.
+WARNING(1): The variable 'x' seems not to be used.
+ERROR(LINKER): A function named 'main()' must be defined.
+Number of warnings: 8
+Number of errors: 5

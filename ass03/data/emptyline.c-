@@ -1,0 +1,14 @@
+// C-F22
+main(){}
+
+dogs()
+{
+    int x;
+    ;           // problem with empty statement
+    ;
+    if true then ;
+    else ;
+    while true do ;
+    for x=1 to 10 do ;
+    {}
+}

@@ -1,0 +1,19 @@
+// C-F22
+int x:111;    // lifetime: whole pgm   visible: whole pgm
+
+main() {
+    int y:222;           // lifetime: main        visible: main
+    static int z:333;    // lifetime: whole pgm   visible: main
+    static bool b:true;
+    static char c:'Z';
+
+    output(x);
+    output(y);
+    output(z);
+    outputb(b);
+    outputc(c);
+}
+
+// cat() {
+//    z=666;   // ERROR!   can't find z.
+// }

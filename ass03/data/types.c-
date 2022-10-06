@@ -1,0 +1,117 @@
+// C-F22
+int main()
+{
+        int i;
+        bool b;
+        int ia[2];
+        bool ba[2];
+        char c, c;
+        int i;
+        bool pumpkin;
+
+        i+i;
+        i+b;
+        b+i;
+        b+b;
+        
+        i  and  i;
+        i  and  b;
+        b  and  i;
+        b  and  b;
+
+        i=i;
+        i=b;
+        b=i;
+        b=b;
+
+        i==i;
+        i==b;
+        b==i;
+        b==b;
+
+        i!=i;
+        i!=b;
+        b!=i;
+        b!=b;
+
+        ia+ia;
+        ia+ba;
+        ba+ia;
+        ba+ba;
+        
+        ia  and  ia;
+        ia  and  ba;
+        ba  and  ia;
+        ba  and  ba;
+        
+        ia=ia;
+        ia=ba;
+        ba=ia;
+        ba=ba;
+
+        ia==ia;
+        ia==ba;
+        ba==ia;
+        ba==ba;
+
+        b+i+i;
+        i+b+i;
+        i+i+b;
+
+        i  or  b  or  b;
+        b  or  i  or  b;
+        b  or  b  or  i;
+
+         not  b;
+         not  i;
+         not  ba;
+         not  ia;
+
+        -b;
+        -i;
+        -ba;
+        -ia;
+
+        (i>i)  or  (i>i);
+        (b>i)  or  (i>i);
+        (i>b)  or  (i>i);
+        (i>i)  or  (b>i);
+        (b>i)  or  (i>b);
+        (b  or  b)  and  (b  or  b);
+
+        if 1 then  i=i;
+        else b=b;
+        
+        if ba then  i=i;
+        else b=b;
+
+        if ia then  i=i;
+        else b=b;
+        
+        if b then  i=i;
+        else b=b;
+
+        if i then  i=i;
+        else b=b;
+
+        while 1 do i=i;
+        while ba do i=i;
+        while ia do i=i;
+        while b do i=i;
+        while i do i=i;
+
+        b();
+        b[3];
+        x[4];
+        main[5];
+        main[main()];
+        ba[ba];
+        ba['s'];
+        main++;
+        ia+ia;
+        *a;
+        *i;
+        -true;
+        
+        return ba;
+}

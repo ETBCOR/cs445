@@ -1,0 +1,18 @@
+// C-F22
+main()
+{
+    int i;
+
+    i = 0;
+    while true  do {
+        while true  do {
+           i++;
+           output(i);
+           if i>4 then  break;
+           outnl();
+        }
+        if i>8 then  break;
+    }
+    output(i);
+    outnl();
+}

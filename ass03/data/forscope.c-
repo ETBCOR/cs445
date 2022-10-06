@@ -1,0 +1,50 @@
+main() {
+    int values[10];
+    values[0] = 3;
+
+    for x = values to 10 do {
+        int x;
+        x = 1;
+    }
+
+    for x = values to 20 do { {
+            int x;
+            x = 2;
+        } }
+
+    for x = values to 30 do {
+        int x;
+        {
+            int x;
+            x = 3;
+        } }
+
+    for x = values to 40 do 
+        if  x>3 then  {
+            int x;
+            x=4;
+        }
+
+    for x = values to 50 do {
+        int x;
+        if  x>3 then  {
+            int x; x=5;
+        }
+    }
+
+    for x = values to 60 do 
+        while true do
+            if  x>3 then  {
+                int x; x = 6;
+            }
+            else {
+                int x; x = 7;
+            }
+
+    for x = values to 70 do
+        while true do
+            if  x>3 then  666;
+            else {
+                int x; x = 7;
+            }
+}

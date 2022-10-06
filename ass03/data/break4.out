@@ -1,0 +1,13 @@
+Func: main returns type void [line: 2]
+.   Child: 1  Compound [line: 3]
+.   .   Child: 1  While [line: 4]
+.   .   .   Child: 0  Const true [line: 4]
+.   .   .   Child: 1  Compound [line: 4]
+.   .   .   .   Child: 1  While [line: 5]
+.   .   .   .   .   Child: 0  Const true [line: 5]
+.   .   .   .   .   Child: 1  Compound [line: 5]
+.   .   .   .   .   .   Child: 1  Break [line: 6]
+.   .   .   .   Sibling: 1  Break [line: 8]
+.   .   Sibling: 1  Break [line: 10]
+Number of warnings: 0
+Number of errors: 0

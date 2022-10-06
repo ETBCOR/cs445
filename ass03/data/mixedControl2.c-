@@ -1,0 +1,20 @@
+// C-F22
+main()
+{
+   if 111 then 
+      while 222 do
+         if 333 then 
+            while 444 do 555;
+         else 666;
+   else 777;
+
+   if 111 then 
+      while 222 do 333;
+   else
+      while 444 do 555;
+
+   if 111 then 
+      while 222 do
+         while 444 do 555;
+   else 666;
+}

@@ -1,0 +1,52 @@
+int ant()
+{
+    int z[100];
+    if z then  2620;
+    return z;
+}
+
+bat()
+{
+    return 666;
+}
+
+int cat()
+{
+    return;
+}
+
+dog(int x; int y)
+{
+   int x;
+
+   x=2620;
+   y=2924;
+}
+
+char dog(){}
+
+elk(bool z[])
+{
+}
+
+main()
+{
+    char c:3;
+    char d:c+6;
+    int z[34];
+
+    break;
+    while 1184 do 1210;
+    if 220 then  284;
+
+    zebu();
+
+    dog();
+    dog('a');
+    dog('a', 'b');
+    dog('a', 'b', 'c'+3, -true);
+
+    dog(z);    
+    elk(13);
+    elk(dog(true, 3));
+}

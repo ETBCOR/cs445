@@ -1,0 +1,10 @@
+main(int x)
+{
+    z = i;
+    z = i;
+    i = i+3;
+    j++;
+    l;
+    -m;
+    main(k);
+}

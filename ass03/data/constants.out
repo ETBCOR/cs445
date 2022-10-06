@@ -1,0 +1,18 @@
+Func: main returns type void [line: 2]
+.   Child: 1  Compound [line: 3]
+.   .   Child: 1  Call: output [line: 4]
+.   .   .   Child: 0  Const 111 [line: 4]
+.   .   Sibling: 1  Call: outputb [line: 5]
+.   .   .   Child: 0  Const true [line: 5]
+.   .   Sibling: 2  Call: outputb [line: 6]
+.   .   .   Child: 0  Const false [line: 6]
+.   .   Sibling: 3  Call: outputc [line: 7]
+.   .   .   Child: 0  Const 'x' [line: 7]
+.   .   Sibling: 4  Call: outnl [line: 8]
+ERROR(4): Symbol 'output' is not declared.
+ERROR(5): Symbol 'outputb' is not declared.
+ERROR(6): Symbol 'outputb' is not declared.
+ERROR(7): Symbol 'outputc' is not declared.
+ERROR(8): Symbol 'outnl' is not declared.
+Number of warnings: 0
+Number of errors: 5

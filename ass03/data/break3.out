@@ -1,0 +1,19 @@
+Func: main returns type void [line: 2]
+.   Child: 1  Compound [line: 3]
+.   .   Child: 0  Var: x of type int [line: 4]
+.   .   Child: 1  While [line: 5]
+.   .   .   Child: 0  Const true [line: 5]
+.   .   .   Child: 1  For [line: 5]
+.   .   .   .   Child: 0  Var: x of type int [line: 5]
+.   .   .   .   Child: 1  Range [line: 5]
+.   .   .   .   .   Child: 0  Const 1 [line: 5]
+.   .   .   .   .   Child: 1  Id: x [line: 5]
+.   .   .   .   Child: 2  If [line: 5]
+.   .   .   .   .   Child: 0  Op: > [line: 5]
+.   .   .   .   .   .   Child: 0  Id: x [line: 5]
+.   .   .   .   .   .   Child: 1  Const 1 [line: 5]
+.   .   .   .   .   Child: 1  Break [line: 5]
+.   .   .   .   .   Child: 2  Break [line: 5]
+WARNING(4): The variable 'x' seems not to be used.
+Number of warnings: 1
+Number of errors: 0

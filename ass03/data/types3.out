@@ -1,0 +1,39 @@
+Var: lund of type int [line: 3]
+Sibling: 1  Func: lund returns type void [line: 5]
+.   Child: 0  Parm: a of type int [line: 5]
+.   Child: 1  Compound [line: 6]
+Sibling: 2  Func: fred returns type int [line: 9]
+.   Child: 0  Parm: a of type int [line: 9]
+.   Sibling: 1  Parm: a of type int [line: 9]
+.   Child: 1  Compound [line: 10]
+.   .   Child: 0  Var: a of type int [line: 11]
+.   .   Child: 1  Call: a [line: 12]
+.   .   Sibling: 1  Op: + [line: 13]
+.   .   .   Child: 0  Id: fred [line: 13]
+.   .   .   Child: 1  Const 4 [line: 13]
+Sibling: 3  Var: fred of type int [line: 16]
+Sibling: 4  Func: linda returns type void [line: 18]
+.   Child: 0  Parm: linda of type int [line: 18]
+.   Child: 1  Compound [line: 19]
+.   .   Child: 0  Var: linda of type int [line: 20]
+Sibling: 5  Var: galadriel of type int [line: 23]
+Sibling: 6  Func: arwen returns type void [line: 24]
+.   Child: 0  Parm: eowyn of type int [line: 24]
+.   Child: 1  Compound [line: 25]
+.   .   Child: 1  Op: + [line: 26]
+.   .   .   Child: 0  Id: arwen [line: 26]
+.   .   .   Child: 1  Const 4 [line: 26]
+ERROR(5): Symbol 'lund' is already declared at line 3.
+WARNING(5): The variable 'a' seems not to be used.
+ERROR(9): Symbol 'a' is already declared at line 9.
+ERROR(11): Symbol 'a' is already declared at line 9.
+ERROR(12): 'a' is a simple variable and cannot be called.
+ERROR(13): Cannot use function 'fred' as a variable.
+ERROR(16): Symbol 'fred' is already declared at line 9.
+ERROR(20): Symbol 'linda' is already declared at line 18.
+WARNING(18): The variable 'linda' seems not to be used.
+ERROR(26): Cannot use function 'arwen' as a variable.
+WARNING(24): The variable 'eowyn' seems not to be used.
+ERROR(LINKER): A function named 'main()' must be defined.
+Number of warnings: 3
+Number of errors: 9

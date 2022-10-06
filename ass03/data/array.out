@@ -1,0 +1,24 @@
+Var: a is array of type int [line: 2]
+Sibling: 1  Func: main returns type void [line: 4]
+.   Child: 1  Compound [line: 5]
+.   .   Child: 0  Var: b is array of type int [line: 6]
+.   .   Sibling: 1  Var: c is array of type int [line: 7]
+.   .   Child: 1  Op: [ [line: 9]
+.   .   .   Child: 0  Id: c [line: 9]
+.   .   .   Child: 1  Const 22 [line: 9]
+.   .   Sibling: 1  Const 999 [line: 10]
+.   .   Sibling: 2  Call: output [line: 11]
+.   .   .   Child: 0  Op: sizeof [line: 11]
+.   .   .   .   Child: 0  Id: a [line: 11]
+.   .   Sibling: 3  Call: output [line: 12]
+.   .   .   Child: 0  Op: sizeof [line: 12]
+.   .   .   .   Child: 0  Id: b [line: 12]
+.   .   Sibling: 4  Call: output [line: 13]
+.   .   .   Child: 0  Op: sizeof [line: 13]
+.   .   .   .   Child: 0  Id: c [line: 13]
+ERROR(11): Symbol 'output' is not declared.
+ERROR(12): Symbol 'output' is not declared.
+WARNING(12): Variable 'b' may be uninitialized when used here.
+ERROR(13): Symbol 'output' is not declared.
+Number of warnings: 1
+Number of errors: 3

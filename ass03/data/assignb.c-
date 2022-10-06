@@ -1,0 +1,13 @@
+main()
+{
+    int aa[10], a;
+    bool bb[10], b;
+    char cc[10], c;
+
+    x = x;
+    x = 3;
+    aa[2];
+    bb[a] = b;
+//    cc[2]!='4';
+    b = cc[2]!='4';
+    }

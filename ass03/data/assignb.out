@@ -1,0 +1,38 @@
+Func: main returns type void [line: 1]
+.   Child: 1  Compound [line: 2]
+.   .   Child: 0  Var: aa is array of type int [line: 3]
+.   .   Sibling: 1  Var: a of type int [line: 3]
+.   .   Sibling: 2  Var: bb is array of type bool [line: 4]
+.   .   Sibling: 3  Var: b of type bool [line: 4]
+.   .   Sibling: 4  Var: cc is array of type char [line: 5]
+.   .   Sibling: 5  Var: c of type char [line: 5]
+.   .   Child: 1  Assign: = [line: 7]
+.   .   .   Child: 0  Id: x [line: 7]
+.   .   .   Child: 1  Id: x [line: 7]
+.   .   Sibling: 1  Assign: = [line: 8]
+.   .   .   Child: 0  Id: x [line: 8]
+.   .   .   Child: 1  Const 3 [line: 8]
+.   .   Sibling: 2  Op: [ [line: 9]
+.   .   .   Child: 0  Id: aa [line: 9]
+.   .   .   Child: 1  Const 2 [line: 9]
+.   .   Sibling: 3  Assign: = [line: 10]
+.   .   .   Child: 0  Op: [ [line: 10]
+.   .   .   .   Child: 0  Id: bb [line: 10]
+.   .   .   .   Child: 1  Id: a [line: 10]
+.   .   .   Child: 1  Id: b [line: 10]
+.   .   Sibling: 4  Assign: = [line: 12]
+.   .   .   Child: 0  Id: b [line: 12]
+.   .   .   Child: 1  Op: != [line: 12]
+.   .   .   .   Child: 0  Op: [ [line: 12]
+.   .   .   .   .   Child: 0  Id: cc [line: 12]
+.   .   .   .   .   Child: 1  Const 2 [line: 12]
+.   .   .   .   Child: 1  Const '4' [line: 12]
+ERROR(7): Symbol 'x' is not declared.
+ERROR(7): Symbol 'x' is not declared.
+ERROR(8): Symbol 'x' is not declared.
+WARNING(9): Variable 'aa' may be uninitialized when used here.
+WARNING(10): Variable 'b' may be uninitialized when used here.
+WARNING(12): Variable 'cc' may be uninitialized when used here.
+WARNING(5): The variable 'c' seems not to be used.
+Number of warnings: 4
+Number of errors: 3

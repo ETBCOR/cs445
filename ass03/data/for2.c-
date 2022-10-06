@@ -1,0 +1,11 @@
+main()
+{
+    int a[10];
+
+    for i = a to j do
+        for j = a to i do {
+            int i;
+            int j;
+            i+j;
+        }
+}

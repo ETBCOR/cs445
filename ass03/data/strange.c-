@@ -1,0 +1,26 @@
+int main;
+int main(){}
+main(int x)
+{
+    int y;
+    int z[10];
+
+    y=3;
+    main(y);
+    y++;
+    x = y = y++;
+//    y++ + 1;  // syntax error
+//    y++ = 1;  // syntax error
+    (y++) + 1;  
+//    (y++) = 1;  // syntax error
+    y = y++;
+    y = (y++)+1;
+    main(y++);
+
+//    if y++ y=4;   // syntax error 
+    if (y++) then y=4;
+//    if y=y+1 y=4; // syntax error
+    if (y=y+1) then y=4;
+    z[y++] = 6;
+    z[y=7] = 6;
+}

@@ -1,0 +1,383 @@
+Func: main returns type int [line: 2]
+.   Child: 1  Compound [line: 3]
+.   .   Child: 0  Var: i of type int [line: 4]
+.   .   Sibling: 1  Var: b of type bool [line: 5]
+.   .   Sibling: 2  Var: ia is array of type int [line: 6]
+.   .   Sibling: 3  Var: ba is array of type bool [line: 7]
+.   .   Sibling: 4  Var: c of type char [line: 8]
+.   .   Sibling: 5  Var: c of type char [line: 8]
+.   .   Sibling: 6  Var: i of type int [line: 9]
+.   .   Sibling: 7  Var: pumpkin of type bool [line: 10]
+.   .   Child: 1  Op: + [line: 12]
+.   .   .   Child: 0  Id: i [line: 12]
+.   .   .   Child: 1  Id: i [line: 12]
+.   .   Sibling: 1  Op: + [line: 13]
+.   .   .   Child: 0  Id: i [line: 13]
+.   .   .   Child: 1  Id: b [line: 13]
+.   .   Sibling: 2  Op: + [line: 14]
+.   .   .   Child: 0  Id: b [line: 14]
+.   .   .   Child: 1  Id: i [line: 14]
+.   .   Sibling: 3  Op: + [line: 15]
+.   .   .   Child: 0  Id: b [line: 15]
+.   .   .   Child: 1  Id: b [line: 15]
+.   .   Sibling: 4  Op: and [line: 17]
+.   .   .   Child: 0  Id: i [line: 17]
+.   .   .   Child: 1  Id: i [line: 17]
+.   .   Sibling: 5  Op: and [line: 18]
+.   .   .   Child: 0  Id: i [line: 18]
+.   .   .   Child: 1  Id: b [line: 18]
+.   .   Sibling: 6  Op: and [line: 19]
+.   .   .   Child: 0  Id: b [line: 19]
+.   .   .   Child: 1  Id: i [line: 19]
+.   .   Sibling: 7  Op: and [line: 20]
+.   .   .   Child: 0  Id: b [line: 20]
+.   .   .   Child: 1  Id: b [line: 20]
+.   .   Sibling: 8  Assign: = [line: 22]
+.   .   .   Child: 0  Id: i [line: 22]
+.   .   .   Child: 1  Id: i [line: 22]
+.   .   Sibling: 9  Assign: = [line: 23]
+.   .   .   Child: 0  Id: i [line: 23]
+.   .   .   Child: 1  Id: b [line: 23]
+.   .   Sibling: 10  Assign: = [line: 24]
+.   .   .   Child: 0  Id: b [line: 24]
+.   .   .   Child: 1  Id: i [line: 24]
+.   .   Sibling: 11  Assign: = [line: 25]
+.   .   .   Child: 0  Id: b [line: 25]
+.   .   .   Child: 1  Id: b [line: 25]
+.   .   Sibling: 12  Op: == [line: 27]
+.   .   .   Child: 0  Id: i [line: 27]
+.   .   .   Child: 1  Id: i [line: 27]
+.   .   Sibling: 13  Op: == [line: 28]
+.   .   .   Child: 0  Id: i [line: 28]
+.   .   .   Child: 1  Id: b [line: 28]
+.   .   Sibling: 14  Op: == [line: 29]
+.   .   .   Child: 0  Id: b [line: 29]
+.   .   .   Child: 1  Id: i [line: 29]
+.   .   Sibling: 15  Op: == [line: 30]
+.   .   .   Child: 0  Id: b [line: 30]
+.   .   .   Child: 1  Id: b [line: 30]
+.   .   Sibling: 16  Op: != [line: 32]
+.   .   .   Child: 0  Id: i [line: 32]
+.   .   .   Child: 1  Id: i [line: 32]
+.   .   Sibling: 17  Op: != [line: 33]
+.   .   .   Child: 0  Id: i [line: 33]
+.   .   .   Child: 1  Id: b [line: 33]
+.   .   Sibling: 18  Op: != [line: 34]
+.   .   .   Child: 0  Id: b [line: 34]
+.   .   .   Child: 1  Id: i [line: 34]
+.   .   Sibling: 19  Op: != [line: 35]
+.   .   .   Child: 0  Id: b [line: 35]
+.   .   .   Child: 1  Id: b [line: 35]
+.   .   Sibling: 20  Op: + [line: 37]
+.   .   .   Child: 0  Id: ia [line: 37]
+.   .   .   Child: 1  Id: ia [line: 37]
+.   .   Sibling: 21  Op: + [line: 38]
+.   .   .   Child: 0  Id: ia [line: 38]
+.   .   .   Child: 1  Id: ba [line: 38]
+.   .   Sibling: 22  Op: + [line: 39]
+.   .   .   Child: 0  Id: ba [line: 39]
+.   .   .   Child: 1  Id: ia [line: 39]
+.   .   Sibling: 23  Op: + [line: 40]
+.   .   .   Child: 0  Id: ba [line: 40]
+.   .   .   Child: 1  Id: ba [line: 40]
+.   .   Sibling: 24  Op: and [line: 42]
+.   .   .   Child: 0  Id: ia [line: 42]
+.   .   .   Child: 1  Id: ia [line: 42]
+.   .   Sibling: 25  Op: and [line: 43]
+.   .   .   Child: 0  Id: ia [line: 43]
+.   .   .   Child: 1  Id: ba [line: 43]
+.   .   Sibling: 26  Op: and [line: 44]
+.   .   .   Child: 0  Id: ba [line: 44]
+.   .   .   Child: 1  Id: ia [line: 44]
+.   .   Sibling: 27  Op: and [line: 45]
+.   .   .   Child: 0  Id: ba [line: 45]
+.   .   .   Child: 1  Id: ba [line: 45]
+.   .   Sibling: 28  Assign: = [line: 47]
+.   .   .   Child: 0  Id: ia [line: 47]
+.   .   .   Child: 1  Id: ia [line: 47]
+.   .   Sibling: 29  Assign: = [line: 48]
+.   .   .   Child: 0  Id: ia [line: 48]
+.   .   .   Child: 1  Id: ba [line: 48]
+.   .   Sibling: 30  Assign: = [line: 49]
+.   .   .   Child: 0  Id: ba [line: 49]
+.   .   .   Child: 1  Id: ia [line: 49]
+.   .   Sibling: 31  Assign: = [line: 50]
+.   .   .   Child: 0  Id: ba [line: 50]
+.   .   .   Child: 1  Id: ba [line: 50]
+.   .   Sibling: 32  Op: == [line: 52]
+.   .   .   Child: 0  Id: ia [line: 52]
+.   .   .   Child: 1  Id: ia [line: 52]
+.   .   Sibling: 33  Op: == [line: 53]
+.   .   .   Child: 0  Id: ia [line: 53]
+.   .   .   Child: 1  Id: ba [line: 53]
+.   .   Sibling: 34  Op: == [line: 54]
+.   .   .   Child: 0  Id: ba [line: 54]
+.   .   .   Child: 1  Id: ia [line: 54]
+.   .   Sibling: 35  Op: == [line: 55]
+.   .   .   Child: 0  Id: ba [line: 55]
+.   .   .   Child: 1  Id: ba [line: 55]
+.   .   Sibling: 36  Op: + [line: 57]
+.   .   .   Child: 0  Op: + [line: 57]
+.   .   .   .   Child: 0  Id: b [line: 57]
+.   .   .   .   Child: 1  Id: i [line: 57]
+.   .   .   Child: 1  Id: i [line: 57]
+.   .   Sibling: 37  Op: + [line: 58]
+.   .   .   Child: 0  Op: + [line: 58]
+.   .   .   .   Child: 0  Id: i [line: 58]
+.   .   .   .   Child: 1  Id: b [line: 58]
+.   .   .   Child: 1  Id: i [line: 58]
+.   .   Sibling: 38  Op: + [line: 59]
+.   .   .   Child: 0  Op: + [line: 59]
+.   .   .   .   Child: 0  Id: i [line: 59]
+.   .   .   .   Child: 1  Id: i [line: 59]
+.   .   .   Child: 1  Id: b [line: 59]
+.   .   Sibling: 39  Op: or [line: 61]
+.   .   .   Child: 0  Op: or [line: 61]
+.   .   .   .   Child: 0  Id: i [line: 61]
+.   .   .   .   Child: 1  Id: b [line: 61]
+.   .   .   Child: 1  Id: b [line: 61]
+.   .   Sibling: 40  Op: or [line: 62]
+.   .   .   Child: 0  Op: or [line: 62]
+.   .   .   .   Child: 0  Id: b [line: 62]
+.   .   .   .   Child: 1  Id: i [line: 62]
+.   .   .   Child: 1  Id: b [line: 62]
+.   .   Sibling: 41  Op: or [line: 63]
+.   .   .   Child: 0  Op: or [line: 63]
+.   .   .   .   Child: 0  Id: b [line: 63]
+.   .   .   .   Child: 1  Id: b [line: 63]
+.   .   .   Child: 1  Id: i [line: 63]
+.   .   Sibling: 42  Op: not [line: 65]
+.   .   .   Child: 0  Id: b [line: 65]
+.   .   Sibling: 43  Op: not [line: 66]
+.   .   .   Child: 0  Id: i [line: 66]
+.   .   Sibling: 44  Op: not [line: 67]
+.   .   .   Child: 0  Id: ba [line: 67]
+.   .   Sibling: 45  Op: not [line: 68]
+.   .   .   Child: 0  Id: ia [line: 68]
+.   .   Sibling: 46  Op: chsign [line: 70]
+.   .   .   Child: 0  Id: b [line: 70]
+.   .   Sibling: 47  Op: chsign [line: 71]
+.   .   .   Child: 0  Id: i [line: 71]
+.   .   Sibling: 48  Op: chsign [line: 72]
+.   .   .   Child: 0  Id: ba [line: 72]
+.   .   Sibling: 49  Op: chsign [line: 73]
+.   .   .   Child: 0  Id: ia [line: 73]
+.   .   Sibling: 50  Op: or [line: 75]
+.   .   .   Child: 0  Op: > [line: 75]
+.   .   .   .   Child: 0  Id: i [line: 75]
+.   .   .   .   Child: 1  Id: i [line: 75]
+.   .   .   Child: 1  Op: > [line: 75]
+.   .   .   .   Child: 0  Id: i [line: 75]
+.   .   .   .   Child: 1  Id: i [line: 75]
+.   .   Sibling: 51  Op: or [line: 76]
+.   .   .   Child: 0  Op: > [line: 76]
+.   .   .   .   Child: 0  Id: b [line: 76]
+.   .   .   .   Child: 1  Id: i [line: 76]
+.   .   .   Child: 1  Op: > [line: 76]
+.   .   .   .   Child: 0  Id: i [line: 76]
+.   .   .   .   Child: 1  Id: i [line: 76]
+.   .   Sibling: 52  Op: or [line: 77]
+.   .   .   Child: 0  Op: > [line: 77]
+.   .   .   .   Child: 0  Id: i [line: 77]
+.   .   .   .   Child: 1  Id: b [line: 77]
+.   .   .   Child: 1  Op: > [line: 77]
+.   .   .   .   Child: 0  Id: i [line: 77]
+.   .   .   .   Child: 1  Id: i [line: 77]
+.   .   Sibling: 53  Op: or [line: 78]
+.   .   .   Child: 0  Op: > [line: 78]
+.   .   .   .   Child: 0  Id: i [line: 78]
+.   .   .   .   Child: 1  Id: i [line: 78]
+.   .   .   Child: 1  Op: > [line: 78]
+.   .   .   .   Child: 0  Id: b [line: 78]
+.   .   .   .   Child: 1  Id: i [line: 78]
+.   .   Sibling: 54  Op: or [line: 79]
+.   .   .   Child: 0  Op: > [line: 79]
+.   .   .   .   Child: 0  Id: b [line: 79]
+.   .   .   .   Child: 1  Id: i [line: 79]
+.   .   .   Child: 1  Op: > [line: 79]
+.   .   .   .   Child: 0  Id: i [line: 79]
+.   .   .   .   Child: 1  Id: b [line: 79]
+.   .   Sibling: 55  Op: and [line: 80]
+.   .   .   Child: 0  Op: or [line: 80]
+.   .   .   .   Child: 0  Id: b [line: 80]
+.   .   .   .   Child: 1  Id: b [line: 80]
+.   .   .   Child: 1  Op: or [line: 80]
+.   .   .   .   Child: 0  Id: b [line: 80]
+.   .   .   .   Child: 1  Id: b [line: 80]
+.   .   Sibling: 56  If [line: 82]
+.   .   .   Child: 0  Const 1 [line: 82]
+.   .   .   Child: 1  Assign: = [line: 82]
+.   .   .   .   Child: 0  Id: i [line: 82]
+.   .   .   .   Child: 1  Id: i [line: 82]
+.   .   .   Child: 2  Assign: = [line: 83]
+.   .   .   .   Child: 0  Id: b [line: 83]
+.   .   .   .   Child: 1  Id: b [line: 83]
+.   .   Sibling: 57  If [line: 85]
+.   .   .   Child: 0  Id: ba [line: 85]
+.   .   .   Child: 1  Assign: = [line: 85]
+.   .   .   .   Child: 0  Id: i [line: 85]
+.   .   .   .   Child: 1  Id: i [line: 85]
+.   .   .   Child: 2  Assign: = [line: 86]
+.   .   .   .   Child: 0  Id: b [line: 86]
+.   .   .   .   Child: 1  Id: b [line: 86]
+.   .   Sibling: 58  If [line: 88]
+.   .   .   Child: 0  Id: ia [line: 88]
+.   .   .   Child: 1  Assign: = [line: 88]
+.   .   .   .   Child: 0  Id: i [line: 88]
+.   .   .   .   Child: 1  Id: i [line: 88]
+.   .   .   Child: 2  Assign: = [line: 89]
+.   .   .   .   Child: 0  Id: b [line: 89]
+.   .   .   .   Child: 1  Id: b [line: 89]
+.   .   Sibling: 59  If [line: 91]
+.   .   .   Child: 0  Id: b [line: 91]
+.   .   .   Child: 1  Assign: = [line: 91]
+.   .   .   .   Child: 0  Id: i [line: 91]
+.   .   .   .   Child: 1  Id: i [line: 91]
+.   .   .   Child: 2  Assign: = [line: 92]
+.   .   .   .   Child: 0  Id: b [line: 92]
+.   .   .   .   Child: 1  Id: b [line: 92]
+.   .   Sibling: 60  If [line: 94]
+.   .   .   Child: 0  Id: i [line: 94]
+.   .   .   Child: 1  Assign: = [line: 94]
+.   .   .   .   Child: 0  Id: i [line: 94]
+.   .   .   .   Child: 1  Id: i [line: 94]
+.   .   .   Child: 2  Assign: = [line: 95]
+.   .   .   .   Child: 0  Id: b [line: 95]
+.   .   .   .   Child: 1  Id: b [line: 95]
+.   .   Sibling: 61  While [line: 97]
+.   .   .   Child: 0  Const 1 [line: 97]
+.   .   .   Child: 1  Assign: = [line: 97]
+.   .   .   .   Child: 0  Id: i [line: 97]
+.   .   .   .   Child: 1  Id: i [line: 97]
+.   .   Sibling: 62  While [line: 98]
+.   .   .   Child: 0  Id: ba [line: 98]
+.   .   .   Child: 1  Assign: = [line: 98]
+.   .   .   .   Child: 0  Id: i [line: 98]
+.   .   .   .   Child: 1  Id: i [line: 98]
+.   .   Sibling: 63  While [line: 99]
+.   .   .   Child: 0  Id: ia [line: 99]
+.   .   .   Child: 1  Assign: = [line: 99]
+.   .   .   .   Child: 0  Id: i [line: 99]
+.   .   .   .   Child: 1  Id: i [line: 99]
+.   .   Sibling: 64  While [line: 100]
+.   .   .   Child: 0  Id: b [line: 100]
+.   .   .   Child: 1  Assign: = [line: 100]
+.   .   .   .   Child: 0  Id: i [line: 100]
+.   .   .   .   Child: 1  Id: i [line: 100]
+.   .   Sibling: 65  While [line: 101]
+.   .   .   Child: 0  Id: i [line: 101]
+.   .   .   Child: 1  Assign: = [line: 101]
+.   .   .   .   Child: 0  Id: i [line: 101]
+.   .   .   .   Child: 1  Id: i [line: 101]
+.   .   Sibling: 66  Call: b [line: 103]
+.   .   Sibling: 67  Op: [ [line: 104]
+.   .   .   Child: 0  Id: b [line: 104]
+.   .   .   Child: 1  Const 3 [line: 104]
+.   .   Sibling: 68  Op: [ [line: 105]
+.   .   .   Child: 0  Id: x [line: 105]
+.   .   .   Child: 1  Const 4 [line: 105]
+.   .   Sibling: 69  Op: [ [line: 106]
+.   .   .   Child: 0  Id: main [line: 106]
+.   .   .   Child: 1  Const 5 [line: 106]
+.   .   Sibling: 70  Op: [ [line: 107]
+.   .   .   Child: 0  Id: main [line: 107]
+.   .   .   Child: 1  Call: main [line: 107]
+.   .   Sibling: 71  Op: [ [line: 108]
+.   .   .   Child: 0  Id: ba [line: 108]
+.   .   .   Child: 1  Id: ba [line: 108]
+.   .   Sibling: 72  Op: [ [line: 109]
+.   .   .   Child: 0  Id: ba [line: 109]
+.   .   .   Child: 1  Const 's' [line: 109]
+.   .   Sibling: 73  Assign: ++ [line: 110]
+.   .   .   Child: 0  Id: main [line: 110]
+.   .   Sibling: 74  Op: + [line: 111]
+.   .   .   Child: 0  Id: ia [line: 111]
+.   .   .   Child: 1  Id: ia [line: 111]
+.   .   Sibling: 75  Op: sizeof [line: 112]
+.   .   .   Child: 0  Id: a [line: 112]
+.   .   Sibling: 76  Op: sizeof [line: 113]
+.   .   .   Child: 0  Id: i [line: 113]
+.   .   Sibling: 77  Op: chsign [line: 114]
+.   .   .   Child: 0  Const true [line: 114]
+.   .   Sibling: 78  Return [line: 116]
+.   .   .   Child: 0  Id: ba [line: 116]
+ERROR(8): Symbol 'c' is already declared at line 8.
+ERROR(9): Symbol 'i' is already declared at line 4.
+WARNING(12): Variable 'i' may be uninitialized when used here.
+WARNING(13): Variable 'b' may be uninitialized when used here.
+ERROR(13): '+' requires operands of type int but rhs is of type bool.
+ERROR(14): '+' requires operands of type int but lhs is of type bool.
+ERROR(15): '+' requires operands of type int but lhs is of type bool.
+ERROR(15): '+' requires operands of type int but rhs is of type bool.
+ERROR(17): 'and' requires operands of type bool but lhs is of type int.
+ERROR(17): 'and' requires operands of type bool but rhs is of type int.
+ERROR(18): 'and' requires operands of type bool but lhs is of type int.
+ERROR(19): 'and' requires operands of type bool but rhs is of type int.
+ERROR(23): '=' requires operands of the same type but lhs is type int and rhs is type bool.
+ERROR(24): '=' requires operands of the same type but lhs is type bool and rhs is type int.
+ERROR(28): '==' requires operands of the same type but lhs is type int and rhs is type bool.
+ERROR(29): '==' requires operands of the same type but lhs is type bool and rhs is type int.
+ERROR(33): '!=' requires operands of the same type but lhs is type int and rhs is type bool.
+ERROR(34): '!=' requires operands of the same type but lhs is type bool and rhs is type int.
+WARNING(37): Variable 'ia' may be uninitialized when used here.
+ERROR(37): The operation '+' does not work with arrays.
+WARNING(38): Variable 'ba' may be uninitialized when used here.
+ERROR(38): '+' requires operands of type int but rhs is of type bool.
+ERROR(38): The operation '+' does not work with arrays.
+ERROR(39): '+' requires operands of type int but lhs is of type bool.
+ERROR(39): The operation '+' does not work with arrays.
+ERROR(40): '+' requires operands of type int but lhs is of type bool.
+ERROR(40): '+' requires operands of type int but rhs is of type bool.
+ERROR(40): The operation '+' does not work with arrays.
+ERROR(42): 'and' requires operands of type bool but lhs is of type int.
+ERROR(42): 'and' requires operands of type bool but rhs is of type int.
+ERROR(42): The operation 'and' does not work with arrays.
+ERROR(43): 'and' requires operands of type bool but lhs is of type int.
+ERROR(43): The operation 'and' does not work with arrays.
+ERROR(44): 'and' requires operands of type bool but rhs is of type int.
+ERROR(44): The operation 'and' does not work with arrays.
+ERROR(45): The operation 'and' does not work with arrays.
+ERROR(48): '=' requires operands of the same type but lhs is type int and rhs is type bool.
+ERROR(49): '=' requires operands of the same type but lhs is type bool and rhs is type int.
+ERROR(53): '==' requires operands of the same type but lhs is type int and rhs is type bool.
+ERROR(54): '==' requires operands of the same type but lhs is type bool and rhs is type int.
+ERROR(57): '+' requires operands of type int but lhs is of type bool.
+ERROR(58): '+' requires operands of type int but rhs is of type bool.
+ERROR(59): '+' requires operands of type int but rhs is of type bool.
+ERROR(61): 'or' requires operands of type bool but lhs is of type int.
+ERROR(62): 'or' requires operands of type bool but rhs is of type int.
+ERROR(63): 'or' requires operands of type bool but rhs is of type int.
+ERROR(66): Unary 'not' requires an operand of type bool but was given type int.
+ERROR(67): The operation 'not' does not work with arrays.
+ERROR(68): Unary 'not' requires an operand of type bool but was given type int.
+ERROR(68): The operation 'not' does not work with arrays.
+ERROR(70): Unary 'chsign' requires an operand of type int but was given type bool.
+ERROR(72): Unary 'chsign' requires an operand of type int but was given type bool.
+ERROR(72): The operation 'chsign' does not work with arrays.
+ERROR(73): The operation 'chsign' does not work with arrays.
+ERROR(76): '>' requires operands of the same type but lhs is type bool and rhs is type int.
+ERROR(77): '>' requires operands of the same type but lhs is type int and rhs is type bool.
+ERROR(78): '>' requires operands of the same type but lhs is type bool and rhs is type int.
+ERROR(79): '>' requires operands of the same type but lhs is type bool and rhs is type int.
+ERROR(79): '>' requires operands of the same type but lhs is type int and rhs is type bool.
+ERROR(103): 'b' is a simple variable and cannot be called.
+ERROR(104): Cannot index nonarray 'b'.
+ERROR(105): Symbol 'x' is not declared.
+ERROR(105): Cannot index nonarray 'x'.
+ERROR(106): Cannot use function 'main' as a variable.
+ERROR(106): Cannot index nonarray 'main'.
+ERROR(107): Cannot use function 'main' as a variable.
+ERROR(107): Cannot index nonarray 'main'.
+ERROR(108): Array 'ba' should be indexed by type int but got type bool.
+ERROR(108): Array index is the unindexed array 'ba'.
+ERROR(109): Array 'ba' should be indexed by type int but got type char.
+ERROR(110): Cannot use function 'main' as a variable.
+ERROR(111): The operation '+' does not work with arrays.
+ERROR(112): Symbol 'a' is not declared.
+ERROR(113): The operation 'sizeof' only works with arrays.
+ERROR(114): Unary 'chsign' requires an operand of type int but was given type bool.
+ERROR(116): Cannot return an array.
+WARNING(8): The variable 'c' seems not to be used.
+WARNING(10): The variable 'pumpkin' seems not to be used.
+Number of warnings: 6
+Number of errors: 72

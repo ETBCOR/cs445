@@ -1,0 +1,50 @@
+// intentionally 4 comments so linenumber match forscope.c-
+//
+//
+//
+ant(int x, x) {
+    int x;
+    x = 1;
+}
+
+bat(int x) { {
+        int x;
+        x = 2;
+    } }
+
+cat(int x) {
+    int x;
+    {
+        int x;
+        x = 3;
+    } }
+
+dog(int x) {
+if  x>3 then  {
+    int x;
+    x=4;
+}}
+
+elk(int x) {
+    int x;
+    if  x>3 then  {
+        int x; x=5;
+    }
+}
+
+fox(int x)  {
+    while true do
+        if  x>3 then  {
+            int x; x = 6;
+        }
+        else {
+            int x; x = 7;
+        }
+}
+
+gnu(int x){ 
+    while true do
+        if  x>3 then  666;
+        else {
+            int x; x = 7;
+        }}

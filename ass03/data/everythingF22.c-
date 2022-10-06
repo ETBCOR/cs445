@@ -1,0 +1,138 @@
+// C-F22
+//
+// Test all the basic elements of C-
+//
+//
+int gromit, mysteriousPenguin;
+
+// no return value
+wallace(int wrong, trousers)
+{
+    bool close:true, shave:false;
+    int cheese:17;
+   
+    1729;
+    close;
+    11*22+33*44;
+    close = shave;
+    wrong = trousers % (666/wrong);
+    gromit = wrong * trousers - gromit + -42;
+    gromit += 27182818;
+    gromit -= -31415927;
+    gromit /= (wrong *= 42);
+    close = wrong < trousers and trousers <= gromit;
+    shave = wrong > trousers and trousers >= gromit;
+    {
+        int a, grand:1/2, day:3*4, out:-9;
+        a = grand += day -= out;
+    }
+    close = -1*2+3<4*5 and 6+7>-3;
+    shave = true or ((-(1*(2+3)))<(4*5) and ((6+7)>(-3)));
+    if shave != close then shave = not close;
+    if not  (shave == close or  not  close) then shave = true;
+    else close = false;
+    mysteriousPenguin = - (- (- 008) - -(cheese--));
+
+    while shave do {
+        static int were, rabbit;
+        static int sheep[10];
+
+        sheep[2] = 1618;
+        if sheep[2]<496 then break;
+        wallace(gromit--, were-rabbit);
+        { 
+            int the, wrong, trousers;
+
+            the = wrong += trousers++;
+            if were == rabbit then were = wrong--;  // assignment is in test
+        }
+    }
+    return;
+}       
+
+
+bool penguin(char Feathers, McGraw[]; bool moon, cheese; int launch) 
+{
+    static char tottington:'x';
+    char  Wensleydale[17];
+    char c;
+    int i;         
+
+    tottington = Feathers;
+    moon = McGraw <= Wensleydale and moon;
+    Wensleydale = McGraw;
+    Wensleydale[*McGraw] = ('Q');
+    McGraw[3] = 'A';
+}        
+
+int Wendolene(int wool; bool shaun; int yarn[]; bool preston[])
+{
+    int skein;
+    preston[3] = yarn[1] > wool or not shaun;
+    return wool + yarn[0] + *yarn + yarn[7*wool] + yarn[yarn[3+wool*2]-4];
+}
+
+
+bool ramsBottom()
+{
+    int chicken[2];
+    bool run[3];
+    int wallace[2], gromit[3];
+
+    42 * Wendolene(1+2+3, not true or true and false, chicken, run);
+    run[*run-1];
+
+    return not wallace[1]>=-gromit[2]*3;
+}
+
+int cheese(int x, y) {while x>0 do if y>3 then x--; else return x*x%y;}
+
+int Wensleydale(int x; int y) {return cheese(x, gromit);}  // weird parm list
+
+int LadyCampanula(char c, s[]) {while true do for i = *s-1 to 0 by -1 do if s[i]==c then return i;
+}
+
+char MrsTweedy(char c, s[])
+{
+     for ginger=0  to  10 do s[ginger] = c;
+     for pastry=0 to 2 by 7 do if s[0]==s[1] then break;
+     while true do break;
+
+     return 'x';
+}
+
+char TheWereRabbit(int x)
+{
+     if x==0 then return '@';
+     else if x==1 then return 'a';
+     else if x==2 then return 'b';
+     else if x==3 then return 'c';
+     else if x==4 then return 'd';
+     else return '\0';
+}
+
+int main()
+{
+    int wool, yarn[113];
+    bool shaun, preston[22];
+    char rocky[12];
+
+    wallace(cheese(62, -311), gromit);
+    rocky = "molybdenum";
+
+    MrsTweedy('Z', rocky);
+
+    yarn[?100] + yarn[?*yarn];
+
+    return Wendolene(*preston**yarn, shaun, yarn, preston);
+}
+
+bool aBigLongVariableName6andthx1138;
+int    odd  ,   separation              ,of,
+stuff ;
+
+char ant[10]:"unwrinkled";
+char bat:'\'';
+char cat:'\t';
+char dog:'\n';
+char hog:'\0';

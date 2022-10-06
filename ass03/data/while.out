@@ -1,0 +1,14 @@
+Func: main returns type void [line: 2]
+.   Child: 1  Compound [line: 3]
+.   .   Child: 0  Var: x of type int [line: 4]
+.   .   Child: 1  Assign: = [line: 5]
+.   .   .   Child: 0  Id: x [line: 5]
+.   .   .   Child: 1  Const 0 [line: 5]
+.   .   Sibling: 1  While [line: 7]
+.   .   .   Child: 0  Op: > [line: 7]
+.   .   .   .   Child: 0  Id: x [line: 7]
+.   .   .   .   Child: 1  Const 10 [line: 7]
+.   .   .   Child: 1  Assign: ++ [line: 7]
+.   .   .   .   Child: 0  Id: x [line: 7]
+Number of warnings: 0
+Number of errors: 0

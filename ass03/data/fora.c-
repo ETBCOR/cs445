@@ -1,0 +1,8 @@
+main()
+{
+    for i = 1 to 11 do i = 3;
+    
+    for j = 2 to 22 by 3 do j = 7;
+
+    for i = i to i by i do 666;  // tricky.   A good language would eval the range in the outter scope
+}

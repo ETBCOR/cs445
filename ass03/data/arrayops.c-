@@ -1,0 +1,76 @@
+// C-F22
+main()
+{
+     int a, aa[5];
+     bool b, bb[5];
+     char c, cc[5];
+
+     a = 42;
+     b = bb[2] = true;
+     aa[1] = 666;
+
+     a = a;
+     a = aa;
+     aa = a;
+     aa = aa;
+
+     -a;
+     -aa;
+     - -aa;
+
+     a[a];
+     a[aa];
+     aa[a];
+     aa[aa];
+
+     *a;
+     *aa;
+     ?a;
+     ?aa;
+     not b;
+     not bb;
+     a++;
+     aa++;
+
+     a+a;
+     a+aa;
+     aa+a;
+     aa+aa;
+
+     b and b;
+     b and bb;
+     bb and b;
+     bb and bb;
+
+     c = c[3];
+     c = cc[3];
+     cc = c[3];
+     cc = cc[3];
+
+     c = 'a';
+     cc = 'b';
+     cc[0] = 'c';
+
+     aa == aa;
+     cc == cc;
+     aa == cc;
+     a == aa;
+     aa == a;
+     a == a;
+
+     aa >= aa;
+     cc >= cc;
+     aa >= cc;
+     a >= aa;
+     aa >= a;
+     a >= a;
+
+     aa < aa;
+     cc < cc;
+     aa < cc;
+     a < aa;
+     aa < a;
+     a < a;
+
+     c < aa;
+}

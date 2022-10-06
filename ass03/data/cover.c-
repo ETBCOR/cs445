@@ -1,0 +1,40 @@
+// C-F22 touch all the tokens (code is not necessarily semantically correct)
+int fahrenheit:451;
+
+int carbon() {return 6;}
+
+fred(int a, b; char c, d[]; bool e, f[]) {
+    for x = 1 to 10 by 3 do {
+            while x>3 do {
+                    if x<5 then return;
+                    else break;
+                    if true then if c == 'a' then 666; else 777;
+                    a = b += 3;
+                    a *= b /= 4;
+                    a++;
+                    e = true or false and not false;
+                    b -= a * b / 5 % 13;
+                    b --;
+                    - -b;
+                    c--;
+                    ?c;
+                    ?*f;
+                    e[5] + e[6];
+                    e[e[0]];
+                    c = 'x';
+                    d = "horses";
+                    (a + a) and (2 * a);
+                    carbon();
+                    return;
+                }    
+        }
+        for i = 1 to 107 do { int x; }
+}
+
+main() {
+    int a, b[6];
+    char c, d[7];
+    bool e, f[8];
+    static int g;
+    fred(101, b, 'q', d, e, f);
+}

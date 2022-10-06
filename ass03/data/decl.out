@@ -1,0 +1,10 @@
+Func: main returns type void [line: 2]
+.   Child: 1  Compound [line: 3]
+.   .   Child: 0  Var: a of type int [line: 4]
+.   .   Sibling: 1  Var: b of type bool [line: 5]
+.   .   Sibling: 2  Var: c of type char [line: 6]
+WARNING(4): The variable 'a' seems not to be used.
+WARNING(5): The variable 'b' seems not to be used.
+WARNING(6): The variable 'c' seems not to be used.
+Number of warnings: 3
+Number of errors: 0

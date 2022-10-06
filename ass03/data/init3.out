@@ -1,0 +1,29 @@
+Var: x of type int [line: 2]
+.   Child: 0  Const 111 [line: 2]
+Sibling: 1  Func: main returns type void [line: 4]
+.   Child: 1  Compound [line: 4]
+.   .   Child: 0  Var: y of type int [line: 5]
+.   .   .   Child: 0  Const 222 [line: 5]
+.   .   Sibling: 1  Var: z of type int [line: 6]
+.   .   .   Child: 0  Const 333 [line: 6]
+.   .   Sibling: 2  Var: b of type bool [line: 7]
+.   .   .   Child: 0  Const true [line: 7]
+.   .   Sibling: 3  Var: c of type char [line: 8]
+.   .   .   Child: 0  Const 'Z' [line: 8]
+.   .   Child: 1  Call: output [line: 10]
+.   .   .   Child: 0  Id: x [line: 10]
+.   .   Sibling: 1  Call: output [line: 11]
+.   .   .   Child: 0  Id: y [line: 11]
+.   .   Sibling: 2  Call: output [line: 12]
+.   .   .   Child: 0  Id: z [line: 12]
+.   .   Sibling: 3  Call: outputb [line: 13]
+.   .   .   Child: 0  Id: b [line: 13]
+.   .   Sibling: 4  Call: outputc [line: 14]
+.   .   .   Child: 0  Id: c [line: 14]
+ERROR(10): Symbol 'output' is not declared.
+ERROR(11): Symbol 'output' is not declared.
+ERROR(12): Symbol 'output' is not declared.
+ERROR(13): Symbol 'outputb' is not declared.
+ERROR(14): Symbol 'outputc' is not declared.
+Number of warnings: 0
+Number of errors: 5

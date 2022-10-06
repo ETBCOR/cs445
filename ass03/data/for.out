@@ -1,0 +1,121 @@
+Func: main returns type void [line: 2]
+.   Child: 1  Compound [line: 3]
+.   .   Child: 0  Var: aa is array of type int [line: 4]
+.   .   Sibling: 1  Var: ba is array of type bool [line: 5]
+.   .   Sibling: 2  Var: ca is array of type char [line: 6]
+.   .   Child: 1  Assign: = [line: 8]
+.   .   .   Child: 0  Op: [ [line: 8]
+.   .   .   .   Child: 0  Id: aa [line: 8]
+.   .   .   .   Child: 1  Const 0 [line: 8]
+.   .   .   Child: 1  Const 100 [line: 8]
+.   .   Sibling: 1  Assign: = [line: 9]
+.   .   .   Child: 0  Op: [ [line: 9]
+.   .   .   .   Child: 0  Id: aa [line: 9]
+.   .   .   .   Child: 1  Const 1 [line: 9]
+.   .   .   Child: 1  Const 101 [line: 9]
+.   .   Sibling: 2  Assign: = [line: 10]
+.   .   .   Child: 0  Op: [ [line: 10]
+.   .   .   .   Child: 0  Id: aa [line: 10]
+.   .   .   .   Child: 1  Const 2 [line: 10]
+.   .   .   Child: 1  Const 102 [line: 10]
+.   .   Sibling: 3  Assign: = [line: 12]
+.   .   .   Child: 0  Op: [ [line: 12]
+.   .   .   .   Child: 0  Id: bb [line: 12]
+.   .   .   .   Child: 1  Const 0 [line: 12]
+.   .   .   Child: 1  Const true [line: 12]
+.   .   Sibling: 4  Assign: = [line: 13]
+.   .   .   Child: 0  Op: [ [line: 13]
+.   .   .   .   Child: 0  Id: bb [line: 13]
+.   .   .   .   Child: 1  Const 1 [line: 13]
+.   .   .   Child: 1  Const false [line: 13]
+.   .   Sibling: 5  Assign: = [line: 14]
+.   .   .   Child: 0  Op: [ [line: 14]
+.   .   .   .   Child: 0  Id: bb [line: 14]
+.   .   .   .   Child: 1  Const 2 [line: 14]
+.   .   .   Child: 1  Const true [line: 14]
+.   .   Sibling: 6  Assign: = [line: 16]
+.   .   .   Child: 0  Op: [ [line: 16]
+.   .   .   .   Child: 0  Id: cc [line: 16]
+.   .   .   .   Child: 1  Const 0 [line: 16]
+.   .   .   Child: 1  Const 'a' [line: 16]
+.   .   Sibling: 7  Assign: = [line: 17]
+.   .   .   Child: 0  Op: [ [line: 17]
+.   .   .   .   Child: 0  Id: cc [line: 17]
+.   .   .   .   Child: 1  Const 1 [line: 17]
+.   .   .   Child: 1  Const 'b' [line: 17]
+.   .   Sibling: 8  Assign: = [line: 18]
+.   .   .   Child: 0  Op: [ [line: 18]
+.   .   .   .   Child: 0  Id: ca [line: 18]
+.   .   .   .   Child: 1  Const 2 [line: 18]
+.   .   .   Child: 1  Const 'c' [line: 18]
+.   .   Sibling: 9  For [line: 20]
+.   .   .   Child: 0  Var: i of type int [line: 20]
+.   .   .   Child: 1  Range [line: 20]
+.   .   .   .   Child: 0  Const 0 [line: 20]
+.   .   .   .   Child: 1  Const 2 [line: 20]
+.   .   .   Child: 2  Call: output [line: 20]
+.   .   .   .   Child: 0  Op: [ [line: 20]
+.   .   .   .   .   Child: 0  Id: a [line: 20]
+.   .   .   .   .   Child: 1  Id: i [line: 20]
+.   .   Sibling: 10  Call: outnl [line: 21]
+.   .   Sibling: 11  For [line: 23]
+.   .   .   Child: 0  Var: i of type int [line: 23]
+.   .   .   Child: 1  Range [line: 23]
+.   .   .   .   Child: 0  Const 0 [line: 23]
+.   .   .   .   Child: 1  Const 2 [line: 23]
+.   .   .   Child: 2  Call: outputb [line: 23]
+.   .   .   .   Child: 0  Op: [ [line: 23]
+.   .   .   .   .   Child: 0  Id: b [line: 23]
+.   .   .   .   .   Child: 1  Id: i [line: 23]
+.   .   Sibling: 12  Call: outnl [line: 24]
+.   .   Sibling: 13  For [line: 26]
+.   .   .   Child: 0  Var: i of type int [line: 26]
+.   .   .   Child: 1  Range [line: 26]
+.   .   .   .   Child: 0  Const 0 [line: 26]
+.   .   .   .   Child: 1  Const 2 [line: 26]
+.   .   .   Child: 2  Call: outputc [line: 26]
+.   .   .   .   Child: 0  Op: [ [line: 26]
+.   .   .   .   .   Child: 0  Id: c [line: 26]
+.   .   .   .   .   Child: 1  Id: i [line: 26]
+.   .   Sibling: 14  Call: outnl [line: 27]
+.   .   Sibling: 15  For [line: 29]
+.   .   .   Child: 0  Var: i of type int [line: 29]
+.   .   .   Child: 1  Range [line: 29]
+.   .   .   .   Child: 0  Const 1 [line: 29]
+.   .   .   .   Child: 1  Const 3 [line: 29]
+.   .   .   Child: 2  For [line: 29]
+.   .   .   .   Child: 0  Var: j of type int [line: 29]
+.   .   .   .   Child: 1  Range [line: 29]
+.   .   .   .   .   Child: 0  Const 1 [line: 29]
+.   .   .   .   .   Child: 1  Const 6 [line: 29]
+.   .   .   .   .   Child: 2  Const 2 [line: 29]
+.   .   .   .   Child: 2  Call: output [line: 29]
+.   .   .   .   .   Child: 0  Op: * [line: 29]
+.   .   .   .   .   .   Child: 0  Id: i [line: 29]
+.   .   .   .   .   .   Child: 1  Id: j [line: 29]
+ERROR(12): Symbol 'bb' is not declared.
+ERROR(12): Cannot index nonarray 'bb'.
+ERROR(13): Symbol 'bb' is not declared.
+ERROR(13): Cannot index nonarray 'bb'.
+ERROR(14): Symbol 'bb' is not declared.
+ERROR(14): Cannot index nonarray 'bb'.
+ERROR(16): Symbol 'cc' is not declared.
+ERROR(16): Cannot index nonarray 'cc'.
+ERROR(17): Symbol 'cc' is not declared.
+ERROR(17): Cannot index nonarray 'cc'.
+ERROR(20): Symbol 'output' is not declared.
+ERROR(20): Symbol 'a' is not declared.
+ERROR(20): Cannot index nonarray 'a'.
+ERROR(21): Symbol 'outnl' is not declared.
+ERROR(23): Symbol 'outputb' is not declared.
+ERROR(23): Symbol 'b' is not declared.
+ERROR(23): Cannot index nonarray 'b'.
+ERROR(24): Symbol 'outnl' is not declared.
+ERROR(26): Symbol 'outputc' is not declared.
+ERROR(26): Symbol 'c' is not declared.
+ERROR(26): Cannot index nonarray 'c'.
+ERROR(27): Symbol 'outnl' is not declared.
+ERROR(29): Symbol 'output' is not declared.
+WARNING(5): The variable 'ba' seems not to be used.
+Number of warnings: 1
+Number of errors: 23

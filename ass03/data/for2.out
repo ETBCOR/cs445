@@ -1,0 +1,25 @@
+Func: main returns type void [line: 1]
+.   Child: 1  Compound [line: 2]
+.   .   Child: 0  Var: a is array of type int [line: 3]
+.   .   Child: 1  For [line: 5]
+.   .   .   Child: 0  Var: i of type int [line: 5]
+.   .   .   Child: 1  Range [line: 5]
+.   .   .   .   Child: 0  Id: a [line: 5]
+.   .   .   .   Child: 1  Id: j [line: 5]
+.   .   .   Child: 2  For [line: 6]
+.   .   .   .   Child: 0  Var: j of type int [line: 6]
+.   .   .   .   Child: 1  Range [line: 6]
+.   .   .   .   .   Child: 0  Id: a [line: 6]
+.   .   .   .   .   Child: 1  Id: i [line: 6]
+.   .   .   .   Child: 2  Compound [line: 6]
+.   .   .   .   .   Child: 0  Var: i of type int [line: 7]
+.   .   .   .   .   Sibling: 1  Var: j of type int [line: 8]
+.   .   .   .   .   Child: 1  Op: + [line: 9]
+.   .   .   .   .   .   Child: 0  Id: i [line: 9]
+.   .   .   .   .   .   Child: 1  Id: j [line: 9]
+ERROR(8): Symbol 'j' is already declared at line 6.
+WARNING(9): Variable 'i' may be uninitialized when used here.
+WARNING(5): The variable 'i' seems not to be used.
+WARNING(3): The variable 'a' seems not to be used.
+Number of warnings: 3
+Number of errors: 1

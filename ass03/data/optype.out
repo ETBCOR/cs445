@@ -1,0 +1,55 @@
+Func: main returns type void [line: 1]
+.   Child: 1  Compound [line: 2]
+.   .   Child: 0  Var: a of type int [line: 3]
+.   .   Sibling: 1  Var: b of type bool [line: 4]
+.   .   Sibling: 2  Var: c of type char [line: 5]
+.   .   Child: 1  Op: < [line: 7]
+.   .   .   Child: 0  Id: a [line: 7]
+.   .   .   Child: 1  Id: a [line: 7]
+.   .   Sibling: 1  Op: < [line: 8]
+.   .   .   Child: 0  Id: a [line: 8]
+.   .   .   Child: 1  Id: b [line: 8]
+.   .   Sibling: 2  Op: < [line: 9]
+.   .   .   Child: 0  Id: a [line: 9]
+.   .   .   Child: 1  Id: c [line: 9]
+.   .   Sibling: 3  Op: < [line: 10]
+.   .   .   Child: 0  Id: b [line: 10]
+.   .   .   Child: 1  Id: a [line: 10]
+.   .   Sibling: 4  Op: < [line: 11]
+.   .   .   Child: 0  Id: b [line: 11]
+.   .   .   Child: 1  Id: b [line: 11]
+.   .   Sibling: 5  Op: < [line: 12]
+.   .   .   Child: 0  Id: b [line: 12]
+.   .   .   Child: 1  Id: c [line: 12]
+.   .   Sibling: 6  Op: < [line: 13]
+.   .   .   Child: 0  Id: c [line: 13]
+.   .   .   Child: 1  Id: a [line: 13]
+.   .   Sibling: 7  Op: < [line: 14]
+.   .   .   Child: 0  Id: c [line: 14]
+.   .   .   Child: 1  Id: b [line: 14]
+.   .   Sibling: 8  Op: < [line: 15]
+.   .   .   Child: 0  Id: c [line: 15]
+.   .   .   Child: 1  Id: c [line: 15]
+.   .   Sibling: 9  Op: < [line: 17]
+.   .   .   Child: 0  Id: x [line: 17]
+.   .   .   Child: 1  Id: a [line: 17]
+.   .   Sibling: 10  Op: < [line: 18]
+.   .   .   Child: 0  Id: x [line: 18]
+.   .   .   Child: 1  Id: b [line: 18]
+.   .   Sibling: 11  Op: < [line: 19]
+.   .   .   Child: 0  Id: x [line: 19]
+.   .   .   Child: 1  Id: c [line: 19]
+WARNING(7): Variable 'a' may be uninitialized when used here.
+WARNING(8): Variable 'b' may be uninitialized when used here.
+ERROR(8): '<' requires operands of the same type but lhs is type int and rhs is type bool.
+WARNING(9): Variable 'c' may be uninitialized when used here.
+ERROR(9): '<' requires operands of the same type but lhs is type int and rhs is type char.
+ERROR(10): '<' requires operands of the same type but lhs is type bool and rhs is type int.
+ERROR(12): '<' requires operands of the same type but lhs is type bool and rhs is type char.
+ERROR(13): '<' requires operands of the same type but lhs is type char and rhs is type int.
+ERROR(14): '<' requires operands of the same type but lhs is type char and rhs is type bool.
+ERROR(17): Symbol 'x' is not declared.
+ERROR(18): Symbol 'x' is not declared.
+ERROR(19): Symbol 'x' is not declared.
+Number of warnings: 3
+Number of errors: 9

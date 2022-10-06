@@ -1,0 +1,238 @@
+Var: x of type int [line: 3]
+Sibling: 1  Var: y of type int [line: 4]
+Sibling: 2  Var: z of type int [line: 5]
+Sibling: 3  Func: agamemnon returns type void [line: 7]
+.   Child: 1  Compound [line: 8]
+.   .   Child: 0  Var: a of type int [line: 9]
+.   .   Sibling: 1  Var: b of type int [line: 10]
+.   .   Sibling: 2  Var: x of type int [line: 11]
+.   .   Child: 1  Assign: = [line: 13]
+.   .   .   Child: 0  Id: a [line: 13]
+.   .   .   Child: 1  Const 666 [line: 13]
+.   .   Sibling: 1  Assign: = [line: 14]
+.   .   .   Child: 0  Id: b [line: 14]
+.   .   .   Child: 1  Const 666 [line: 14]
+.   .   Sibling: 2  Assign: = [line: 15]
+.   .   .   Child: 0  Id: x [line: 15]
+.   .   .   Child: 1  Const 666 [line: 15]
+.   .   Sibling: 3  Assign: = [line: 16]
+.   .   .   Child: 0  Id: z [line: 16]
+.   .   .   Child: 1  Const 666 [line: 16]
+.   .   Sibling: 4  Call: output [line: 18]
+.   .   .   Child: 0  Id: a [line: 18]
+.   .   Sibling: 5  Call: output [line: 19]
+.   .   .   Child: 0  Id: b [line: 19]
+.   .   Sibling: 6  Call: output [line: 20]
+.   .   .   Child: 0  Id: x [line: 20]
+.   .   Sibling: 7  Call: output [line: 21]
+.   .   .   Child: 0  Id: y [line: 21]
+.   .   Sibling: 8  Call: output [line: 22]
+.   .   .   Child: 0  Id: z [line: 22]
+.   .   Sibling: 9  Call: outnl [line: 23]
+.   .   Sibling: 10  Assign: = [line: 24]
+.   .   .   Child: 0  Id: a [line: 24]
+.   .   .   Child: 1  Const 1 [line: 24]
+.   .   Sibling: 11  Assign: = [line: 25]
+.   .   .   Child: 0  Id: b [line: 25]
+.   .   .   Child: 1  Const 2 [line: 25]
+.   .   Sibling: 12  Assign: = [line: 26]
+.   .   .   Child: 0  Id: x [line: 26]
+.   .   .   Child: 1  Const 3 [line: 26]
+.   .   Sibling: 13  Assign: = [line: 27]
+.   .   .   Child: 0  Id: y [line: 27]
+.   .   .   Child: 1  Const 4 [line: 27]
+.   .   Sibling: 14  Assign: = [line: 28]
+.   .   .   Child: 0  Id: z [line: 28]
+.   .   .   Child: 1  Const 5 [line: 28]
+Sibling: 4  Func: main returns type void [line: 31]
+.   Child: 1  Compound [line: 32]
+.   .   Child: 0  Var: a of type int [line: 33]
+.   .   Sibling: 1  Var: b of type int [line: 34]
+.   .   Sibling: 2  Var: z of type int [line: 35]
+.   .   Child: 1  Assign: = [line: 37]
+.   .   .   Child: 0  Id: a [line: 37]
+.   .   .   Child: 1  Const 6 [line: 37]
+.   .   Sibling: 1  Assign: = [line: 38]
+.   .   .   Child: 0  Id: b [line: 38]
+.   .   .   Child: 1  Const 7 [line: 38]
+.   .   Sibling: 2  Assign: = [line: 39]
+.   .   .   Child: 0  Id: x [line: 39]
+.   .   .   Child: 1  Const 8 [line: 39]
+.   .   Sibling: 3  Assign: = [line: 40]
+.   .   .   Child: 0  Id: y [line: 40]
+.   .   .   Child: 1  Const 9 [line: 40]
+.   .   Sibling: 4  Assign: = [line: 41]
+.   .   .   Child: 0  Id: z [line: 41]
+.   .   .   Child: 1  Const 10 [line: 41]
+.   .   Sibling: 5  Call: output [line: 43]
+.   .   .   Child: 0  Id: a [line: 43]
+.   .   Sibling: 6  Call: output [line: 44]
+.   .   .   Child: 0  Id: b [line: 44]
+.   .   Sibling: 7  Call: output [line: 45]
+.   .   .   Child: 0  Id: x [line: 45]
+.   .   Sibling: 8  Call: output [line: 46]
+.   .   .   Child: 0  Id: y [line: 46]
+.   .   Sibling: 9  Call: output [line: 47]
+.   .   .   Child: 0  Id: z [line: 47]
+.   .   Sibling: 10  Call: outnl [line: 48]
+.   .   Sibling: 11  Compound [line: 49]
+.   .   .   Child: 0  Var: a of type int [line: 50]
+.   .   .   Sibling: 1  Var: b of type int [line: 51]
+.   .   .   Sibling: 2  Var: z of type int [line: 52]
+.   .   .   Child: 1  Assign: = [line: 54]
+.   .   .   .   Child: 0  Id: a [line: 54]
+.   .   .   .   Child: 1  Const 666 [line: 54]
+.   .   .   Sibling: 1  Assign: = [line: 55]
+.   .   .   .   Child: 0  Id: b [line: 55]
+.   .   .   .   Child: 1  Const 666 [line: 55]
+.   .   .   Sibling: 2  Assign: = [line: 56]
+.   .   .   .   Child: 0  Id: z [line: 56]
+.   .   .   .   Child: 1  Const 666 [line: 56]
+.   .   .   Sibling: 3  Call: output [line: 58]
+.   .   .   .   Child: 0  Id: a [line: 58]
+.   .   .   Sibling: 4  Call: output [line: 59]
+.   .   .   .   Child: 0  Id: b [line: 59]
+.   .   .   Sibling: 5  Call: output [line: 60]
+.   .   .   .   Child: 0  Id: x [line: 60]
+.   .   .   Sibling: 6  Call: output [line: 61]
+.   .   .   .   Child: 0  Id: y [line: 61]
+.   .   .   Sibling: 7  Call: output [line: 62]
+.   .   .   .   Child: 0  Id: z [line: 62]
+.   .   .   Sibling: 8  Call: outnl [line: 63]
+.   .   .   Sibling: 9  Assign: = [line: 65]
+.   .   .   .   Child: 0  Id: a [line: 65]
+.   .   .   .   Child: 1  Const 11 [line: 65]
+.   .   .   Sibling: 10  Assign: = [line: 66]
+.   .   .   .   Child: 0  Id: b [line: 66]
+.   .   .   .   Child: 1  Const 12 [line: 66]
+.   .   .   Sibling: 11  Assign: = [line: 67]
+.   .   .   .   Child: 0  Id: x [line: 67]
+.   .   .   .   Child: 1  Const 13 [line: 67]
+.   .   .   Sibling: 12  Assign: = [line: 68]
+.   .   .   .   Child: 0  Id: y [line: 68]
+.   .   .   .   Child: 1  Const 14 [line: 68]
+.   .   .   Sibling: 13  Assign: = [line: 69]
+.   .   .   .   Child: 0  Id: z [line: 69]
+.   .   .   .   Child: 1  Const 15 [line: 69]
+.   .   .   Sibling: 14  Call: output [line: 70]
+.   .   .   .   Child: 0  Id: a [line: 70]
+.   .   .   Sibling: 15  Call: output [line: 71]
+.   .   .   .   Child: 0  Id: b [line: 71]
+.   .   .   Sibling: 16  Call: output [line: 72]
+.   .   .   .   Child: 0  Id: x [line: 72]
+.   .   .   Sibling: 17  Call: output [line: 73]
+.   .   .   .   Child: 0  Id: y [line: 73]
+.   .   .   Sibling: 18  Call: output [line: 74]
+.   .   .   .   Child: 0  Id: z [line: 74]
+.   .   .   Sibling: 19  Call: outnl [line: 75]
+.   .   .   Sibling: 20  Compound [line: 76]
+.   .   .   .   Child: 1  Call: output [line: 77]
+.   .   .   .   .   Child: 0  Id: a [line: 77]
+.   .   .   .   Sibling: 1  Call: output [line: 78]
+.   .   .   .   .   Child: 0  Id: b [line: 78]
+.   .   .   .   Sibling: 2  Call: output [line: 79]
+.   .   .   .   .   Child: 0  Id: x [line: 79]
+.   .   .   .   Sibling: 3  Call: output [line: 80]
+.   .   .   .   .   Child: 0  Id: y [line: 80]
+.   .   .   .   Sibling: 4  Call: output [line: 81]
+.   .   .   .   .   Child: 0  Id: z [line: 81]
+.   .   .   .   Sibling: 5  Call: outnl [line: 82]
+.   .   .   .   Sibling: 6  Assign: = [line: 84]
+.   .   .   .   .   Child: 0  Id: a [line: 84]
+.   .   .   .   .   Child: 1  Const 16 [line: 84]
+.   .   .   .   Sibling: 7  Assign: = [line: 85]
+.   .   .   .   .   Child: 0  Id: b [line: 85]
+.   .   .   .   .   Child: 1  Const 17 [line: 85]
+.   .   .   .   Sibling: 8  Assign: = [line: 86]
+.   .   .   .   .   Child: 0  Id: x [line: 86]
+.   .   .   .   .   Child: 1  Const 18 [line: 86]
+.   .   .   .   Sibling: 9  Assign: = [line: 87]
+.   .   .   .   .   Child: 0  Id: y [line: 87]
+.   .   .   .   .   Child: 1  Const 19 [line: 87]
+.   .   .   .   Sibling: 10  Assign: = [line: 88]
+.   .   .   .   .   Child: 0  Id: z [line: 88]
+.   .   .   .   .   Child: 1  Const 20 [line: 88]
+.   .   .   .   Sibling: 11  Call: output [line: 89]
+.   .   .   .   .   Child: 0  Id: a [line: 89]
+.   .   .   .   Sibling: 12  Call: output [line: 90]
+.   .   .   .   .   Child: 0  Id: b [line: 90]
+.   .   .   .   Sibling: 13  Call: output [line: 91]
+.   .   .   .   .   Child: 0  Id: x [line: 91]
+.   .   .   .   Sibling: 14  Call: output [line: 92]
+.   .   .   .   .   Child: 0  Id: y [line: 92]
+.   .   .   .   Sibling: 15  Call: output [line: 93]
+.   .   .   .   .   Child: 0  Id: z [line: 93]
+.   .   .   .   Sibling: 16  Call: outnl [line: 94]
+.   .   .   Sibling: 21  Call: output [line: 97]
+.   .   .   .   Child: 0  Id: a [line: 97]
+.   .   .   Sibling: 22  Call: output [line: 98]
+.   .   .   .   Child: 0  Id: b [line: 98]
+.   .   .   Sibling: 23  Call: output [line: 99]
+.   .   .   .   Child: 0  Id: x [line: 99]
+.   .   .   Sibling: 24  Call: output [line: 100]
+.   .   .   .   Child: 0  Id: y [line: 100]
+.   .   .   Sibling: 25  Call: output [line: 101]
+.   .   .   .   Child: 0  Id: z [line: 101]
+.   .   .   Sibling: 26  Call: outnl [line: 102]
+.   .   .   Sibling: 27  Call: agamemnon [line: 104]
+.   .   .   Sibling: 28  Call: output [line: 106]
+.   .   .   .   Child: 0  Id: a [line: 106]
+.   .   .   Sibling: 29  Call: output [line: 107]
+.   .   .   .   Child: 0  Id: b [line: 107]
+.   .   .   Sibling: 30  Call: output [line: 108]
+.   .   .   .   Child: 0  Id: x [line: 108]
+.   .   .   Sibling: 31  Call: output [line: 109]
+.   .   .   .   Child: 0  Id: y [line: 109]
+.   .   .   Sibling: 32  Call: output [line: 110]
+.   .   .   .   Child: 0  Id: z [line: 110]
+.   .   .   Sibling: 33  Call: outnl [line: 111]
+ERROR(18): Symbol 'output' is not declared.
+ERROR(19): Symbol 'output' is not declared.
+ERROR(20): Symbol 'output' is not declared.
+ERROR(21): Symbol 'output' is not declared.
+ERROR(22): Symbol 'output' is not declared.
+ERROR(23): Symbol 'outnl' is not declared.
+ERROR(43): Symbol 'output' is not declared.
+ERROR(44): Symbol 'output' is not declared.
+ERROR(45): Symbol 'output' is not declared.
+ERROR(46): Symbol 'output' is not declared.
+ERROR(47): Symbol 'output' is not declared.
+ERROR(48): Symbol 'outnl' is not declared.
+ERROR(58): Symbol 'output' is not declared.
+ERROR(59): Symbol 'output' is not declared.
+ERROR(60): Symbol 'output' is not declared.
+ERROR(61): Symbol 'output' is not declared.
+ERROR(62): Symbol 'output' is not declared.
+ERROR(63): Symbol 'outnl' is not declared.
+ERROR(70): Symbol 'output' is not declared.
+ERROR(71): Symbol 'output' is not declared.
+ERROR(72): Symbol 'output' is not declared.
+ERROR(73): Symbol 'output' is not declared.
+ERROR(74): Symbol 'output' is not declared.
+ERROR(75): Symbol 'outnl' is not declared.
+ERROR(77): Symbol 'output' is not declared.
+ERROR(78): Symbol 'output' is not declared.
+ERROR(79): Symbol 'output' is not declared.
+ERROR(80): Symbol 'output' is not declared.
+ERROR(81): Symbol 'output' is not declared.
+ERROR(82): Symbol 'outnl' is not declared.
+ERROR(89): Symbol 'output' is not declared.
+ERROR(90): Symbol 'output' is not declared.
+ERROR(91): Symbol 'output' is not declared.
+ERROR(92): Symbol 'output' is not declared.
+ERROR(93): Symbol 'output' is not declared.
+ERROR(94): Symbol 'outnl' is not declared.
+ERROR(97): Symbol 'output' is not declared.
+ERROR(98): Symbol 'output' is not declared.
+ERROR(99): Symbol 'output' is not declared.
+ERROR(100): Symbol 'output' is not declared.
+ERROR(101): Symbol 'output' is not declared.
+ERROR(102): Symbol 'outnl' is not declared.
+ERROR(106): Symbol 'output' is not declared.
+ERROR(107): Symbol 'output' is not declared.
+ERROR(108): Symbol 'output' is not declared.
+ERROR(109): Symbol 'output' is not declared.
+ERROR(110): Symbol 'output' is not declared.
+ERROR(111): Symbol 'outnl' is not declared.
+Number of warnings: 0
+Number of errors: 48

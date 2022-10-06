@@ -1,0 +1,15 @@
+// C-F22
+int a[11];
+
+main()
+{
+   int b[22];           // size inited locally
+   static int c[33];
+
+   c[22];
+   999;
+   output(*a);
+   output(*b);
+   output(*c);
+}
+

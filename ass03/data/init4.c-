@@ -1,0 +1,15 @@
+int main()
+{
+    int x:23*3;
+    int y:x;
+    int roll:?6;
+    333;
+    'z';
+    true;
+}
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+main(int x)
+{
+    int z, g, h, i, j, k, l, m, z, z;
+
+    z = i;
+    z = i;
+    i = g+3;
+    i = 4+h;
+    j++;
+    main(k);
+    l;
+    -m;
+    dog();
+    main = 3;
+    g+h+i+j+k+l+m+z;
+}

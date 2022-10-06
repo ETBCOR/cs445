@@ -1,0 +1,101 @@
+Var: g of type int [line: 2]
+Sibling: 1  Func: ant returns type int [line: 3]
+.   Child: 0  Parm: x of type int [line: 3]
+.   Child: 1  Compound [line: 4]
+.   .   Child: 0  Var: a of type int [line: 5]
+.   .   Child: 1  Call: bat [line: 7]
+.   .   .   Child: 0  Const 3 [line: 7]
+.   .   Sibling: 1  Op: or [line: 8]
+.   .   .   Child: 0  Id: a [line: 8]
+.   .   .   Child: 1  Id: a [line: 8]
+.   .   Sibling: 2  Id: x [line: 9]
+.   .   Sibling: 3  Id: g [line: 10]
+.   .   Sibling: 4  Compound [line: 11]
+.   .   .   Child: 0  Var: c of type int [line: 12]
+.   .   .   Child: 1  Id: a [line: 13]
+.   .   .   Sibling: 1  Id: b [line: 14]
+.   .   .   Sibling: 2  Id: c [line: 15]
+.   .   .   Sibling: 3  Id: g [line: 16]
+.   .   .   Sibling: 4  Id: x [line: 17]
+.   .   .   Sibling: 5  Compound [line: 18]
+.   .   .   .   Child: 0  Var: IWouldNotEatItWithAGoat of type int [line: 19]
+.   .   .   .   Child: 1  Id: c [line: 20]
+.   .   .   .   Sibling: 1  Id: a [line: 21]
+.   .   Sibling: 5  Id: a [line: 24]
+.   .   Sibling: 6  Id: b [line: 25]
+.   .   Sibling: 7  Id: c [line: 26]
+.   .   Sibling: 8  Id: x [line: 27]
+.   .   Sibling: 9  Compound [line: 28]
+.   .   .   Child: 1  Id: a [line: 29]
+.   .   .   Sibling: 1  Id: b [line: 30]
+.   .   .   Sibling: 2  Id: c [line: 31]
+.   .   .   Sibling: 3  Id: x [line: 32]
+.   .   Sibling: 10  Id: x [line: 34]
+Sibling: 2  Func: bat returns type int [line: 37]
+.   Child: 0  Parm: y of type int [line: 37]
+.   Child: 1  Compound [line: 38]
+.   .   Child: 0  Var: z of type int [line: 39]
+.   .   Sibling: 1  Var: bat of type int [line: 40]
+.   .   Child: 1  Id: x [line: 41]
+.   .   Sibling: 1  Call: ant [line: 42]
+.   .   .   Child: 0  Id: y [line: 42]
+.   .   Sibling: 2  Call: ant [line: 43]
+.   .   .   Child: 0  Id: g [line: 43]
+.   .   Sibling: 3  Call: ant [line: 44]
+.   .   .   Child: 0  Id: z [line: 44]
+.   .   Sibling: 4  Id: p [line: 45]
+.   .   Sibling: 5  Op: + [line: 46]
+.   .   .   Child: 0  Id: q [line: 46]
+.   .   .   Child: 1  Id: r [line: 46]
+.   .   Sibling: 6  Call: ant [line: 47]
+.   .   .   Child: 0  Id: s [line: 47]
+.   .   .   Sibling: 1  Id: t [line: 47]
+.   .   Sibling: 7  Assign: = [line: 48]
+.   .   .   Child: 0  Id: u [line: 48]
+.   .   .   Child: 1  Call: cow [line: 48]
+.   .   .   .   Child: 0  Id: v [line: 48]
+.   .   Sibling: 8  Id: abraxsis [line: 49]
+.   .   Sibling: 9  Id: a [line: 50]
+.   .   Sibling: 10  Id: z [line: 51]
+.   .   Sibling: 11  Id: g [line: 52]
+Sibling: 3  Var: g of type int [line: 55]
+Sibling: 4  Func: g returns type int [line: 57]
+.   Child: 1  Compound [line: 58]
+.   .   Child: 1  Return [line: 59]
+.   .   .   Child: 0  Id: x [line: 59]
+Sibling: 5  Func: g returns type void [line: 62]
+.   Child: 1  Compound [line: 62]
+Sibling: 6  Func: ant returns type void [line: 63]
+.   Child: 1  Compound [line: 63]
+ERROR(7): Symbol 'bat' is not declared.
+WARNING(8): Variable 'a' may be uninitialized when used here.
+ERROR(8): 'or' requires operands of type bool but lhs is of type int.
+ERROR(8): 'or' requires operands of type bool but rhs is of type int.
+ERROR(14): Symbol 'b' is not declared.
+WARNING(15): Variable 'c' may be uninitialized when used here.
+WARNING(19): The variable 'IWouldNotEatItWithAGoat' seems not to be used.
+ERROR(25): Symbol 'b' is not declared.
+ERROR(26): Symbol 'c' is not declared.
+ERROR(30): Symbol 'b' is not declared.
+ERROR(31): Symbol 'c' is not declared.
+ERROR(41): Symbol 'x' is not declared.
+WARNING(44): Variable 'z' may be uninitialized when used here.
+ERROR(45): Symbol 'p' is not declared.
+ERROR(46): Symbol 'q' is not declared.
+ERROR(46): Symbol 'r' is not declared.
+ERROR(47): Symbol 's' is not declared.
+ERROR(47): Symbol 't' is not declared.
+ERROR(48): Symbol 'u' is not declared.
+ERROR(48): Symbol 'cow' is not declared.
+ERROR(48): Symbol 'v' is not declared.
+ERROR(49): Symbol 'abraxsis' is not declared.
+ERROR(50): Symbol 'a' is not declared.
+WARNING(40): The variable 'bat' seems not to be used.
+ERROR(55): Symbol 'g' is already declared at line 2.
+ERROR(57): Symbol 'g' is already declared at line 2.
+ERROR(59): Symbol 'x' is not declared.
+ERROR(62): Symbol 'g' is already declared at line 2.
+ERROR(63): Symbol 'ant' is already declared at line 3.
+ERROR(LINKER): A function named 'main()' must be defined.
+Number of warnings: 5
+Number of errors: 25

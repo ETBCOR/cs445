@@ -1,0 +1,31 @@
+// C-F22
+main()
+{
+   int x, y, z;
+
+   if x>=0 then 
+       while true do x;
+   else y;
+   111;
+   if y>=0 then  y;
+   else while true do z;
+   222;
+   if y>=0 then  y;
+   while true do
+        if true then  z;
+        else x;
+   333;
+   if x>=0 then 
+       while true do
+          if true then  x;
+          else y;
+   else z;
+   444;
+   if x>=0 then  z;
+   else
+       if true then  
+          while true do
+              if true then  x;
+              else y;
+       else z;
+}

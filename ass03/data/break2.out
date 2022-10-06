@@ -1,0 +1,36 @@
+Func: main returns type void [line: 2]
+.   Child: 1  Compound [line: 3]
+.   .   Child: 0  Var: i of type int [line: 4]
+.   .   Child: 1  Assign: = [line: 6]
+.   .   .   Child: 0  Id: i [line: 6]
+.   .   .   Child: 1  Const 0 [line: 6]
+.   .   Sibling: 1  While [line: 7]
+.   .   .   Child: 0  Const true [line: 7]
+.   .   .   Child: 1  Compound [line: 7]
+.   .   .   .   Child: 1  While [line: 8]
+.   .   .   .   .   Child: 0  Const true [line: 8]
+.   .   .   .   .   Child: 1  Compound [line: 8]
+.   .   .   .   .   .   Child: 1  Assign: ++ [line: 9]
+.   .   .   .   .   .   .   Child: 0  Id: i [line: 9]
+.   .   .   .   .   .   Sibling: 1  Call: output [line: 10]
+.   .   .   .   .   .   .   Child: 0  Id: i [line: 10]
+.   .   .   .   .   .   Sibling: 2  If [line: 11]
+.   .   .   .   .   .   .   Child: 0  Op: > [line: 11]
+.   .   .   .   .   .   .   .   Child: 0  Id: i [line: 11]
+.   .   .   .   .   .   .   .   Child: 1  Const 4 [line: 11]
+.   .   .   .   .   .   .   Child: 1  Break [line: 11]
+.   .   .   .   .   .   Sibling: 3  Call: outnl [line: 12]
+.   .   .   .   Sibling: 1  If [line: 14]
+.   .   .   .   .   Child: 0  Op: > [line: 14]
+.   .   .   .   .   .   Child: 0  Id: i [line: 14]
+.   .   .   .   .   .   Child: 1  Const 8 [line: 14]
+.   .   .   .   .   Child: 1  Break [line: 14]
+.   .   Sibling: 2  Call: output [line: 16]
+.   .   .   Child: 0  Id: i [line: 16]
+.   .   Sibling: 3  Call: outnl [line: 17]
+ERROR(10): Symbol 'output' is not declared.
+ERROR(12): Symbol 'outnl' is not declared.
+ERROR(16): Symbol 'output' is not declared.
+ERROR(17): Symbol 'outnl' is not declared.
+Number of warnings: 0
+Number of errors: 4

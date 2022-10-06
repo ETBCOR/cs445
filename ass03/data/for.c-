@@ -1,0 +1,31 @@
+// C-F22
+main()
+{
+    int aa[3];
+    bool ba[3];
+    char ca[3];
+
+    aa[0] = 100;
+    aa[1] = 101;
+    aa[2] = 102;
+
+    bb[0] = true;
+    bb[1] = false;
+    bb[2] = true;
+
+    cc[0] = 'a';
+    cc[1] = 'b';
+    ca[2] = 'c';
+
+    for i = 0 to 2 do output(a[i]);
+    outnl();
+
+    for i = 0 to 2 do outputb(b[i]);
+    outnl();
+
+    for i = 0 to 2 do outputc(c[i]);
+    outnl();
+
+    for i = 1 to 3 do for j = 1 to 6 by 2 do output(i*j);
+}
+
