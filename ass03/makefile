@@ -6,8 +6,8 @@ lexgens = lex.yy.c
 yacc = bison
 yaccopts = -d
 yaccgens = parser.tab.c parser.tab.h
-libs = main.h scanType.h node.h ourgetopt.h symbolTable.h
-gens = main.o node.o ourgetopt.o symbolTable.o
+libs = main.h scanType.h node.h error.h ourgetopt.h symbolTable.h
+gens = main.o node.o error.o ourgetopt.o symbolTable.o
 bin = parser
 out = c-
 arc = corg03
@@ -30,7 +30,7 @@ clean:
 	rm -f $(lexgens) $(yaccgens) $(out) $(bin).tab.h $(bin).tab.c $(gens) myout
 
 edit:
-	vim $(bin).l $(bin).y main.h main.cpp node.h node.cpp scanType.h makefile
+	vim $(bin).l $(bin).y main.h main.cpp node.h node.cpp error.h error.cpp scanType.h makefile
 
 run: $(out)
 	./$(out) -p data/$(tst).c-

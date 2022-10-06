@@ -85,7 +85,7 @@ varDecl
 
         if ($2) {
             ((VarDecl *)$$)->setType($1->tokenstr, false);
-            ((VarDecl *)$$)->init();
+            ((VarDecl *)$$)->initS();
         }
     }
     ;
@@ -96,7 +96,7 @@ scopedVarDecl
 
         if ($3) {
             ((VarDecl *)$$)->setType($2->tokenstr, true);
-            ((VarDecl *)$$)->init();
+            ((VarDecl *)$$)->initS();
         }
     }
     | typeSpec varDeclList SEMCOL {
@@ -104,7 +104,7 @@ scopedVarDecl
 
         if ($2) {
             ((VarDecl *)$$)->setType($1->tokenstr, false);
-            ((VarDecl *)$$)->init();
+            // ((VarDecl *)$$)->init();
         }
     }
     ;

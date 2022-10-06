@@ -1,5 +1,7 @@
 #include "node.h"
 
+bool doInitChecking = true;
+
 Node::Node()
 {
     sibling = NULL;
@@ -10,6 +12,8 @@ Node::Node()
     isChild = false;
     isConst = false;
     isArray = false;
+    isUnscoped = false;
+    isInited = false;
     type = (char *)"undefined";
 }
 
@@ -45,6 +49,12 @@ void Node::updateLoc()
         if (!isChild) sibling->index = index + 1;
         sibling->updateLoc();
     }
+}
+
+void Node::init(SymbolTable * tbl)
+{
+    for (int i = 0; i < MAXCHILDREN; i++) if (child[i]) child[i]->init(tbl);
+    if (sibling) sibling->init(tbl);
 }
 
 void Node::sem(SymbolTable * tbl)
@@ -86,14 +96,21 @@ VarDecl::VarDecl(TokenData * tkn) : Node()
     name = strdup(tkn->svalue);
     isFun = false;
     isStatic = false;
-    isInited = false;
     arrSize = 0;
+    usageFlg = false;
+    usageWrnFlg = false;
 }
 
 VarDecl::VarDecl(TokenData * tkn, TokenData * arrTkn) : VarDecl(tkn)
 {
     isArray = true;
     arrSize = arrTkn->nvalue;
+}
+
+void VarDecl::initS()
+{
+    isInited = true;
+    if (sibling) ((VarDecl *)sibling)->initS();
 }
 
 void VarDecl::setType(char * varType, bool stat)
@@ -103,23 +120,19 @@ void VarDecl::setType(char * varType, bool stat)
     if (sibling) ((VarDecl *)sibling)->setType(varType, stat);
 }
 
-void VarDecl::init()
+void VarDecl::init(SymbolTable * tbl)
 {
-    isInited = true;
-    if (sibling) ((VarDecl *)sibling)->init();
+    void * found = tbl->lookup(name);
+    if (found) {
+        VarDecl * v = (VarDecl *)found;
+        v->isInited = true;
+    }
 }
 
 void VarDecl::sem(SymbolTable * tbl)
 {
     Node::semC(tbl);
-    
-    bool inserted = tbl->insert(name, this);
-    if(!inserted) {
-        Node * found = (Node *)tbl->lookup(name);
-        printf("ERROR(%d): Symbol '%s' is already declared at line %d.\n", linenum, name, found->linenum);
-        errCount++;
-    }
-
+    if (!tbl->insert(name, this)) throwErr(DECL_DBL, this);
     Node::semS(tbl);
 }
 
@@ -140,6 +153,7 @@ FunDecl::FunDecl(TokenData * tkn, Node * prms, Node * stmt) : VarDecl(tkn)
 {
     addChild(0, prms);
     addChild(1, stmt);
+    if (stmt) stmt->isUnscoped = true;
     type = (char *)"void";
     isFun = true;
 }
@@ -148,6 +162,16 @@ FunDecl::FunDecl(TokenData * retType, TokenData * tkn,
                               Node * prms, Node * stmt) : FunDecl(tkn, prms, stmt)
 {
     type = strdup(retType->tokenstr);
+}
+
+void FunDecl::sem(SymbolTable * tbl)
+{
+    if (!tbl->insert(name, this)) throwErr(DECL_DBL, this);
+    tbl->enter("Function");
+    Node::semC(tbl);
+    tbl->applyToAll(wrnUnused);
+    tbl->leave();
+    Node::semS(tbl);
 }
 
 void FunDecl::print()
@@ -162,6 +186,13 @@ Parm::Parm(TokenData * tkn, bool arr) : VarDecl(tkn)
 {
     isArray = arr;
     isInited = true;
+}
+
+void Parm::sem(SymbolTable * tbl)
+{
+    Node::semC(tbl);
+    if (!tbl->insert(name, this)) throwErr(DECL_DBL, this);
+    Node::semS(tbl);
 }
 
 void Parm::print()
@@ -183,6 +214,17 @@ CompoundStmt::CompoundStmt(int line, Node * decls, Node * stmt)
     addChild(1, stmt->sibling);
 }
 
+void CompoundStmt::sem(SymbolTable * tbl)
+{
+    if (!isUnscoped) tbl->enter("Compound");
+    Node::semC(tbl);
+    if (!isUnscoped) {
+        tbl->applyToAll(wrnUnused);
+        tbl->leave();
+    }
+    Node::semS(tbl);
+}
+
 void CompoundStmt::print()
 {
     printSelf();
@@ -202,6 +244,15 @@ IfStmt::IfStmt(int line, Node * cond, Node * stmt, Node * alt) : IfStmt(line, co
     addChild(2, alt);
 }
 
+void IfStmt::sem(SymbolTable * tbl)
+{
+    tbl->enter("If");
+    Node::semC(tbl);
+
+    tbl->leave();
+    Node::semS(tbl);
+}
+
 void IfStmt::print()
 {
     printSelf();
@@ -214,6 +265,15 @@ WhileStmt::WhileStmt(int line, Node * cond, Node * stmt)
     linenum = line;
     addChild(0, cond);
     addChild(1, stmt);
+}
+
+void WhileStmt::sem(SymbolTable * tbl)
+{
+    tbl->enter("While");
+    Node::semC(tbl);
+    tbl->applyToAll(wrnUnused);
+    tbl->leave();
+    Node::semS(tbl);
 }
 
 void WhileStmt::print()
@@ -232,6 +292,15 @@ ForStmt::ForStmt(int line, TokenData * itr, Node * rng, Node * stmt)
     addChild(0, itrVar);
     addChild(1, rng);
     addChild(2, stmt);
+}
+
+void ForStmt::sem(SymbolTable * tbl)
+{
+    tbl->enter("For");
+    Node::semC(tbl);
+    tbl->applyToAll(wrnUnused);
+    tbl->leave();
+    Node::semS(tbl);
 }
 
 void ForStmt::print()
@@ -253,6 +322,12 @@ IterRange::IterRange(int line, Node * strt, Node * end, Node * jmp) : IterRange(
     addChild(2, jmp);
 }
 
+void IterRange::sem(SymbolTable * tbl)
+{
+    Node::semC(tbl);
+    Node::semS(tbl);
+}
+
 void IterRange::print()
 {
     printSelf();
@@ -270,6 +345,12 @@ ReturnStmt::ReturnStmt(int line, Node * retVal) : ReturnStmt(line)
     addChild(0, retVal);
 }
 
+void ReturnStmt::sem(SymbolTable * tbl)
+{
+    Node::semC(tbl);
+    Node::semS(tbl);
+}
+
 void ReturnStmt::print()
 {
     printSelf();
@@ -280,6 +361,12 @@ void ReturnStmt::print()
 BreakStmt::BreakStmt(int line)
 {
     linenum = line;
+}
+
+void BreakStmt::sem(SymbolTable * tbl)
+{
+    Node::semC(tbl);
+    Node::semS(tbl);
 }
 
 void BreakStmt::print()
@@ -305,6 +392,62 @@ Op::Op(TokenData * tkn, Node * lhs, Node * rhs) : Op(tkn, lhs)
     opName = strdup(tkn->tokenstr);
 }
 
+void Op::sem(SymbolTable * tbl)
+{
+    Node::semC(tbl);
+
+    switch (opId) {
+        case AND:
+            break;
+        case OR:
+            break;
+        case EQ:
+            break;
+        case NEQ:
+            break;
+        case LESS:
+            break;
+        case LEQ:
+            break;
+        case GRTR:
+            break;
+        case GEQ:
+            break;
+        case ASS:
+            break;
+        case ADDASS:
+            break;
+        case SUBASS:
+            break;
+        case MULASS:
+            break;
+        case DIVASS:
+            break;
+        case PLUS:
+            break;
+        case MINUS:
+            break;
+        case ASTR:
+            break;
+        case SLASH:
+            break;
+        case PERC:
+            break;
+        case BRACKL:
+            break;
+        case DEC:
+            break;
+        case INC:
+            break;
+        case NOT:
+            break;
+        case QUEST:
+            break;
+    }
+
+    Node::semS(tbl);
+}
+
 void Op::print()
 {
     printSelf();
@@ -316,6 +459,17 @@ void Op::print()
 Assign::Assign(TokenData * tkn, Node * lhs) : Op(tkn, lhs) {}
 
 Assign::Assign(TokenData * tkn, Node * lhs, Node * rhs) : Op(tkn, lhs, rhs) {}
+
+void Assign::sem(SymbolTable * tbl)
+{
+    doInitChecking = false;
+    child[0]->sem(tbl);
+    doInitChecking = true;
+    if(child[1]) child[1]->sem(tbl);
+
+    child[0]->init(tbl);
+    Node::semS(tbl);
+}
 
 void Assign::print()
 {
@@ -329,8 +483,22 @@ Id::Id(TokenData * tkn) : VarDecl(tkn) {}
 
 void Id::sem(SymbolTable * tbl)
 {
-    Node::semC(tbl);
-    Node::semS(tbl);
+    void * found = tbl->lookup(name);
+    if (!found) throwErr(DECL_NOT, this);
+    else {
+        VarDecl * v = (VarDecl *)found;
+        if (v->isFun) throwErr(FUN_AS_VAR, this);
+        else {
+            type = strdup(v->type);
+            isArray = v->isArray;
+            if (isInited) v->isInited = true;
+            isFun = v->isFun;
+            isStatic = v->isStatic;
+            v->usageFlg = true;
+            if (doInitChecking && !v->isInited && !v->usageWrnFlg) throwWrn(VAR_UNINITED, this);
+        }
+    }
+    Node::sem(tbl);
 }
 
 void Id::print()
@@ -349,6 +517,15 @@ Call::Call(TokenData * tkn, Node * args)
     name = strdup(tkn->tokenstr);
 }
 
+void Call::sem(SymbolTable * tbl)
+{
+    Node::semC(tbl);
+
+
+
+    Node::semS(tbl);
+}
+
 void Call::print()
 {
     printSelf();
@@ -362,7 +539,7 @@ Const::Const(TokenData * tkn)
     linenum = tkn->linenum;
     isConst = true;
     token = tkn;
-    switch(token->tokenclass) {
+    switch (token->tokenclass) {
         case BOOLCONST:   type = (char *)"bool"; break;
         case NUMCONST:    type = (char *)"int";  break;
         case CHARCONST:   type = (char *)"char";
@@ -370,11 +547,20 @@ Const::Const(TokenData * tkn)
     }
 }
 
+void Const::sem(SymbolTable * tbl)
+{
+    Node::semC(tbl);
+
+
+
+    Node::semS(tbl);
+}
+
 void Const::print()
 {
     printSelf();
     printf("Const ");
-    switch(token->tokenclass) {
+    switch (token->tokenclass) {
         case BOOLCONST:   printf(token->nvalue ? "true" : "false"); break;
         case NUMCONST:    printf("%d", token->nvalue);              break;
         case CHARCONST:   printf("'%c'", token->cvalue);            break;

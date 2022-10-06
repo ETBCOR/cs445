@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
 #include "ourgetopt.h"
 #include "node.h"
@@ -13,4 +13,4 @@ Node * AST;
 int errCount;
 int wrnCount;
 
-#endif /* MAIN_H */
+#endif /* _MAIN_H_ */

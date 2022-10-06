@@ -1,5 +1,5 @@
-#ifndef SCANTYPE_H
-#define SCANTYPE_H
+#ifndef _SCANTYPE_H_
+#define _SCANTYPE_H_
 
 class TokenData
 {
@@ -12,4 +12,4 @@ public:
    char * svalue;   // any string value e.g. an id
 };
 
-#endif /* SCANTYPE_H */
+#endif /* _SCANTYPE_H_ */

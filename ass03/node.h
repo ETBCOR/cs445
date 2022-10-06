@@ -1,18 +1,15 @@
-#ifndef NODE_H
-#define NODE_H
+#ifndef _NODE_H_
+#define _NODE_H_
 
 #include <string.h>
 #include <stdio.h>
 #include "scanType.h"
 #include "parser.tab.h"
 #include "symbolTable.h"
+#include "error.h"
 
 #define MAXCHILDREN 3
 
-extern int errCount;
-extern int wrnCount;
-
-/* abstract AST node - for all nonterminals */
 class Node
 { public:
     // tree connectivity
@@ -27,6 +24,8 @@ class Node
     bool isChild;               // used for printing
     bool isConst;               // is this a constant?
     bool isArray;               // is this node an array?
+    bool isUnscoped;            // is this node unscoped (e.g. "if(true) x++;")?
+    bool isInited;              // has this node been initialized?
     
     char * type;                // for variable and expression nodes
 
@@ -36,7 +35,8 @@ class Node
     void addChild(int, Node *); // adds given node as child of this node at given index
 
     void updateLoc();           // recursively sets the depth and index for the whole tree
-    virtual void sem(SymbolTable *); // do error/warning checking and semantic analysis
+    virtual void init(SymbolTable *); // initialzies symbols into the table
+    virtual void sem(SymbolTable *);  // do error/warning checking and semantic analysis
     void semC(SymbolTable *);   // do semantic analysis on children
     void semS(SymbolTable *);   // do semantic analysis on sibling
 
@@ -44,34 +44,37 @@ class Node
     virtual void print();       // recursively prints the tree
 };
 
-/* variable nodes (and function nodes) */
 class VarDecl: public Node
 { public:
     char * name;                            // stores the name of the variable or function
 
     bool isFun;                             // does this node represent a function (or a variable)?
     bool isStatic;                          // is this node's variable/function statically allocated?
-    bool isInited;                          // has this node been initialized?
 
     int arrSize;                            // stores the size of the array (if the node is an array)
+
+    bool usageFlg;                          // set to true when var is found to have been referenced
+    bool usageWrnFlg;                       // set to true when a "var unused" message has been sent for this var
 
     VarDecl(TokenData *);                   // default constructor
     VarDecl(TokenData *, TokenData *);      // array constructor
 
+    void initS();                           // recursively sets isInited of nodes in sibling list
     void setType(char *, bool);             // recursively sets type and isStatic of nodes in sibling list
-    void init();                            // recursively sets isInited of nodes in sibling list
 
+    virtual void init(SymbolTable *);
     virtual void sem(SymbolTable *);
+
     virtual void print();
 };
 
-/* function nodes */
 class FunDecl: public VarDecl
 { public:
     FunDecl(TokenData *, Node *, Node *);   // constructor for fun decls w/o type spec
     FunDecl(TokenData *, TokenData *,       // constructor for function declarations
                          Node *, Node *);   //                   with type specifier
 
+    virtual void sem(SymbolTable *);
     virtual void print();
 };
 
@@ -79,6 +82,7 @@ class Parm: public VarDecl
 { public:
     Parm(TokenData *, bool arr = false);    // constructor for parameter nodes, takes ID and bool for isArray
 
+    virtual void sem(SymbolTable *);
     virtual void print();
 };
 
@@ -86,6 +90,7 @@ class CompoundStmt: public Node
 { public:
     CompoundStmt(int, Node *, Node *);
 
+    virtual void sem(SymbolTable *);
     virtual void print();
 };
 
@@ -94,6 +99,7 @@ class IfStmt: public Node
     IfStmt(int, Node *, Node *);            // constructor for if statements (no else part)
     IfStmt(int, Node *, Node *, Node*);     // constructor for if/else statements
 
+    virtual void sem(SymbolTable *);
     virtual void print();
 };
 
@@ -101,6 +107,7 @@ class WhileStmt: public Node
 { public:
     WhileStmt(int, Node *, Node*);          // constructor for while statements
 
+    virtual void sem(SymbolTable *);
     virtual void print();
 };
 
@@ -108,6 +115,7 @@ class ForStmt: public Node
 { public:
     ForStmt(int, TokenData *, Node *, Node *); // constructor for for statements
 
+    virtual void sem(SymbolTable *);
     virtual void print();
 };
 
@@ -116,6 +124,7 @@ class IterRange: public Node
     IterRange(int, Node *, Node *);         // constructor for "to" ranges 
     IterRange(int, Node *, Node *, Node *); // constructor for to/by ranges
 
+    virtual void sem(SymbolTable *);
     virtual void print();
 };
 
@@ -124,6 +133,7 @@ class ReturnStmt: public Node
     ReturnStmt(int);                        // constructor for void return statements
     ReturnStmt(int, Node *);                // constructor for typed return statements
 
+    virtual void sem(SymbolTable *);
     virtual void print();
 };
 
@@ -131,6 +141,7 @@ class BreakStmt: public Node
 { public:
     BreakStmt(int);                         // constructor for break statements
 
+    virtual void sem(SymbolTable *);
     virtual void print();
 };
 
@@ -142,6 +153,7 @@ class Op: public Node
     Op(TokenData *, Node *);                // constructor for unary operations
     Op(TokenData *, Node *, Node *);        // constructor for binary operations
 
+    virtual void sem(SymbolTable *);
     virtual void print();
 };
 
@@ -150,6 +162,7 @@ class Assign: public Op
     Assign(TokenData *, Node *);             // constructor for unary assignments
     Assign(TokenData *, Node *, Node *);    // constructor for binary assignments
 
+    virtual void sem(SymbolTable *);
     virtual void print();
 };
 
@@ -158,6 +171,7 @@ class Id: public VarDecl
     Id(TokenData *);                        // constructor for identifiers
 
     virtual void sem(SymbolTable *);
+
     virtual void print();
 };
 
@@ -167,6 +181,7 @@ class Call: public Node
 
     Call(TokenData *, Node*);               // constructor for call "statement"
 
+    virtual void sem(SymbolTable *);
     virtual void print();
 };
 
@@ -176,8 +191,9 @@ class Const: public Node
 
     Const(TokenData *);                     // constructor for constants
 
+    virtual void sem(SymbolTable *);
     virtual void print();
 };
 
-#endif /* NODE_H */
+#endif /* _NODE_H_ */
 
