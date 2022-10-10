@@ -1,43 +1,31 @@
 #include "error.h"
 
-void throwErr (ErrCode err, Node * node)
+void throwErr (ErrCode err, Node * node, Node * found)
 {
     switch (err) {
-        case SIMPLE_CALL:
+        case VAR_AS_FUN:
             printf("ERROR(%d): '%s' is a simple variable and cannot be called.\n", node->linenum, ((VarDecl *)node)->name);
             break;
-        case ARR_MISMATCH: {
-            Op * o = (Op *)node;
-            printf("ERROR(%d): '%s' requires both operands be arrays or not but lhs is%s an array and rhs is%s an array.\n", o->linenum, o->opName, o->child[0]->type, o->child[1]->type);
+        case ARR_MISMATCH:
+            printf("ERROR(%d): '%s' requires both operands be arrays or not but lhs is%s an array and rhs is%s an array.\n", node->linenum, ((Op *)node)->opName, node->child[0]->isArray ? "" : " not", node->child[1]->isArray ? "" : " not");
             break;
-        }
-        case OP_LHS: {
-            Op * o = (Op *)node;
-            printf("ERROR(%d): '%s' requires operands of %s but lhs is of %s.\n", o->linenum, o->opName, o->type, o->child[0]->type);
+        case OP_LHS:
+            printf("ERROR(%d): '%s' requires operands of type %s but lhs is of type %s.\n", node->linenum, ((Op *)node)->opName, node->type, node->child[0]->type);
             break;
-        }
-        case OP_RHS: {
-            Op * o = (Op *)node;
-            printf("ERROR(%d): '%s' requires operands of %s but rhs is of %s.\n", o->linenum, o->opName, o->type, o->child[1]->type);
+        case OP_RHS:
+            printf("ERROR(%d): '%s' requires operands of type %s but rhs is of type %s.\n", node->linenum, ((Op *)node)->opName, node->type, node->child[1]->type);
             break;
-        }
-        case OPERAND_MISMATCH: {
-            Op * o = (Op *)node;
-            printf("ERROR(%d): '%s' requires operands of the same type but lhs is %s and rhs is %s.\n", o->linenum, o->opName, o->child[0]->type, o->child[1]->type);
+        case OPERAND_MISMATCH:
+            printf("ERROR(%d): '%s' requires operands of the same type but lhs is type %s and rhs is type %s.\n", node->linenum, ((Op *)node)->opName, node->child[0]->type, node->child[1]->type);
             break;
-        }
-        case ARR_NONINT_INDEX: {
-            Op * o = (Op *)node;
-            printf("ERROR(%d): Array '%s' should be indexed by type int but got %s.\n", o->linenum, ((VarDecl *)o->child[0])->name, o->child[1]->type);
+        case ARR_NONINT_INDEX:
+            printf("ERROR(%d): Array '%s' should be indexed by type int but got type %s.\n", node->linenum, ((VarDecl *)node->child[0])->name, node->child[1]->type);
             break;
-        }
-        case ARR_UNINDEXED: {
-            Op * o = (Op *)node;
-            printf("ERROR(%d): Array index is the unindexed array '%s'.\n", o->linenum, ((VarDecl *)o->child[1])->name);
+        case ARR_UNINDEXED:
+            printf("ERROR(%d): Array index is the unindexed array '%s'.\n", node->linenum, ((VarDecl *)node->child[1])->name);
             break;
-        }
         case NON_ARR_INDEX:
-            printf("ERROR(%d): Cannot index nonarray '%s'.\n", node->linenum);
+            printf("ERROR(%d): Cannot index nonarray '%s'.\n", node->linenum, ((VarDecl *)node->child[0])->name);
             break;
         case ARR_RETURN:
             printf("ERROR(%d): Cannot return an array.\n", node->linenum);
@@ -46,19 +34,19 @@ void throwErr (ErrCode err, Node * node)
             printf("ERROR(%d): Cannot use function '%s' as a variable.\n", node->linenum, ((VarDecl *)node)->name);
             break;
         case DECL_DBL:
-            printf("ERROR(%d): Symbol '%s' is already declared at line %d.\n", node->linenum, ((VarDecl *)node)->name, -1);
+            printf("ERROR(%d): Symbol '%s' is already declared at line %d.\n", node->linenum, ((VarDecl *)node)->name, found->linenum);
             break;
         case DECL_NOT:
             printf("ERROR(%d): Symbol '%s' is not declared.\n", node->linenum, ((VarDecl *)node)->name);
             break;
         case OP_ARR:
-            printf("ERROR(%d): The operation '%s' does not work with arrays.\n", node->linenum);
+            printf("ERROR(%d): The operation '%s' does not work with arrays.\n", node->linenum, ((Op *)node)->opName);
             break;
         case OP_NOT_ARR:
-            printf("ERROR(%d): The operation '%s' only works with arrays.\n", node->linenum);
+            printf("ERROR(%d): The operation '%s' only works with arrays.\n", node->linenum, ((Op *)node)->opName);
             break;
         case OPERAND_UNARY:
-            printf("ERROR(%d): Unary '%s' requires an operand of %s but was given %s.\n", node->linenum);
+            printf("ERROR(%d): Unary '%s' requires an operand of type %s but was given type %s.\n", node->linenum, ((Op *)node)->opName, node->type, node->child[0]->type);
             break;
         case NO_MAIN:
             printf("ERROR(LINKER): A function named 'main()' must be defined.\n");
@@ -67,21 +55,17 @@ void throwErr (ErrCode err, Node * node)
     errCount++;
 }
 
-void throwWrn (WrnCode wrn, Node * node)
+void throwWrn (WrnCode wrn, Node * node, Node * found)
 {
     switch (wrn) {
-        case VAR_UNUSED: {
-            VarDecl * v = (VarDecl *) node;
-            printf("WARNING(%d): The variable '%s' seems not to be used.\n", v->linenum, v->name);
-            v->usageWrnFlg = true;
+        case VAR_UNUSED:
+            printf("WARNING(%d): The variable '%s' seems not to be used.\n", node->linenum, ((VarDecl *)node)->name);
+            ((VarDecl *)node)->usageWrnFlg = true;
             break;
-        }
-        case VAR_UNINITED: {
-            VarDecl * v = (VarDecl *) node;
-            printf("WARNING(%d): Variable '%s' may be uninitialized when used here.\n", v->linenum, v->name);
-            v->usageWrnFlg = true;
+        case VAR_UNINITED:
+            printf("WARNING(%d): Variable '%s' may be uninitialized when used here.\n", node->linenum, ((VarDecl *)node)->name);
+            ((VarDecl *)found)->usageWrnFlg = true;
             break;
-        }
     }
     wrnCount++;
 }

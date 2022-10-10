@@ -12,7 +12,16 @@ bin = parser
 out = c-
 arc = corg03
 
-tst = allbad
+tst = allgood
+# allbad allgood array arrayops arrayx assignb assignBool
+# assignChar assignInt break2 break3 break4 break call2
+# call3 call callerr constants cover decl emptyline
+# everythingF22 exp expL expR for2 fora forb
+# for forscope funscope if ifNest init2 init3
+# init4 init mixedControl2 mixedControl3 mixedControl nest ops
+# optype overlapArray overlap overlapStatic part2 randomRoll return
+# scope static strange types3 types undeclared uninit2
+# uninit varAssign var varPair while whileif
 
 $(out): $(lexgens) $(yaccgens) $(gens)
 	$(cc) $(ccopts) $(gens) $(lexgens) $(yaccgens) -o $(out)

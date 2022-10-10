@@ -21,24 +21,28 @@ int main (int argc, char *argv[])
     }
 
     // print the usage message if the h flag was raised
-    if(hOpt) printf("usage: -c [options] [sourcefile]\noptions:\n-d          - turn on parser debugging\n-D          - turn on symbol table debugging\n-h          - print this usage messagea\n-p          - print the abstract syntax tree\n-P          - print the abstract syntax tree plus type information\n");
+    if (hOpt) printf("usage: -c [options] [sourcefile]\noptions:\n-d          - turn on parser debugging\n-D          - turn on symbol table debugging\n-h          - print this usage messagea\n-p          - print the abstract syntax tree\n-P          - print the abstract syntax tree plus type information\n");
 
     // turn on parser debugging
-    if(dOpt) yydebug = 1;
+    if (dOpt) yydebug = 1;
 
     // do parsing
     if (optind < argc) {
         // a file was specified on the command line, so read it
-        yyin = fopen(argv[optind], "r");
-        yyparse();
-        fclose(yyin);
+        if ((yyin = fopen(argv[optind], "r"))) {
+            yyparse();
+            fclose(yyin);
+        } else {
+            printf("ERROR(ARGLIST): source file \"%s\" could not be opened.\n", argv[optind]);
+            errCount++;
+        }
     } else {
         // no command line file was specified, so read from the input stream instead
         yyparse();
     }
 
     // check that the AST was generated
-    if(!AST) {
+    if (!AST) {
         // if AST wasn't generated, print error mesasage and exit
         printf("ERROR: No abstract syntax tree was generated.\n");
         return -1;
@@ -50,12 +54,11 @@ int main (int argc, char *argv[])
     // set the symbol table's debug flag 
     syms->debug(DOpt);
 
-    if(errCount == 0) {
+    if (errCount == 0) {
         AST->updateLoc();
-
-        //if(pOpt) AST->print(POpt);
-        if(pOpt) AST->print();
+        if (pOpt) AST->print(false);
         AST->sem(syms);
+        if (POpt && errCount == 0) AST->print(true);
     }
 
     printf("Number of warnings: %d\nNumber of errors: %d\n", wrnCount, errCount);

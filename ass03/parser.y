@@ -68,9 +68,7 @@ declList
     }
     | decl {
         AST->add($1);
-        //AST = $1;
         if ($1) $1->isRoot = true;
-        //$$ = $1;
     }
     ;
 

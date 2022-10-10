@@ -1,9 +1,10 @@
 exe=c-
-path="testData"
+path="data"
 
 for testfile in $path/*.c-;
 do
     echo $testfile
     ./$exe -p $testfile > myout
-    diff -y myout ${testfile::-3}.out
+    diff -y --suppress-common-lines -W 200 myout ${testfile::-3}.out
+    #diff -y -W 200 myout ${testfile::-3}.out
 done

@@ -41,7 +41,7 @@ class Node
     void semS(SymbolTable *);   // do semantic analysis on sibling
 
     void printSelf();           // prints the preamble for each line
-    virtual void print();       // recursively prints the tree
+    virtual void print(bool);    // recursively prints the tree. bool is for extra type info
 };
 
 class VarDecl: public Node
@@ -65,7 +65,7 @@ class VarDecl: public Node
     virtual void init(SymbolTable *);
     virtual void sem(SymbolTable *);
 
-    virtual void print();
+    virtual void print(bool);
 };
 
 class FunDecl: public VarDecl
@@ -75,7 +75,7 @@ class FunDecl: public VarDecl
                          Node *, Node *);   //                   with type specifier
 
     virtual void sem(SymbolTable *);
-    virtual void print();
+    virtual void print(bool);
 };
 
 class Parm: public VarDecl
@@ -83,7 +83,7 @@ class Parm: public VarDecl
     Parm(TokenData *, bool arr = false);    // constructor for parameter nodes, takes ID and bool for isArray
 
     virtual void sem(SymbolTable *);
-    virtual void print();
+    virtual void print(bool);
 };
 
 class CompoundStmt: public Node
@@ -91,7 +91,7 @@ class CompoundStmt: public Node
     CompoundStmt(int, Node *, Node *);
 
     virtual void sem(SymbolTable *);
-    virtual void print();
+    virtual void print(bool);
 };
 
 class IfStmt: public Node
@@ -100,7 +100,7 @@ class IfStmt: public Node
     IfStmt(int, Node *, Node *, Node*);     // constructor for if/else statements
 
     virtual void sem(SymbolTable *);
-    virtual void print();
+    virtual void print(bool);
 };
 
 class WhileStmt: public Node
@@ -108,7 +108,7 @@ class WhileStmt: public Node
     WhileStmt(int, Node *, Node*);          // constructor for while statements
 
     virtual void sem(SymbolTable *);
-    virtual void print();
+    virtual void print(bool);
 };
 
 class ForStmt: public Node
@@ -116,7 +116,7 @@ class ForStmt: public Node
     ForStmt(int, TokenData *, Node *, Node *); // constructor for for statements
 
     virtual void sem(SymbolTable *);
-    virtual void print();
+    virtual void print(bool);
 };
 
 class IterRange: public Node
@@ -125,7 +125,7 @@ class IterRange: public Node
     IterRange(int, Node *, Node *, Node *); // constructor for to/by ranges
 
     virtual void sem(SymbolTable *);
-    virtual void print();
+    virtual void print(bool);
 };
 
 class ReturnStmt: public Node
@@ -134,7 +134,7 @@ class ReturnStmt: public Node
     ReturnStmt(int, Node *);                // constructor for typed return statements
 
     virtual void sem(SymbolTable *);
-    virtual void print();
+    virtual void print(bool);
 };
 
 class BreakStmt: public Node
@@ -142,7 +142,7 @@ class BreakStmt: public Node
     BreakStmt(int);                         // constructor for break statements
 
     virtual void sem(SymbolTable *);
-    virtual void print();
+    virtual void print(bool);
 };
 
 class Op: public Node
@@ -154,7 +154,7 @@ class Op: public Node
     Op(TokenData *, Node *, Node *);        // constructor for binary operations
 
     virtual void sem(SymbolTable *);
-    virtual void print();
+    virtual void print(bool);
 };
 
 class Assign: public Op
@@ -163,7 +163,7 @@ class Assign: public Op
     Assign(TokenData *, Node *, Node *);    // constructor for binary assignments
 
     virtual void sem(SymbolTable *);
-    virtual void print();
+    virtual void print(bool);
 };
 
 class Id: public VarDecl
@@ -172,7 +172,7 @@ class Id: public VarDecl
 
     virtual void sem(SymbolTable *);
 
-    virtual void print();
+    virtual void print(bool);
 };
 
 class Call: public Node
@@ -182,7 +182,7 @@ class Call: public Node
     Call(TokenData *, Node*);               // constructor for call "statement"
 
     virtual void sem(SymbolTable *);
-    virtual void print();
+    virtual void print(bool);
 };
 
 class Const: public Node
@@ -192,7 +192,7 @@ class Const: public Node
     Const(TokenData *);                     // constructor for constants
 
     virtual void sem(SymbolTable *);
-    virtual void print();
+    virtual void print(bool);
 };
 
 #endif /* _NODE_H_ */

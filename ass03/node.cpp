@@ -61,13 +61,16 @@ void Node::sem(SymbolTable * tbl)
 {
     semC(tbl);
     semS(tbl);
+    if (sibling && sibling->isRoot) {
+        Node * m = (Node *)tbl->lookupGlobal("main");
+        if (!m || !((VarDecl *)m)->isFun || m->child[0])
+            throwErr(NO_MAIN, NULL);
+    }
 }
 
 void Node::semC(SymbolTable * tbl)
 {
-    for (int i = 0; i < MAXCHILDREN; i++) if (child[i]) {
-        child[i]->sem(tbl);
-    }
+    for (int i = 0; i < MAXCHILDREN; i++) if (child[i]) child[i]->sem(tbl);
 }
 
 void Node::semS(SymbolTable * tbl)
@@ -83,11 +86,11 @@ void Node::printSelf()
     else printf("Sibling: %d  ", index);
 }
 
-void Node::print()
+void Node::print(bool ann)
 {
     for (int i = 0; i < MAXCHILDREN; i++)
-        if (child[i]) child[i]->print();
-    if (sibling) sibling->print();
+        if (child[i]) child[i]->print(ann);
+    if (sibling) sibling->print(ann);
 }
 
 VarDecl::VarDecl(TokenData * tkn) : Node()
@@ -132,11 +135,11 @@ void VarDecl::init(SymbolTable * tbl)
 void VarDecl::sem(SymbolTable * tbl)
 {
     Node::semC(tbl);
-    if (!tbl->insert(name, this)) throwErr(DECL_DBL, this);
+    if (!tbl->insert(name, this)) throwErr(DECL_DBL, this, (Node *)tbl->lookup(name));
     Node::semS(tbl);
 }
 
-void VarDecl::print()
+void VarDecl::print(bool ann)
 {
     printSelf();
     printf(
@@ -146,7 +149,7 @@ void VarDecl::print()
         isArray ? "is array " : "",
         type, linenum
     );
-    Node::print();
+    Node::print(ann);
 }
 
 FunDecl::FunDecl(TokenData * tkn, Node * prms, Node * stmt) : VarDecl(tkn)
@@ -166,7 +169,7 @@ FunDecl::FunDecl(TokenData * retType, TokenData * tkn,
 
 void FunDecl::sem(SymbolTable * tbl)
 {
-    if (!tbl->insert(name, this)) throwErr(DECL_DBL, this);
+    if (!tbl->insert(name, this)) throwErr(DECL_DBL, this, (Node *)tbl->lookup(name));
     tbl->enter("Function");
     Node::semC(tbl);
     tbl->applyToAll(wrnUnused);
@@ -174,12 +177,12 @@ void FunDecl::sem(SymbolTable * tbl)
     Node::semS(tbl);
 }
 
-void FunDecl::print()
+void FunDecl::print(bool ann)
 {
     printSelf();
     printf( "Func: %s returns type %s [line: %d]\n",
                   name,           type,    linenum);
-    Node::print();
+    Node::print(ann);
 }
 
 Parm::Parm(TokenData * tkn, bool arr) : VarDecl(tkn)
@@ -191,11 +194,11 @@ Parm::Parm(TokenData * tkn, bool arr) : VarDecl(tkn)
 void Parm::sem(SymbolTable * tbl)
 {
     Node::semC(tbl);
-    if (!tbl->insert(name, this)) throwErr(DECL_DBL, this);
+    if (!tbl->insert(name, this)) throwErr(DECL_DBL, this, (Node *)tbl->lookup(name));
     Node::semS(tbl);
 }
 
-void Parm::print()
+void Parm::print(bool ann)
 {
     printSelf();
     printf(
@@ -204,7 +207,7 @@ void Parm::print()
         isArray ? "is array " : "",
         type, linenum
     );
-    Node::print();
+    Node::print(ann);
 }
 
 CompoundStmt::CompoundStmt(int line, Node * decls, Node * stmt)
@@ -225,11 +228,11 @@ void CompoundStmt::sem(SymbolTable * tbl)
     Node::semS(tbl);
 }
 
-void CompoundStmt::print()
+void CompoundStmt::print(bool ann)
 {
     printSelf();
     printf("Compound [line: %d]\n", linenum);
-    Node::print();
+    Node::print(ann);
 }
 
 IfStmt::IfStmt(int line, Node * cond, Node * stmt)
@@ -247,17 +250,19 @@ IfStmt::IfStmt(int line, Node * cond, Node * stmt, Node * alt) : IfStmt(line, co
 void IfStmt::sem(SymbolTable * tbl)
 {
     tbl->enter("If");
-    Node::semC(tbl);
-
+    if (child[0]) child[0]->sem(tbl);
+    if (child[1]) child[1]->sem(tbl);
+    if (child[2]) child[2]->sem(tbl);
+    tbl->applyToAll(wrnUnused);
     tbl->leave();
     Node::semS(tbl);
 }
 
-void IfStmt::print()
+void IfStmt::print(bool ann)
 {
     printSelf();
     printf("If [line: %d]\n", linenum);
-    Node::print();
+    Node::print(ann);
 }
 
 WhileStmt::WhileStmt(int line, Node * cond, Node * stmt)
@@ -276,11 +281,11 @@ void WhileStmt::sem(SymbolTable * tbl)
     Node::semS(tbl);
 }
 
-void WhileStmt::print()
+void WhileStmt::print(bool ann)
 {
     printSelf();
     printf("While [line: %d]\n", linenum);
-    Node::print();
+    Node::print(ann);
 }
 
 ForStmt::ForStmt(int line, TokenData * itr, Node * rng, Node * stmt)
@@ -297,17 +302,21 @@ ForStmt::ForStmt(int line, TokenData * itr, Node * rng, Node * stmt)
 void ForStmt::sem(SymbolTable * tbl)
 {
     tbl->enter("For");
-    Node::semC(tbl);
+    doInitChecking = false;
+    child[0]->sem(tbl);
+    doInitChecking = true;
+    child[1]->sem(tbl);
+    if (child[2]) child[2]->sem(tbl);
     tbl->applyToAll(wrnUnused);
     tbl->leave();
     Node::semS(tbl);
 }
 
-void ForStmt::print()
+void ForStmt::print(bool ann)
 {
     printSelf();
     printf("For [line: %d]\n", linenum);
-    Node::print();
+    Node::print(ann);
 }
 
 IterRange::IterRange(int line, Node * strt, Node * end)
@@ -325,14 +334,14 @@ IterRange::IterRange(int line, Node * strt, Node * end, Node * jmp) : IterRange(
 void IterRange::sem(SymbolTable * tbl)
 {
     Node::semC(tbl);
-    Node::semS(tbl);
+    //tbl->applyToAll(wrnUnused);
 }
 
-void IterRange::print()
+void IterRange::print(bool ann)
 {
     printSelf();
     printf("Range [line: %d]\n", linenum);
-    Node::print();
+    Node::print(ann);
 }
 
 ReturnStmt::ReturnStmt(int line)
@@ -348,14 +357,15 @@ ReturnStmt::ReturnStmt(int line, Node * retVal) : ReturnStmt(line)
 void ReturnStmt::sem(SymbolTable * tbl)
 {
     Node::semC(tbl);
+    if (child[0] && child[0]->isArray) throwErr(ARR_RETURN, this);
     Node::semS(tbl);
 }
 
-void ReturnStmt::print()
+void ReturnStmt::print(bool ann)
 {
     printSelf();
     printf("Return [line: %d]\n", linenum);
-    Node::print();
+    Node::print(ann);
 }
 
 BreakStmt::BreakStmt(int line)
@@ -369,11 +379,11 @@ void BreakStmt::sem(SymbolTable * tbl)
     Node::semS(tbl);
 }
 
-void BreakStmt::print()
+void BreakStmt::print(bool ann)
 {
     printSelf();
     printf("Break [line: %d]\n", linenum);
-    Node::print();
+    Node::print(ann);
 }
 
 Op::Op(TokenData * tkn, Node * lhs)
@@ -395,65 +405,111 @@ Op::Op(TokenData * tkn, Node * lhs, Node * rhs) : Op(tkn, lhs)
 void Op::sem(SymbolTable * tbl)
 {
     Node::semC(tbl);
-
     switch (opId) {
         case AND:
-            break;
         case OR:
+            type = (char *)"bool";
+            if (strcmp(child[0]->type, type)
+             && strcmp(child[0]->type, (char *)"undefined"))
+                throwErr(OP_LHS, this);
+            if (strcmp(child[1]->type, type)
+             && strcmp(child[1]->type, (char *)"undefined"))
+                throwErr(OP_RHS, this);
+            if (child[0]->isArray || child[1]->isArray) throwErr(OP_ARR, this);
             break;
         case EQ:
-            break;
         case NEQ:
-            break;
         case LESS:
-            break;
         case LEQ:
-            break;
         case GRTR:
-            break;
         case GEQ:
-            break;
-        case ASS:
-            break;
-        case ADDASS:
-            break;
-        case SUBASS:
-            break;
-        case MULASS:
-            break;
-        case DIVASS:
+            type = (char *)"bool";
+            if (strcmp(child[0]->type, child[1]->type)
+             && strcmp(child[0]->type, (char *)"undefined")
+             && strcmp(child[1]->type, (char *)"undefined"))
+                throwErr(OPERAND_MISMATCH, this);
+            if ((child[0]->isArray && !child[1]->isArray)
+             || (child[1]->isArray && !child[0]->isArray))
+                throwErr(ARR_MISMATCH, this);
             break;
         case PLUS:
+        case SLASH:
+        case PERC:
+            type = (char *)"int";
+            if (strcmp(child[0]->type, type)
+             && strcmp(child[0]->type, (char *)"undefined"))
+                throwErr(OP_LHS, this);
+            if (strcmp(child[1]->type, type)
+             && strcmp(child[1]->type, (char *)"undefined"))
+                throwErr(OP_RHS, this);
+            if (child[0]->isArray || child[1]->isArray) throwErr(OP_ARR, this);
             break;
         case MINUS:
+            type = (char *)"int";
+            if (child[1]) {
+                if (strcmp(child[0]->type, type)
+                 && strcmp(child[0]->type, (char *)"undefined"))
+                    throwErr(OP_LHS, this);
+                if (strcmp(child[1]->type, type)
+                 && strcmp(child[1]->type, (char *)"undefined"))
+                    throwErr(OP_RHS, this);
+                if (child[0]->isArray || child[1]->isArray) throwErr(OP_ARR, this);
+            } else {
+                if (strcmp(child[0]->type, type)
+                 && strcmp(child[0]->type, (char *)"undefined"))
+                    throwErr(OPERAND_UNARY, this);
+                if (child[0]->isArray) throwErr(OP_ARR, this);
+            }
             break;
         case ASTR:
-            break;
-        case SLASH:
-            break;
-        case PERC:
+            type = (char *)"int";
+            if(child[1]) {
+                if (strcmp(child[0]->type, type)
+                 && strcmp(child[0]->type, (char *)"undefined"))
+                    throwErr(OP_LHS, this);
+                if (strcmp(child[1]->type, type)
+                 && strcmp(child[1]->type, (char *)"undefined"))
+                    throwErr(OP_RHS, this);
+            } else {
+                if (!child[0]->isArray
+                 && strcmp(child[0]->type, (char *)"undefined"))
+                    throwErr(OP_NOT_ARR, this);
+            }
             break;
         case BRACKL:
-            break;
-        case DEC:
-            break;
-        case INC:
+            type = strdup(child[0]->type);
+            if (!child[0]->isArray) throwErr(NON_ARR_INDEX, this);
+            if (strcmp(child[1]->type, (char *)"int")) throwErr(ARR_NONINT_INDEX, this);
+            if (child[1]->isArray) throwErr(ARR_UNINDEXED, this);
             break;
         case NOT:
+            type = (char *)"bool";
+            if (strcmp(child[0]->type, type)
+             && strcmp(child[0]->type, (char *)"undefined"))
+                throwErr(OPERAND_UNARY, this);
+            if (child[0]->isArray) throwErr(OP_ARR, this);
             break;
         case QUEST:
+            type = (char *)"int";
+            if (strcmp(child[0]->type, type)
+             && strcmp(child[0]->type, (char *)"undefined"))
+                throwErr(OPERAND_UNARY, this);
+            if (child[0]->isArray) throwErr(OP_ARR, this);
             break;
     }
 
     Node::semS(tbl);
 }
 
-void Op::print()
+void Op::print(bool ann)
 {
     printSelf();
-    printf( "Op: %s [line: %d]\n",
-               opName,   linenum);
-    Node::print();
+    printf("Op: %s%s%s [line: %d]\n",
+           opName,
+           ann ? " of type " : "",
+           ann ? type : "",
+           linenum);
+    Node::print(ann);
 }
 
 Assign::Assign(TokenData * tkn, Node * lhs) : Op(tkn, lhs) {}
@@ -462,21 +518,63 @@ Assign::Assign(TokenData * tkn, Node * lhs, Node * rhs) : Op(tkn, lhs, rhs) {}
 
 void Assign::sem(SymbolTable * tbl)
 {
-    doInitChecking = false;
-    child[0]->sem(tbl);
-    doInitChecking = true;
-    if(child[1]) child[1]->sem(tbl);
-
-    child[0]->init(tbl);
+    switch (opId) {
+        case ASS:
+            doInitChecking = false;
+            child[0]->sem(tbl);
+            doInitChecking = true;
+            child[1]->sem(tbl);
+            type = strdup(child[0]->type);
+            if (strcmp(child[0]->type, child[1]->type)
+             && strcmp(child[0]->type, (char *)"undefined")
+             && strcmp(child[1]->type, (char *)"undefined"))
+                throwErr(OPERAND_MISMATCH, this);
+            if ((child[0]->isArray && !child[1]->isArray)
+             || (child[1]->isArray && !child[0]->isArray))
+            throwErr(ARR_MISMATCH, this);
+            child[0]->init(tbl);
+            break;
+        case ADDASS:
+        case SUBASS:
+        case MULASS:
+        case DIVASS:
+            type = (char *)"int";
+            doInitChecking = false;
+            child[0]->sem(tbl);
+            doInitChecking = true;
+            child[1]->sem(tbl);
+            if (strcmp(child[0]->type, type)
+             && strcmp(child[0]->type, (char *)"undefined"))
+                throwErr(OP_LHS, this);
+            if (strcmp(child[1]->type, type)
+             && strcmp(child[1]->type, (char *)"undefined"))
+                throwErr(OP_RHS, this);
+            if (child[0]->isArray || child[1]->isArray) throwErr(OP_ARR, this);
+            child[0]->init(tbl);
+            break;
+        case INC:
+        case DEC:
+            Node::semC(tbl);
+            type = (char *)"int";
+            if (strcmp(child[0]->type, type)
+             && strcmp(child[0]->type, (char *)"undefined"))
+                throwErr(OPERAND_UNARY, this);
+            if (child[0]->isArray) throwErr(OP_ARR, this);
+            child[0]->sem(tbl);
+            break;
+    }
     Node::semS(tbl);
 }
 
-void Assign::print()
+void Assign::print(bool ann)
 {
     printSelf();
-    printf( "Assign: %s [line: %d]\n",
-                   opName,   linenum);
-    Node::print();
+    printf("Assign: %s%s%s [line: %d]\n",
+           opName,
+           ann ? " of type " : "", 
+           ann ? type : "",
+           linenum);
+    Node::print(ann);
 }
 
 Id::Id(TokenData * tkn) : VarDecl(tkn) {}
@@ -489,24 +587,27 @@ void Id::sem(SymbolTable * tbl)
         VarDecl * v = (VarDecl *)found;
         if (v->isFun) throwErr(FUN_AS_VAR, this);
         else {
-            type = strdup(v->type);
             isArray = v->isArray;
             if (isInited) v->isInited = true;
-            isFun = v->isFun;
+            type = strdup(v->type);
             isStatic = v->isStatic;
             v->usageFlg = true;
-            if (doInitChecking && !v->isInited && !v->usageWrnFlg) throwWrn(VAR_UNINITED, this);
+            if (doInitChecking && !v->isInited && !v->usageWrnFlg)
+                throwWrn(VAR_UNINITED, this, v);
         }
     }
     Node::sem(tbl);
 }
 
-void Id::print()
+void Id::print(bool ann)
 {
     printSelf();
-    printf( "Id: %s [line: %d]\n",
-                name,    linenum);
-    Node::print();
+    printf("Id: %s%s%s [line: %d]\n",
+           name,
+           ann ? " of type " : "",
+           ann ? type : "",
+           linenum);
+    Node::print(ann);
 }
 
 Call::Call(TokenData * tkn, Node * args)
@@ -519,19 +620,28 @@ Call::Call(TokenData * tkn, Node * args)
 
 void Call::sem(SymbolTable * tbl)
 {
-    Node::semC(tbl);
-
-
-
-    Node::semS(tbl);
+    void * found = tbl->lookup(name);
+    if (!found) throwErr(DECL_NOT, this);
+    else {
+        VarDecl * v = (VarDecl *)found;
+        if (!v->isFun) throwErr(VAR_AS_FUN, this);
+        else {
+            type = strdup(v->type);
+            v->usageFlg = true;
+        }
+    }
+    Node::sem(tbl);
 }
 
-void Call::print()
+void Call::print(bool ann)
 {
     printSelf();
-    printf( "Call: %s [line: %d]\n",
-                  name,    linenum);
-    Node::print();
+    printf("Call: %s%s%s [line: %d]\n",
+           name,
+           ann ? " of type " : "",
+           ann ? type : "",
+           linenum);
+    Node::print(ann);
 }
 
 Const::Const(TokenData * tkn)
@@ -542,8 +652,8 @@ Const::Const(TokenData * tkn)
     switch (token->tokenclass) {
         case BOOLCONST:   type = (char *)"bool"; break;
         case NUMCONST:    type = (char *)"int";  break;
-        case CHARCONST:   type = (char *)"char";
-        case STRINGCONST: isArray = true;        break;
+        case CHARCONST:   type = (char *)"char"; break;
+        case STRINGCONST: type = (char *)"char"; isArray = true; break;
     }
 }
 
@@ -556,7 +666,7 @@ void Const::sem(SymbolTable * tbl)
     Node::semS(tbl);
 }
 
-void Const::print()
+void Const::print(bool ann)
 {
     printSelf();
     printf("Const ");
@@ -566,7 +676,10 @@ void Const::print()
         case CHARCONST:   printf("'%c'", token->cvalue);            break;
         case STRINGCONST: printf("is array \"%s\"", token->svalue);       break; 
     }
-    printf(" [line: %d]\n", linenum);
-    Node::print();
+    printf("%s%s [line: %d]\n",
+           ann ? " of type " : "",
+           ann ? type : "",
+           linenum);
+    Node::print(ann);
 }
 
