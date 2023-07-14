@@ -1,0 +1,114 @@
+data/allbad.c-
+============================================================================================================
+data/allgood.c-
+============================================================================================================
+data/everythingF22.c-
+============================================================================================================
+data/syntaxerr-assign.c-
+ERROR(14): Syntax error, unexpected '='.							   <
+Number of errors: 16										   |	Number of errors: 15
+============================================================================================================
+data/syntaxerr-badchar.c-
+												   >	ERROR(5): Syntax error, unexpected "or", expecting ',' or ';'.
+Number of errors: 26										   |	Number of errors: 27
+============================================================================================================
+data/syntaxerr-call.c-
+============================================================================================================
+data/syntaxerr-compound.c-
+============================================================================================================
+data/syntaxerr-constants.c-
+ERROR(3): Syntax error, unexpected character constant '', expecting identifier.			   |	ERROR(3): Empty character ''.  Characters ignored.
+												   >	ERROR(3): Syntax error, unexpected ',', expecting identifier.
+Number of errors: 4										   |	Number of errors: 5
+============================================================================================================
+data/syntaxerr-empty.c-
+============================================================================================================
+data/syntaxerr-extra.c-
+ERROR(22): Syntax error, unexpected "for".							   <
+ERROR(29): Syntax error, unexpected "then".							   <
+Number of errors: 29										   |	Number of errors: 27
+============================================================================================================
+data/syntaxerr-for.c-
+ERROR(15): Syntax error, unexpected "int".							   <
+Number of errors: 9										   |	Number of errors: 8
+============================================================================================================
+data/syntaxerr-hamlet.c-
+============================================================================================================
+data/syntaxerr-if.c-
+============================================================================================================
+data/syntaxerr-ifminus.c-
+ERROR(16): Syntax error, unexpected "else".							   <
+ERROR(18): Syntax error, unexpected "else".							   <
+ERROR(38): Syntax error, unexpected "else".							   <
+ERROR(40): Syntax error, unexpected "else".							   <
+ERROR(58): Syntax error, unexpected "else".							   <
+ERROR(60): Syntax error, unexpected "else".							   <
+ERROR(80): Syntax error, unexpected "else".							   <
+ERROR(82): Syntax error, unexpected "else".							   <
+ERROR(110): Syntax error, unexpected "else".							   <
+ERROR(112): Syntax error, unexpected "else".							   <
+Number of errors: 91										   |	Number of errors: 81
+============================================================================================================
+data/syntaxerr-logic.c-
+ERROR(10): Syntax error, unexpected "or".							   <
+ERROR(17): Syntax error, unexpected "and".							   <
+ERROR(25): Syntax error, unexpected "and".							   <
+Number of errors: 14										   |	Number of errors: 11
+============================================================================================================
+data/syntaxerr-loops.c-
+============================================================================================================
+data/syntaxerr-loopscope2.c-
+============================================================================================================
+data/syntaxerr-loopscope.c-
+============================================================================================================
+data/syntaxerr-parens.c-
+============================================================================================================
+data/syntaxerr-parms.c-
+============================================================================================================
+data/syntaxerr-relop.c-
+ERROR(10): Syntax error, unexpected '>'.							   <
+ERROR(17): Syntax error, unexpected "<=".							   <
+Number of errors: 12										   |	Number of errors: 10
+============================================================================================================
+data/syntaxerr-shuffle.c-
+												   >	ERROR(23): Syntax error, unexpected identifier "c", expecting ',' or ';'.
+												   >	ERROR(137): Syntax error, unexpected '*', expecting ',' or ';'.
+												   >	ERROR(146): Syntax error, unexpected identifier "wool", expecting ',' or ';'.
+												   >	ERROR(200): Syntax error, unexpected identifier "close", expecting ',' or ';'.
+												   >	ERROR(239): Syntax error, unexpected "bool", expecting ',' or ';'.
+												   >	ERROR(259): Invalid or misplaced input character: '"'. Character Ignored.
+												   >	ERROR(259): Invalid or misplaced input character: '\'. Character Ignored.
+												   >	ERROR(259): Invalid or misplaced input character: '"'. Character Ignored.
+												   >	ERROR(352): Syntax error, unexpected '-', expecting ',' or ';'.
+												   >	ERROR(418): Syntax error, unexpected identifier "a", expecting ',' or ';'.
+												   >	ERROR(422): Syntax error, unexpected identifier "x", expecting ',' or ';'.
+												   >	ERROR(528): Syntax error, unexpected identifier "rabbit", expecting ',' or ';'.
+												   >	ERROR(580): Syntax error, unexpected "==", expecting ',' or ';'.
+												   >	ERROR(701): Syntax error, unexpected identifier "gromit", expecting ',' or ';'.
+												   >	ERROR(714): Syntax error, unexpected identifier "run", expecting ',' or ';'.
+												   >	ERROR(727): Syntax error, unexpected '(', expecting ',' or ';'.
+Number of errors: 105										   |	Number of errors: 121
+============================================================================================================
+data/syntaxerr-small.c-
+============================================================================================================
+data/syntaxerr-summul.c-
+ERROR(10): Syntax error, unexpected '+'.							   <
+ERROR(22): Syntax error, unexpected '+'.							   <
+Number of errors: 10										   |	Number of errors: 8
+============================================================================================================
+data/syntaxerr-testExample.c-
+============================================================================================================
+data/syntaxerr-typearray.c-
+============================================================================================================
+data/syntaxerr-type.c-
+============================================================================================================
+data/syntaxerr-typefun.c-
+============================================================================================================
+data/syntaxerr-unary.c-
+ERROR(10): Syntax error, unexpected ';'.							   <
+ERROR(14): Syntax error, unexpected "else".							   <
+Number of errors: 9										   |	Number of errors: 7
+============================================================================================================
+data/syntaxerr-while.c-
+============================================================================================================
+53 / 1880 lines differed in total.

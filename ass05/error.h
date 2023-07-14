@@ -1,0 +1,18 @@
+#ifndef _ERROR_H_
+#define _ERROR_H_
+
+#include "node.h"
+
+extern int errCount;
+extern int wrnCount;
+
+enum ErrCode {VAR_AS_FUN, ARR_MISMATCH, OP_LHS, OP_RHS, OPERAND_MISMATCH, ARR_NONINT_INDEX, ARR_UNINDEXED, LOOPLESS_BREAK, NON_ARR_INDEX, ARR_RETURN, ARR_COND, ARR_RANGE, FUN_AS_VAR, PARM_TYPE, RANGE_TYPE, NONBOOL_COND, PARM_NONARR, RETURN_VALUED, RETURN_UNVALUED, RETURN_MISMATCH, INIT_NONCONST, INIT_MISMATCH, INIT_ARR_MISMATCH, PARM_ARR, DECL_DBL, DECL_NOT, OP_ARR, OP_NONARR, PARM_FEW, PARM_MANY, OPERAND_UNARY, NO_MAIN};
+enum WrnCode {NO_RETURN, FUN_UNUSED, PARM_UNUSED, VAR_UNUSED, VAR_UNINITED};
+
+void throwErr (ErrCode, Node *, Node * = NULL, Node * = NULL, Node * = NULL, int = -1);
+void throwWrn (WrnCode, Node *, Node * = NULL);
+
+void wrnUnused(std::string, void *);
+
+#endif /* _ERROR_H_ */
+

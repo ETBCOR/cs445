@@ -1,0 +1,330 @@
+SCRIPT RUNNING WITH "h03"
+// C-F22
+cat(int x[])
+{
+    output(x[3]); outnl();
+    if x[3]>0 then  {
+        x[3] = x[3] - 1;
+        cat(x);
+    }
+    return;
+}
+
+main()
+{
+    int x[18];
+    x[3] = 12;
+    cat(x);
+}
+---- MEM DIFF ----
+Func: input returns type int [mem: Global loc: 0 size: -2] [line: -1]					Func: input returns type int [mem: Global loc: 0 size: -2] [line: -1]
+Sibling: 1  Func: output returns type void [mem: Global loc: 0 size: -3] [line: -1]			Sibling: 1  Func: output returns type void [mem: Global loc: 0 size: -3] [line: -1]
+.   Child: 0  Parm: *dummy* of type int [mem: Parameter loc: -2 size: 1] [line: -1]			.   Child: 0  Parm: *dummy* of type int [mem: Parameter loc: -2 size: 1] [line: -1]
+Sibling: 2  Func: inputb returns type bool [mem: Global loc: 0 size: -2] [line: -1]			Sibling: 2  Func: inputb returns type bool [mem: Global loc: 0 size: -2] [line: -1]
+Sibling: 3  Func: outputb returns type void [mem: Global loc: 0 size: -3] [line: -1]			Sibling: 3  Func: outputb returns type void [mem: Global loc: 0 size: -3] [line: -1]
+.   Child: 0  Parm: *dummy* of type bool [mem: Parameter loc: -2 size: 1] [line: -1]			.   Child: 0  Parm: *dummy* of type bool [mem: Parameter loc: -2 size: 1] [line: -1]
+Sibling: 4  Func: inputc returns type char [mem: Global loc: 0 size: -2] [line: -1]			Sibling: 4  Func: inputc returns type char [mem: Global loc: 0 size: -2] [line: -1]
+Sibling: 5  Func: outputc returns type void [mem: Global loc: 0 size: -3] [line: -1]			Sibling: 5  Func: outputc returns type void [mem: Global loc: 0 size: -3] [line: -1]
+.   Child: 0  Parm: *dummy* of type char [mem: Parameter loc: -2 size: 1] [line: -1]			.   Child: 0  Parm: *dummy* of type char [mem: Parameter loc: -2 size: 1] [line: -1]
+Sibling: 6  Func: outnl returns type void [mem: Global loc: 0 size: -2] [line: -1]			Sibling: 6  Func: outnl returns type void [mem: Global loc: 0 size: -2] [line: -1]
+Sibling: 7  Func: cat returns type void [mem: Global loc: 0 size: -3] [line: 2]				Sibling: 7  Func: cat returns type void [mem: Global loc: 0 size: -3] [line: 2]
+.   Child: 0  Parm: x of array of type int [mem: Parameter loc: -2 size: 1] [line: 2]			.   Child: 0  Parm: x of array of type int [mem: Parameter loc: -2 size: 1] [line: 2]
+.   Child: 1  Compound [mem: None loc: 0 size: -3] [line: 3]						.   Child: 1  Compound [mem: None loc: 0 size: -3] [line: 3]
+.   .   Child: 1  Call: output of type void [line: 4]							.   .   Child: 1  Call: output of type void [line: 4]
+.   .   .   Child: 0  Op: [ of type int [line: 4]							.   .   .   Child: 0  Op: [ of type int [line: 4]
+.   .   .   .   Child: 0  Id: x of array of type int [mem: Parameter loc: -2 size: 1] [line: 4]		.   .   .   .   Child: 0  Id: x of array of type int [mem: Parameter loc: -2 size: 1] [line: 4]
+.   .   .   .   Child: 1  Const 3 of type int [line: 4]							.   .   .   .   Child: 1  Const 3 of type int [line: 4]
+.   .   Sibling: 1  Call: outnl of type void [line: 4]							.   .   Sibling: 1  Call: outnl of type void [line: 4]
+.   .   Sibling: 2  If [line: 5]									.   .   Sibling: 2  If [line: 5]
+.   .   .   Child: 0  Op: > of type bool [line: 5]							.   .   .   Child: 0  Op: > of type bool [line: 5]
+.   .   .   .   Child: 0  Op: [ of type int [line: 5]							.   .   .   .   Child: 0  Op: [ of type int [line: 5]
+.   .   .   .   .   Child: 0  Id: x of array of type int [mem: Parameter loc: -2 size: 1] [line:	.   .   .   .   .   Child: 0  Id: x of array of type int [mem: Parameter loc: -2 size: 1] [line:
+.   .   .   .   .   Child: 1  Const 3 of type int [line: 5]						.   .   .   .   .   Child: 1  Const 3 of type int [line: 5]
+.   .   .   .   Child: 1  Const 0 of type int [line: 5]							.   .   .   .   Child: 1  Const 0 of type int [line: 5]
+.   .   .   Child: 1  Compound [mem: None loc: 0 size: -3] [line: 5]					.   .   .   Child: 1  Compound [mem: None loc: 0 size: -3] [line: 5]
+.   .   .   .   Child: 1  Assign: := of type int [line: 6]						.   .   .   .   Child: 1  Assign: := of type int [line: 6]
+.   .   .   .   .   Child: 0  Op: [ of type int [line: 6]						.   .   .   .   .   Child: 0  Op: [ of type int [line: 6]
+.   .   .   .   .   .   Child: 0  Id: x of array of type int [mem: Parameter loc: -2 size: 1] [l	.   .   .   .   .   .   Child: 0  Id: x of array of type int [mem: Parameter loc: -2 size: 1] [l
+.   .   .   .   .   .   Child: 1  Const 3 of type int [line: 6]						.   .   .   .   .   .   Child: 1  Const 3 of type int [line: 6]
+.   .   .   .   .   Child: 1  Op: - of type int [line: 6]						.   .   .   .   .   Child: 1  Op: - of type int [line: 6]
+.   .   .   .   .   .   Child: 0  Op: [ of type int [line: 6]						.   .   .   .   .   .   Child: 0  Op: [ of type int [line: 6]
+.   .   .   .   .   .   .   Child: 0  Id: x of array of type int [mem: Parameter loc: -2 size: 1	.   .   .   .   .   .   .   Child: 0  Id: x of array of type int [mem: Parameter loc: -2 size: 1
+.   .   .   .   .   .   .   Child: 1  Const 3 of type int [line: 6]					.   .   .   .   .   .   .   Child: 1  Const 3 of type int [line: 6]
+.   .   .   .   .   .   Child: 1  Const 1 of type int [line: 6]						.   .   .   .   .   .   Child: 1  Const 1 of type int [line: 6]
+.   .   .   .   Sibling: 1  Call: cat of type void [line: 7]						.   .   .   .   Sibling: 1  Call: cat of type void [line: 7]
+.   .   .   .   .   Child: 0  Id: x of array of type int [mem: Parameter loc: -2 size: 1] [line:	.   .   .   .   .   Child: 0  Id: x of array of type int [mem: Parameter loc: -2 size: 1] [line:
+.   .   Sibling: 3  Return [line: 9]									.   .   Sibling: 3  Return [line: 9]
+Sibling: 8  Func: main returns type void [mem: Global loc: 0 size: -2] [line: 12]			Sibling: 8  Func: main returns type void [mem: Global loc: 0 size: -2] [line: 12]
+.   Child: 1  Compound [mem: None loc: 0 size: -21] [line: 13]						.   Child: 1  Compound [mem: None loc: 0 size: -21] [line: 13]
+.   .   Child: 0  Var: x of array of type int [mem: Local loc: -3 size: 19] [line: 14]			.   .   Child: 0  Var: x of array of type int [mem: Local loc: -3 size: 19] [line: 14]
+.   .   Child: 1  Assign: := of type int [line: 15]							.   .   Child: 1  Assign: := of type int [line: 15]
+.   .   .   Child: 0  Op: [ of type int [line: 15]							.   .   .   Child: 0  Op: [ of type int [line: 15]
+.   .   .   .   Child: 0  Id: x of array of type int [mem: Local loc: -3 size: 19] [line: 15]		.   .   .   .   Child: 0  Id: x of array of type int [mem: Local loc: -3 size: 19] [line: 15]
+.   .   .   .   Child: 1  Const 3 of type int [line: 15]						.   .   .   .   Child: 1  Const 3 of type int [line: 15]
+.   .   .   Child: 1  Const 12 of type int [line: 15]							.   .   .   Child: 1  Const 12 of type int [line: 15]
+.   .   Sibling: 1  Call: cat of type void [line: 16]							.   .   Sibling: 1  Call: cat of type void [line: 16]
+.   .   .   Child: 0  Id: x of array of type int [mem: Local loc: -3 size: 19] [line: 16]		.   .   .   Child: 0  Id: x of array of type int [mem: Local loc: -3 size: 19] [line: 16]
+Offset for end of global space: 0									Offset for end of global space: 0
+Number of warnings: 0											Number of warnings: 0
+Number of errors: 0											Number of errors: 0
+---- TMCODE DIFF ----
+* C- compiler version 07-08									   |	* C- compiler version C-S21
+* Built: Tue Nov 29 19:39:34 2022								   |	* Built: Apr 18, 2021 (toffset telemetry)
+* Author: Ethan Corgatelli									   |	* Author: Robert B. Heckendorn
+* File compiled: h03.c-										   |	* File compiled:  h03.c-
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION input											* FUNCTION input
+  1:     ST  3,-1(1)	Store return address 								  1:     ST  3,-1(1)	Store return address 
+  2:     IN  2,2,2	Grab int input 									  2:     IN  2,2,2	Grab int input 
+  3:     LD  3,-1(1)	Load return address 								  3:     LD  3,-1(1)	Load return address 
+  4:     LD  1,0(1)	Adjust fp 									  4:     LD  1,0(1)	Adjust fp 
+  5:    JMP  7,0(3)	Return 										  5:    JMP  7,0(3)	Return 
+* END FUNCTION input											* END FUNCTION input
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION output											* FUNCTION output
+  6:     ST  3,-1(1)	Store return address 								  6:     ST  3,-1(1)	Store return address 
+  7:     LD  3,-2(1)	Load parameter 									  7:     LD  3,-2(1)	Load parameter 
+  8:    OUT  3,3,3	Output integer 									  8:    OUT  3,3,3	Output integer 
+  9:     LD  3,-1(1)	Load return address 								  9:     LD  3,-1(1)	Load return address 
+ 10:     LD  1,0(1)	Adjust fp 									 10:     LD  1,0(1)	Adjust fp 
+ 11:    JMP  7,0(3)	Return 										 11:    JMP  7,0(3)	Return 
+* END FUNCTION output											* END FUNCTION output
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION inputb											* FUNCTION inputb
+ 12:     ST  3,-1(1)	Store return address 								 12:     ST  3,-1(1)	Store return address 
+ 13:    INB  2,2,2	Grab bool input 								 13:    INB  2,2,2	Grab bool input 
+ 14:     LD  3,-1(1)	Load return address 								 14:     LD  3,-1(1)	Load return address 
+ 15:     LD  1,0(1)	Adjust fp 									 15:     LD  1,0(1)	Adjust fp 
+ 16:    JMP  7,0(3)	Return 										 16:    JMP  7,0(3)	Return 
+* END FUNCTION inputb											* END FUNCTION inputb
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION outputb											* FUNCTION outputb
+ 17:     ST  3,-1(1)	Store return address 								 17:     ST  3,-1(1)	Store return address 
+ 18:     LD  3,-2(1)	Load parameter 									 18:     LD  3,-2(1)	Load parameter 
+ 19:   OUTB  3,3,3	Output bool 									 19:   OUTB  3,3,3	Output bool 
+ 20:     LD  3,-1(1)	Load return address 								 20:     LD  3,-1(1)	Load return address 
+ 21:     LD  1,0(1)	Adjust fp 									 21:     LD  1,0(1)	Adjust fp 
+ 22:    JMP  7,0(3)	Return 										 22:    JMP  7,0(3)	Return 
+* END FUNCTION outputb											* END FUNCTION outputb
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION inputc											* FUNCTION inputc
+ 23:     ST  3,-1(1)	Store return address 								 23:     ST  3,-1(1)	Store return address 
+ 24:    INC  2,2,2	Grab char input 								 24:    INC  2,2,2	Grab char input 
+ 25:     LD  3,-1(1)	Load return address 								 25:     LD  3,-1(1)	Load return address 
+ 26:     LD  1,0(1)	Adjust fp 									 26:     LD  1,0(1)	Adjust fp 
+ 27:    JMP  7,0(3)	Return 										 27:    JMP  7,0(3)	Return 
+* END FUNCTION inputc											* END FUNCTION inputc
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION outputc											* FUNCTION outputc
+ 28:     ST  3,-1(1)	Store return address 								 28:     ST  3,-1(1)	Store return address 
+ 29:     LD  3,-2(1)	Load parameter 									 29:     LD  3,-2(1)	Load parameter 
+ 30:   OUTC  3,3,3	Output char 									 30:   OUTC  3,3,3	Output char 
+ 31:     LD  3,-1(1)	Load return address 								 31:     LD  3,-1(1)	Load return address 
+ 32:     LD  1,0(1)	Adjust fp 									 32:     LD  1,0(1)	Adjust fp 
+ 33:    JMP  7,0(3)	Return 										 33:    JMP  7,0(3)	Return 
+* END FUNCTION outputc											* END FUNCTION outputc
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION outnl											* FUNCTION outnl
+ 34:     ST  3,-1(1)	Store return address 								 34:     ST  3,-1(1)	Store return address 
+ 35:  OUTNL  3,3,3	Output a newline 								 35:  OUTNL  3,3,3	Output a newline 
+ 36:     LD  3,-1(1)	Load return address 								 36:     LD  3,-1(1)	Load return address 
+ 37:     LD  1,0(1)	Adjust fp 									 37:     LD  1,0(1)	Adjust fp 
+ 38:    JMP  7,0(3)	Return 										 38:    JMP  7,0(3)	Return 
+* END FUNCTION outnl											* END FUNCTION outnl
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION cat												* FUNCTION cat
+* TOFF set: -3												* TOFF set: -3
+ 39:     ST  3,-1(1)	Store return address 								 39:     ST  3,-1(1)	Store return address 
+* COMPOUND												* COMPOUND
+* TOFF set: -3												* TOFF set: -3
+* Compound Body												* Compound Body
+* EXPRESSION												* EXPRESSION
+* CALL output												* CALL output
+ 40:     ST  1,-3(1)	Store fp in ghost frame for output						 40:     ST  1,-3(1)	Store fp in ghost frame for output
+* TOFF dec: -4												* TOFF dec: -4
+* TOFF dec: -5												* TOFF dec: -5
+* Param 1												* Param 1
+ 41:     LD  3,-2(1)	Load address of base of array x							 41:     LD  3,-2(1)	Load address of base of array x
+ 42:     ST  3,-5(1)	Push left side 									 42:     ST  3,-5(1)	Push left side 
+* TOFF dec: -6												* TOFF dec: -6
+ 43:    LDC  3,3(6)	Load integer constant 								 43:    LDC  3,3(6)	Load integer constant 
+* TOFF inc: -5												* TOFF inc: -5
+ 44:     LD  4,-5(1)	Pop left into ac1 								 44:     LD  4,-5(1)	Pop left into ac1 
+ 45:    SUB  3,4,3	compute location from index 							 45:    SUB  3,4,3	compute location from index 
+ 46:     LD  3,0(3)	Load array element 								 46:     LD  3,0(3)	Load array element 
+ 47:     ST  3,-5(1)	Push parameter 									 47:     ST  3,-5(1)	Push parameter 
+* TOFF dec: -6												* TOFF dec: -6
+* Param end output											* Param end output
+ 48:    LDA  1,-3(1)	Ghost frame becomes new active frame 						 48:    LDA  1,-3(1)	Ghost frame becomes new active frame 
+ 49:    LDA  3,1(7)	Return address in ac 								 49:    LDA  3,1(7)	Return address in ac 
+ 50:    JMP  7,-45(7)	CALL output									 50:    JMP  7,-45(7)	CALL output
+ 51:    LDA  3,0(2)	Save the result in ac 								 51:    LDA  3,0(2)	Save the result in ac 
+* Call end output											* Call end output
+* TOFF set: -3												* TOFF set: -3
+* EXPRESSION												* EXPRESSION
+* CALL outnl												* CALL outnl
+ 52:     ST  1,-3(1)	Store fp in ghost frame for outnl						 52:     ST  1,-3(1)	Store fp in ghost frame for outnl
+* TOFF dec: -4												* TOFF dec: -4
+* TOFF dec: -5												* TOFF dec: -5
+* Param end outnl											* Param end outnl
+ 53:    LDA  1,-3(1)	Ghost frame becomes new active frame 						 53:    LDA  1,-3(1)	Ghost frame becomes new active frame 
+ 54:    LDA  3,1(7)	Return address in ac 								 54:    LDA  3,1(7)	Return address in ac 
+ 55:    JMP  7,-22(7)	CALL outnl									 55:    JMP  7,-22(7)	CALL outnl
+ 56:    LDA  3,0(2)	Save the result in ac 								 56:    LDA  3,0(2)	Save the result in ac 
+* Call end outnl											* Call end outnl
+* TOFF set: -3												* TOFF set: -3
+* IF													* IF
+ 57:     LD  3,-2(1)	Load address of base of array x							 57:     LD  3,-2(1)	Load address of base of array x
+ 58:     ST  3,-3(1)	Push left side 									 58:     ST  3,-3(1)	Push left side 
+* TOFF dec: -4												* TOFF dec: -4
+ 59:    LDC  3,3(6)	Load integer constant 								 59:    LDC  3,3(6)	Load integer constant 
+* TOFF inc: -3												* TOFF inc: -3
+ 60:     LD  4,-3(1)	Pop left into ac1 								 60:     LD  4,-3(1)	Pop left into ac1 
+ 61:    SUB  3,4,3	compute location from index 							 61:    SUB  3,4,3	compute location from index 
+ 62:     LD  3,0(3)	Load array element 								 62:     LD  3,0(3)	Load array element 
+ 63:     ST  3,-3(1)	Push left side 									 63:     ST  3,-3(1)	Push left side 
+* TOFF dec: -4												* TOFF dec: -4
+ 64:    LDC  3,0(6)	Load integer constant 								 64:    LDC  3,0(6)	Load integer constant 
+* TOFF inc: -3												* TOFF inc: -3
+ 65:     LD  4,-3(1)	Pop left into ac1 								 65:     LD  4,-3(1)	Pop left into ac1 
+ 66:    TGT  3,4,3	Op >									   |	 66:    TGT  3,4,3	Op > 
+* THEN													* THEN
+* COMPOUND												* COMPOUND
+* TOFF set: -3												* TOFF set: -3
+* Compound Body												* Compound Body
+* EXPRESSION												* EXPRESSION
+ 68:    LDC  3,3(6)	Load integer constant 								 68:    LDC  3,3(6)	Load integer constant 
+ 69:     ST  3,-3(1)	Push index 									 69:     ST  3,-3(1)	Push index 
+* TOFF dec: -4												* TOFF dec: -4
+ 70:     LD  3,-2(1)	Load address of base of array x							 70:     LD  3,-2(1)	Load address of base of array x
+ 71:     ST  3,-4(1)	Push left side 									 71:     ST  3,-4(1)	Push left side 
+* TOFF dec: -5												* TOFF dec: -5
+ 72:    LDC  3,3(6)	Load integer constant 								 72:    LDC  3,3(6)	Load integer constant 
+* TOFF inc: -4												* TOFF inc: -4
+ 73:     LD  4,-4(1)	Pop left into ac1 								 73:     LD  4,-4(1)	Pop left into ac1 
+ 74:    SUB  3,4,3	compute location from index 							 74:    SUB  3,4,3	compute location from index 
+ 75:     LD  3,0(3)	Load array element 								 75:     LD  3,0(3)	Load array element 
+ 76:     ST  3,-4(1)	Push left side 									 76:     ST  3,-4(1)	Push left side 
+* TOFF dec: -5												* TOFF dec: -5
+ 77:    LDC  3,1(6)	Load integer constant 								 77:    LDC  3,1(6)	Load integer constant 
+* TOFF inc: -4												* TOFF inc: -4
+ 78:     LD  4,-4(1)	Pop left into ac1 								 78:     LD  4,-4(1)	Pop left into ac1 
+ 79:    SUB  3,4,3	Op -									   |	 79:    SUB  3,4,3	Op - 
+* TOFF inc: -3												* TOFF inc: -3
+ 80:     LD  4,-3(1)	Pop index 									 80:     LD  4,-3(1)	Pop index 
+ 81:     LD  5,-2(1)	Load address of base of array x							 81:     LD  5,-2(1)	Load address of base of array x
+ 82:    SUB  5,5,4	Compute offset of value 							 82:    SUB  5,5,4	Compute offset of value 
+ 83:     ST  3,0(5)	Store variable x								 83:     ST  3,0(5)	Store variable x
+* EXPRESSION												* EXPRESSION
+* CALL cat												* CALL cat
+ 84:     ST  1,-3(1)	Store fp in ghost frame for cat							 84:     ST  1,-3(1)	Store fp in ghost frame for cat
+* TOFF dec: -4												* TOFF dec: -4
+* TOFF dec: -5												* TOFF dec: -5
+* Param 1												* Param 1
+ 85:     LD  3,-2(1)	Load address of base of array x							 85:     LD  3,-2(1)	Load address of base of array x
+ 86:     ST  3,-5(1)	Push parameter 									 86:     ST  3,-5(1)	Push parameter 
+* TOFF dec: -6												* TOFF dec: -6
+* Param end cat												* Param end cat
+ 87:    LDA  1,-3(1)	Ghost frame becomes new active frame 						 87:    LDA  1,-3(1)	Ghost frame becomes new active frame 
+ 88:    LDA  3,1(7)	Return address in ac 								 88:    LDA  3,1(7)	Return address in ac 
+ 89:    JMP  7,-51(7)	CALL cat									 89:    JMP  7,-51(7)	CALL cat
+ 90:    LDA  3,0(2)	Save the result in ac 								 90:    LDA  3,0(2)	Save the result in ac 
+* Call end cat												* Call end cat
+* TOFF set: -3												* TOFF set: -3
+* TOFF set: -3												* TOFF set: -3
+* END COMPOUND												* END COMPOUND
+ 67:    JZR  3,23(7)	Jump around the THEN if false [backpatch] 					 67:    JZR  3,23(7)	Jump around the THEN if false [backpatch] 
+* END IF												* END IF
+* RETURN												* RETURN
+ 91:     LD  3,-1(1)	Load return address 								 91:     LD  3,-1(1)	Load return address 
+ 92:     LD  1,0(1)	Adjust fp 									 92:     LD  1,0(1)	Adjust fp 
+ 93:    JMP  7,0(3)	Return 										 93:    JMP  7,0(3)	Return 
+* TOFF set: -3												* TOFF set: -3
+* END COMPOUND												* END COMPOUND
+* Add standard closing in case there is no return statement						* Add standard closing in case there is no return statement
+ 94:    LDC  2,0(6)	Set return value to 0 								 94:    LDC  2,0(6)	Set return value to 0 
+ 95:     LD  3,-1(1)	Load return address 								 95:     LD  3,-1(1)	Load return address 
+ 96:     LD  1,0(1)	Adjust fp 									 96:     LD  1,0(1)	Adjust fp 
+ 97:    JMP  7,0(3)	Return 										 97:    JMP  7,0(3)	Return 
+* END FUNCTION cat											* END FUNCTION cat
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION main												* FUNCTION main
+* TOFF set: -2												* TOFF set: -2
+ 98:     ST  3,-1(1)	Store return address 								 98:     ST  3,-1(1)	Store return address 
+* COMPOUND												* COMPOUND
+* TOFF set: -21												* TOFF set: -21
+ 99:    LDC  3,18(6)	load size of array x								 99:    LDC  3,18(6)	load size of array x
+100:     ST  3,-2(1)	save size of array x								100:     ST  3,-2(1)	save size of array x
+* Compound Body												* Compound Body
+* EXPRESSION												* EXPRESSION
+101:    LDC  3,3(6)	Load integer constant 								101:    LDC  3,3(6)	Load integer constant 
+102:     ST  3,-21(1)	Push index 									102:     ST  3,-21(1)	Push index 
+* TOFF dec: -22												* TOFF dec: -22
+103:    LDC  3,12(6)	Load integer constant 								103:    LDC  3,12(6)	Load integer constant 
+* TOFF inc: -21												* TOFF inc: -21
+104:     LD  4,-21(1)	Pop index 									104:     LD  4,-21(1)	Pop index 
+105:     LD  5,-3(1)	Load address of base of array x						   |	105:    LDA  5,-3(1)	Load address of base of array x
+106:    SUB  5,5,4	Compute offset of value 							106:    SUB  5,5,4	Compute offset of value 
+107:     ST  3,0(5)	Store variable x								107:     ST  3,0(5)	Store variable x
+* EXPRESSION												* EXPRESSION
+* CALL cat												* CALL cat
+108:     ST  1,-21(1)	Store fp in ghost frame for cat							108:     ST  1,-21(1)	Store fp in ghost frame for cat
+* TOFF dec: -22												* TOFF dec: -22
+* TOFF dec: -23												* TOFF dec: -23
+* Param 1												* Param 1
+109:    LDA  3,-3(1)	Load address of base of array x							109:    LDA  3,-3(1)	Load address of base of array x
+110:     ST  3,-23(1)	Push parameter 									110:     ST  3,-23(1)	Push parameter 
+* TOFF dec: -24												* TOFF dec: -24
+* Param end cat												* Param end cat
+111:    LDA  1,-21(1)	Ghost frame becomes new active frame 						111:    LDA  1,-21(1)	Ghost frame becomes new active frame 
+112:    LDA  3,1(7)	Return address in ac 								112:    LDA  3,1(7)	Return address in ac 
+113:    JMP  7,-75(7)	CALL cat									113:    JMP  7,-75(7)	CALL cat
+114:    LDA  3,0(2)	Save the result in ac 								114:    LDA  3,0(2)	Save the result in ac 
+* Call end cat												* Call end cat
+* TOFF set: -21												* TOFF set: -21
+* TOFF set: -2												* TOFF set: -2
+* END COMPOUND												* END COMPOUND
+* Add standard closing in case there is no return statement						* Add standard closing in case there is no return statement
+115:    LDC  2,0(6)	Set return value to 0 								115:    LDC  2,0(6)	Set return value to 0 
+116:     LD  3,-1(1)	Load return address 								116:     LD  3,-1(1)	Load return address 
+117:     LD  1,0(1)	Adjust fp 									117:     LD  1,0(1)	Adjust fp 
+118:    JMP  7,0(3)	Return 										118:    JMP  7,0(3)	Return 
+* END FUNCTION main											* END FUNCTION main
+  0:    JMP  7,118(7)	Jump to init [backpatch] 							  0:    JMP  7,118(7)	Jump to init [backpatch] 
+* INIT													* INIT
+119:    LDA  1,0(0)	set first frame at end of globals 						119:    LDA  1,0(0)	set first frame at end of globals 
+120:     ST  1,0(1)	store old fp (point to self) 							120:     ST  1,0(1)	store old fp (point to self) 
+* INIT GLOBALS AND STATICS										* INIT GLOBALS AND STATICS
+* END INIT GLOBALS AND STATICS										* END INIT GLOBALS AND STATICS
+121:    LDA  3,1(7)	Return address in ac 								121:    LDA  3,1(7)	Return address in ac 
+122:    JMP  7,-25(7)	Jump to main 									122:    JMP  7,-25(7)	Jump to main 
+123:   HALT  0,0,0	DONE! 										123:   HALT  0,0,0	DONE! 
+* END INIT												* END INIT
+---- OUTPUT DIFF ----
+Loading file: data/UnitTests/h03.tm								   |	Number of warnings: 0
+Enter command: command: a 200000								   |	Number of errors: 0
+command: o 500											   |	------------------------------------
+command: g											   |	Loading file: UnitTests/h03.tm
+ERROR(setDMem): instruction at addr 107 attempting to set out of bounds data memory at loc: -3	   |	12
+												   >	11
+												   >	10
+												   >	9
+												   >	8
+												   >	7
+												   >	6
+												   >	5
+												   >	4
+												   >	3
+												   >	2
+												   >	1
+												   >	0
+												   >	Bye.

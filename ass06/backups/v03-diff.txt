@@ -1,0 +1,672 @@
+data/a2a.c-
+.   .   Child: 1  Assign: = of type char [line: 6]						   |	.   .   Child: 1  Assign: = of array of type char [line: 6]
+.   .   Sibling: 1  Assign: = of type char [line: 7]						   |	.   .   Sibling: 1  Assign: = of array of type char [line: 7]
+.   .   Sibling: 2  Assign: = of type char [line: 8]						   |	.   .   Sibling: 2  Assign: = of array of type char [line: 8]
+============================================================================================================
+data/allbad.c-
+============================================================================================================
+data/allgood.c-
+============================================================================================================
+data/array2.c-
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 17]				   |	.   .   .   Child: 1  Range [line: 17]
+============================================================================================================
+data/array.c-
+============================================================================================================
+data/arrayex.c-
+.   .   Child: 1  Assign: = of type int [line: 5]						   |	.   .   Child: 1  Assign: = of array of type int [line: 5]
+.   .   Sibling: 1  Assign: = of type int [line: 6]						   |	.   .   Sibling: 1  Assign: = of array of type int [line: 6]
+============================================================================================================
+data/arrayops.c-
+============================================================================================================
+data/arrays2.c-
+============================================================================================================
+data/arrays.c-
+============================================================================================================
+data/arrayx.c-
+============================================================================================================
+data/assignb.c-
+============================================================================================================
+data/assignBool.c-
+============================================================================================================
+data/assignChar.c-
+============================================================================================================
+data/assignInt.c-
+============================================================================================================
+data/assignSmall.c-
+============================================================================================================
+data/badarray.c-
+============================================================================================================
+data/badcontrol.c-
+ERROR(52): Symbol 'zog' is not declared.							   <
+												   >	ERROR(52): Symbol 'zog' is not declared.
+============================================================================================================
+data/basicAll5.c-
+WARNING(11): The parameter 'x' seems not to be used.						   <
+WARNING(22): The parameter 'x' seems not to be used.						   <
+WARNING(29): The parameter 'x' seems not to be used.						   <
+WARNING(42): The parameter 'x' seems not to be used.						   <
+WARNING(48): The parameter 'y' seems not to be used.						   <
+WARNING(53): The parameter 'x' seems not to be used.						   <
+WARNING(53): The parameter 'y' seems not to be used.						   <
+WARNING(53): The parameter 'z' seems not to be used.						   <
+												   >	ERROR(177): Expecting type char in parameter 1 of call to 'emu' declared on line 53 but got type
+ERROR(177): Expecting type char in parameter 1 of call to 'emu' declared on line 53 but got type   <
+												   >	ERROR(178): Expecting type char in parameter 1 of call to 'emu' declared on line 53 but got type
+												   >	ERROR(178): Expecting type char in parameter 1 of call to 'emu' declared on line 53 but got type
+ERROR(178): Expecting type char in parameter 1 of call to 'emu' declared on line 53 but got type   <
+ERROR(178): '*' requires operands of type int but lhs is of type char.				   <
+ERROR(178): Expecting type char in parameter 1 of call to 'emu' declared on line 53 but got type   <
+												   >	ERROR(178): '*' requires operands of type int but lhs is of type char.
+Number of warnings: 39										   |	Number of warnings: 31
+============================================================================================================
+data/basicExtra.c-
+============================================================================================================
+data/break2.c-
+============================================================================================================
+data/break3.c-
+.   .   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 5]				   |	.   .   .   .   Child: 1  Range [line: 5]
+============================================================================================================
+data/break4.c-
+============================================================================================================
+data/break.c-
+============================================================================================================
+data/call2.c-
+============================================================================================================
+data/call3.c-
+============================================================================================================
+data/call4.c-
+============================================================================================================
+data/call.c-
+============================================================================================================
+data/callconst.c-
+============================================================================================================
+data/callerr.c-
+============================================================================================================
+data/callframes.c-
+============================================================================================================
+data/callglobal.c-
+============================================================================================================
+data/calllocal.c-
+============================================================================================================
+data/callparam.c-
+============================================================================================================
+data/callstatic.c-
+============================================================================================================
+data/chararray.c-
+.   .   Sibling: 3  Assign: = of type char [line: 10]						   |	.   .   Sibling: 3  Assign: = of array of type char [line: 10]
+.   .   Sibling: 4  Assign: = of type char [line: 11]						   |	.   .   Sibling: 4  Assign: = of array of type char [line: 11]
+.   .   Sibling: 5  Assign: = of type char [line: 12]						   |	.   .   Sibling: 5  Assign: = of array of type char [line: 12]
+.   .   Sibling: 6  Assign: = of type char [line: 13]						   |	.   .   Sibling: 6  Assign: = of array of type char [line: 13]
+============================================================================================================
+data/compfunc.c-
+WARNING(26): The parameter 'x' seems not to be used.						   <
+Number of warnings: 6										   |	Number of warnings: 5
+============================================================================================================
+data/const2.c-
+============================================================================================================
+data/constants.c-
+============================================================================================================
+data/const.c-
+============================================================================================================
+data/control2.c-
+============================================================================================================
+data/control.c-
+============================================================================================================
+data/cover.c-
+												   >	ERROR(39): Not expecting array in parameter 2 of call to 'fred' declared on line 6.
+ERROR(39): Not expecting array in parameter 2 of call to 'fred' declared on line 6.		   <
+============================================================================================================
+data/decl.c-
+============================================================================================================
+data/declinitreset.c-
+============================================================================================================
+data/decllists.c-
+												   >	WARNING(3): Expecting to return type int but function 'fred' has no return statement.
+WARNING(3): Expecting to return type int but function 'fred' has no return statement.		   <
+WARNING(3): The parameter 'a' seems not to be used.						   <
+WARNING(3): The parameter 'b' seems not to be used.						   <
+WARNING(3): The parameter 'c' seems not to be used.						   <
+WARNING(3): The parameter 'd' seems not to be used.						   <
+WARNING(3): The parameter 'e' seems not to be used.						   <
+WARNING(3): The parameter 'f' seems not to be used.						   <
+WARNING(3): The parameter 'g' seems not to be used.						   <
+WARNING(3): The parameter 'h' seems not to be used.						   <
+WARNING(3): The parameter 'i' seems not to be used.						   <
+WARNING(3): The parameter 'j' seems not to be used.						   <
+WARNING(3): The parameter 'k' seems not to be used.						   <
+WARNING(3): The parameter 'l' seems not to be used.						   <
+WARNING(3): The parameter 'm' seems not to be used.						   <
+Number of warnings: 40										   |	Number of warnings: 27
+============================================================================================================
+data/defused.c-
+ERROR(17): Symbol 'bob' is already declared at line 16.						   <
+												   >	ERROR(17): Symbol 'bob' is already declared at line 16.
+WARNING(33): The parameter 'a' seems not to be used.						   <
+Number of warnings: 8										   |	Number of warnings: 7
+============================================================================================================
+data/elsif.c-
+============================================================================================================
+data/emptyline.c-
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 12]				   |	.   .   .   Child: 1  Range [line: 12]
+============================================================================================================
+data/errormessages.c-
+WARNING(11): The variable 'i' seems not to be used.						   <
+												   >	WARNING(11): The variable 'i' seems not to be used.
+============================================================================================================
+data/everythingF22.c-
+												   >	WARNING(54): Expecting to return type bool but function 'penguin' has no return statement.
+WARNING(54): Expecting to return type bool but function 'penguin' has no return statement.	   <
+WARNING(54): The parameter 'cheese' seems not to be used.					   <
+WARNING(54): The parameter 'launch' seems not to be used.					   <
+WARNING(90): The parameter 'y' seems not to be used.						   <
+.   .   Sibling: 2  Assign: = of type char [line: 63]						   |	.   .   Sibling: 2  Assign: = of array of type char [line: 63]
+.   .   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 92]				   |	.   .   .   .   Child: 1  Range [line: 92]
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 97]				   |	.   .   .   Child: 1  Range [line: 97]
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 98]				   |	.   .   .   Child: 1  Range [line: 98]
+.   .   Sibling: 1  Assign: = of type char [line: 121]						   |	.   .   Sibling: 1  Assign: = of array of type char [line: 121]
+Number of warnings: 36										   |	Number of warnings: 33
+============================================================================================================
+data/exampleScope.c-
+============================================================================================================
+data/exp2.c-
+============================================================================================================
+data/exp3.c-
+============================================================================================================
+data/exp4.c-
+============================================================================================================
+data/exp.c-
+============================================================================================================
+data/expL.c-
+============================================================================================================
+data/expR.c-
+============================================================================================================
+data/fact.c-
+============================================================================================================
+data/factor.c-
+============================================================================================================
+data/factorial2.c-
+============================================================================================================
+data/factorial.c-
+============================================================================================================
+data/factorialr.c-
+============================================================================================================
+data/fail.c-
+============================================================================================================
+data/for2.c-
+ERROR(5): Symbol 'j' is not declared.								   <
+												   >	ERROR(5): Symbol 'j' is not declared.
+============================================================================================================
+data/fora.c-
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 3]				   |	.   .   .   Child: 1  Range [line: 3]
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 5]				   |	.   .   .   Child: 1  Range [line: 5]
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 7]				   |	.   .   .   Child: 1  Range [line: 7]
+============================================================================================================
+data/forb.c-
+============================================================================================================
+data/for.c-
+============================================================================================================
+data/forerr.c-
+WARNING(8): Variable 'bb' may be uninitialized when used here.					   <
+												   >	WARNING(8): Variable 'bb' may be uninitialized when used here.
+WARNING(10): Variable 'c' may be uninitialized when used here.					   <
+												   >	WARNING(10): Variable 'c' may be uninitialized when used here.
+============================================================================================================
+data/forscope.c-
+============================================================================================================
+data/funcscope.c-
+WARNING(10): The parameter 'x' seems not to be used.						   <
+WARNING(15): The parameter 'x' seems not to be used.						   <
+Number of warnings: 11										   |	Number of warnings: 9
+============================================================================================================
+data/gcd2.c-
+============================================================================================================
+data/gcd.c-
+============================================================================================================
+data/gcdsm2.c-
+============================================================================================================
+data/gcdsm.c-
+============================================================================================================
+data/id.c-
+WARNING(1): The parameter 'a' seems not to be used.						   <
+WARNING(1): The parameter 'c' seems not to be used.						   <
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 14]				   |	.   .   .   Child: 1  Range [line: 14]
+Number of warnings: 9										   |	Number of warnings: 7
+============================================================================================================
+data/if2.c-
+============================================================================================================
+data/if.c-
+============================================================================================================
+data/ifevil.c-
+============================================================================================================
+data/ifNest.c-
+============================================================================================================
+data/init2.c-
+============================================================================================================
+data/init3.c-
+============================================================================================================
+data/init4.c-
+												   >	WARNING(1): Expecting to return type int but function 'main' has no return statement.
+WARNING(1): Expecting to return type int but function 'main' has no return statement.		   <
+============================================================================================================
+data/init5.c-
+============================================================================================================
+data/initbad2.c-
+============================================================================================================
+data/initbad.c-
+============================================================================================================
+data/init.c-
+============================================================================================================
+data/initconst.c-
+============================================================================================================
+data/initsm.c-
+============================================================================================================
+data/initused.c-
+============================================================================================================
+data/invalidChar.c-
+============================================================================================================
+data/io.c-
+============================================================================================================
+data/lec01.c-
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 7]				   |	.   .   .   Child: 1  Range [line: 7]
+============================================================================================================
+data/lec02.c-
+============================================================================================================
+data/lec03.c-
+============================================================================================================
+data/lec04.c-
+============================================================================================================
+data/lhs.c-
+============================================================================================================
+data/loops.c-
+WARNING(4): The parameter 'c' seems not to be used.						   <
+WARNING(4): The parameter 'd' seems not to be used.						   <
+Number of warnings: 10										   |	Number of warnings: 8
+============================================================================================================
+data/loopscope2.c-
+WARNING(27): The variable 'y' seems not to be used.						   <
+												   >	WARNING(27): The variable 'y' seems not to be used.
+============================================================================================================
+data/loopscope.c-
+============================================================================================================
+data/matchunmatch.c-
+============================================================================================================
+data/mem2.c-
+WARNING(3): The parameter 'y' seems not to be used.						   <
+WARNING(3): The parameter 'z' seems not to be used.						   <
+.   .   Sibling: 1  Assign: = of type char [line: 11]						   |	.   .   Sibling: 1  Assign: = of array of type char [line: 11]
+Number of warnings: 16										   |	Number of warnings: 14
+============================================================================================================
+data/mem.c-
+============================================================================================================
+data/memcall.c-
+WARNING(3): The parameter 'x' seems not to be used.						   <
+Number of warnings: 3										   |	Number of warnings: 2
+============================================================================================================
+data/memory2.c-
+WARNING(8): The parameter 'b' seems not to be used.						   <
+Number of warnings: 6										   |	Number of warnings: 5
+============================================================================================================
+data/memory.c-
+WARNING(5): The parameter 'x' seems not to be used.						   <
+WARNING(5): The parameter 'y' seems not to be used.						   <
+WARNING(5): The parameter 'z' seems not to be used.						   <
+WARNING(9): The parameter 'x' seems not to be used.						   <
+WARNING(9): The parameter 'y' seems not to be used.						   <
+WARNING(9): The parameter 'z' seems not to be used.						   <
+Number of warnings: 18										   |	Number of warnings: 12
+============================================================================================================
+data/memtype.c-
+WARNING(2): The parameter 'p' seems not to be used.						   <
+Number of warnings: 6										   |	Number of warnings: 5
+============================================================================================================
+data/minus.c-
+============================================================================================================
+data/mixed.c-
+WARNING(14): The parameter 'c' seems not to be used.						   <
+WARNING(25): The parameter 'c' seems not to be used.						   <
+WARNING(27): The variable 'zz' seems not to be used.						   <
+												   >	WARNING(27): The variable 'zz' seems not to be used.
+Number of warnings: 7										   |	Number of warnings: 5
+============================================================================================================
+data/mixedControl2.c-
+============================================================================================================
+data/mixedControl3.c-
+============================================================================================================
+data/mixedControl.c-
+============================================================================================================
+data/nano.c-
+WARNING(1): The parameter 'x' seems not to be used.						   <
+Number of warnings: 2										   |	Number of warnings: 1
+============================================================================================================
+data/nest.c-
+============================================================================================================
+data/nested.c-
+WARNING(12): The parameter 'i' seems not to be used.						   <
+WARNING(18): The parameter 'i' seems not to be used.						   <
+Number of warnings: 15										   |	Number of warnings: 13
+============================================================================================================
+data/nestedfors.c-
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 6]				   |	.   .   .   Child: 1  Range [line: 6]
+.   .   .   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 7]			   |	.   .   .   .   .   Child: 1  Range [line: 7]
+============================================================================================================
+data/nestedmem.c-
+WARNING(29): The parameter 'i' seems not to be used.						   <
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 5]				   |	.   .   .   Child: 1  Range [line: 5]
+.   .   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 6]				   |	.   .   .   .   Child: 1  Range [line: 6]
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 8]				   |	.   .   .   Child: 1  Range [line: 8]
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 13]				   |	.   .   .   Child: 1  Range [line: 13]
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 18]				   |	.   .   .   Child: 1  Range [line: 18]
+.   .   .   Child: 2  For [mem: None loc: 0 size: -5] [line: 19]				   |	.   .   .   Child: 2  For [mem: None loc: 0 size: -4] [line: 19]
+.   .   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 19]				   |	.   .   .   .   Child: 1  Range [line: 19]
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 23]				   |	.   .   .   Child: 1  Range [line: 23]
+.   .   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 24]				   |	.   .   .   .   Child: 1  Range [line: 24]
+.   .   Sibling: 1  For [mem: None loc: 0 size: -6] [line: 48]					   |	.   .   Sibling: 1  For [mem: None loc: 0 size: -5] [line: 48]
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 48]				   |	.   .   .   Child: 1  Range [line: 48]
+Number of warnings: 10										   |	Number of warnings: 9
+============================================================================================================
+data/notused.c-
+WARNING(8): The parameter 'u' seems not to be used.						   <
+WARNING(10): The variable 'w' seems not to be used.						   <
+WARNING(8): The parameter 'z' seems not to be used.						   <
+												   >	WARNING(10): The variable 'w' seems not to be used.
+Number of warnings: 10										   |	Number of warnings: 8
+============================================================================================================
+data/oparray.c-
+============================================================================================================
+data/op.c-
+============================================================================================================
+data/ops.c-
+============================================================================================================
+data/optype.c-
+============================================================================================================
+data/overkill.c-
+												   >	ERROR(40): The operation '*' does not work with arrays.
+												   >	ERROR(76): The operation '*' does not work with arrays.
+												   >	ERROR(112): The operation '*' does not work with arrays.
+												   >	ERROR(148): The operation '*' does not work with arrays.
+												   >	ERROR(166): The operation '*' does not work with arrays.
+												   >	ERROR(184): The operation '*' does not work with arrays.
+												   >	ERROR(202): The operation '*' does not work with arrays.
+												   >	ERROR(220): The operation '*' does not work with arrays.
+												   >	ERROR(238): The operation '*' does not work with arrays.
+												   >	ERROR(256): The operation '*' does not work with arrays.
+												   >	ERROR(292): The operation '*' does not work with arrays.
+												   >	ERROR(328): The operation '*' does not work with arrays.
+												   >	ERROR(364): The operation '*' does not work with arrays.
+												   >	ERROR(400): The operation '*' does not work with arrays.
+												   >	ERROR(418): The operation '*' does not work with arrays.
+												   >	ERROR(436): The operation '*' does not work with arrays.
+												   >	ERROR(454): The operation '*' does not work with arrays.
+												   >	ERROR(472): The operation '*' does not work with arrays.
+												   >	ERROR(490): The operation '*' does not work with arrays.
+												   >	ERROR(508): The operation '*' does not work with arrays.
+												   >	ERROR(544): The operation '*' does not work with arrays.
+												   >	ERROR(580): The operation '*' does not work with arrays.
+												   >	ERROR(616): The operation '*' does not work with arrays.
+												   >	ERROR(652): The operation '*' does not work with arrays.
+												   >	ERROR(670): The operation '*' does not work with arrays.
+												   >	ERROR(688): The operation '*' does not work with arrays.
+												   >	ERROR(706): The operation '*' does not work with arrays.
+												   >	ERROR(724): The operation '*' does not work with arrays.
+												   >	ERROR(742): The operation '*' does not work with arrays.
+												   >	ERROR(760): The operation '*' does not work with arrays.
+												   >	ERROR(779): The operation '*' does not work with arrays.
+												   >	ERROR(797): The operation '*' does not work with arrays.
+												   >	ERROR(815): The operation '*' does not work with arrays.
+Number of errors: 1449										   |	Number of errors: 1482
+============================================================================================================
+data/overlapArray.c-
+WARNING(2): The parameter 'p' seems not to be used.						   <
+Number of warnings: 7										   |	Number of warnings: 6
+============================================================================================================
+data/overlap.c-
+WARNING(4): The parameter 'p' seems not to be used.						   <
+Number of warnings: 9										   |	Number of warnings: 8
+============================================================================================================
+data/overlapStatic.c-
+WARNING(4): The parameter 'p' seems not to be used.						   <
+Number of warnings: 9										   |	Number of warnings: 8
+============================================================================================================
+data/overlayArray.c-
+============================================================================================================
+data/overlay.c-
+============================================================================================================
+data/overlayCall.c-
+============================================================================================================
+data/overlayTmp2.c-
+============================================================================================================
+data/overlayTmp3.c-
+WARNING(4): The parameter 'a' seems not to be used.						   <
+Number of warnings: 3										   |	Number of warnings: 2
+============================================================================================================
+data/overlayTmp.c-
+============================================================================================================
+data/param.c-
+												   >	ERROR(12): Too many parameters passed for function 'Athos' declared on line 3.
+ERROR(12): Too many parameters passed for function 'Athos' declared on line 3.			   <
+ERROR(25): Symbol 'thx1138' is not declared.							   <
+												   >	ERROR(25): Symbol 'thx1138' is not declared.
+WARNING(16): The parameter 'aa' seems not to be used.						   <
+WARNING(16): The parameter 'bb' seems not to be used.						   <
+WARNING(16): The parameter 'cc' seems not to be used.						   <
+Number of warnings: 11										   |	Number of warnings: 8
+============================================================================================================
+data/paramerr2.c-
+WARNING(4): The parameter 'boar' seems not to be used.						   <
+ERROR(13): '-' requires operands of type int but rhs is of type bool.				   <
+												   >	ERROR(13): '-' requires operands of type int but rhs is of type bool.
+Number of warnings: 2										   |	Number of warnings: 1
+============================================================================================================
+data/paramerr3.c-
+												   >	ERROR(13): Too many parameters passed for function 'Athos' declared on line 4.
+ERROR(13): Too many parameters passed for function 'Athos' declared on line 4.			   <
+ERROR(26): Symbol 'thx1138' is not declared.							   <
+												   >	ERROR(26): Symbol 'thx1138' is not declared.
+WARNING(17): The parameter 'aa' seems not to be used.						   <
+WARNING(17): The parameter 'bb' seems not to be used.						   <
+WARNING(17): The parameter 'cc' seems not to be used.						   <
+Number of warnings: 11										   |	Number of warnings: 8
+============================================================================================================
+data/paramerr.c-
+WARNING(19): The parameter 'aardvark' seems not to be used.					   <
+WARNING(19): The parameter 'baboon' seems not to be used.					   <
+WARNING(19): The parameter 'cow' seems not to be used.						   <
+WARNING(22): The parameter 'asp' seems not to be used.						   <
+WARNING(22): The parameter 'bull' seems not to be used.						   <
+WARNING(22): The parameter 'crow' seems not to be used.						   <
+WARNING(34): Variable 'bb' may be uninitialized when used here.					   <
+WARNING(34): Variable 'cc' may be uninitialized when used here.					   <
+												   >	WARNING(34): Variable 'bb' may be uninitialized when used here.
+												   >	WARNING(34): Variable 'cc' may be uninitialized when used here.
+ERROR(43): '*' requires operands of type int but rhs is of type char.				   <
+												   >	ERROR(43): '*' requires operands of type int but rhs is of type char.
+												   >	ERROR(44): Expecting array in parameter 1 of call to 'elk' declared on line 22.
+ERROR(44): '*' requires operands of type int but rhs is of type char.				   <
+ERROR(44): Expecting array in parameter 1 of call to 'elk' declared on line 22.			   <
+												   >	ERROR(44): '*' requires operands of type int but rhs is of type char.
+Number of warnings: 21										   |	Number of warnings: 15
+============================================================================================================
+data/parmtiny.c-
+WARNING(2): The parameter 'x' seems not to be used.						   <
+WARNING(2): The parameter 'y' seems not to be used.						   <
+WARNING(2): The parameter 'z' seems not to be used.						   <
+WARNING(10): Variable 'b' may be uninitialized when used here.					   <
+												   >	WARNING(10): Variable 'b' may be uninitialized when used here.
+												   >	ERROR(11): Expecting type char in parameter 1 of call to 'emu' declared on line 2 but got type i
+ERROR(11): Expecting type char in parameter 1 of call to 'emu' declared on line 2 but got type i   <
+												   >	ERROR(12): Expecting type char in parameter 1 of call to 'emu' declared on line 2 but got type i
+ERROR(12): Expecting type char in parameter 1 of call to 'emu' declared on line 2 but got type i   <
+ERROR(16): '+' requires operands of type int but lhs is of type char.				   <
+												   >	ERROR(16): '+' requires operands of type int but lhs is of type char.
+Number of warnings: 10										   |	Number of warnings: 7
+============================================================================================================
+data/part2.c-
+WARNING(28): The parameter 'z' seems not to be used.						   <
+ERROR(47): '+' requires operands of type int but lhs is of type char.				   <
+ERROR(47): Unary 'chsign' requires an operand of type int but was given type bool.		   <
+												   >	ERROR(47): '+' requires operands of type int but lhs is of type char.
+												   >	ERROR(47): Unary 'chsign' requires an operand of type int but was given type bool.
+Number of warnings: 9										   |	Number of warnings: 8
+============================================================================================================
+data/peek.c-
+============================================================================================================
+data/precassoc.c-
+============================================================================================================
+data/randomRoll.c-
+============================================================================================================
+data/rangeifwhile.c-
+ERROR(13): Cannot use function 'main' as a variable.						   <
+												   >	ERROR(13): Cannot use function 'main' as a variable.
+============================================================================================================
+data/redefined.c-
+WARNING(18): The parameter 'a' seems not to be used.						   <
+WARNING(18): The parameter 'b' seems not to be used.						   <
+WARNING(18): The parameter 'c' seems not to be used.						   <
+WARNING(32): The parameter 'cat' seems not to be used.						   <
+WARNING(32): The parameter 'g' seems not to be used.						   <
+Number of warnings: 26										   |	Number of warnings: 21
+============================================================================================================
+data/returnbad.c-
+============================================================================================================
+data/return.c-
+============================================================================================================
+data/scope35.c-
+.   .   Sibling: 9  Assign: = of type int [line: 42]						   |	.   .   Sibling: 9  Assign: = of array of type int [line: 42]
+============================================================================================================
+data/scope3.c-
+WARNING(10): The parameter 'pa' seems not to be used.						   <
+WARNING(13): The parameter 'paa' seems not to be used.						   <
+WARNING(11): The parameter 'pb' seems not to be used.						   <
+WARNING(14): The parameter 'pbb' seems not to be used.						   <
+WARNING(12): The parameter 'pc' seems not to be used.						   <
+WARNING(15): The parameter 'pcc' seems not to be used.						   <
+WARNING(57): The parameter 'fpa' seems not to be used.						   <
+WARNING(57): The parameter 'fpaa' seems not to be used.						   <
+WARNING(57): The parameter 'fpb' seems not to be used.						   <
+WARNING(57): The parameter 'fpbb' seems not to be used.						   <
+WARNING(57): The parameter 'fpc' seems not to be used.						   <
+WARNING(57): The parameter 'fpcc' seems not to be used.						   <
+Number of warnings: 59										   |	Number of warnings: 47
+============================================================================================================
+data/scope4.c-
+============================================================================================================
+data/scope5.c-
+============================================================================================================
+data/scope6.c-
+============================================================================================================
+data/scope.c-
+ERROR(47): Symbol 't' is not declared.								   <
+												   >	ERROR(47): Symbol 't' is not declared.
+WARNING(40): The variable 'bat' seems not to be used.						   <
+												   >	WARNING(40): The variable 'bat' seems not to be used.
+============================================================================================================
+data/scopes.c-
+============================================================================================================
+data/simple.c-
+============================================================================================================
+data/simpleDefine.c-
+WARNING(25): The parameter 'x' seems not to be used.						   <
+Number of warnings: 8										   |	Number of warnings: 7
+============================================================================================================
+data/small.c-
+============================================================================================================
+data/static.c-
+============================================================================================================
+data/strange.c-
+============================================================================================================
+data/stress.c-
+WARNING(1): The parameter 'Archimedes' seems not to be used.					   <
+Number of warnings: 7										   |	Number of warnings: 6
+============================================================================================================
+data/string.c-
+============================================================================================================
+data/testExample.c-
+============================================================================================================
+data/tinybad.c-
+WARNING(4): The parameter 'corgi' seems not to be used.						   <
+Number of warnings: 3										   |	Number of warnings: 2
+============================================================================================================
+data/tiny.c-
+WARNING(4): The parameter 'corgi' seems not to be used.						   <
+Number of warnings: 5										   |	Number of warnings: 4
+============================================================================================================
+data/tinygood.c-
+WARNING(4): The parameter 'corgi' seems not to be used.						   <
+Number of warnings: 3										   |	Number of warnings: 2
+============================================================================================================
+data/tinyMixed2.c-
+.   .   Sibling: 2  For [mem: None loc: 0 size: -4] [line: 13]					   |	.   .   Sibling: 2  For [mem: None loc: 0 size: -3] [line: 13]
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 13]				   |	.   .   .   Child: 1  Range [line: 13]
+============================================================================================================
+data/tinyMixed.c-
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 9]				   |	.   .   .   Child: 1  Range [line: 9]
+============================================================================================================
+data/tinyMixedControl2.c-
+============================================================================================================
+data/tinyMixedControl3.c-
+.   .   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 7]				   |	.   .   .   .   Child: 1  Range [line: 7]
+.   .   .   .   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 9]			   |	.   .   .   .   .   .   Child: 1  Range [line: 9]
+.   .   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 14]				   |	.   .   .   .   Child: 1  Range [line: 14]
+.   .   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 16]				   |	.   .   .   .   Child: 1  Range [line: 16]
+.   .   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 19]				   |	.   .   .   .   Child: 1  Range [line: 19]
+.   .   .   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 20]			   |	.   .   .   .   .   Child: 1  Range [line: 20]
+============================================================================================================
+data/tinyMixedControl.c-
+============================================================================================================
+data/tinyOverlap.c-
+WARNING(4): The parameter 'p' seems not to be used.						   <
+Number of warnings: 9										   |	Number of warnings: 8
+============================================================================================================
+data/tinyscope.c-
+============================================================================================================
+data/types3.c-
+WARNING(5): The parameter 'a' seems not to be used.						   <
+WARNING(18): The parameter 'linda' seems not to be used.					   <
+WARNING(24): The parameter 'eowyn' seems not to be used.					   <
+Number of warnings: 10										   |	Number of warnings: 7
+============================================================================================================
+data/types.c-
+============================================================================================================
+data/unary.c-
+============================================================================================================
+data/unarystar.c-
+============================================================================================================
+data/undeclared.c-
+WARNING(1): The parameter 'x' seems not to be used.						   <
+Number of warnings: 2										   |	Number of warnings: 1
+============================================================================================================
+data/undefined.c-
+============================================================================================================
+data/uninit2.c-
+============================================================================================================
+data/uninit.c-
+WARNING(1): The parameter 'x' seems not to be used.						   <
+Number of warnings: 9										   |	Number of warnings: 8
+============================================================================================================
+data/uninitialized.c-
+WARNING(5): The variable 'x' seems not to be used.						   <
+												   >	WARNING(5): The variable 'x' seems not to be used.
+============================================================================================================
+data/unused.c-
+WARNING(2): The parameter 'x' seems not to be used.						   <
+Number of warnings: 4										   |	Number of warnings: 3
+============================================================================================================
+data/varAssign.c-
+============================================================================================================
+data/var.c-
+============================================================================================================
+data/varPair.c-
+============================================================================================================
+data/vars.c-
+WARNING(4): The parameter 'pb' seems not to be used.						   <
+WARNING(4): The parameter 'pc' seems not to be used.						   <
+.   .   .   Child: 1  Range [mem: None loc: 0 size: 0] [line: 4]				   |	.   .   .   Child: 1  Range [line: 4]
+Number of warnings: 12										   |	Number of warnings: 10
+============================================================================================================
+data/walsh.c-
+============================================================================================================
+data/while.c-
+============================================================================================================
+data/whileif.c-
+============================================================================================================
+299 / 10113 lines differed in total.

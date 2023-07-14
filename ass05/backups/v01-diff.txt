@@ -1,0 +1,1080 @@
+data/allbad.c-
+												   >	====================================
+												   >	FILE: allbad.c-
+============================================================================================================
+data/allgood.c-
+												   >	====================================
+												   >	FILE: allgood.c-
+============================================================================================================
+data/everythingF22.c-
+												   >	====================================
+												   >	FILE: everythingF22.c-
+============================================================================================================
+data/syntaxerr-assign.c-
+ERROR(10): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-assign.c-
+												   >	ERROR(10): Syntax error, unexpected ';'.
+												   >	ERROR(11): Syntax error, unexpected ';'.
+												   >	ERROR(12): Syntax error, unexpected ';'.
+												   >	ERROR(15): Syntax error, unexpected "+=".
+												   >	ERROR(16): Syntax error, unexpected "-=".
+												   >	ERROR(18): Syntax error, unexpected '='.
+												   >	ERROR(22): Syntax error, unexpected "--".
+												   >	ERROR(24): Syntax error, unexpected "bool".
+												   >	ERROR(25): Syntax error, unexpected "bool".
+												   >	ERROR(26): Syntax error, unexpected "bool".
+												   >	ERROR(28): Syntax error, unexpected '='.
+												   >	ERROR(29): Syntax error, unexpected "+=".
+												   >	ERROR(30): Syntax error, unexpected "-=".
+												   >	ERROR(31): Syntax error, unexpected "++".
+												   >	ERROR(32): Syntax error, unexpected "--".
+Number of errors: 1										   |	Number of errors: 15
+============================================================================================================
+data/syntaxerr-badchar.c-
+ERROR(2): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-badchar.c-
+Number of warnings: 0										   |	ERROR(2): Syntax error, unexpected character constant 'x', expecting "bool" or "char" or "int" o
+Number of errors: 1										   |	WARNING(3): character is 15 characters long and not a single character: ''dogs  and  cats''.  Th
+												   >	ERROR(4): Syntax error, unexpected '=', expecting '('.
+												   >	ERROR(4): Invalid or misplaced input character: '''. Character Ignored.
+												   >	ERROR(5): Invalid or misplaced input character: '!'. Character Ignored.
+												   >	ERROR(5): Invalid or misplaced input character: '@'. Character Ignored.
+												   >	ERROR(5): Invalid or misplaced input character: '#'. Character Ignored.
+												   >	ERROR(5): Invalid or misplaced input character: '$'. Character Ignored.
+												   >	ERROR(5): Syntax error, unexpected '%'.
+												   >	ERROR(5): Invalid or misplaced input character: '^'. Character Ignored.
+												   >	ERROR(5): Invalid or misplaced input character: '_'. Character Ignored.
+												   >	ERROR(5): Invalid or misplaced input character: '~'. Character Ignored.
+												   >	ERROR(5): Invalid or misplaced input character: '`'. Character Ignored.
+												   >	ERROR(5): Syntax error, unexpected '{', expecting ',' or ';'.
+												   >	ERROR(5): Invalid or misplaced input character: '\'. Character Ignored.
+												   >	ERROR(5): Syntax error, unexpected "or", expecting ',' or ';'.
+												   >	ERROR(5): Invalid or misplaced input character: '.'. Character Ignored.
+												   >	ERROR(6): Invalid or misplaced input character: '@'. Character Ignored.
+												   >	ERROR(6): Invalid or misplaced input character: '#'. Character Ignored.
+												   >	ERROR(6): Invalid or misplaced input character: '$'. Character Ignored.
+												   >	ERROR(6): Syntax error, unexpected '%'.
+												   >	ERROR(6): Invalid or misplaced input character: '^'. Character Ignored.
+												   >	ERROR(6): Invalid or misplaced input character: '_'. Character Ignored.
+												   >	ERROR(6): Invalid or misplaced input character: '~'. Character Ignored.
+												   >	ERROR(6): Invalid or misplaced input character: '`'. Character Ignored.
+												   >	ERROR(6): Invalid or misplaced input character: '\'. Character Ignored.
+												   >	ERROR(6): Invalid or misplaced input character: '.'. Character Ignored.
+												   >	WARNING(7): character is 15 characters long and not a single character: ''dogs  and  cats''.  Th
+												   >	ERROR(7): Syntax error, unexpected character constant 'dogs  and  cats'.
+												   >	Number of warnings: 2
+												   >	Number of errors: 27
+============================================================================================================
+data/syntaxerr-call.c-
+ERROR(2): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-call.c-
+												   >	ERROR(2): Syntax error, unexpected ';', expecting identifier.
+												   >	ERROR(8): Syntax error, unexpected "while".
+												   >	ERROR(9): Syntax error, unexpected "while", expecting ')'.
+												   >	ERROR(10): Syntax error, unexpected identifier "dog", expecting ')'.
+												   >	ERROR(10): Syntax error, unexpected ',', expecting ';'.
+												   >	ERROR(10): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(12): Syntax error, unexpected ';'.
+												   >	ERROR(18): Syntax error, unexpected "int", expecting ')'.
+Number of errors: 1										   |	Number of errors: 8
+============================================================================================================
+data/syntaxerr-compound.c-
+ERROR(2): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-compound.c-
+												   >	ERROR(2): Syntax error, unexpected '}', expecting "bool" or "char" or "int" or identifier.
+												   >	ERROR(4): Syntax error, unexpected '}'.
+												   >	ERROR(5): Syntax error, unexpected numeric constant "666".
+												   >	ERROR(5): Syntax error, unexpected '}'.
+												   >	ERROR(6): Syntax error, unexpected "++".
+Number of errors: 1										   |	Number of errors: 5
+============================================================================================================
+data/syntaxerr-constants.c-
+ERROR(2): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-constants.c-
+Number of warnings: 0										   |	ERROR(2): Syntax error, unexpected numeric constant "45234", expecting identifier.
+Number of errors: 1										   |	ERROR(3): Empty character ''.  Characters ignored.
+												   >	ERROR(3): Syntax error, unexpected ',', expecting identifier.
+												   >	WARNING(3): character is 4 characters long and not a single character: ''dogs''.  The first char
+												   >	ERROR(4): Syntax error, unexpected Boolean constant "true", expecting identifier.
+												   >	ERROR(5): Syntax error, unexpected string constant "dogs", expecting identifier.
+												   >	Number of warnings: 1
+												   >	Number of errors: 5
+============================================================================================================
+data/syntaxerr-empty.c-
+ERROR(2): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-empty.c-
+												   >	ERROR(2): Syntax error, unexpected end of input, expecting "bool" or "char" or "int" or identifi
+============================================================================================================
+data/syntaxerr-extra.c-
+ERROR(3): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-extra.c-
+												   >	ERROR(3): Syntax error, unexpected ',', expecting ';'.
+												   >	ERROR(4): Syntax error, unexpected "int".
+												   >	ERROR(5): Syntax error, unexpected "int".
+												   >	ERROR(6): Syntax error, unexpected "int".
+												   >	ERROR(7): Syntax error, unexpected "int".
+												   >	ERROR(7): Syntax error, unexpected "int", expecting ';'.
+												   >	ERROR(8): Syntax error, unexpected ']'.
+												   >	ERROR(9): Syntax error, unexpected ']'.
+												   >	ERROR(10): Syntax error, unexpected "while".
+												   >	ERROR(11): Syntax error, unexpected "while".
+												   >	ERROR(13): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(14): Syntax error, unexpected "bool".
+												   >	ERROR(15): Syntax error, unexpected "else", expecting "or" or "then".
+												   >	ERROR(16): Syntax error, unexpected "bool".
+												   >	ERROR(17): Syntax error, unexpected "then".
+												   >	ERROR(18): Syntax error, unexpected "then".
+												   >	ERROR(19): Syntax error, unexpected '=', expecting identifier.
+												   >	ERROR(20): Syntax error, unexpected ';'.
+												   >	ERROR(21): Syntax error, unexpected ';'.
+												   >	ERROR(23): Syntax error, unexpected '}'.
+												   >	ERROR(26): Syntax error, unexpected "do".
+												   >	ERROR(27): Syntax error, unexpected "do".
+												   >	ERROR(28): Syntax error, unexpected ';'.
+												   >	ERROR(30): Syntax error, unexpected "and".
+												   >	ERROR(31): Syntax error, unexpected "while".
+												   >	ERROR(32): Syntax error, unexpected "int".
+												   >	ERROR(33): Syntax error, unexpected numeric constant "5", expecting ';'.
+Number of errors: 1										   |	Number of errors: 27
+============================================================================================================
+data/syntaxerr-for.c-
+ERROR(4): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-for.c-
+												   >	ERROR(4): Syntax error, unexpected '=', expecting identifier.
+												   >	ERROR(5): Syntax error, unexpected numeric constant "1", expecting '='.
+												   >	ERROR(6): Syntax error, unexpected numeric constant "11", expecting "or" or "to".
+												   >	ERROR(9): Syntax error, unexpected "by".
+												   >	ERROR(10): Syntax error, unexpected "do".
+												   >	ERROR(11): Syntax error, unexpected "while".
+												   >	ERROR(12): Syntax error, unexpected "by", expecting '='.
+												   >	ERROR(14): Syntax error, unexpected ';'.
+Number of errors: 1										   |	Number of errors: 8
+============================================================================================================
+data/syntaxerr-hamlet.c-
+ERROR(2): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-hamlet.c-
+Number of warnings: 0										   |	ERROR(2): Syntax error, unexpected identifier "be", expecting '('.
+Number of errors: 1										   |	ERROR(2): Syntax error, unexpected identifier "is", expecting ',' or ';'.
+												   >	ERROR(3): Invalid or misplaced input character: '''. Character Ignored.
+												   >	ERROR(3): Syntax error, unexpected identifier "tis", expecting ',' or ';'.
+												   >	ERROR(5): Syntax error, unexpected "to", expecting ',' or ';'.
+												   >	ERROR(6): Syntax error, unexpected "by", expecting ',' or ';'.
+												   >	ERROR(9): Invalid or misplaced input character: '''. Character Ignored.
+												   >	ERROR(10): Invalid or misplaced input character: '''. Character Ignored.
+												   >	ERROR(10): Invalid or misplaced input character: '.'. Character Ignored.
+												   >	ERROR(11): Invalid or misplaced input character: '''. Character Ignored.
+												   >	ERROR(14): Invalid or misplaced input character: '''. Character Ignored.
+												   >	WARNING(17): character is 22 characters long and not a single character: ''s wrong, the proud ma
+												   >	ERROR(18): Invalid or misplaced input character: '''. Character Ignored.
+												   >	ERROR(25): Invalid or misplaced input character: '''. Character Ignored.
+												   >	ERROR(31): Invalid or misplaced input character: '''. Character Ignored.
+												   >	ERROR(34): Invalid or misplaced input character: '.'. Character Ignored.
+												   >	ERROR(34): Invalid or misplaced input character: '!'. Character Ignored.
+												   >	ERROR(35): Invalid or misplaced input character: '!'. Character Ignored.
+												   >	ERROR(36): Invalid or misplaced input character: '''. Character Ignored.
+												   >	ERROR(36): Invalid or misplaced input character: '.'. Character Ignored.
+												   >	Number of warnings: 1
+												   >	Number of errors: 19
+============================================================================================================
+data/syntaxerr-if.c-
+ERROR(6): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-if.c-
+												   >	ERROR(6): Syntax error, unexpected "++".
+												   >	ERROR(8): Syntax error, unexpected "++".
+												   >	ERROR(8): Syntax error, unexpected numeric constant "222", expecting ';'.
+												   >	ERROR(10): Syntax error, unexpected "++".
+												   >	ERROR(10): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(12): Syntax error, unexpected "++".
+												   >	ERROR(12): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(14): Syntax error, unexpected "++".
+												   >	ERROR(14): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(16): Syntax error, unexpected "++".
+												   >	ERROR(16): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(16): Syntax error, unexpected numeric constant "222", expecting ';'.
+												   >	ERROR(18): Syntax error, unexpected "++".
+												   >	ERROR(18): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(18): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(20): Syntax error, unexpected "++", expecting "or" or "then".
+												   >	ERROR(20): Syntax error, unexpected "else".
+												   >	ERROR(22): Syntax error, unexpected "++", expecting "or" or "then".
+												   >	ERROR(22): Syntax error, unexpected "else".
+												   >	ERROR(24): Syntax error, unexpected "++", expecting "or" or "then".
+												   >	ERROR(24): Syntax error, unexpected "++".
+												   >	ERROR(24): Syntax error, unexpected numeric constant "222", expecting ';'.
+												   >	ERROR(26): Syntax error, unexpected "++", expecting "or" or "then".
+												   >	ERROR(26): Syntax error, unexpected "++".
+												   >	ERROR(26): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(28): Syntax error, unexpected "++", expecting "or" or "then".
+												   >	ERROR(28): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(30): Syntax error, unexpected "++", expecting "or" or "then".
+												   >	ERROR(30): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(32): Syntax error, unexpected "++", expecting "or" or "then".
+												   >	ERROR(32): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(32): Syntax error, unexpected numeric constant "222", expecting ';'.
+												   >	ERROR(34): Syntax error, unexpected "++".
+												   >	ERROR(34): Syntax error, unexpected "else".
+												   >	ERROR(36): Syntax error, unexpected "++".
+												   >	ERROR(36): Syntax error, unexpected "else".
+												   >	ERROR(38): Syntax error, unexpected "++".
+												   >	ERROR(38): Syntax error, unexpected "++".
+												   >	ERROR(38): Syntax error, unexpected numeric constant "222", expecting ';'.
+												   >	ERROR(40): Syntax error, unexpected "++".
+												   >	ERROR(40): Syntax error, unexpected "++".
+												   >	ERROR(40): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(42): Syntax error, unexpected "++".
+												   >	ERROR(42): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(44): Syntax error, unexpected "++".
+												   >	ERROR(44): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(46): Syntax error, unexpected "++".
+												   >	ERROR(46): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(46): Syntax error, unexpected numeric constant "222", expecting ';'.
+												   >	ERROR(48): Syntax error, unexpected "++".
+												   >	ERROR(48): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(48): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(50): Syntax error, unexpected "++".
+												   >	ERROR(50): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(50): Syntax error, unexpected "else".
+												   >	ERROR(52): Syntax error, unexpected "++".
+												   >	ERROR(52): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(52): Syntax error, unexpected "else".
+												   >	ERROR(54): Syntax error, unexpected "++".
+												   >	ERROR(54): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(54): Syntax error, unexpected "++".
+												   >	ERROR(54): Syntax error, unexpected numeric constant "222", expecting ';'.
+												   >	ERROR(56): Syntax error, unexpected "++".
+												   >	ERROR(56): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(56): Syntax error, unexpected "++".
+												   >	ERROR(56): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(58): Syntax error, unexpected "++".
+												   >	ERROR(58): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(58): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(60): Syntax error, unexpected "++".
+												   >	ERROR(60): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(60): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(62): Syntax error, unexpected "++".
+												   >	ERROR(62): Syntax error, unexpected "else".
+												   >	ERROR(64): Syntax error, unexpected "++".
+												   >	ERROR(64): Syntax error, unexpected "else".
+												   >	ERROR(66): Syntax error, unexpected "++".
+												   >	ERROR(66): Syntax error, unexpected "++".
+												   >	ERROR(66): Syntax error, unexpected numeric constant "222", expecting ';'.
+												   >	ERROR(68): Syntax error, unexpected "++".
+												   >	ERROR(68): Syntax error, unexpected "++".
+												   >	ERROR(68): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(70): Syntax error, unexpected "++".
+												   >	ERROR(70): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(72): Syntax error, unexpected "++".
+												   >	ERROR(72): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(74): Syntax error, unexpected "++".
+												   >	ERROR(74): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(74): Syntax error, unexpected numeric constant "222", expecting ';'.
+												   >	ERROR(76): Syntax error, unexpected "++".
+												   >	ERROR(76): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(76): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(78): Syntax error, unexpected "++".
+												   >	ERROR(78): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(78): Syntax error, unexpected "else".
+												   >	ERROR(80): Syntax error, unexpected "++".
+												   >	ERROR(80): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(80): Syntax error, unexpected "else".
+												   >	ERROR(82): Syntax error, unexpected "++".
+												   >	ERROR(82): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(82): Syntax error, unexpected "++".
+												   >	ERROR(82): Syntax error, unexpected numeric constant "222", expecting ';'.
+												   >	ERROR(84): Syntax error, unexpected "++".
+												   >	ERROR(84): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(84): Syntax error, unexpected "++".
+												   >	ERROR(84): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(86): Syntax error, unexpected "++".
+												   >	ERROR(86): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(86): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(88): Syntax error, unexpected "++".
+												   >	ERROR(88): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(88): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(90): Syntax error, unexpected "++".
+												   >	ERROR(90): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(90): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(90): Syntax error, unexpected numeric constant "222", expecting ';'.
+												   >	ERROR(92): Syntax error, unexpected "++".
+												   >	ERROR(92): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(92): Syntax error, unexpected "else".
+												   >	ERROR(94): Syntax error, unexpected "++".
+												   >	ERROR(94): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(94): Syntax error, unexpected "else".
+												   >	ERROR(96): Syntax error, unexpected "++".
+												   >	ERROR(96): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(96): Syntax error, unexpected "++".
+												   >	ERROR(96): Syntax error, unexpected numeric constant "222", expecting ';'.
+												   >	ERROR(98): Syntax error, unexpected "++".
+												   >	ERROR(98): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(98): Syntax error, unexpected "++".
+												   >	ERROR(98): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(100): Syntax error, unexpected "++".
+												   >	ERROR(100): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(100): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(102): Syntax error, unexpected "++".
+												   >	ERROR(102): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(102): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(104): Syntax error, unexpected "++".
+												   >	ERROR(104): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(104): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(104): Syntax error, unexpected numeric constant "222", expecting ';'.
+												   >	ERROR(106): Syntax error, unexpected "++".
+												   >	ERROR(106): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(106): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(106): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(108): Syntax error, unexpected "++".
+												   >	ERROR(108): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(108): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(108): Syntax error, unexpected "else".
+												   >	ERROR(110): Syntax error, unexpected "++".
+												   >	ERROR(110): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(110): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(110): Syntax error, unexpected "else".
+												   >	ERROR(112): Syntax error, unexpected "++".
+												   >	ERROR(112): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(112): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(112): Syntax error, unexpected "++".
+												   >	ERROR(112): Syntax error, unexpected numeric constant "222", expecting ';'.
+												   >	ERROR(114): Syntax error, unexpected "++".
+												   >	ERROR(114): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(114): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(114): Syntax error, unexpected "++".
+												   >	ERROR(114): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(116): Syntax error, unexpected "++".
+												   >	ERROR(116): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(116): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(116): Syntax error, unexpected "else".
+												   >	ERROR(118): Syntax error, unexpected "++".
+												   >	ERROR(118): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(118): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(118): Syntax error, unexpected "else".
+												   >	ERROR(120): Syntax error, unexpected "++".
+												   >	ERROR(120): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(120): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(120): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(122): Syntax error, unexpected "++".
+												   >	ERROR(122): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(122): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(122): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(124): Syntax error, unexpected "++".
+												   >	ERROR(124): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(124): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(124): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(124): Syntax error, unexpected "else".
+												   >	ERROR(126): Syntax error, unexpected "++".
+												   >	ERROR(126): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(126): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(126): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(126): Syntax error, unexpected "else".
+												   >	ERROR(128): Syntax error, unexpected "++".
+												   >	ERROR(128): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(128): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(128): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(128): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(130): Syntax error, unexpected "++".
+												   >	ERROR(130): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(130): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(130): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(130): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(132): Syntax error, unexpected "++".
+												   >	ERROR(132): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(132): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(132): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(132): Syntax error, unexpected "else".
+												   >	ERROR(134): Syntax error, unexpected "++".
+												   >	ERROR(134): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(134): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(134): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(134): Syntax error, unexpected "else".
+												   >	ERROR(136): Syntax error, unexpected "++".
+												   >	ERROR(136): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(136): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(136): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(136): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(138): Syntax error, unexpected "++".
+												   >	ERROR(138): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(138): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(138): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(138): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(140): Syntax error, unexpected "++".
+												   >	ERROR(140): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(140): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(140): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(140): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(140): Syntax error, unexpected "else".
+												   >	ERROR(142): Syntax error, unexpected "++".
+												   >	ERROR(142): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(142): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(142): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(142): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(142): Syntax error, unexpected "else".
+												   >	ERROR(144): Syntax error, unexpected "++".
+												   >	ERROR(144): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(144): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(144): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(144): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(144): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(146): Syntax error, unexpected "++".
+												   >	ERROR(146): Syntax error, unexpected '(', expecting ';'.
+												   >	ERROR(146): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(146): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(146): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(146): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(148): Syntax error, unexpected "++".
+												   >	ERROR(148): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(148): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(148): Syntax error, unexpected "else".
+												   >	ERROR(150): Syntax error, unexpected "++".
+												   >	ERROR(150): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(150): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(150): Syntax error, unexpected "else".
+												   >	ERROR(152): Syntax error, unexpected "++".
+												   >	ERROR(152): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(152): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(152): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(154): Syntax error, unexpected "++".
+												   >	ERROR(154): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(154): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(154): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(156): Syntax error, unexpected "++".
+												   >	ERROR(156): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(156): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(156): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(156): Syntax error, unexpected "else".
+												   >	ERROR(158): Syntax error, unexpected "++".
+												   >	ERROR(158): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(158): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(158): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(158): Syntax error, unexpected "else".
+												   >	ERROR(160): Syntax error, unexpected "++".
+												   >	ERROR(160): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(160): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(160): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(160): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(162): Syntax error, unexpected "++".
+												   >	ERROR(162): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(162): Syntax error, unexpected identifier "x", expecting ';'.
+												   >	ERROR(162): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(162): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(164): Syntax error, unexpected "++".
+												   >	ERROR(164): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(164): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(164): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(164): Syntax error, unexpected "else".
+												   >	ERROR(166): Syntax error, unexpected "++".
+												   >	ERROR(166): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(166): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(166): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(166): Syntax error, unexpected "else".
+												   >	ERROR(168): Syntax error, unexpected "++".
+												   >	ERROR(168): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(168): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(168): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(168): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(170): Syntax error, unexpected "++".
+												   >	ERROR(170): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(170): Syntax error, unexpected "++", expecting ';'.
+												   >	ERROR(170): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(170): Syntax error, unexpected "else", expecting ';'.
+Number of errors: 1										   |	Number of errors: 298
+============================================================================================================
+data/syntaxerr-ifminus.c-
+ERROR(10): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-ifminus.c-
+												   >	ERROR(10): Syntax error, unexpected "else".
+												   >	ERROR(12): Syntax error, unexpected "else".
+												   >	ERROR(16): Syntax error, unexpected numeric constant "111", expecting "or" or "then".
+												   >	ERROR(18): Syntax error, unexpected numeric constant "111", expecting "or" or "then".
+												   >	ERROR(20): Syntax error, unexpected "else", expecting "or" or "then".
+												   >	ERROR(22): Syntax error, unexpected "else", expecting "or" or "then".
+												   >	ERROR(24): Syntax error, unexpected numeric constant "222", expecting "or" or "then".
+												   >	ERROR(26): Syntax error, unexpected "then".
+												   >	ERROR(28): Syntax error, unexpected "then".
+												   >	ERROR(30): Syntax error, unexpected "then".
+												   >	ERROR(32): Syntax error, unexpected "then".
+												   >	ERROR(34): Syntax error, unexpected "then".
+												   >	ERROR(36): Syntax error, unexpected "then".
+												   >	ERROR(38): Syntax error, unexpected ';', expecting "or" or "then".
+												   >	ERROR(40): Syntax error, unexpected ';', expecting "or" or "then".
+												   >	ERROR(42): Syntax error, unexpected "else".
+												   >	ERROR(44): Syntax error, unexpected "else".
+												   >	ERROR(46): Syntax error, unexpected ')', expecting "or" or "then".
+												   >	ERROR(46): Syntax error, unexpected "else".
+												   >	ERROR(48): Syntax error, unexpected ')', expecting "or" or "then".
+												   >	ERROR(48): Syntax error, unexpected "else".
+												   >	ERROR(50): Syntax error, unexpected ')', expecting "or" or "then".
+												   >	ERROR(52): Syntax error, unexpected ')', expecting "or" or "then".
+												   >	ERROR(54): Syntax error, unexpected ')', expecting "or" or "then".
+												   >	ERROR(56): Syntax error, unexpected ')', expecting "or" or "then".
+												   >	ERROR(58): Syntax error, unexpected numeric constant "111", expecting "or" or "then".
+												   >	ERROR(60): Syntax error, unexpected numeric constant "111", expecting "or" or "then".
+												   >	ERROR(62): Syntax error, unexpected "else", expecting "or" or "then".
+												   >	ERROR(64): Syntax error, unexpected "else", expecting "or" or "then".
+												   >	ERROR(66): Syntax error, unexpected numeric constant "222", expecting "or" or "then".
+												   >	ERROR(68): Syntax error, unexpected ')'.
+												   >	ERROR(68): Syntax error, unexpected "else".
+												   >	ERROR(70): Syntax error, unexpected ')'.
+												   >	ERROR(70): Syntax error, unexpected "else".
+												   >	ERROR(72): Syntax error, unexpected ')'.
+												   >	ERROR(74): Syntax error, unexpected ')'.
+												   >	ERROR(76): Syntax error, unexpected ')'.
+												   >	ERROR(78): Syntax error, unexpected ')'.
+												   >	ERROR(80): Syntax error, unexpected ';', expecting "or" or "then".
+												   >	ERROR(82): Syntax error, unexpected ';', expecting "or" or "then".
+												   >	ERROR(84): Syntax error, unexpected ';'.
+												   >	ERROR(86): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(86): Syntax error, unexpected "else".
+												   >	ERROR(88): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(88): Syntax error, unexpected "else".
+												   >	ERROR(90): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(92): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(94): Syntax error, unexpected numeric constant "111", expecting ')'.
+												   >	ERROR(94): Syntax error, unexpected "else".
+												   >	ERROR(96): Syntax error, unexpected numeric constant "111", expecting ')'.
+												   >	ERROR(96): Syntax error, unexpected "else".
+												   >	ERROR(98): Syntax error, unexpected "else", expecting ')'.
+												   >	ERROR(100): Syntax error, unexpected "else", expecting ')'.
+												   >	ERROR(102): Syntax error, unexpected ')'.
+												   >	ERROR(102): Syntax error, unexpected "else".
+												   >	ERROR(104): Syntax error, unexpected ')'.
+												   >	ERROR(104): Syntax error, unexpected "else".
+												   >	ERROR(106): Syntax error, unexpected ')'.
+												   >	ERROR(108): Syntax error, unexpected ')'.
+												   >	ERROR(110): Syntax error, unexpected ';', expecting ')'.
+												   >	ERROR(112): Syntax error, unexpected ';', expecting ')'.
+												   >	ERROR(114): Syntax error, unexpected "else".
+												   >	ERROR(116): Syntax error, unexpected "else".
+												   >	ERROR(118): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(118): Syntax error, unexpected "else".
+												   >	ERROR(120): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(120): Syntax error, unexpected "else".
+												   >	ERROR(122): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(124): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(126): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(126): Syntax error, unexpected "else".
+												   >	ERROR(128): Syntax error, unexpected numeric constant "111", expecting ';'.
+												   >	ERROR(128): Syntax error, unexpected "else".
+												   >	ERROR(130): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(132): Syntax error, unexpected "else", expecting ';'.
+												   >	ERROR(134): Syntax error, unexpected ')'.
+												   >	ERROR(134): Syntax error, unexpected "else".
+												   >	ERROR(136): Syntax error, unexpected ')'.
+												   >	ERROR(136): Syntax error, unexpected "else".
+												   >	ERROR(138): Syntax error, unexpected ')'.
+												   >	ERROR(140): Syntax error, unexpected ')'.
+Number of errors: 1										   |	Number of errors: 81
+============================================================================================================
+data/syntaxerr-logic.c-
+ERROR(6): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-logic.c-
+												   >	ERROR(6): Syntax error, unexpected Boolean constant "false", expecting ';'.
+												   >	ERROR(8): Syntax error, unexpected "or".
+												   >	ERROR(9): Syntax error, unexpected ';'.
+												   >	ERROR(11): Syntax error, unexpected "or".
+												   >	ERROR(15): Syntax error, unexpected "and".
+												   >	ERROR(16): Syntax error, unexpected ';'.
+												   >	ERROR(18): Syntax error, unexpected "and".
+												   >	ERROR(21): Syntax error, unexpected "and".
+												   >	ERROR(22): Syntax error, unexpected "or".
+												   >	ERROR(24): Syntax error, unexpected "and".
+												   >	ERROR(26): Syntax error, unexpected "or".
+Number of errors: 1										   |	Number of errors: 11
+============================================================================================================
+data/syntaxerr-loops.c-
+ERROR(9): syntax error										   |	====================================
+WARNING(2): The variable 'iorek' seems not to be used.						   |	FILE: syntaxerr-loops.c-
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	ERROR(9): Syntax error, unexpected identifier "x", expecting '='.
+Number of warnings: 1										   |	ERROR(11): Syntax error, unexpected ':', expecting "do".
+Number of errors: 1										   |	ERROR(12): Syntax error, unexpected ':', expecting "do".
+												   >	ERROR(16): Syntax error, unexpected ':', expecting "do".
+												   >	Number of warnings: 0
+												   >	Number of errors: 4
+============================================================================================================
+data/syntaxerr-loopscope2.c-
+ERROR(10): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-loopscope2.c-
+												   >	ERROR(10): Syntax error, unexpected '{', expecting '='.
+============================================================================================================
+data/syntaxerr-loopscope.c-
+												   >	====================================
+												   >	FILE: syntaxerr-loopscope.c-
+============================================================================================================
+data/syntaxerr-parens.c-
+ERROR(5): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-parens.c-
+												   >	ERROR(5): Syntax error, unexpected ')', expecting ';'.
+												   >	ERROR(6): Syntax error, unexpected ';', expecting ')'.
+												   >	ERROR(7): Syntax error, unexpected ';', expecting ')'.
+Number of errors: 1										   |	Number of errors: 3
+============================================================================================================
+data/syntaxerr-parms.c-
+ERROR(2): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-parms.c-
+												   >	ERROR(2): Syntax error, unexpected ';', expecting '{'.
+												   >	ERROR(3): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(3): Syntax error, unexpected ')', expecting ',' or ';'.
+												   >	ERROR(4): Syntax error, unexpected ')', expecting identifier.
+												   >	ERROR(5): Syntax error, unexpected ')', expecting '('.
+												   >	ERROR(6): Syntax error, unexpected ')', expecting "bool" or "char" or "int".
+												   >	ERROR(7): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(7): Syntax error, unexpected "bool", expecting ',' or ';'.
+												   >	ERROR(8): Syntax error, unexpected "bool", expecting ',' or ';'.
+												   >	ERROR(9): Syntax error, unexpected identifier "z", expecting ')'.
+												   >	ERROR(10): Syntax error, unexpected ';', expecting '{'.
+												   >	ERROR(11): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(11): Syntax error, unexpected ';', expecting identifier.
+												   >	ERROR(11): Syntax error, unexpected ')', expecting ',' or ';'.
+												   >	ERROR(12): Syntax error, unexpected ')', expecting identifier.
+												   >	ERROR(13): Syntax error, unexpected ')', expecting '('.
+												   >	ERROR(14): Syntax error, unexpected ';', expecting identifier.
+												   >	ERROR(15): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(15): Syntax error, unexpected "bool", expecting identifier.
+												   >	ERROR(16): Syntax error, unexpected "bool", expecting identifier.
+												   >	ERROR(17): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(17): Syntax error, unexpected ')', expecting ',' or ';'.
+												   >	ERROR(19): Syntax error, unexpected identifier "y", expecting ')'.
+												   >	ERROR(20): Syntax error, unexpected identifier "y", expecting ')'.
+												   >	ERROR(21): Syntax error, unexpected identifier "y", expecting ')'.
+												   >	ERROR(22): Syntax error, unexpected identifier "y", expecting ')'.
+												   >	ERROR(23): Syntax error, unexpected identifier "y", expecting ')'.
+												   >	ERROR(25): Syntax error, unexpected identifier "y", expecting ')'.
+												   >	ERROR(26): Syntax error, unexpected identifier "y", expecting ')'.
+												   >	ERROR(27): Syntax error, unexpected ';', expecting '{'.
+												   >	ERROR(28): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(28): Syntax error, unexpected ')', expecting identifier.
+												   >	ERROR(29): Syntax error, unexpected ')', expecting '('.
+												   >	ERROR(30): Syntax error, unexpected ')', expecting "bool" or "char" or "int".
+												   >	ERROR(31): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(33): Syntax error, unexpected identifier "z", expecting ')'.
+												   >	ERROR(34): Syntax error, unexpected ';', expecting '{'.
+												   >	ERROR(36): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(36): Syntax error, unexpected ')', expecting ',' or ';'.
+												   >	ERROR(37): Syntax error, unexpected ')', expecting identifier.
+												   >	ERROR(38): Syntax error, unexpected ')', expecting '('.
+												   >	ERROR(39): Syntax error, unexpected ',', expecting identifier.
+												   >	ERROR(39): Syntax error, unexpected ')', expecting "bool" or "char" or "int".
+												   >	ERROR(40): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(40): Syntax error, unexpected "bool", expecting ',' or ';'.
+												   >	ERROR(41): Syntax error, unexpected "bool", expecting ',' or ';'.
+												   >	ERROR(42): Syntax error, unexpected ',', expecting identifier.
+												   >	ERROR(42): Syntax error, unexpected identifier "z", expecting ')'.
+												   >	ERROR(43): Syntax error, unexpected ',', expecting identifier.
+												   >	ERROR(43): Syntax error, unexpected ';', expecting '{'.
+												   >	ERROR(44): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(44): Syntax error, unexpected ')', expecting ',' or ';'.
+												   >	ERROR(45): Syntax error, unexpected ')', expecting identifier.
+												   >	ERROR(46): Syntax error, unexpected ')', expecting '('.
+												   >	ERROR(47): Syntax error, unexpected ',', expecting identifier.
+												   >	ERROR(48): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(49): Syntax error, unexpected ',', expecting identifier.
+												   >	ERROR(50): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(50): Syntax error, unexpected ')', expecting ',' or ';'.
+												   >	ERROR(52): Syntax error, unexpected ';', expecting '{'.
+												   >	ERROR(53): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(53): Syntax error, unexpected ')', expecting identifier.
+												   >	ERROR(54): Syntax error, unexpected ')', expecting '('.
+												   >	ERROR(55): Syntax error, unexpected ')', expecting "bool" or "char" or "int".
+												   >	ERROR(56): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(58): Syntax error, unexpected identifier "z", expecting ')'.
+												   >	ERROR(59): Syntax error, unexpected ';', expecting '{'.
+												   >	ERROR(60): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(60): Syntax error, unexpected ')', expecting ',' or ';'.
+												   >	ERROR(61): Syntax error, unexpected ')', expecting identifier.
+												   >	ERROR(62): Syntax error, unexpected ')', expecting '('.
+												   >	ERROR(63): Syntax error, unexpected ';', expecting identifier.
+												   >	ERROR(64): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(66): Syntax error, unexpected ';', expecting '{'.
+												   >	ERROR(67): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(69): Syntax error, unexpected ')', expecting ',' or ';'.
+												   >	ERROR(70): Syntax error, unexpected ')', expecting identifier.
+												   >	ERROR(71): Syntax error, unexpected ')', expecting '('.
+												   >	ERROR(72): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(72): Syntax error, unexpected ')'.
+												   >	ERROR(73): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(74): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(75): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(76): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(77): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(77): Syntax error, unexpected ')', expecting ',' or ';'.
+												   >	ERROR(78): Syntax error, unexpected ')', expecting identifier.
+												   >	ERROR(79): Syntax error, unexpected ')', expecting '('.
+												   >	ERROR(80): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(80): Syntax error, unexpected ')'.
+												   >	ERROR(81): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(82): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(83): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(84): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(85): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(85): Syntax error, unexpected ')', expecting ',' or ';'.
+												   >	ERROR(86): Syntax error, unexpected ')', expecting identifier.
+												   >	ERROR(87): Syntax error, unexpected ')', expecting '('.
+												   >	ERROR(88): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(88): Syntax error, unexpected ')'.
+												   >	ERROR(89): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(90): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(91): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(92): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(93): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(94): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(95): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(96): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(97): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(99): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(100): Syntax error, unexpected identifier "x", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(102): Syntax error, unexpected ',', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(102): Syntax error, unexpected ')', expecting ',' or ';'.
+												   >	ERROR(103): Syntax error, unexpected ')', expecting identifier.
+												   >	ERROR(104): Syntax error, unexpected ')', expecting '('.
+												   >	ERROR(105): Syntax error, unexpected ',', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(105): Syntax error, unexpected ')'.
+												   >	ERROR(106): Syntax error, unexpected ',', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(107): Syntax error, unexpected ',', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(108): Syntax error, unexpected ',', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(109): Syntax error, unexpected ',', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(110): Syntax error, unexpected ',', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(111): Syntax error, unexpected ',', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(112): Syntax error, unexpected ',', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(113): Syntax error, unexpected ',', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(114): Syntax error, unexpected ',', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(116): Syntax error, unexpected ',', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(117): Syntax error, unexpected ',', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(118): Syntax error, unexpected identifier "y", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(119): Syntax error, unexpected identifier "y", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(120): Syntax error, unexpected identifier "y", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(121): Syntax error, unexpected identifier "y", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(122): Syntax error, unexpected identifier "y", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(124): Syntax error, unexpected identifier "y", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(125): Syntax error, unexpected identifier "y", expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(126): Syntax error, unexpected ';', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(126): Syntax error, unexpected ';', expecting '{'.
+												   >	ERROR(127): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(128): Syntax error, unexpected ';', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(129): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(130): Syntax error, unexpected ';', expecting '{'.
+												   >	ERROR(131): Syntax error, unexpected '(', expecting ')'.
+												   >	ERROR(133): Syntax error, unexpected ';', expecting '{'.
+Number of errors: 1										   |	Number of errors: 143
+============================================================================================================
+data/syntaxerr-relop.c-
+ERROR(6): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-relop.c-
+												   >	ERROR(6): Syntax error, unexpected numeric constant "42", expecting ';'.
+												   >	ERROR(8): Syntax error, unexpected '>'.
+												   >	ERROR(9): Syntax error, unexpected ';'.
+												   >	ERROR(11): Syntax error, unexpected '>'.
+												   >	ERROR(15): Syntax error, unexpected "<=".
+												   >	ERROR(16): Syntax error, unexpected ';'.
+												   >	ERROR(18): Syntax error, unexpected "<=".
+												   >	ERROR(20): Syntax error, unexpected '>', expecting ';'.
+												   >	ERROR(21): Syntax error, unexpected "<=".
+												   >	ERROR(22): Syntax error, unexpected '>'.
+Number of errors: 1										   |	Number of errors: 10
+============================================================================================================
+data/syntaxerr-shuffle.c-
+ERROR(1): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-shuffle.c-
+												   >	ERROR(1): Syntax error, unexpected '>', expecting "bool" or "char" or "int" or identifier.
+												   >	ERROR(11): Syntax error, unexpected '('.
+												   >	ERROR(18): Syntax error, unexpected ';'.
+												   >	ERROR(21): Syntax error, unexpected "and".
+												   >	ERROR(23): Syntax error, unexpected identifier "c", expecting ',' or ';'.
+												   >	ERROR(40): Invalid or misplaced input character: '!'. Character Ignored.
+												   >	ERROR(41): Syntax error, unexpected identifier "run", expecting '('.
+												   >	ERROR(47): Syntax error, unexpected '('.
+												   >	ERROR(55): Invalid or misplaced input character: '''. Character Ignored.
+												   >	ERROR(56): Syntax error, unexpected '}'.
+												   >	ERROR(63): Syntax error, unexpected ','.
+												   >	ERROR(66): Syntax error, unexpected ','.
+												   >	ERROR(76): Syntax error, unexpected '+'.
+												   >	ERROR(78): Invalid or misplaced input character: '''. Character Ignored.
+												   >	ERROR(81): Syntax error, unexpected ')', expecting ',' or ';'.
+												   >	ERROR(89): Syntax error, unexpected '('.
+												   >	ERROR(98): Syntax error, unexpected identifier "x", expecting '('.
+												   >	ERROR(108): Syntax error, unexpected numeric constant "3".
+												   >	ERROR(110): Syntax error, unexpected ']'.
+												   >	ERROR(117): Syntax error, unexpected '('.
+												   >	ERROR(120): Syntax error, unexpected "!=".
+												   >	ERROR(125): Invalid or misplaced input character: '''. Character Ignored.
+												   >	ERROR(125): Invalid or misplaced input character: '\'. Character Ignored.
+												   >	ERROR(126): Syntax error, unexpected ')', expecting '('.
+												   >	ERROR(137): Syntax error, unexpected '*', expecting ',' or ';'.
+												   >	ERROR(144): Syntax error, unexpected numeric constant "666".
+												   >	ERROR(146): Syntax error, unexpected identifier "wool", expecting ',' or ';'.
+												   >	ERROR(155): Syntax error, unexpected ',', expecting '('.
+												   >	ERROR(162): Invalid or misplaced input character: '\'. Character Ignored.
+												   >	ERROR(163): Syntax error, unexpected identifier "grand", expecting ',' or ';'.
+												   >	ERROR(165): Syntax error, unexpected numeric constant "3".
+												   >	ERROR(172): Syntax error, unexpected identifier "shave", expecting '('.
+												   >	ERROR(188): Syntax error, unexpected ']'.
+												   >	ERROR(191): Syntax error, unexpected numeric constant "10".
+												   >	ERROR(194): Syntax error, unexpected numeric constant "2".
+												   >	ERROR(196): Syntax error, unexpected "static".
+												   >	ERROR(200): Syntax error, unexpected identifier "close", expecting ',' or ';'.
+												   >	ERROR(210): Syntax error, unexpected "while", expecting ',' or ';'.
+												   >	ERROR(228): Syntax error, unexpected ';'.
+												   >	ERROR(232): Syntax error, unexpected "while", expecting '('.
+												   >	ERROR(238): Syntax error, unexpected ']', expecting ',' or ';'.
+												   >	ERROR(239): Syntax error, unexpected "bool", expecting ',' or ';'.
+												   >	ERROR(254): Syntax error, unexpected "static", expecting '('.
+												   >	ERROR(257): Syntax error, unexpected identifier "close", expecting '('.
+												   >	ERROR(259): Invalid or misplaced input character: '"'. Character Ignored.
+												   >	ERROR(259): Invalid or misplaced input character: '\'. Character Ignored.
+												   >	ERROR(259): Invalid or misplaced input character: '"'. Character Ignored.
+												   >	ERROR(263): Syntax error, unexpected '[', expecting ',' or ';'.
+												   >	ERROR(272): Invalid or misplaced input character: '!'. Character Ignored.
+												   >	ERROR(277): Syntax error, unexpected "or".
+												   >	ERROR(278): Invalid or misplaced input character: '!'. Character Ignored.
+												   >	ERROR(304): Invalid or misplaced input character: '\'. Character Ignored.
+												   >	ERROR(316): Syntax error, unexpected "if", expecting ',' or ';'.
+												   >	ERROR(322): Invalid or misplaced input character: '''. Character Ignored.
+												   >	ERROR(322): Invalid or misplaced input character: '"'. Character Ignored.
+												   >	ERROR(323): Syntax error, unexpected '['.
+												   >	ERROR(330): Syntax error, unexpected ']', expecting '{'.
+												   >	ERROR(343): Syntax error, unexpected '-', expecting identifier.
+												   >	ERROR(352): Syntax error, unexpected '-', expecting ',' or ';'.
+												   >	ERROR(363): Syntax error, unexpected ')', expecting '('.
+												   >	ERROR(364): Invalid or misplaced input character: '\'. Character Ignored.
+												   >	ERROR(381): Syntax error, unexpected "*=", expecting '('.
+												   >	ERROR(407): Syntax error, unexpected '(', expecting ',' or ';'.
+												   >	ERROR(412): Syntax error, unexpected identifier "y", expecting ',' or ';'.
+												   >	ERROR(415): Syntax error, unexpected identifier "Wendolene", expecting '('.
+												   >	ERROR(418): Syntax error, unexpected identifier "a", expecting ',' or ';'.
+												   >	ERROR(422): Syntax error, unexpected identifier "x", expecting ',' or ';'.
+												   >	ERROR(431): Syntax error, unexpected identifier "wrong", expecting ',' or ';'.
+												   >	ERROR(437): Syntax error, unexpected numeric constant "1".
+												   >	ERROR(440): Syntax error, unexpected '[', expecting '('.
+												   >	ERROR(444): Syntax error, unexpected "int", expecting identifier.
+												   >	ERROR(450): Syntax error, unexpected numeric constant "33", expecting '('.
+												   >	ERROR(453): Syntax error, unexpected ';'.
+												   >	ERROR(460): Syntax error, unexpected numeric constant "1".
+												   >	ERROR(463): Syntax error, unexpected Boolean constant "false".
+												   >	ERROR(473): Syntax error, unexpected '}'.
+												   >	ERROR(481): Syntax error, unexpected '('.
+												   >	ERROR(487): Syntax error, unexpected ')'.
+												   >	ERROR(493): Syntax error, unexpected '='.
+												   >	ERROR(495): Invalid or misplaced input character: '\'. Character Ignored.
+												   >	ERROR(495): Invalid or misplaced input character: '''. Character Ignored.
+												   >	ERROR(495): Invalid or misplaced input character: '"'. Character Ignored.
+												   >	ERROR(496): Syntax error, unexpected ';'.
+												   >	ERROR(499): Syntax error, unexpected identifier "McGraw", expecting ',' or ';'.
+												   >	ERROR(509): Syntax error, unexpected character constant 'b'.
+												   >	ERROR(521): Syntax error, unexpected identifier "y", expecting '('.
+												   >	ERROR(528): Syntax error, unexpected identifier "rabbit", expecting ',' or ';'.
+												   >	ERROR(530): Syntax error, unexpected ']'.
+												   >	ERROR(533): Invalid or misplaced input character: '''. Character Ignored.
+												   >	ERROR(533): Invalid or misplaced input character: '\'. Character Ignored.
+												   >	ERROR(558): Syntax error, unexpected ':', expecting ',' or ';'.
+												   >	ERROR(562): Syntax error, unexpected '(', expecting ',' or ';'.
+												   >	ERROR(568): Syntax error, unexpected ')'.
+												   >	ERROR(580): Syntax error, unexpected "==", expecting ',' or ';'.
+												   >	ERROR(585): Invalid or misplaced input character: '"'. Character Ignored.
+												   >	ERROR(587): Syntax error, unexpected "return", expecting ',' or ';'.
+												   >	ERROR(606): Syntax error, unexpected '/', expecting '('.
+												   >	ERROR(610): Invalid or misplaced input character: '"'. Character Ignored.
+												   >	ERROR(614): Syntax error, unexpected '=', expecting ',' or ';'.
+												   >	ERROR(616): Syntax error, unexpected "+=".
+												   >	ERROR(620): Syntax error, unexpected ';'.
+												   >	ERROR(623): Invalid or misplaced input character: '!'. Character Ignored.
+												   >	ERROR(641): Syntax error, unexpected '['.
+												   >	ERROR(643): Syntax error, unexpected ';'.
+												   >	ERROR(652): Syntax error, unexpected '%', expecting '('.
+												   >	ERROR(654): Syntax error, unexpected '*'.
+												   >	ERROR(664): Syntax error, unexpected "if", expecting '('.
+												   >	ERROR(673): Syntax error, unexpected ')'.
+												   >	ERROR(678): Syntax error, unexpected ','.
+												   >	ERROR(687): Syntax error, unexpected ')'.
+												   >	ERROR(689): Invalid or misplaced input character: '\'. Character Ignored.
+												   >	ERROR(689): Invalid or misplaced input character: '\'. Character Ignored.
+												   >	ERROR(689): Invalid or misplaced input character: '"'. Character Ignored.
+												   >	ERROR(691): Syntax error, unexpected '-', expecting '('.
+												   >	ERROR(695): Syntax error, unexpected ')'.
+												   >	ERROR(701): Syntax error, unexpected identifier "gromit", expecting ',' or ';'.
+												   >	ERROR(714): Syntax error, unexpected identifier "run", expecting ',' or ';'.
+												   >	ERROR(718): Invalid or misplaced input character: '!'. Character Ignored.
+												   >	ERROR(720): Syntax error, unexpected '}'.
+												   >	ERROR(727): Syntax error, unexpected '(', expecting ',' or ';'.
+												   >	ERROR(752): Syntax error, unexpected "++".
+Number of errors: 1										   |	Number of errors: 121
+============================================================================================================
+data/syntaxerr-small.c-
+												   >	====================================
+												   >	FILE: syntaxerr-small.c-
+ERROR(5): syntax error										   |	ERROR(5): Syntax error, unexpected identifier "k", expecting ']'.
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	ERROR(7): Syntax error, unexpected '='.
+												   >	ERROR(8): Syntax error, unexpected identifier "x0", expecting ';'.
+												   >	ERROR(9): Syntax error, unexpected '+'.
+												   >	ERROR(10): Syntax error, unexpected "else".
+												   >	ERROR(11): Syntax error, unexpected '=', expecting ';'.
+												   >	ERROR(12): Syntax error, unexpected "if".
+												   >	ERROR(13): Syntax error, unexpected numeric constant "999", expecting ';'.
+												   >	ERROR(14): Syntax error, unexpected "while".
+												   >	ERROR(14): Invalid or misplaced input character: '@'. Character Ignored.
+												   >	ERROR(14): Invalid or misplaced input character: '#'. Character Ignored.
+												   >	ERROR(15): Syntax error, unexpected numeric constant "3", expecting ')'.
+												   >	ERROR(19): Syntax error, unexpected '{', expecting ')'.
+Number of errors: 1										   |	Number of errors: 14
+============================================================================================================
+data/syntaxerr-summul.c-
+ERROR(6): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-summul.c-
+												   >	ERROR(6): Syntax error, unexpected numeric constant "222", expecting ';'.
+												   >	ERROR(8): Syntax error, unexpected '+'.
+												   >	ERROR(9): Syntax error, unexpected ';'.
+												   >	ERROR(11): Syntax error, unexpected '+'.
+												   >	ERROR(15): Syntax error, unexpected ';'.
+												   >	ERROR(16): Syntax error, unexpected ';'.
+												   >	ERROR(18): Syntax error, unexpected ';'.
+												   >	ERROR(21): Syntax error, unexpected '+'.
+Number of errors: 1										   |	Number of errors: 8
+============================================================================================================
+data/syntaxerr-testExample.c-
+ERROR(24): syntax error										   |	====================================
+WARNING(3): The variable 'x' seems not to be used.						   |	FILE: syntaxerr-testExample.c-
+WARNING(3): The variable 'y' seems not to be used.						   |	ERROR(24): Syntax error, unexpected ':', expecting "do".
+WARNING(2): The variable 'zev' seems not to be used.						   |	ERROR(26): Syntax error, unexpected "then".
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	ERROR(27): Syntax error, unexpected "then".
+Number of warnings: 3										   |	ERROR(31): Syntax error, unexpected "if", expecting '='.
+Number of errors: 1										   |	Number of warnings: 0
+												   >	Number of errors: 4
+============================================================================================================
+data/syntaxerr-typearray.c-
+ERROR(4): syntax error										   |	====================================
+WARNING(2): The variable 'x' seems not to be used.						   |	FILE: syntaxerr-typearray.c-
+WARNING(3): The variable 'z' seems not to be used.						   |	ERROR(4): Syntax error, unexpected identifier "x", expecting numeric constant.
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	ERROR(6): Syntax error, unexpected '*', expecting ']'.
+Number of warnings: 2										   |	ERROR(11): Syntax error, unexpected ';', expecting ']'.
+Number of errors: 1										   |	ERROR(13): Syntax error, unexpected ']', expecting numeric constant.
+												   >	ERROR(15): Syntax error, unexpected ';', expecting numeric constant.
+												   >	ERROR(17): Syntax error, unexpected numeric constant "33", expecting ',' or ';'.
+												   >	ERROR(19): Syntax error, unexpected numeric constant "33", expecting ',' or ';'.
+												   >	ERROR(21): Syntax error, unexpected ']', expecting ',' or ';'.
+												   >	ERROR(25): Syntax error, unexpected '[', expecting identifier.
+												   >	ERROR(27): Syntax error, unexpected '[', expecting identifier.
+												   >	ERROR(29): Syntax error, unexpected '[', expecting identifier.
+												   >	ERROR(31): Syntax error, unexpected '[', expecting identifier.
+												   >	ERROR(33): Syntax error, unexpected numeric constant "33", expecting identifier.
+												   >	ERROR(35): Syntax error, unexpected numeric constant "33", expecting identifier.
+												   >	ERROR(37): Syntax error, unexpected ']', expecting identifier.
+												   >	ERROR(41): Syntax error, unexpected "bool", expecting ']'.
+												   >	ERROR(43): Syntax error, unexpected ']', expecting numeric constant.
+												   >	ERROR(45): Syntax error, unexpected "bool", expecting numeric constant.
+												   >	ERROR(47): Syntax error, unexpected numeric constant "33", expecting ',' or ';'.
+												   >	ERROR(49): Syntax error, unexpected numeric constant "33", expecting ',' or ';'.
+												   >	ERROR(51): Syntax error, unexpected ']', expecting ',' or ';'.
+												   >	ERROR(53): Syntax error, unexpected "bool", expecting ',' or ';'.
+												   >	ERROR(55): Syntax error, unexpected '[', expecting identifier.
+												   >	ERROR(57): Syntax error, unexpected '[', expecting identifier.
+												   >	ERROR(59): Syntax error, unexpected '[', expecting identifier.
+												   >	ERROR(61): Syntax error, unexpected '[', expecting identifier.
+												   >	ERROR(63): Syntax error, unexpected numeric constant "33", expecting identifier.
+												   >	ERROR(65): Syntax error, unexpected numeric constant "33", expecting identifier.
+												   >	ERROR(67): Syntax error, unexpected ']', expecting identifier.
+												   >	ERROR(69): Syntax error, unexpected "bool", expecting identifier.
+												   >	Number of warnings: 0
+												   >	Number of errors: 30
+============================================================================================================
+data/syntaxerr-type.c-
+ERROR(2): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-type.c-
+												   >	ERROR(2): Syntax error, unexpected ';', expecting identifier.
+												   >	ERROR(3): Syntax error, unexpected identifier "b", expecting ',' or ';'.
+												   >	ERROR(5): Syntax error, unexpected "int", expecting identifier.
+												   >	ERROR(7): Syntax error, unexpected "bool", expecting ',' or ';'.
+												   >	ERROR(8): Syntax error, unexpected ',', expecting identifier.
+												   >	ERROR(9): Syntax error, unexpected "while", expecting identifier.
+												   >	ERROR(11): Syntax error, unexpected identifier "b", expecting ',' or ';'.
+Number of errors: 1										   |	Number of errors: 7
+============================================================================================================
+data/syntaxerr-typefun.c-
+ERROR(9): syntax error										   |	====================================
+WARNING(3): Expecting to return type int but function 'dog' has no return statement.		   |	FILE: syntaxerr-typefun.c-
+ERROR(4): Symbol 'z' is already declared at line 2.						   |	ERROR(9): Syntax error, unexpected '*', expecting "bool" or "char" or "int" or ')'.
+ERROR(5): Symbol 'dog' is already declared at line 3.						   |	ERROR(14): Syntax error, unexpected ';', expecting "bool" or "char" or "int" or ')'.
+WARNING(5): Expecting to return type int but function 'dog' has no return statement.		   |	ERROR(16): Syntax error, unexpected ';', expecting '{'.
+WARNING(5): The parameter 'x' seems not to be used.						   |	ERROR(20): Syntax error, unexpected '(', expecting identifier.
+ERROR(6): Symbol 'z' is already declared at line 2.						   |	ERROR(22): Syntax error, unexpected '(', expecting identifier.
+ERROR(7): Symbol 'dog' is already declared at line 3.						   |	ERROR(24): Syntax error, unexpected ')', expecting identifier.
+WARNING(7): Expecting to return type int but function 'dog' has no return statement.		   |	ERROR(26): Syntax error, unexpected ';', expecting identifier.
+WARNING(7): The parameter 'x' seems not to be used.						   |	ERROR(28): Syntax error, unexpected identifier "dog", expecting "bool" or "char" or "int".
+WARNING(7): The parameter 'y' seems not to be used.						   |	ERROR(30): Syntax error, unexpected ';', expecting "bool" or "char" or "int" or ')'.
+ERROR(8): Symbol 'z' is already declared at line 2.						   |	ERROR(32): Syntax error, unexpected identifier "dog", expecting "bool" or "char" or "int".
+WARNING(3): The function 'dog' seems not to be used.						   |	ERROR(34): Syntax error, unexpected ';', expecting '('.
+WARNING(2): The variable 'z' seems not to be used.						   |	ERROR(36): Syntax error, unexpected '('.
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	ERROR(38): Syntax error, unexpected '('.
+Number of warnings: 8										   |	ERROR(40): Syntax error, unexpected ')'.
+Number of errors: 6										   |	ERROR(42): Syntax error, unexpected ';'.
+												   >	ERROR(45): Syntax error, unexpected '*', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(47): Syntax error, unexpected '*', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(49): Syntax error, unexpected '*', expecting ',' or ';'.
+												   >	ERROR(51): Syntax error, unexpected '*', expecting ',' or ';'.
+												   >	ERROR(53): Syntax error, unexpected '(', expecting identifier.
+												   >	ERROR(55): Syntax error, unexpected '(', expecting identifier.
+												   >	ERROR(57): Syntax error, unexpected '*', expecting identifier.
+												   >	ERROR(59): Syntax error, unexpected '*', expecting identifier.
+												   >	ERROR(61): Syntax error, unexpected '*', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(63): Syntax error, unexpected '*', expecting "bool" or "char" or "int" or ')'.
+												   >	ERROR(65): Syntax error, unexpected '*', expecting '('.
+												   >	ERROR(67): Syntax error, unexpected '*', expecting '('.
+												   >	ERROR(69): Syntax error, unexpected '('.
+												   >	ERROR(71): Syntax error, unexpected '('.
+												   >	ERROR(73): Syntax error, unexpected '*'.
+												   >	ERROR(75): Syntax error, unexpected '*'.
+												   >	ERROR(81): Syntax error, unexpected "break", expecting "bool" or "char" or "int".
+												   >	ERROR(82): Syntax error, unexpected "bool", expecting ')'.
+												   >	ERROR(84): Syntax error, unexpected "bool", expecting ',' or ';'.
+												   >	ERROR(86): Syntax error, unexpected '(', expecting identifier.
+												   >	ERROR(88): Syntax error, unexpected '(', expecting identifier.
+												   >	ERROR(90): Syntax error, unexpected "bool", expecting identifier.
+												   >	ERROR(92): Syntax error, unexpected "bool", expecting identifier.
+												   >	ERROR(94): Syntax error, unexpected ';', expecting '{'.
+												   >	ERROR(98): Syntax error, unexpected identifier "dog", expecting "bool" or "char" or "int".
+												   >	ERROR(100): Syntax error, unexpected "bool", expecting '('.
+												   >	ERROR(102): Syntax error, unexpected '('.
+												   >	ERROR(104): Syntax error, unexpected '('.
+												   >	ERROR(106): Syntax error, unexpected ')', expecting ',' or ';'.
+												   >	Number of warnings: 0
+												   >	Number of errors: 44
+============================================================================================================
+data/syntaxerr-unary.c-
+ERROR(5): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-unary.c-
+												   >	ERROR(5): Syntax error, unexpected "while".
+												   >	ERROR(6): Syntax error, unexpected ';'.
+												   >	ERROR(8): Syntax error, unexpected "while".
+												   >	ERROR(9): Syntax error, unexpected ';'.
+												   >	ERROR(12): Syntax error, unexpected "while".
+												   >	ERROR(13): Syntax error, unexpected ';'.
+												   >	ERROR(16): Syntax error, unexpected ';'.
+Number of errors: 1										   |	Number of errors: 7
+============================================================================================================
+data/syntaxerr-while.c-
+ERROR(4): syntax error										   |	====================================
+ERROR(LINKER): A function named 'main' with no parameters must be defined.			   |	FILE: syntaxerr-while.c-
+												   >	ERROR(4): Syntax error, unexpected ')', expecting "do" or "or".
+												   >	ERROR(6): Syntax error, unexpected "int", expecting "do" or "or".
+												   >	ERROR(8): Syntax error, unexpected "int".
+												   >	ERROR(10): Syntax error, unexpected "int".
+												   >	ERROR(12): Syntax error, unexpected "int".
+												   >	ERROR(14): Syntax error, unexpected "int".
+												   >	ERROR(16): Syntax error, unexpected "int".
+												   >	ERROR(18): Syntax error, unexpected "int".
+												   >	ERROR(21): Syntax error, unexpected ')', expecting "do" or "or".
+												   >	ERROR(23): Syntax error, unexpected ';'.
+												   >	ERROR(25): Syntax error, unexpected ')'.
+												   >	ERROR(27): Syntax error, unexpected ';'.
+												   >	ERROR(29): Syntax error, unexpected ')', expecting "do" or "or".
+												   >	ERROR(31): Syntax error, unexpected ';'.
+												   >	ERROR(33): Syntax error, unexpected ')'.
+												   >	ERROR(35): Syntax error, unexpected ';'.
+												   >	ERROR(38): Syntax error, unexpected ')', expecting "do" or "or".
+												   >	ERROR(40): Syntax error, unexpected ';', expecting "do" or "or".
+												   >	ERROR(42): Syntax error, unexpected ')'.
+												   >	ERROR(44): Syntax error, unexpected ';'.
+												   >	ERROR(46): Syntax error, unexpected ')', expecting "do" or "or".
+												   >	ERROR(48): Syntax error, unexpected ';', expecting "do" or "or".
+												   >	ERROR(50): Syntax error, unexpected ')'.
+												   >	ERROR(52): Syntax error, unexpected ';'.
+Number of errors: 1										   |	Number of errors: 24
+============================================================================================================
+1019 / 1880 lines differed in total.

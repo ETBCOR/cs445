@@ -1,0 +1,778 @@
+SCRIPT RUNNING WITH "assign2"
+int gx[7], gy[6];
+bool ga[5], gb[4];
+
+main()
+{
+    int x[8], y[7];
+    bool a[6], b[5];
+     
+    x[5] = 111;
+    output(x[5]);
+    y[4] = 222;
+    output(y[4]);
+    a[3] = true;
+    outputb(a[3]);
+    b[2] = false;
+    outputb(b[2]);
+    outnl();
+
+    gx[5] = 333;
+    output(gx[5]);
+    gy[4] = 444;
+    output(gy[4]);
+    ga[3] = false;
+    outputb(ga[3]);
+    gb[2] = true;
+    outputb(gb[2]);
+    outnl();
+     
+    x[5] = y[4];
+    output(x[5]);
+    a[3] = b[2];
+    outputb(a[3]);
+    outnl();
+
+    gx[5] = gy[4];
+    output(gx[5]);
+    ga[3] = gb[2];
+    outputb(ga[3]);
+    outnl();
+
+    return;
+}
+---- MEM DIFF ----
+Func: input returns type int [mem: Global loc: 0 size: -2] [line: -1]					Func: input returns type int [mem: Global loc: 0 size: -2] [line: -1]
+Sibling: 1  Func: output returns type void [mem: Global loc: 0 size: -3] [line: -1]			Sibling: 1  Func: output returns type void [mem: Global loc: 0 size: -3] [line: -1]
+.   Child: 0  Parm: *dummy* of type int [mem: Parameter loc: -2 size: 1] [line: -1]			.   Child: 0  Parm: *dummy* of type int [mem: Parameter loc: -2 size: 1] [line: -1]
+Sibling: 2  Func: inputb returns type bool [mem: Global loc: 0 size: -2] [line: -1]			Sibling: 2  Func: inputb returns type bool [mem: Global loc: 0 size: -2] [line: -1]
+Sibling: 3  Func: outputb returns type void [mem: Global loc: 0 size: -3] [line: -1]			Sibling: 3  Func: outputb returns type void [mem: Global loc: 0 size: -3] [line: -1]
+.   Child: 0  Parm: *dummy* of type bool [mem: Parameter loc: -2 size: 1] [line: -1]			.   Child: 0  Parm: *dummy* of type bool [mem: Parameter loc: -2 size: 1] [line: -1]
+Sibling: 4  Func: inputc returns type char [mem: Global loc: 0 size: -2] [line: -1]			Sibling: 4  Func: inputc returns type char [mem: Global loc: 0 size: -2] [line: -1]
+Sibling: 5  Func: outputc returns type void [mem: Global loc: 0 size: -3] [line: -1]			Sibling: 5  Func: outputc returns type void [mem: Global loc: 0 size: -3] [line: -1]
+.   Child: 0  Parm: *dummy* of type char [mem: Parameter loc: -2 size: 1] [line: -1]			.   Child: 0  Parm: *dummy* of type char [mem: Parameter loc: -2 size: 1] [line: -1]
+Sibling: 6  Func: outnl returns type void [mem: Global loc: 0 size: -2] [line: -1]			Sibling: 6  Func: outnl returns type void [mem: Global loc: 0 size: -2] [line: -1]
+Sibling: 7  Var: gx of array of type int [mem: Global loc: -1 size: 8] [line: 1]			Sibling: 7  Var: gx of array of type int [mem: Global loc: -1 size: 8] [line: 1]
+Sibling: 8  Var: gy of array of type int [mem: Global loc: -9 size: 7] [line: 1]			Sibling: 8  Var: gy of array of type int [mem: Global loc: -9 size: 7] [line: 1]
+Sibling: 9  Var: ga of array of type bool [mem: Global loc: -16 size: 6] [line: 2]			Sibling: 9  Var: ga of array of type bool [mem: Global loc: -16 size: 6] [line: 2]
+Sibling: 10  Var: gb of array of type bool [mem: Global loc: -22 size: 5] [line: 2]			Sibling: 10  Var: gb of array of type bool [mem: Global loc: -22 size: 5] [line: 2]
+Sibling: 11  Func: main returns type void [mem: Global loc: 0 size: -2] [line: 4]			Sibling: 11  Func: main returns type void [mem: Global loc: 0 size: -2] [line: 4]
+.   Child: 1  Compound [mem: None loc: 0 size: -32] [line: 5]						.   Child: 1  Compound [mem: None loc: 0 size: -32] [line: 5]
+.   .   Child: 0  Var: x of array of type int [mem: Local loc: -3 size: 9] [line: 6]			.   .   Child: 0  Var: x of array of type int [mem: Local loc: -3 size: 9] [line: 6]
+.   .   Sibling: 1  Var: y of array of type int [mem: Local loc: -12 size: 8] [line: 6]			.   .   Sibling: 1  Var: y of array of type int [mem: Local loc: -12 size: 8] [line: 6]
+.   .   Sibling: 2  Var: a of array of type bool [mem: Local loc: -20 size: 7] [line: 7]		.   .   Sibling: 2  Var: a of array of type bool [mem: Local loc: -20 size: 7] [line: 7]
+.   .   Sibling: 3  Var: b of array of type bool [mem: Local loc: -27 size: 6] [line: 7]		.   .   Sibling: 3  Var: b of array of type bool [mem: Local loc: -27 size: 6] [line: 7]
+.   .   Child: 1  Assign: := of type int [line: 9]							.   .   Child: 1  Assign: := of type int [line: 9]
+.   .   .   Child: 0  Op: [ of type int [line: 9]							.   .   .   Child: 0  Op: [ of type int [line: 9]
+.   .   .   .   Child: 0  Id: x of array of type int [mem: Local loc: -3 size: 9] [line: 9]		.   .   .   .   Child: 0  Id: x of array of type int [mem: Local loc: -3 size: 9] [line: 9]
+.   .   .   .   Child: 1  Const 5 of type int [line: 9]							.   .   .   .   Child: 1  Const 5 of type int [line: 9]
+.   .   .   Child: 1  Const 111 of type int [line: 9]							.   .   .   Child: 1  Const 111 of type int [line: 9]
+.   .   Sibling: 1  Call: output of type void [line: 10]						.   .   Sibling: 1  Call: output of type void [line: 10]
+.   .   .   Child: 0  Op: [ of type int [line: 10]							.   .   .   Child: 0  Op: [ of type int [line: 10]
+.   .   .   .   Child: 0  Id: x of array of type int [mem: Local loc: -3 size: 9] [line: 10]		.   .   .   .   Child: 0  Id: x of array of type int [mem: Local loc: -3 size: 9] [line: 10]
+.   .   .   .   Child: 1  Const 5 of type int [line: 10]						.   .   .   .   Child: 1  Const 5 of type int [line: 10]
+.   .   Sibling: 2  Assign: := of type int [line: 11]							.   .   Sibling: 2  Assign: := of type int [line: 11]
+.   .   .   Child: 0  Op: [ of type int [line: 11]							.   .   .   Child: 0  Op: [ of type int [line: 11]
+.   .   .   .   Child: 0  Id: y of array of type int [mem: Local loc: -12 size: 8] [line: 11]		.   .   .   .   Child: 0  Id: y of array of type int [mem: Local loc: -12 size: 8] [line: 11]
+.   .   .   .   Child: 1  Const 4 of type int [line: 11]						.   .   .   .   Child: 1  Const 4 of type int [line: 11]
+.   .   .   Child: 1  Const 222 of type int [line: 11]							.   .   .   Child: 1  Const 222 of type int [line: 11]
+.   .   Sibling: 3  Call: output of type void [line: 12]						.   .   Sibling: 3  Call: output of type void [line: 12]
+.   .   .   Child: 0  Op: [ of type int [line: 12]							.   .   .   Child: 0  Op: [ of type int [line: 12]
+.   .   .   .   Child: 0  Id: y of array of type int [mem: Local loc: -12 size: 8] [line: 12]		.   .   .   .   Child: 0  Id: y of array of type int [mem: Local loc: -12 size: 8] [line: 12]
+.   .   .   .   Child: 1  Const 4 of type int [line: 12]						.   .   .   .   Child: 1  Const 4 of type int [line: 12]
+.   .   Sibling: 4  Assign: := of type bool [line: 13]							.   .   Sibling: 4  Assign: := of type bool [line: 13]
+.   .   .   Child: 0  Op: [ of type bool [line: 13]							.   .   .   Child: 0  Op: [ of type bool [line: 13]
+.   .   .   .   Child: 0  Id: a of array of type bool [mem: Local loc: -20 size: 7] [line: 13]		.   .   .   .   Child: 0  Id: a of array of type bool [mem: Local loc: -20 size: 7] [line: 13]
+.   .   .   .   Child: 1  Const 3 of type int [line: 13]						.   .   .   .   Child: 1  Const 3 of type int [line: 13]
+.   .   .   Child: 1  Const true of type bool [line: 13]						.   .   .   Child: 1  Const true of type bool [line: 13]
+.   .   Sibling: 5  Call: outputb of type void [line: 14]						.   .   Sibling: 5  Call: outputb of type void [line: 14]
+.   .   .   Child: 0  Op: [ of type bool [line: 14]							.   .   .   Child: 0  Op: [ of type bool [line: 14]
+.   .   .   .   Child: 0  Id: a of array of type bool [mem: Local loc: -20 size: 7] [line: 14]		.   .   .   .   Child: 0  Id: a of array of type bool [mem: Local loc: -20 size: 7] [line: 14]
+.   .   .   .   Child: 1  Const 3 of type int [line: 14]						.   .   .   .   Child: 1  Const 3 of type int [line: 14]
+.   .   Sibling: 6  Assign: := of type bool [line: 15]							.   .   Sibling: 6  Assign: := of type bool [line: 15]
+.   .   .   Child: 0  Op: [ of type bool [line: 15]							.   .   .   Child: 0  Op: [ of type bool [line: 15]
+.   .   .   .   Child: 0  Id: b of array of type bool [mem: Local loc: -27 size: 6] [line: 15]		.   .   .   .   Child: 0  Id: b of array of type bool [mem: Local loc: -27 size: 6] [line: 15]
+.   .   .   .   Child: 1  Const 2 of type int [line: 15]						.   .   .   .   Child: 1  Const 2 of type int [line: 15]
+.   .   .   Child: 1  Const false of type bool [line: 15]						.   .   .   Child: 1  Const false of type bool [line: 15]
+.   .   Sibling: 7  Call: outputb of type void [line: 16]						.   .   Sibling: 7  Call: outputb of type void [line: 16]
+.   .   .   Child: 0  Op: [ of type bool [line: 16]							.   .   .   Child: 0  Op: [ of type bool [line: 16]
+.   .   .   .   Child: 0  Id: b of array of type bool [mem: Local loc: -27 size: 6] [line: 16]		.   .   .   .   Child: 0  Id: b of array of type bool [mem: Local loc: -27 size: 6] [line: 16]
+.   .   .   .   Child: 1  Const 2 of type int [line: 16]						.   .   .   .   Child: 1  Const 2 of type int [line: 16]
+.   .   Sibling: 8  Call: outnl of type void [line: 17]							.   .   Sibling: 8  Call: outnl of type void [line: 17]
+.   .   Sibling: 9  Assign: := of type int [line: 19]							.   .   Sibling: 9  Assign: := of type int [line: 19]
+.   .   .   Child: 0  Op: [ of type int [line: 19]							.   .   .   Child: 0  Op: [ of type int [line: 19]
+.   .   .   .   Child: 0  Id: gx of array of type int [mem: Global loc: -1 size: 8] [line: 19]		.   .   .   .   Child: 0  Id: gx of array of type int [mem: Global loc: -1 size: 8] [line: 19]
+.   .   .   .   Child: 1  Const 5 of type int [line: 19]						.   .   .   .   Child: 1  Const 5 of type int [line: 19]
+.   .   .   Child: 1  Const 333 of type int [line: 19]							.   .   .   Child: 1  Const 333 of type int [line: 19]
+.   .   Sibling: 10  Call: output of type void [line: 20]						.   .   Sibling: 10  Call: output of type void [line: 20]
+.   .   .   Child: 0  Op: [ of type int [line: 20]							.   .   .   Child: 0  Op: [ of type int [line: 20]
+.   .   .   .   Child: 0  Id: gx of array of type int [mem: Global loc: -1 size: 8] [line: 20]		.   .   .   .   Child: 0  Id: gx of array of type int [mem: Global loc: -1 size: 8] [line: 20]
+.   .   .   .   Child: 1  Const 5 of type int [line: 20]						.   .   .   .   Child: 1  Const 5 of type int [line: 20]
+.   .   Sibling: 11  Assign: := of type int [line: 21]							.   .   Sibling: 11  Assign: := of type int [line: 21]
+.   .   .   Child: 0  Op: [ of type int [line: 21]							.   .   .   Child: 0  Op: [ of type int [line: 21]
+.   .   .   .   Child: 0  Id: gy of array of type int [mem: Global loc: -9 size: 7] [line: 21]		.   .   .   .   Child: 0  Id: gy of array of type int [mem: Global loc: -9 size: 7] [line: 21]
+.   .   .   .   Child: 1  Const 4 of type int [line: 21]						.   .   .   .   Child: 1  Const 4 of type int [line: 21]
+.   .   .   Child: 1  Const 444 of type int [line: 21]							.   .   .   Child: 1  Const 444 of type int [line: 21]
+.   .   Sibling: 12  Call: output of type void [line: 22]						.   .   Sibling: 12  Call: output of type void [line: 22]
+.   .   .   Child: 0  Op: [ of type int [line: 22]							.   .   .   Child: 0  Op: [ of type int [line: 22]
+.   .   .   .   Child: 0  Id: gy of array of type int [mem: Global loc: -9 size: 7] [line: 22]		.   .   .   .   Child: 0  Id: gy of array of type int [mem: Global loc: -9 size: 7] [line: 22]
+.   .   .   .   Child: 1  Const 4 of type int [line: 22]						.   .   .   .   Child: 1  Const 4 of type int [line: 22]
+.   .   Sibling: 13  Assign: := of type bool [line: 23]							.   .   Sibling: 13  Assign: := of type bool [line: 23]
+.   .   .   Child: 0  Op: [ of type bool [line: 23]							.   .   .   Child: 0  Op: [ of type bool [line: 23]
+.   .   .   .   Child: 0  Id: ga of array of type bool [mem: Global loc: -16 size: 6] [line: 23]	.   .   .   .   Child: 0  Id: ga of array of type bool [mem: Global loc: -16 size: 6] [line: 23]
+.   .   .   .   Child: 1  Const 3 of type int [line: 23]						.   .   .   .   Child: 1  Const 3 of type int [line: 23]
+.   .   .   Child: 1  Const false of type bool [line: 23]						.   .   .   Child: 1  Const false of type bool [line: 23]
+.   .   Sibling: 14  Call: outputb of type void [line: 24]						.   .   Sibling: 14  Call: outputb of type void [line: 24]
+.   .   .   Child: 0  Op: [ of type bool [line: 24]							.   .   .   Child: 0  Op: [ of type bool [line: 24]
+.   .   .   .   Child: 0  Id: ga of array of type bool [mem: Global loc: -16 size: 6] [line: 24]	.   .   .   .   Child: 0  Id: ga of array of type bool [mem: Global loc: -16 size: 6] [line: 24]
+.   .   .   .   Child: 1  Const 3 of type int [line: 24]						.   .   .   .   Child: 1  Const 3 of type int [line: 24]
+.   .   Sibling: 15  Assign: := of type bool [line: 25]							.   .   Sibling: 15  Assign: := of type bool [line: 25]
+.   .   .   Child: 0  Op: [ of type bool [line: 25]							.   .   .   Child: 0  Op: [ of type bool [line: 25]
+.   .   .   .   Child: 0  Id: gb of array of type bool [mem: Global loc: -22 size: 5] [line: 25]	.   .   .   .   Child: 0  Id: gb of array of type bool [mem: Global loc: -22 size: 5] [line: 25]
+.   .   .   .   Child: 1  Const 2 of type int [line: 25]						.   .   .   .   Child: 1  Const 2 of type int [line: 25]
+.   .   .   Child: 1  Const true of type bool [line: 25]						.   .   .   Child: 1  Const true of type bool [line: 25]
+.   .   Sibling: 16  Call: outputb of type void [line: 26]						.   .   Sibling: 16  Call: outputb of type void [line: 26]
+.   .   .   Child: 0  Op: [ of type bool [line: 26]							.   .   .   Child: 0  Op: [ of type bool [line: 26]
+.   .   .   .   Child: 0  Id: gb of array of type bool [mem: Global loc: -22 size: 5] [line: 26]	.   .   .   .   Child: 0  Id: gb of array of type bool [mem: Global loc: -22 size: 5] [line: 26]
+.   .   .   .   Child: 1  Const 2 of type int [line: 26]						.   .   .   .   Child: 1  Const 2 of type int [line: 26]
+.   .   Sibling: 17  Call: outnl of type void [line: 27]						.   .   Sibling: 17  Call: outnl of type void [line: 27]
+.   .   Sibling: 18  Assign: := of type int [line: 29]							.   .   Sibling: 18  Assign: := of type int [line: 29]
+.   .   .   Child: 0  Op: [ of type int [line: 29]							.   .   .   Child: 0  Op: [ of type int [line: 29]
+.   .   .   .   Child: 0  Id: x of array of type int [mem: Local loc: -3 size: 9] [line: 29]		.   .   .   .   Child: 0  Id: x of array of type int [mem: Local loc: -3 size: 9] [line: 29]
+.   .   .   .   Child: 1  Const 5 of type int [line: 29]						.   .   .   .   Child: 1  Const 5 of type int [line: 29]
+.   .   .   Child: 1  Op: [ of type int [line: 29]							.   .   .   Child: 1  Op: [ of type int [line: 29]
+.   .   .   .   Child: 0  Id: y of array of type int [mem: Local loc: -12 size: 8] [line: 29]		.   .   .   .   Child: 0  Id: y of array of type int [mem: Local loc: -12 size: 8] [line: 29]
+.   .   .   .   Child: 1  Const 4 of type int [line: 29]						.   .   .   .   Child: 1  Const 4 of type int [line: 29]
+.   .   Sibling: 19  Call: output of type void [line: 30]						.   .   Sibling: 19  Call: output of type void [line: 30]
+.   .   .   Child: 0  Op: [ of type int [line: 30]							.   .   .   Child: 0  Op: [ of type int [line: 30]
+.   .   .   .   Child: 0  Id: x of array of type int [mem: Local loc: -3 size: 9] [line: 30]		.   .   .   .   Child: 0  Id: x of array of type int [mem: Local loc: -3 size: 9] [line: 30]
+.   .   .   .   Child: 1  Const 5 of type int [line: 30]						.   .   .   .   Child: 1  Const 5 of type int [line: 30]
+.   .   Sibling: 20  Assign: := of type bool [line: 31]							.   .   Sibling: 20  Assign: := of type bool [line: 31]
+.   .   .   Child: 0  Op: [ of type bool [line: 31]							.   .   .   Child: 0  Op: [ of type bool [line: 31]
+.   .   .   .   Child: 0  Id: a of array of type bool [mem: Local loc: -20 size: 7] [line: 31]		.   .   .   .   Child: 0  Id: a of array of type bool [mem: Local loc: -20 size: 7] [line: 31]
+.   .   .   .   Child: 1  Const 3 of type int [line: 31]						.   .   .   .   Child: 1  Const 3 of type int [line: 31]
+.   .   .   Child: 1  Op: [ of type bool [line: 31]							.   .   .   Child: 1  Op: [ of type bool [line: 31]
+.   .   .   .   Child: 0  Id: b of array of type bool [mem: Local loc: -27 size: 6] [line: 31]		.   .   .   .   Child: 0  Id: b of array of type bool [mem: Local loc: -27 size: 6] [line: 31]
+.   .   .   .   Child: 1  Const 2 of type int [line: 31]						.   .   .   .   Child: 1  Const 2 of type int [line: 31]
+.   .   Sibling: 21  Call: outputb of type void [line: 32]						.   .   Sibling: 21  Call: outputb of type void [line: 32]
+.   .   .   Child: 0  Op: [ of type bool [line: 32]							.   .   .   Child: 0  Op: [ of type bool [line: 32]
+.   .   .   .   Child: 0  Id: a of array of type bool [mem: Local loc: -20 size: 7] [line: 32]		.   .   .   .   Child: 0  Id: a of array of type bool [mem: Local loc: -20 size: 7] [line: 32]
+.   .   .   .   Child: 1  Const 3 of type int [line: 32]						.   .   .   .   Child: 1  Const 3 of type int [line: 32]
+.   .   Sibling: 22  Call: outnl of type void [line: 33]						.   .   Sibling: 22  Call: outnl of type void [line: 33]
+.   .   Sibling: 23  Assign: := of type int [line: 35]							.   .   Sibling: 23  Assign: := of type int [line: 35]
+.   .   .   Child: 0  Op: [ of type int [line: 35]							.   .   .   Child: 0  Op: [ of type int [line: 35]
+.   .   .   .   Child: 0  Id: gx of array of type int [mem: Global loc: -1 size: 8] [line: 35]		.   .   .   .   Child: 0  Id: gx of array of type int [mem: Global loc: -1 size: 8] [line: 35]
+.   .   .   .   Child: 1  Const 5 of type int [line: 35]						.   .   .   .   Child: 1  Const 5 of type int [line: 35]
+.   .   .   Child: 1  Op: [ of type int [line: 35]							.   .   .   Child: 1  Op: [ of type int [line: 35]
+.   .   .   .   Child: 0  Id: gy of array of type int [mem: Global loc: -9 size: 7] [line: 35]		.   .   .   .   Child: 0  Id: gy of array of type int [mem: Global loc: -9 size: 7] [line: 35]
+.   .   .   .   Child: 1  Const 4 of type int [line: 35]						.   .   .   .   Child: 1  Const 4 of type int [line: 35]
+.   .   Sibling: 24  Call: output of type void [line: 36]						.   .   Sibling: 24  Call: output of type void [line: 36]
+.   .   .   Child: 0  Op: [ of type int [line: 36]							.   .   .   Child: 0  Op: [ of type int [line: 36]
+.   .   .   .   Child: 0  Id: gx of array of type int [mem: Global loc: -1 size: 8] [line: 36]		.   .   .   .   Child: 0  Id: gx of array of type int [mem: Global loc: -1 size: 8] [line: 36]
+.   .   .   .   Child: 1  Const 5 of type int [line: 36]						.   .   .   .   Child: 1  Const 5 of type int [line: 36]
+.   .   Sibling: 25  Assign: := of type bool [line: 37]							.   .   Sibling: 25  Assign: := of type bool [line: 37]
+.   .   .   Child: 0  Op: [ of type bool [line: 37]							.   .   .   Child: 0  Op: [ of type bool [line: 37]
+.   .   .   .   Child: 0  Id: ga of array of type bool [mem: Global loc: -16 size: 6] [line: 37]	.   .   .   .   Child: 0  Id: ga of array of type bool [mem: Global loc: -16 size: 6] [line: 37]
+.   .   .   .   Child: 1  Const 3 of type int [line: 37]						.   .   .   .   Child: 1  Const 3 of type int [line: 37]
+.   .   .   Child: 1  Op: [ of type bool [line: 37]							.   .   .   Child: 1  Op: [ of type bool [line: 37]
+.   .   .   .   Child: 0  Id: gb of array of type bool [mem: Global loc: -22 size: 5] [line: 37]	.   .   .   .   Child: 0  Id: gb of array of type bool [mem: Global loc: -22 size: 5] [line: 37]
+.   .   .   .   Child: 1  Const 2 of type int [line: 37]						.   .   .   .   Child: 1  Const 2 of type int [line: 37]
+.   .   Sibling: 26  Call: outputb of type void [line: 38]						.   .   Sibling: 26  Call: outputb of type void [line: 38]
+.   .   .   Child: 0  Op: [ of type bool [line: 38]							.   .   .   Child: 0  Op: [ of type bool [line: 38]
+.   .   .   .   Child: 0  Id: ga of array of type bool [mem: Global loc: -16 size: 6] [line: 38]	.   .   .   .   Child: 0  Id: ga of array of type bool [mem: Global loc: -16 size: 6] [line: 38]
+.   .   .   .   Child: 1  Const 3 of type int [line: 38]						.   .   .   .   Child: 1  Const 3 of type int [line: 38]
+.   .   Sibling: 27  Call: outnl of type void [line: 39]						.   .   Sibling: 27  Call: outnl of type void [line: 39]
+.   .   Sibling: 28  Return [line: 41]									.   .   Sibling: 28  Return [line: 41]
+Offset for end of global space: -26									Offset for end of global space: -26
+Number of warnings: 0											Number of warnings: 0
+Number of errors: 0											Number of errors: 0
+---- TMCODE DIFF ----
+* C- compiler version C-S21										* C- compiler version C-S21
+* Built: Mon Nov 28 14:13:20 2022								   |	* Built: Apr 18, 2021 (toffset telemetry)
+* Author: Ethan Corgatelli									   |	* Author: Robert B. Heckendorn
+* File compiled: assign2.c-									   |	* File compiled:  assign2.c-
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION input											* FUNCTION input
+  1:     ST  3,-1(1)	Store return address 								  1:     ST  3,-1(1)	Store return address 
+  2:     IN  2,2,2	Grab int input 									  2:     IN  2,2,2	Grab int input 
+  3:     LD  3,-1(1)	Load return address 								  3:     LD  3,-1(1)	Load return address 
+  4:     LD  1,0(1)	Adjust fp 									  4:     LD  1,0(1)	Adjust fp 
+  5:    JMP  7,0(3)	Return 										  5:    JMP  7,0(3)	Return 
+* END FUNCTION input											* END FUNCTION input
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION output											* FUNCTION output
+  6:     ST  3,-1(1)	Store return address 								  6:     ST  3,-1(1)	Store return address 
+  7:     LD  3,-2(1)	Load parameter 									  7:     LD  3,-2(1)	Load parameter 
+  8:    OUT  3,3,3	Output integer 									  8:    OUT  3,3,3	Output integer 
+  9:     LD  3,-1(1)	Load return address 								  9:     LD  3,-1(1)	Load return address 
+ 10:     LD  1,0(1)	Adjust fp 									 10:     LD  1,0(1)	Adjust fp 
+ 11:    JMP  7,0(3)	Return 										 11:    JMP  7,0(3)	Return 
+* END FUNCTION output											* END FUNCTION output
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION inputb											* FUNCTION inputb
+ 12:     ST  3,-1(1)	Store return address 								 12:     ST  3,-1(1)	Store return address 
+ 13:    INB  2,2,2	Grab bool input 								 13:    INB  2,2,2	Grab bool input 
+ 14:     LD  3,-1(1)	Load return address 								 14:     LD  3,-1(1)	Load return address 
+ 15:     LD  1,0(1)	Adjust fp 									 15:     LD  1,0(1)	Adjust fp 
+ 16:    JMP  7,0(3)	Return 										 16:    JMP  7,0(3)	Return 
+* END FUNCTION inputb											* END FUNCTION inputb
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION outputb											* FUNCTION outputb
+ 17:     ST  3,-1(1)	Store return address 								 17:     ST  3,-1(1)	Store return address 
+ 18:     LD  3,-2(1)	Load parameter 									 18:     LD  3,-2(1)	Load parameter 
+ 19:   OUTB  3,3,3	Output bool 									 19:   OUTB  3,3,3	Output bool 
+ 20:     LD  3,-1(1)	Load return address 								 20:     LD  3,-1(1)	Load return address 
+ 21:     LD  1,0(1)	Adjust fp 									 21:     LD  1,0(1)	Adjust fp 
+ 22:    JMP  7,0(3)	Return 										 22:    JMP  7,0(3)	Return 
+* END FUNCTION outputb											* END FUNCTION outputb
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION inputc											* FUNCTION inputc
+ 23:     ST  3,-1(1)	Store return address 								 23:     ST  3,-1(1)	Store return address 
+ 24:    INC  2,2,2	Grab char input 								 24:    INC  2,2,2	Grab char input 
+ 25:     LD  3,-1(1)	Load return address 								 25:     LD  3,-1(1)	Load return address 
+ 26:     LD  1,0(1)	Adjust fp 									 26:     LD  1,0(1)	Adjust fp 
+ 27:    JMP  7,0(3)	Return 										 27:    JMP  7,0(3)	Return 
+* END FUNCTION inputc											* END FUNCTION inputc
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION outputc											* FUNCTION outputc
+ 28:     ST  3,-1(1)	Store return address 								 28:     ST  3,-1(1)	Store return address 
+ 29:     LD  3,-2(1)	Load parameter 									 29:     LD  3,-2(1)	Load parameter 
+ 30:   OUTC  3,3,3	Output char 									 30:   OUTC  3,3,3	Output char 
+ 31:     LD  3,-1(1)	Load return address 								 31:     LD  3,-1(1)	Load return address 
+ 32:     LD  1,0(1)	Adjust fp 									 32:     LD  1,0(1)	Adjust fp 
+ 33:    JMP  7,0(3)	Return 										 33:    JMP  7,0(3)	Return 
+* END FUNCTION outputc											* END FUNCTION outputc
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION outnl											* FUNCTION outnl
+ 34:     ST  3,-1(1)	Store return address 								 34:     ST  3,-1(1)	Store return address 
+ 35:  OUTNL  3,3,3	Output a newline 								 35:  OUTNL  3,3,3	Output a newline 
+ 36:     LD  3,-1(1)	Load return address 								 36:     LD  3,-1(1)	Load return address 
+ 37:     LD  1,0(1)	Adjust fp 									 37:     LD  1,0(1)	Adjust fp 
+ 38:    JMP  7,0(3)	Return 										 38:    JMP  7,0(3)	Return 
+* END FUNCTION outnl											* END FUNCTION outnl
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION main												* FUNCTION main
+* TOFF set: -2												* TOFF set: -2
+ 39:     ST  3,-1(1)	Store return address 								 39:     ST  3,-1(1)	Store return address 
+* COMPOUND												* COMPOUND
+* TOFF set: -32												* TOFF set: -32
+ 40:    LDC  3,8(6)	load size of array x								 40:    LDC  3,8(6)	load size of array x
+ 41:     ST  3,-2(1)	save size of array x								 41:     ST  3,-2(1)	save size of array x
+ 42:    LDC  3,7(6)	load size of array y								 42:    LDC  3,7(6)	load size of array y
+ 43:     ST  3,-11(1)	save size of array y								 43:     ST  3,-11(1)	save size of array y
+ 44:    LDC  3,6(6)	load size of array a								 44:    LDC  3,6(6)	load size of array a
+ 45:     ST  3,-19(1)	save size of array a								 45:     ST  3,-19(1)	save size of array a
+ 46:    LDC  3,5(6)	load size of array b								 46:    LDC  3,5(6)	load size of array b
+ 47:     ST  3,-26(1)	save size of array b								 47:     ST  3,-26(1)	save size of array b
+* Compound Body												* Compound Body
+* EXPRESSION												* EXPRESSION
+ 48:    LDC  3,5(6)	Load integer constant 								 48:    LDC  3,5(6)	Load integer constant 
+ 49:     ST  3,-32(1)	Push index 									 49:     ST  3,-32(1)	Push index 
+* TOFF dec: -33												* TOFF dec: -33
+ 50:    LDC  3,111(6)	Load integer constant 								 50:    LDC  3,111(6)	Load integer constant 
+* TOFF inc: -32												* TOFF inc: -32
+ 51:     LD  4,-32(1)	Pop index 									 51:     LD  4,-32(1)	Pop index 
+ 52:    LDA  5,-3(1)	Load address of base of array x							 52:    LDA  5,-3(1)	Load address of base of array x
+ 53:    SUB  5,5,4	Compute offset of value 							 53:    SUB  5,5,4	Compute offset of value 
+ 54:     ST  3,0(5)	Store variable x								 54:     ST  3,0(5)	Store variable x
+* EXPRESSION												* EXPRESSION
+* CALL output												* CALL output
+ 55:     ST  1,-32(1)	Store fp in ghost frame for output						 55:     ST  1,-32(1)	Store fp in ghost frame for output
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param 1												* Param 1
+ 56:    LDA  3,-3(1)	Load address of base of array x							 56:    LDA  3,-3(1)	Load address of base of array x
+ 57:     ST  3,-34(1)	Push left side 									 57:     ST  3,-34(1)	Push left side 
+* TOFF dec: -35												* TOFF dec: -35
+ 58:    LDC  3,5(6)	Load integer constant 								 58:    LDC  3,5(6)	Load integer constant 
+* TOFF inc: -34												* TOFF inc: -34
+ 59:     LD  4,-34(1)	Pop left into ac1 								 59:     LD  4,-34(1)	Pop left into ac1 
+ 60:    SUB  3,4,3	compute location from index 							 60:    SUB  3,4,3	compute location from index 
+ 61:     LD  3,0(3)	Load array element 								 61:     LD  3,0(3)	Load array element 
+ 62:     ST  3,-34(1)	Push parameter 									 62:     ST  3,-34(1)	Push parameter 
+* TOFF dec: -35												* TOFF dec: -35
+* Param end output											* Param end output
+ 63:    LDA  1,-32(1)	Ghost frame becomes new active frame 						 63:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+ 64:    LDA  3,1(7)	Return address in ac 								 64:    LDA  3,1(7)	Return address in ac 
+ 65:    JMP  7,-60(7)	CALL output									 65:    JMP  7,-60(7)	CALL output
+ 66:    LDA  3,0(2)	Save the result in ac 								 66:    LDA  3,0(2)	Save the result in ac 
+* Call end output											* Call end output
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION												* EXPRESSION
+ 67:    LDC  3,4(6)	Load integer constant 								 67:    LDC  3,4(6)	Load integer constant 
+ 68:     ST  3,-32(1)	Push index 									 68:     ST  3,-32(1)	Push index 
+* TOFF dec: -33												* TOFF dec: -33
+ 69:    LDC  3,222(6)	Load integer constant 								 69:    LDC  3,222(6)	Load integer constant 
+* TOFF inc: -32												* TOFF inc: -32
+ 70:     LD  4,-32(1)	Pop index 									 70:     LD  4,-32(1)	Pop index 
+ 71:    LDA  5,-12(1)	Load address of base of array y							 71:    LDA  5,-12(1)	Load address of base of array y
+ 72:    SUB  5,5,4	Compute offset of value 							 72:    SUB  5,5,4	Compute offset of value 
+ 73:     ST  3,0(5)	Store variable y								 73:     ST  3,0(5)	Store variable y
+* EXPRESSION												* EXPRESSION
+* CALL output												* CALL output
+ 74:     ST  1,-32(1)	Store fp in ghost frame for output						 74:     ST  1,-32(1)	Store fp in ghost frame for output
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param 1												* Param 1
+ 75:    LDA  3,-12(1)	Load address of base of array y							 75:    LDA  3,-12(1)	Load address of base of array y
+ 76:     ST  3,-34(1)	Push left side 									 76:     ST  3,-34(1)	Push left side 
+* TOFF dec: -35												* TOFF dec: -35
+ 77:    LDC  3,4(6)	Load integer constant 								 77:    LDC  3,4(6)	Load integer constant 
+* TOFF inc: -34												* TOFF inc: -34
+ 78:     LD  4,-34(1)	Pop left into ac1 								 78:     LD  4,-34(1)	Pop left into ac1 
+ 79:    SUB  3,4,3	compute location from index 							 79:    SUB  3,4,3	compute location from index 
+ 80:     LD  3,0(3)	Load array element 								 80:     LD  3,0(3)	Load array element 
+ 81:     ST  3,-34(1)	Push parameter 									 81:     ST  3,-34(1)	Push parameter 
+* TOFF dec: -35												* TOFF dec: -35
+* Param end output											* Param end output
+ 82:    LDA  1,-32(1)	Ghost frame becomes new active frame 						 82:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+ 83:    LDA  3,1(7)	Return address in ac 								 83:    LDA  3,1(7)	Return address in ac 
+ 84:    JMP  7,-79(7)	CALL output									 84:    JMP  7,-79(7)	CALL output
+ 85:    LDA  3,0(2)	Save the result in ac 								 85:    LDA  3,0(2)	Save the result in ac 
+* Call end output											* Call end output
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION												* EXPRESSION
+ 86:    LDC  3,3(6)	Load integer constant 								 86:    LDC  3,3(6)	Load integer constant 
+ 87:     ST  3,-32(1)	Push index 									 87:     ST  3,-32(1)	Push index 
+* TOFF dec: -33												* TOFF dec: -33
+ 88:    LDC  3,1(6)	Load Boolean constant 								 88:    LDC  3,1(6)	Load Boolean constant 
+* TOFF inc: -32												* TOFF inc: -32
+ 89:     LD  4,-32(1)	Pop index 									 89:     LD  4,-32(1)	Pop index 
+ 90:    LDA  5,-20(1)	Load address of base of array a							 90:    LDA  5,-20(1)	Load address of base of array a
+ 91:    SUB  5,5,4	Compute offset of value 							 91:    SUB  5,5,4	Compute offset of value 
+ 92:     ST  3,0(5)	Store variable a								 92:     ST  3,0(5)	Store variable a
+* EXPRESSION												* EXPRESSION
+* CALL outputb												* CALL outputb
+ 93:     ST  1,-32(1)	Store fp in ghost frame for outputb						 93:     ST  1,-32(1)	Store fp in ghost frame for outputb
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param 1												* Param 1
+ 94:    LDA  3,-20(1)	Load address of base of array a							 94:    LDA  3,-20(1)	Load address of base of array a
+ 95:     ST  3,-34(1)	Push left side 									 95:     ST  3,-34(1)	Push left side 
+* TOFF dec: -35												* TOFF dec: -35
+ 96:    LDC  3,3(6)	Load integer constant 								 96:    LDC  3,3(6)	Load integer constant 
+* TOFF inc: -34												* TOFF inc: -34
+ 97:     LD  4,-34(1)	Pop left into ac1 								 97:     LD  4,-34(1)	Pop left into ac1 
+ 98:    SUB  3,4,3	compute location from index 							 98:    SUB  3,4,3	compute location from index 
+ 99:     LD  3,0(3)	Load array element 								 99:     LD  3,0(3)	Load array element 
+100:     ST  3,-34(1)	Push parameter 									100:     ST  3,-34(1)	Push parameter 
+* TOFF dec: -35												* TOFF dec: -35
+* Param end outputb											* Param end outputb
+101:    LDA  1,-32(1)	Ghost frame becomes new active frame 						101:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+102:    LDA  3,1(7)	Return address in ac 								102:    LDA  3,1(7)	Return address in ac 
+103:    JMP  7,-87(7)	CALL outputb									103:    JMP  7,-87(7)	CALL outputb
+104:    LDA  3,0(2)	Save the result in ac 								104:    LDA  3,0(2)	Save the result in ac 
+* Call end outputb											* Call end outputb
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION												* EXPRESSION
+105:    LDC  3,2(6)	Load integer constant 								105:    LDC  3,2(6)	Load integer constant 
+106:     ST  3,-32(1)	Push index 									106:     ST  3,-32(1)	Push index 
+* TOFF dec: -33												* TOFF dec: -33
+107:    LDC  3,0(6)	Load Boolean constant 								107:    LDC  3,0(6)	Load Boolean constant 
+* TOFF inc: -32												* TOFF inc: -32
+108:     LD  4,-32(1)	Pop index 									108:     LD  4,-32(1)	Pop index 
+109:    LDA  5,-27(1)	Load address of base of array b							109:    LDA  5,-27(1)	Load address of base of array b
+110:    SUB  5,5,4	Compute offset of value 							110:    SUB  5,5,4	Compute offset of value 
+111:     ST  3,0(5)	Store variable b								111:     ST  3,0(5)	Store variable b
+* EXPRESSION												* EXPRESSION
+* CALL outputb												* CALL outputb
+112:     ST  1,-32(1)	Store fp in ghost frame for outputb						112:     ST  1,-32(1)	Store fp in ghost frame for outputb
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param 1												* Param 1
+113:    LDA  3,-27(1)	Load address of base of array b							113:    LDA  3,-27(1)	Load address of base of array b
+114:     ST  3,-34(1)	Push left side 									114:     ST  3,-34(1)	Push left side 
+* TOFF dec: -35												* TOFF dec: -35
+115:    LDC  3,2(6)	Load integer constant 								115:    LDC  3,2(6)	Load integer constant 
+* TOFF inc: -34												* TOFF inc: -34
+116:     LD  4,-34(1)	Pop left into ac1 								116:     LD  4,-34(1)	Pop left into ac1 
+117:    SUB  3,4,3	compute location from index 							117:    SUB  3,4,3	compute location from index 
+118:     LD  3,0(3)	Load array element 								118:     LD  3,0(3)	Load array element 
+119:     ST  3,-34(1)	Push parameter 									119:     ST  3,-34(1)	Push parameter 
+* TOFF dec: -35												* TOFF dec: -35
+* Param end outputb											* Param end outputb
+120:    LDA  1,-32(1)	Ghost frame becomes new active frame 						120:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+121:    LDA  3,1(7)	Return address in ac 								121:    LDA  3,1(7)	Return address in ac 
+122:    JMP  7,-106(7)	CALL outputb									122:    JMP  7,-106(7)	CALL outputb
+123:    LDA  3,0(2)	Save the result in ac 								123:    LDA  3,0(2)	Save the result in ac 
+* Call end outputb											* Call end outputb
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION												* EXPRESSION
+* CALL outnl												* CALL outnl
+124:     ST  1,-32(1)	Store fp in ghost frame for outnl						124:     ST  1,-32(1)	Store fp in ghost frame for outnl
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param end outnl											* Param end outnl
+125:    LDA  1,-32(1)	Ghost frame becomes new active frame 						125:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+126:    LDA  3,1(7)	Return address in ac 								126:    LDA  3,1(7)	Return address in ac 
+127:    JMP  7,-94(7)	CALL outnl									127:    JMP  7,-94(7)	CALL outnl
+128:    LDA  3,0(2)	Save the result in ac 								128:    LDA  3,0(2)	Save the result in ac 
+* Call end outnl											* Call end outnl
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION												* EXPRESSION
+129:    LDC  3,5(6)	Load integer constant 								129:    LDC  3,5(6)	Load integer constant 
+130:     ST  3,-32(1)	Push index 									130:     ST  3,-32(1)	Push index 
+* TOFF dec: -33												* TOFF dec: -33
+131:    LDC  3,333(6)	Load integer constant 								131:    LDC  3,333(6)	Load integer constant 
+* TOFF inc: -32												* TOFF inc: -32
+132:     LD  4,-32(1)	Pop index 									132:     LD  4,-32(1)	Pop index 
+133:    LDA  5,-1(0)	Load address of base of array gx						133:    LDA  5,-1(0)	Load address of base of array gx
+134:    SUB  5,5,4	Compute offset of value 							134:    SUB  5,5,4	Compute offset of value 
+135:     ST  3,0(5)	Store variable gx								135:     ST  3,0(5)	Store variable gx
+* EXPRESSION												* EXPRESSION
+* CALL output												* CALL output
+136:     ST  1,-32(1)	Store fp in ghost frame for output						136:     ST  1,-32(1)	Store fp in ghost frame for output
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param 1												* Param 1
+137:    LDA  3,-1(0)	Load address of base of array gx						137:    LDA  3,-1(0)	Load address of base of array gx
+138:     ST  3,-34(1)	Push left side 									138:     ST  3,-34(1)	Push left side 
+* TOFF dec: -35												* TOFF dec: -35
+139:    LDC  3,5(6)	Load integer constant 								139:    LDC  3,5(6)	Load integer constant 
+* TOFF inc: -34												* TOFF inc: -34
+140:     LD  4,-34(1)	Pop left into ac1 								140:     LD  4,-34(1)	Pop left into ac1 
+141:    SUB  3,4,3	compute location from index 							141:    SUB  3,4,3	compute location from index 
+142:     LD  3,0(3)	Load array element 								142:     LD  3,0(3)	Load array element 
+143:     ST  3,-34(1)	Push parameter 									143:     ST  3,-34(1)	Push parameter 
+* TOFF dec: -35												* TOFF dec: -35
+* Param end output											* Param end output
+144:    LDA  1,-32(1)	Ghost frame becomes new active frame 						144:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+145:    LDA  3,1(7)	Return address in ac 								145:    LDA  3,1(7)	Return address in ac 
+146:    JMP  7,-141(7)	CALL output									146:    JMP  7,-141(7)	CALL output
+147:    LDA  3,0(2)	Save the result in ac 								147:    LDA  3,0(2)	Save the result in ac 
+* Call end output											* Call end output
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION												* EXPRESSION
+148:    LDC  3,4(6)	Load integer constant 								148:    LDC  3,4(6)	Load integer constant 
+149:     ST  3,-32(1)	Push index 									149:     ST  3,-32(1)	Push index 
+* TOFF dec: -33												* TOFF dec: -33
+150:    LDC  3,444(6)	Load integer constant 								150:    LDC  3,444(6)	Load integer constant 
+* TOFF inc: -32												* TOFF inc: -32
+151:     LD  4,-32(1)	Pop index 									151:     LD  4,-32(1)	Pop index 
+152:    LDA  5,-9(0)	Load address of base of array gy						152:    LDA  5,-9(0)	Load address of base of array gy
+153:    SUB  5,5,4	Compute offset of value 							153:    SUB  5,5,4	Compute offset of value 
+154:     ST  3,0(5)	Store variable gy								154:     ST  3,0(5)	Store variable gy
+* EXPRESSION												* EXPRESSION
+* CALL output												* CALL output
+155:     ST  1,-32(1)	Store fp in ghost frame for output						155:     ST  1,-32(1)	Store fp in ghost frame for output
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param 1												* Param 1
+156:    LDA  3,-9(0)	Load address of base of array gy						156:    LDA  3,-9(0)	Load address of base of array gy
+157:     ST  3,-34(1)	Push left side 									157:     ST  3,-34(1)	Push left side 
+* TOFF dec: -35												* TOFF dec: -35
+158:    LDC  3,4(6)	Load integer constant 								158:    LDC  3,4(6)	Load integer constant 
+* TOFF inc: -34												* TOFF inc: -34
+159:     LD  4,-34(1)	Pop left into ac1 								159:     LD  4,-34(1)	Pop left into ac1 
+160:    SUB  3,4,3	compute location from index 							160:    SUB  3,4,3	compute location from index 
+161:     LD  3,0(3)	Load array element 								161:     LD  3,0(3)	Load array element 
+162:     ST  3,-34(1)	Push parameter 									162:     ST  3,-34(1)	Push parameter 
+* TOFF dec: -35												* TOFF dec: -35
+* Param end output											* Param end output
+163:    LDA  1,-32(1)	Ghost frame becomes new active frame 						163:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+164:    LDA  3,1(7)	Return address in ac 								164:    LDA  3,1(7)	Return address in ac 
+165:    JMP  7,-160(7)	CALL output									165:    JMP  7,-160(7)	CALL output
+166:    LDA  3,0(2)	Save the result in ac 								166:    LDA  3,0(2)	Save the result in ac 
+* Call end output											* Call end output
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION												* EXPRESSION
+167:    LDC  3,3(6)	Load integer constant 								167:    LDC  3,3(6)	Load integer constant 
+168:     ST  3,-32(1)	Push index 									168:     ST  3,-32(1)	Push index 
+* TOFF dec: -33												* TOFF dec: -33
+169:    LDC  3,0(6)	Load Boolean constant 								169:    LDC  3,0(6)	Load Boolean constant 
+* TOFF inc: -32												* TOFF inc: -32
+170:     LD  4,-32(1)	Pop index 									170:     LD  4,-32(1)	Pop index 
+171:    LDA  5,-16(0)	Load address of base of array ga						171:    LDA  5,-16(0)	Load address of base of array ga
+172:    SUB  5,5,4	Compute offset of value 							172:    SUB  5,5,4	Compute offset of value 
+173:     ST  3,0(5)	Store variable ga								173:     ST  3,0(5)	Store variable ga
+* EXPRESSION												* EXPRESSION
+* CALL outputb												* CALL outputb
+174:     ST  1,-32(1)	Store fp in ghost frame for outputb						174:     ST  1,-32(1)	Store fp in ghost frame for outputb
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param 1												* Param 1
+175:    LDA  3,-16(0)	Load address of base of array ga						175:    LDA  3,-16(0)	Load address of base of array ga
+176:     ST  3,-34(1)	Push left side 									176:     ST  3,-34(1)	Push left side 
+* TOFF dec: -35												* TOFF dec: -35
+177:    LDC  3,3(6)	Load integer constant 								177:    LDC  3,3(6)	Load integer constant 
+* TOFF inc: -34												* TOFF inc: -34
+178:     LD  4,-34(1)	Pop left into ac1 								178:     LD  4,-34(1)	Pop left into ac1 
+179:    SUB  3,4,3	compute location from index 							179:    SUB  3,4,3	compute location from index 
+180:     LD  3,0(3)	Load array element 								180:     LD  3,0(3)	Load array element 
+181:     ST  3,-34(1)	Push parameter 									181:     ST  3,-34(1)	Push parameter 
+* TOFF dec: -35												* TOFF dec: -35
+* Param end outputb											* Param end outputb
+182:    LDA  1,-32(1)	Ghost frame becomes new active frame 						182:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+183:    LDA  3,1(7)	Return address in ac 								183:    LDA  3,1(7)	Return address in ac 
+184:    JMP  7,-168(7)	CALL outputb									184:    JMP  7,-168(7)	CALL outputb
+185:    LDA  3,0(2)	Save the result in ac 								185:    LDA  3,0(2)	Save the result in ac 
+* Call end outputb											* Call end outputb
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION												* EXPRESSION
+186:    LDC  3,2(6)	Load integer constant 								186:    LDC  3,2(6)	Load integer constant 
+187:     ST  3,-32(1)	Push index 									187:     ST  3,-32(1)	Push index 
+* TOFF dec: -33												* TOFF dec: -33
+188:    LDC  3,1(6)	Load Boolean constant 								188:    LDC  3,1(6)	Load Boolean constant 
+* TOFF inc: -32												* TOFF inc: -32
+189:     LD  4,-32(1)	Pop index 									189:     LD  4,-32(1)	Pop index 
+190:    LDA  5,-22(0)	Load address of base of array gb						190:    LDA  5,-22(0)	Load address of base of array gb
+191:    SUB  5,5,4	Compute offset of value 							191:    SUB  5,5,4	Compute offset of value 
+192:     ST  3,0(5)	Store variable gb								192:     ST  3,0(5)	Store variable gb
+* EXPRESSION												* EXPRESSION
+* CALL outputb												* CALL outputb
+193:     ST  1,-32(1)	Store fp in ghost frame for outputb						193:     ST  1,-32(1)	Store fp in ghost frame for outputb
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param 1												* Param 1
+194:    LDA  3,-22(0)	Load address of base of array gb						194:    LDA  3,-22(0)	Load address of base of array gb
+195:     ST  3,-34(1)	Push left side 									195:     ST  3,-34(1)	Push left side 
+* TOFF dec: -35												* TOFF dec: -35
+196:    LDC  3,2(6)	Load integer constant 								196:    LDC  3,2(6)	Load integer constant 
+* TOFF inc: -34												* TOFF inc: -34
+197:     LD  4,-34(1)	Pop left into ac1 								197:     LD  4,-34(1)	Pop left into ac1 
+198:    SUB  3,4,3	compute location from index 							198:    SUB  3,4,3	compute location from index 
+199:     LD  3,0(3)	Load array element 								199:     LD  3,0(3)	Load array element 
+200:     ST  3,-34(1)	Push parameter 									200:     ST  3,-34(1)	Push parameter 
+* TOFF dec: -35												* TOFF dec: -35
+* Param end outputb											* Param end outputb
+201:    LDA  1,-32(1)	Ghost frame becomes new active frame 						201:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+202:    LDA  3,1(7)	Return address in ac 								202:    LDA  3,1(7)	Return address in ac 
+203:    JMP  7,-187(7)	CALL outputb									203:    JMP  7,-187(7)	CALL outputb
+204:    LDA  3,0(2)	Save the result in ac 								204:    LDA  3,0(2)	Save the result in ac 
+* Call end outputb											* Call end outputb
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION												* EXPRESSION
+* CALL outnl												* CALL outnl
+205:     ST  1,-32(1)	Store fp in ghost frame for outnl						205:     ST  1,-32(1)	Store fp in ghost frame for outnl
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param end outnl											* Param end outnl
+206:    LDA  1,-32(1)	Ghost frame becomes new active frame 						206:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+207:    LDA  3,1(7)	Return address in ac 								207:    LDA  3,1(7)	Return address in ac 
+208:    JMP  7,-175(7)	CALL outnl									208:    JMP  7,-175(7)	CALL outnl
+209:    LDA  3,0(2)	Save the result in ac 								209:    LDA  3,0(2)	Save the result in ac 
+* Call end outnl											* Call end outnl
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION												* EXPRESSION
+210:    LDC  3,5(6)	Load integer constant 								210:    LDC  3,5(6)	Load integer constant 
+211:     ST  3,-32(1)	Push index 									211:     ST  3,-32(1)	Push index 
+* TOFF dec: -33												* TOFF dec: -33
+212:    LDA  3,-12(1)	Load address of base of array y							212:    LDA  3,-12(1)	Load address of base of array y
+213:     ST  3,-33(1)	Push left side 									213:     ST  3,-33(1)	Push left side 
+* TOFF dec: -34												* TOFF dec: -34
+214:    LDC  3,4(6)	Load integer constant 								214:    LDC  3,4(6)	Load integer constant 
+* TOFF inc: -33												* TOFF inc: -33
+215:     LD  4,-33(1)	Pop left into ac1 								215:     LD  4,-33(1)	Pop left into ac1 
+216:    SUB  3,4,3	compute location from index 							216:    SUB  3,4,3	compute location from index 
+217:     LD  3,0(3)	Load array element 								217:     LD  3,0(3)	Load array element 
+* TOFF inc: -32												* TOFF inc: -32
+218:     LD  4,-32(1)	Pop index 									218:     LD  4,-32(1)	Pop index 
+219:    LDA  5,-3(1)	Load address of base of array x							219:    LDA  5,-3(1)	Load address of base of array x
+220:    SUB  5,5,4	Compute offset of value 							220:    SUB  5,5,4	Compute offset of value 
+221:     ST  3,0(5)	Store variable x								221:     ST  3,0(5)	Store variable x
+* EXPRESSION												* EXPRESSION
+* CALL output												* CALL output
+222:     ST  1,-32(1)	Store fp in ghost frame for output						222:     ST  1,-32(1)	Store fp in ghost frame for output
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param 1												* Param 1
+223:    LDA  3,-3(1)	Load address of base of array x							223:    LDA  3,-3(1)	Load address of base of array x
+224:     ST  3,-34(1)	Push left side 									224:     ST  3,-34(1)	Push left side 
+* TOFF dec: -35												* TOFF dec: -35
+225:    LDC  3,5(6)	Load integer constant 								225:    LDC  3,5(6)	Load integer constant 
+* TOFF inc: -34												* TOFF inc: -34
+226:     LD  4,-34(1)	Pop left into ac1 								226:     LD  4,-34(1)	Pop left into ac1 
+227:    SUB  3,4,3	compute location from index 							227:    SUB  3,4,3	compute location from index 
+228:     LD  3,0(3)	Load array element 								228:     LD  3,0(3)	Load array element 
+229:     ST  3,-34(1)	Push parameter 									229:     ST  3,-34(1)	Push parameter 
+* TOFF dec: -35												* TOFF dec: -35
+* Param end output											* Param end output
+230:    LDA  1,-32(1)	Ghost frame becomes new active frame 						230:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+231:    LDA  3,1(7)	Return address in ac 								231:    LDA  3,1(7)	Return address in ac 
+232:    JMP  7,-227(7)	CALL output									232:    JMP  7,-227(7)	CALL output
+233:    LDA  3,0(2)	Save the result in ac 								233:    LDA  3,0(2)	Save the result in ac 
+* Call end output											* Call end output
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION												* EXPRESSION
+234:    LDC  3,3(6)	Load integer constant 								234:    LDC  3,3(6)	Load integer constant 
+235:     ST  3,-32(1)	Push index 									235:     ST  3,-32(1)	Push index 
+* TOFF dec: -33												* TOFF dec: -33
+236:    LDA  3,-27(1)	Load address of base of array b							236:    LDA  3,-27(1)	Load address of base of array b
+237:     ST  3,-33(1)	Push left side 									237:     ST  3,-33(1)	Push left side 
+* TOFF dec: -34												* TOFF dec: -34
+238:    LDC  3,2(6)	Load integer constant 								238:    LDC  3,2(6)	Load integer constant 
+* TOFF inc: -33												* TOFF inc: -33
+239:     LD  4,-33(1)	Pop left into ac1 								239:     LD  4,-33(1)	Pop left into ac1 
+240:    SUB  3,4,3	compute location from index 							240:    SUB  3,4,3	compute location from index 
+241:     LD  3,0(3)	Load array element 								241:     LD  3,0(3)	Load array element 
+* TOFF inc: -32												* TOFF inc: -32
+242:     LD  4,-32(1)	Pop index 									242:     LD  4,-32(1)	Pop index 
+243:    LDA  5,-20(1)	Load address of base of array a							243:    LDA  5,-20(1)	Load address of base of array a
+244:    SUB  5,5,4	Compute offset of value 							244:    SUB  5,5,4	Compute offset of value 
+245:     ST  3,0(5)	Store variable a								245:     ST  3,0(5)	Store variable a
+* EXPRESSION												* EXPRESSION
+* CALL outputb												* CALL outputb
+246:     ST  1,-32(1)	Store fp in ghost frame for outputb						246:     ST  1,-32(1)	Store fp in ghost frame for outputb
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param 1												* Param 1
+247:    LDA  3,-20(1)	Load address of base of array a							247:    LDA  3,-20(1)	Load address of base of array a
+248:     ST  3,-34(1)	Push left side 									248:     ST  3,-34(1)	Push left side 
+* TOFF dec: -35												* TOFF dec: -35
+249:    LDC  3,3(6)	Load integer constant 								249:    LDC  3,3(6)	Load integer constant 
+* TOFF inc: -34												* TOFF inc: -34
+250:     LD  4,-34(1)	Pop left into ac1 								250:     LD  4,-34(1)	Pop left into ac1 
+251:    SUB  3,4,3	compute location from index 							251:    SUB  3,4,3	compute location from index 
+252:     LD  3,0(3)	Load array element 								252:     LD  3,0(3)	Load array element 
+253:     ST  3,-34(1)	Push parameter 									253:     ST  3,-34(1)	Push parameter 
+* TOFF dec: -35												* TOFF dec: -35
+* Param end outputb											* Param end outputb
+254:    LDA  1,-32(1)	Ghost frame becomes new active frame 						254:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+255:    LDA  3,1(7)	Return address in ac 								255:    LDA  3,1(7)	Return address in ac 
+256:    JMP  7,-240(7)	CALL outputb									256:    JMP  7,-240(7)	CALL outputb
+257:    LDA  3,0(2)	Save the result in ac 								257:    LDA  3,0(2)	Save the result in ac 
+* Call end outputb											* Call end outputb
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION												* EXPRESSION
+* CALL outnl												* CALL outnl
+258:     ST  1,-32(1)	Store fp in ghost frame for outnl						258:     ST  1,-32(1)	Store fp in ghost frame for outnl
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param end outnl											* Param end outnl
+259:    LDA  1,-32(1)	Ghost frame becomes new active frame 						259:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+260:    LDA  3,1(7)	Return address in ac 								260:    LDA  3,1(7)	Return address in ac 
+261:    JMP  7,-228(7)	CALL outnl									261:    JMP  7,-228(7)	CALL outnl
+262:    LDA  3,0(2)	Save the result in ac 								262:    LDA  3,0(2)	Save the result in ac 
+* Call end outnl											* Call end outnl
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION												* EXPRESSION
+263:    LDC  3,5(6)	Load integer constant 								263:    LDC  3,5(6)	Load integer constant 
+264:     ST  3,-32(1)	Push index 									264:     ST  3,-32(1)	Push index 
+* TOFF dec: -33												* TOFF dec: -33
+265:    LDA  3,-9(0)	Load address of base of array gy						265:    LDA  3,-9(0)	Load address of base of array gy
+266:     ST  3,-33(1)	Push left side 									266:     ST  3,-33(1)	Push left side 
+* TOFF dec: -34												* TOFF dec: -34
+267:    LDC  3,4(6)	Load integer constant 								267:    LDC  3,4(6)	Load integer constant 
+* TOFF inc: -33												* TOFF inc: -33
+268:     LD  4,-33(1)	Pop left into ac1 								268:     LD  4,-33(1)	Pop left into ac1 
+269:    SUB  3,4,3	compute location from index 							269:    SUB  3,4,3	compute location from index 
+270:     LD  3,0(3)	Load array element 								270:     LD  3,0(3)	Load array element 
+* TOFF inc: -32												* TOFF inc: -32
+271:     LD  4,-32(1)	Pop index 									271:     LD  4,-32(1)	Pop index 
+272:    LDA  5,-1(0)	Load address of base of array gx						272:    LDA  5,-1(0)	Load address of base of array gx
+273:    SUB  5,5,4	Compute offset of value 							273:    SUB  5,5,4	Compute offset of value 
+274:     ST  3,0(5)	Store variable gx								274:     ST  3,0(5)	Store variable gx
+* EXPRESSION												* EXPRESSION
+* CALL output												* CALL output
+275:     ST  1,-32(1)	Store fp in ghost frame for output						275:     ST  1,-32(1)	Store fp in ghost frame for output
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param 1												* Param 1
+276:    LDA  3,-1(0)	Load address of base of array gx						276:    LDA  3,-1(0)	Load address of base of array gx
+277:     ST  3,-34(1)	Push left side 									277:     ST  3,-34(1)	Push left side 
+* TOFF dec: -35												* TOFF dec: -35
+278:    LDC  3,5(6)	Load integer constant 								278:    LDC  3,5(6)	Load integer constant 
+* TOFF inc: -34												* TOFF inc: -34
+279:     LD  4,-34(1)	Pop left into ac1 								279:     LD  4,-34(1)	Pop left into ac1 
+280:    SUB  3,4,3	compute location from index 							280:    SUB  3,4,3	compute location from index 
+281:     LD  3,0(3)	Load array element 								281:     LD  3,0(3)	Load array element 
+282:     ST  3,-34(1)	Push parameter 									282:     ST  3,-34(1)	Push parameter 
+* TOFF dec: -35												* TOFF dec: -35
+* Param end output											* Param end output
+283:    LDA  1,-32(1)	Ghost frame becomes new active frame 						283:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+284:    LDA  3,1(7)	Return address in ac 								284:    LDA  3,1(7)	Return address in ac 
+285:    JMP  7,-280(7)	CALL output									285:    JMP  7,-280(7)	CALL output
+286:    LDA  3,0(2)	Save the result in ac 								286:    LDA  3,0(2)	Save the result in ac 
+* Call end output											* Call end output
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION												* EXPRESSION
+287:    LDC  3,3(6)	Load integer constant 								287:    LDC  3,3(6)	Load integer constant 
+288:     ST  3,-32(1)	Push index 									288:     ST  3,-32(1)	Push index 
+* TOFF dec: -33												* TOFF dec: -33
+289:    LDA  3,-22(0)	Load address of base of array gb						289:    LDA  3,-22(0)	Load address of base of array gb
+290:     ST  3,-33(1)	Push left side 									290:     ST  3,-33(1)	Push left side 
+* TOFF dec: -34												* TOFF dec: -34
+291:    LDC  3,2(6)	Load integer constant 								291:    LDC  3,2(6)	Load integer constant 
+* TOFF inc: -33												* TOFF inc: -33
+292:     LD  4,-33(1)	Pop left into ac1 								292:     LD  4,-33(1)	Pop left into ac1 
+293:    SUB  3,4,3	compute location from index 							293:    SUB  3,4,3	compute location from index 
+294:     LD  3,0(3)	Load array element 								294:     LD  3,0(3)	Load array element 
+* TOFF inc: -32												* TOFF inc: -32
+295:     LD  4,-32(1)	Pop index 									295:     LD  4,-32(1)	Pop index 
+296:    LDA  5,-16(0)	Load address of base of array ga						296:    LDA  5,-16(0)	Load address of base of array ga
+297:    SUB  5,5,4	Compute offset of value 							297:    SUB  5,5,4	Compute offset of value 
+298:     ST  3,0(5)	Store variable ga								298:     ST  3,0(5)	Store variable ga
+* EXPRESSION												* EXPRESSION
+* CALL outputb												* CALL outputb
+299:     ST  1,-32(1)	Store fp in ghost frame for outputb						299:     ST  1,-32(1)	Store fp in ghost frame for outputb
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param 1												* Param 1
+300:    LDA  3,-16(0)	Load address of base of array ga						300:    LDA  3,-16(0)	Load address of base of array ga
+301:     ST  3,-34(1)	Push left side 									301:     ST  3,-34(1)	Push left side 
+* TOFF dec: -35												* TOFF dec: -35
+302:    LDC  3,3(6)	Load integer constant 								302:    LDC  3,3(6)	Load integer constant 
+* TOFF inc: -34												* TOFF inc: -34
+303:     LD  4,-34(1)	Pop left into ac1 								303:     LD  4,-34(1)	Pop left into ac1 
+304:    SUB  3,4,3	compute location from index 							304:    SUB  3,4,3	compute location from index 
+305:     LD  3,0(3)	Load array element 								305:     LD  3,0(3)	Load array element 
+306:     ST  3,-34(1)	Push parameter 									306:     ST  3,-34(1)	Push parameter 
+* TOFF dec: -35												* TOFF dec: -35
+* Param end outputb											* Param end outputb
+307:    LDA  1,-32(1)	Ghost frame becomes new active frame 						307:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+308:    LDA  3,1(7)	Return address in ac 								308:    LDA  3,1(7)	Return address in ac 
+309:    JMP  7,-293(7)	CALL outputb									309:    JMP  7,-293(7)	CALL outputb
+310:    LDA  3,0(2)	Save the result in ac 								310:    LDA  3,0(2)	Save the result in ac 
+* Call end outputb											* Call end outputb
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION												* EXPRESSION
+* CALL outnl												* CALL outnl
+311:     ST  1,-32(1)	Store fp in ghost frame for outnl						311:     ST  1,-32(1)	Store fp in ghost frame for outnl
+* TOFF dec: -33												* TOFF dec: -33
+* TOFF dec: -34												* TOFF dec: -34
+* Param end outnl											* Param end outnl
+312:    LDA  1,-32(1)	Ghost frame becomes new active frame 						312:    LDA  1,-32(1)	Ghost frame becomes new active frame 
+313:    LDA  3,1(7)	Return address in ac 								313:    LDA  3,1(7)	Return address in ac 
+314:    JMP  7,-281(7)	CALL outnl									314:    JMP  7,-281(7)	CALL outnl
+315:    LDA  3,0(2)	Save the result in ac 								315:    LDA  3,0(2)	Save the result in ac 
+* Call end outnl											* Call end outnl
+* TOFF set: -32												* TOFF set: -32
+* EXPRESSION											   <
+* RETURN												* RETURN
+316:     LD  3,-1(1)	Load return address 								316:     LD  3,-1(1)	Load return address 
+317:     LD  1,0(1)	Adjust fp 									317:     LD  1,0(1)	Adjust fp 
+318:    JMP  7,0(3)	Return 										318:    JMP  7,0(3)	Return 
+* TOFF set: -2												* TOFF set: -2
+* END COMPOUND												* END COMPOUND
+* Add standard closing in case there is no return statement						* Add standard closing in case there is no return statement
+319:    LDC  2,0(6)	Set return value to 0 								319:    LDC  2,0(6)	Set return value to 0 
+320:     LD  3,-1(1)	Load return address 								320:     LD  3,-1(1)	Load return address 
+321:     LD  1,0(1)	Adjust fp 									321:     LD  1,0(1)	Adjust fp 
+322:    JMP  7,0(3)	Return 										322:    JMP  7,0(3)	Return 
+* END FUNCTION main											* END FUNCTION main
+  0:    JMP  7,322(7)	Jump to init [backpatch] 							  0:    JMP  7,322(7)	Jump to init [backpatch] 
+* INIT													* INIT
+323:    LDA  1,-26(0)	set first frame at end of globals 						323:    LDA  1,-26(0)	set first frame at end of globals 
+324:     ST  1,0(1)	store old fp (point to self) 							324:     ST  1,0(1)	store old fp (point to self) 
+* INIT GLOBALS AND STATICS										* INIT GLOBALS AND STATICS
+325:    LDC  3,7(6)	load size of array gx							   |	325:    LDC  3,5(6)	load size of array ga
+326:     ST  3,0(0)	save size of array gx							   |	326:     ST  3,-15(0)	save size of array ga
+327:    LDC  3,6(6)	load size of array gy							   |	327:    LDC  3,4(6)	load size of array gb
+328:     ST  3,-8(0)	save size of array gy							   |	328:     ST  3,-21(0)	save size of array gb
+329:    LDC  3,5(6)	load size of array ga							   |	329:    LDC  3,7(6)	load size of array gx
+330:     ST  3,-15(0)	save size of array ga							   |	330:     ST  3,0(0)	save size of array gx
+331:    LDC  3,4(6)	load size of array gb							   |	331:    LDC  3,6(6)	load size of array gy
+332:     ST  3,-21(0)	save size of array gb							   |	332:     ST  3,-8(0)	save size of array gy
+* END INIT GLOBALS AND STATICS										* END INIT GLOBALS AND STATICS
+333:    LDA  3,1(7)	Return address in ac 								333:    LDA  3,1(7)	Return address in ac 
+334:    JMP  7,-296(7)	Jump to main 									334:    JMP  7,-296(7)	Jump to main 
+335:   HALT  0,0,0	DONE! 										335:   HALT  0,0,0	DONE! 
+* END INIT												* END INIT

@@ -1,0 +1,131 @@
+
+Details of editing .y file to be more bullet proof.
+
+1. First modify addSibling (if you use mine) to only complain about adding a
+NULL if there are no errors.   That is don't complain on syntax errors.
+See below.
+
+2. I have added marker lines with the locations of lhs symbols in the bison grammar
+so you will know where to put the mods.   These markers have the '@' in them.
+
+
+// add a TreeNode to a list of siblings.
+// Adding a NULL to the list is probably a programming error
+// except in the case of syntax errors.
+TreeNode *addSibling(TreeNode *t, TreeNode *s)
+{
+    if (s==NULL && numErrors==0) {
+        printf("ERROR(SYSTEM): never add a NULL to a sibling list.\n");
+        exit(1);
+    }
+    if (t!=NULL) { 
+        TreeNode *tmp;
+
+        tmp = t;
+        while (tmp->sibling!=NULL) tmp = tmp->sibling;
+        tmp->sibling = s; 
+        return t;
+    }
+    return s;
+}
+
+--------------------------------------------------------------------------------
+
+ program      @
+ declList     @
+ decl         @
+              | error                                   { $$ = NULL; }
+ varDecl      @
+ varDecl      : typeSpec varDeclList ';'                { $$ = $2; setType($2, $1, false); yyerrok; }
+              | error varDeclList ';'                   { $$ = NULL; yyerrok; }
+              | typeSpec error ';'                      { $$ = NULL; yyerrok; }
+ scopedVarDecl @
+ scopedVarDecl: STATIC typeSpec varDeclList ';'         { $$ = $3; setType($3, $2, true); yyerrok; }
+              | typeSpec varDeclList ';'                { $$ = $2; setType($2, $1, false); yyerrok; }
+ varDeclList  @
+ varDeclList  : varDeclList ',' varDeclInit             { $$ = addSibling($1, $3); yyerrok; }
+              | varDeclList ',' error                   { $$ = NULL; }
+              | error                                   { $$ = NULL; }
+ varDeclInit  @
+              | error ':' simpleExp                     { $$ = NULL; yyerrok; }
+ varDeclId    @
+              | ID '[' error                            { $$ = NULL; }
+              | error ']'                               { $$ = NULL; yyerrok; }
+ typeSpec     @
+ funDecl      @
+              | typeSpec error                          { $$ = NULL; }
+              | typeSpec ID '(' error                   { $$ = NULL; }
+              | ID '(' error                            { $$ = NULL; }
+              | ID '(' parms ')' error                  { $$ = NULL; }
+ parms        @
+ parmList     @
+              | parmList ';' error                      { $$ = NULL; }
+              | error                                   { $$ = NULL; }
+ parmTypeList @
+              | typeSpec error                          { $$ = NULL; }
+ parmIdList   @
+ parmIdList   : parmIdList ',' parmId                   { $$ = addSibling($1, $3); yyerrok; }
+              | parmIdList ',' error                    { $$ = NULL; }
+              | error                                   { $$ = NULL; }
+ parmId       @
+ stmt         @
+ matched      @
+              | IF error                                { $$ = NULL; }
+              | IF error ELSE matched                   { $$ = NULL; yyerrok; }
+              | IF error THEN matched ELSE matched      { $$ = NULL; yyerrok; }
+              | WHILE error DO matched                  { $$ = NULL; yyerrok; }
+              | WHILE error                             { $$ = NULL; }
+              | FOR ID ASGN error DO matched            { $$ = NULL; yyerrok; }
+              | FOR error                               { $$ = NULL; }
+ iterRange    @
+              | simpleExp TO error                      { $$ = NULL; }
+              | error BY error                          { $$ = NULL; yyerrok; }
+              | simpleExp TO simpleExp BY error         { $$ = NULL; }
+ unmatched    @
+              | IF error THEN stmt                      { $$ = NULL; yyerrok; }
+              | IF error THEN matched ELSE unmatched    { $$ = NULL; yyerrok; }
+ expStmt      @
+              | error ';'                               { $$ = NULL; yyerrok; }
+ compoundStmt : Begin localDecls stmtList End           { $$ = newStmtNode(CompoundK, $1, $2, $3); yyerrok;}
+ localDecls   @
+ stmtList     @
+ returnStmt   @
+              | RETURN exp ';'                          { $$ = newStmtNode(ReturnK, $1, $2); yyerrok;
+              | RETURN error ';'                        { $$ = NULL; yyerrok; }
+ breakStmt    @
+ exp          @
+              | error assignop exp                      { $$ = NULL; yyerrok; }
+              | mutable assignop error                  { $$ = NULL; }
+              | error INC                               { $$ = NULL; yyerrok; }
+              | error DEC                               { $$ = NULL; yyerrok; }
+ assignop     @
+ simpleExp    @
+              | simpleExp OR error                      { $$ = NULL; };
+ andExp       @
+              | andExp AND error                        { $$ = NULL; }
+ unaryRelExp  @
+              | NOT error                               { $$ = NULL; }
+ relExp       @
+ relop        @
+ sumExp       @
+              | sumExp sumop error                      { $$ = NULL; }
+ sumop        @
+ mulExp       @
+              | mulExp mulop error                      { $$ = NULL; }
+ mulop        @
+ unaryExp     @
+              | unaryop error                           { $$ = NULL; }
+ unaryop      @
+ factor       @
+ mutable      @
+ immutable    @
+ immutable    : '(' exp ')'                             { $$ = $2; yyerrok; }
+              | '(' error                               { $$ = NULL; }
+ call         @
+              | error '('                               { $$ = NULL; yyerrok; }
+ args         @
+ argList      @
+ argList      : argList ',' exp                         { $$ = addSibling($1, $3); yyerrok; }
+              | argList ',' error                       { $$=NULL; }
+ constant     @
+

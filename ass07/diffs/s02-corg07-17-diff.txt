@@ -1,0 +1,339 @@
+SCRIPT RUNNING WITH "s02"
+// C-F22
+// testing static variables
+
+int runningSum;
+
+int sum(bool init; int x) {
+    int localGal;
+    static int runningSum;
+    int localGuy;
+
+    if init then  runningSum = 0;
+
+    runningSum += x;
+
+    return runningSum;
+}
+
+main()
+{
+    runningSum = 7000;
+    output(runningSum);
+
+    sum(true, 666);
+    sum(false, 3);
+    output(sum(false, 0));
+
+    output(runningSum);
+}
+---- MEM DIFF ----
+WARNING(7): The variable 'localGal' seems not to be used.						WARNING(7): The variable 'localGal' seems not to be used.
+WARNING(9): The variable 'localGuy' seems not to be used.						WARNING(9): The variable 'localGuy' seems not to be used.
+Func: input returns type int [mem: Global loc: 0 size: -2] [line: -1]					Func: input returns type int [mem: Global loc: 0 size: -2] [line: -1]
+Sibling: 1  Func: output returns type void [mem: Global loc: 0 size: -3] [line: -1]			Sibling: 1  Func: output returns type void [mem: Global loc: 0 size: -3] [line: -1]
+.   Child: 0  Parm: *dummy* of type int [mem: Parameter loc: -2 size: 1] [line: -1]			.   Child: 0  Parm: *dummy* of type int [mem: Parameter loc: -2 size: 1] [line: -1]
+Sibling: 2  Func: inputb returns type bool [mem: Global loc: 0 size: -2] [line: -1]			Sibling: 2  Func: inputb returns type bool [mem: Global loc: 0 size: -2] [line: -1]
+Sibling: 3  Func: outputb returns type void [mem: Global loc: 0 size: -3] [line: -1]			Sibling: 3  Func: outputb returns type void [mem: Global loc: 0 size: -3] [line: -1]
+.   Child: 0  Parm: *dummy* of type bool [mem: Parameter loc: -2 size: 1] [line: -1]			.   Child: 0  Parm: *dummy* of type bool [mem: Parameter loc: -2 size: 1] [line: -1]
+Sibling: 4  Func: inputc returns type char [mem: Global loc: 0 size: -2] [line: -1]			Sibling: 4  Func: inputc returns type char [mem: Global loc: 0 size: -2] [line: -1]
+Sibling: 5  Func: outputc returns type void [mem: Global loc: 0 size: -3] [line: -1]			Sibling: 5  Func: outputc returns type void [mem: Global loc: 0 size: -3] [line: -1]
+.   Child: 0  Parm: *dummy* of type char [mem: Parameter loc: -2 size: 1] [line: -1]			.   Child: 0  Parm: *dummy* of type char [mem: Parameter loc: -2 size: 1] [line: -1]
+Sibling: 6  Func: outnl returns type void [mem: Global loc: 0 size: -2] [line: -1]			Sibling: 6  Func: outnl returns type void [mem: Global loc: 0 size: -2] [line: -1]
+Sibling: 7  Var: runningSum of type int [mem: Global loc: 0 size: 1] [line: 4]				Sibling: 7  Var: runningSum of type int [mem: Global loc: 0 size: 1] [line: 4]
+Sibling: 8  Func: sum returns type int [mem: Global loc: 0 size: -4] [line: 6]				Sibling: 8  Func: sum returns type int [mem: Global loc: 0 size: -4] [line: 6]
+.   Child: 0  Parm: init of type bool [mem: Parameter loc: -2 size: 1] [line: 6]			.   Child: 0  Parm: init of type bool [mem: Parameter loc: -2 size: 1] [line: 6]
+.   Sibling: 1  Parm: x of type int [mem: Parameter loc: -3 size: 1] [line: 6]				.   Sibling: 1  Parm: x of type int [mem: Parameter loc: -3 size: 1] [line: 6]
+.   Child: 1  Compound [mem: None loc: 0 size: -6] [line: 6]						.   Child: 1  Compound [mem: None loc: 0 size: -6] [line: 6]
+.   .   Child: 0  Var: localGal of type int [mem: Local loc: -4 size: 1] [line: 7]			.   .   Child: 0  Var: localGal of type int [mem: Local loc: -4 size: 1] [line: 7]
+.   .   Sibling: 1  Var: runningSum of static type int [mem: LocalStatic loc: -1 size: 1] [line:	.   .   Sibling: 1  Var: runningSum of static type int [mem: LocalStatic loc: -1 size: 1] [line:
+.   .   Sibling: 2  Var: localGuy of type int [mem: Local loc: -5 size: 1] [line: 9]			.   .   Sibling: 2  Var: localGuy of type int [mem: Local loc: -5 size: 1] [line: 9]
+.   .   Child: 1  If [line: 11]										.   .   Child: 1  If [line: 11]
+.   .   .   Child: 0  Id: init of type bool [mem: Parameter loc: -2 size: 1] [line: 11]			.   .   .   Child: 0  Id: init of type bool [mem: Parameter loc: -2 size: 1] [line: 11]
+.   .   .   Child: 1  Assign: := of type int [line: 11]							.   .   .   Child: 1  Assign: := of type int [line: 11]
+.   .   .   .   Child: 0  Id: runningSum of static type int [mem: LocalStatic loc: -1 size: 1] [	.   .   .   .   Child: 0  Id: runningSum of static type int [mem: LocalStatic loc: -1 size: 1] [
+.   .   .   .   Child: 1  Const 0 of type int [line: 11]						.   .   .   .   Child: 1  Const 0 of type int [line: 11]
+.   .   Sibling: 1  Assign: += of type int [line: 13]							.   .   Sibling: 1  Assign: += of type int [line: 13]
+.   .   .   Child: 0  Id: runningSum of static type int [mem: LocalStatic loc: -1 size: 1] [line	.   .   .   Child: 0  Id: runningSum of static type int [mem: LocalStatic loc: -1 size: 1] [line
+.   .   .   Child: 1  Id: x of type int [mem: Parameter loc: -3 size: 1] [line: 13]			.   .   .   Child: 1  Id: x of type int [mem: Parameter loc: -3 size: 1] [line: 13]
+.   .   Sibling: 2  Return [line: 15]									.   .   Sibling: 2  Return [line: 15]
+.   .   .   Child: 0  Id: runningSum of static type int [mem: LocalStatic loc: -1 size: 1] [line	.   .   .   Child: 0  Id: runningSum of static type int [mem: LocalStatic loc: -1 size: 1] [line
+Sibling: 9  Func: main returns type void [mem: Global loc: 0 size: -2] [line: 18]			Sibling: 9  Func: main returns type void [mem: Global loc: 0 size: -2] [line: 18]
+.   Child: 1  Compound [mem: None loc: 0 size: -2] [line: 19]						.   Child: 1  Compound [mem: None loc: 0 size: -2] [line: 19]
+.   .   Child: 1  Assign: := of type int [line: 20]							.   .   Child: 1  Assign: := of type int [line: 20]
+.   .   .   Child: 0  Id: runningSum of type int [mem: Global loc: 0 size: 1] [line: 20]		.   .   .   Child: 0  Id: runningSum of type int [mem: Global loc: 0 size: 1] [line: 20]
+.   .   .   Child: 1  Const 7000 of type int [line: 20]							.   .   .   Child: 1  Const 7000 of type int [line: 20]
+.   .   Sibling: 1  Call: output of type void [line: 21]						.   .   Sibling: 1  Call: output of type void [line: 21]
+.   .   .   Child: 0  Id: runningSum of type int [mem: Global loc: 0 size: 1] [line: 21]		.   .   .   Child: 0  Id: runningSum of type int [mem: Global loc: 0 size: 1] [line: 21]
+.   .   Sibling: 2  Call: sum of type int [line: 23]							.   .   Sibling: 2  Call: sum of type int [line: 23]
+.   .   .   Child: 0  Const true of type bool [line: 23]						.   .   .   Child: 0  Const true of type bool [line: 23]
+.   .   .   Sibling: 1  Const 666 of type int [line: 23]						.   .   .   Sibling: 1  Const 666 of type int [line: 23]
+.   .   Sibling: 3  Call: sum of type int [line: 24]							.   .   Sibling: 3  Call: sum of type int [line: 24]
+.   .   .   Child: 0  Const false of type bool [line: 24]						.   .   .   Child: 0  Const false of type bool [line: 24]
+.   .   .   Sibling: 1  Const 3 of type int [line: 24]							.   .   .   Sibling: 1  Const 3 of type int [line: 24]
+.   .   Sibling: 4  Call: output of type void [line: 25]						.   .   Sibling: 4  Call: output of type void [line: 25]
+.   .   .   Child: 0  Call: sum of type int [line: 25]							.   .   .   Child: 0  Call: sum of type int [line: 25]
+.   .   .   .   Child: 0  Const false of type bool [line: 25]						.   .   .   .   Child: 0  Const false of type bool [line: 25]
+.   .   .   .   Sibling: 1  Const 0 of type int [line: 25]						.   .   .   .   Sibling: 1  Const 0 of type int [line: 25]
+.   .   Sibling: 5  Call: output of type void [line: 27]						.   .   Sibling: 5  Call: output of type void [line: 27]
+.   .   .   Child: 0  Id: runningSum of type int [mem: Global loc: 0 size: 1] [line: 27]		.   .   .   Child: 0  Id: runningSum of type int [mem: Global loc: 0 size: 1] [line: 27]
+Offset for end of global space: -2									Offset for end of global space: -2
+Number of warnings: 2											Number of warnings: 2
+Number of errors: 0											Number of errors: 0
+---- TMCODE DIFF ----
+* C- compiler version 07-08									   |	* C- compiler version C-S21
+* Built: Thu Dec  1 14:32:21 2022								   |	* Built: Apr 18, 2021 (toffset telemetry)
+* Author: Ethan Corgatelli									   |	* Author: Robert B. Heckendorn
+* File compiled: s02.c-										   |	* File compiled:  s02.c-
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION input											* FUNCTION input
+  1:     ST  3,-1(1)	Store return address 								  1:     ST  3,-1(1)	Store return address 
+  2:     IN  2,2,2	Grab int input 									  2:     IN  2,2,2	Grab int input 
+  3:     LD  3,-1(1)	Load return address 								  3:     LD  3,-1(1)	Load return address 
+  4:     LD  1,0(1)	Adjust fp 									  4:     LD  1,0(1)	Adjust fp 
+  5:    JMP  7,0(3)	Return 										  5:    JMP  7,0(3)	Return 
+* END FUNCTION input											* END FUNCTION input
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION output											* FUNCTION output
+  6:     ST  3,-1(1)	Store return address 								  6:     ST  3,-1(1)	Store return address 
+  7:     LD  3,-2(1)	Load parameter 									  7:     LD  3,-2(1)	Load parameter 
+  8:    OUT  3,3,3	Output integer 									  8:    OUT  3,3,3	Output integer 
+  9:     LD  3,-1(1)	Load return address 								  9:     LD  3,-1(1)	Load return address 
+ 10:     LD  1,0(1)	Adjust fp 									 10:     LD  1,0(1)	Adjust fp 
+ 11:    JMP  7,0(3)	Return 										 11:    JMP  7,0(3)	Return 
+* END FUNCTION output											* END FUNCTION output
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION inputb											* FUNCTION inputb
+ 12:     ST  3,-1(1)	Store return address 								 12:     ST  3,-1(1)	Store return address 
+ 13:    INB  2,2,2	Grab bool input 								 13:    INB  2,2,2	Grab bool input 
+ 14:     LD  3,-1(1)	Load return address 								 14:     LD  3,-1(1)	Load return address 
+ 15:     LD  1,0(1)	Adjust fp 									 15:     LD  1,0(1)	Adjust fp 
+ 16:    JMP  7,0(3)	Return 										 16:    JMP  7,0(3)	Return 
+* END FUNCTION inputb											* END FUNCTION inputb
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION outputb											* FUNCTION outputb
+ 17:     ST  3,-1(1)	Store return address 								 17:     ST  3,-1(1)	Store return address 
+ 18:     LD  3,-2(1)	Load parameter 									 18:     LD  3,-2(1)	Load parameter 
+ 19:   OUTB  3,3,3	Output bool 									 19:   OUTB  3,3,3	Output bool 
+ 20:     LD  3,-1(1)	Load return address 								 20:     LD  3,-1(1)	Load return address 
+ 21:     LD  1,0(1)	Adjust fp 									 21:     LD  1,0(1)	Adjust fp 
+ 22:    JMP  7,0(3)	Return 										 22:    JMP  7,0(3)	Return 
+* END FUNCTION outputb											* END FUNCTION outputb
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION inputc											* FUNCTION inputc
+ 23:     ST  3,-1(1)	Store return address 								 23:     ST  3,-1(1)	Store return address 
+ 24:    INC  2,2,2	Grab char input 								 24:    INC  2,2,2	Grab char input 
+ 25:     LD  3,-1(1)	Load return address 								 25:     LD  3,-1(1)	Load return address 
+ 26:     LD  1,0(1)	Adjust fp 									 26:     LD  1,0(1)	Adjust fp 
+ 27:    JMP  7,0(3)	Return 										 27:    JMP  7,0(3)	Return 
+* END FUNCTION inputc											* END FUNCTION inputc
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION outputc											* FUNCTION outputc
+ 28:     ST  3,-1(1)	Store return address 								 28:     ST  3,-1(1)	Store return address 
+ 29:     LD  3,-2(1)	Load parameter 									 29:     LD  3,-2(1)	Load parameter 
+ 30:   OUTC  3,3,3	Output char 									 30:   OUTC  3,3,3	Output char 
+ 31:     LD  3,-1(1)	Load return address 								 31:     LD  3,-1(1)	Load return address 
+ 32:     LD  1,0(1)	Adjust fp 									 32:     LD  1,0(1)	Adjust fp 
+ 33:    JMP  7,0(3)	Return 										 33:    JMP  7,0(3)	Return 
+* END FUNCTION outputc											* END FUNCTION outputc
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION outnl											* FUNCTION outnl
+ 34:     ST  3,-1(1)	Store return address 								 34:     ST  3,-1(1)	Store return address 
+ 35:  OUTNL  3,3,3	Output a newline 								 35:  OUTNL  3,3,3	Output a newline 
+ 36:     LD  3,-1(1)	Load return address 								 36:     LD  3,-1(1)	Load return address 
+ 37:     LD  1,0(1)	Adjust fp 									 37:     LD  1,0(1)	Adjust fp 
+ 38:    JMP  7,0(3)	Return 										 38:    JMP  7,0(3)	Return 
+* END FUNCTION outnl											* END FUNCTION outnl
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION sum												* FUNCTION sum
+* TOFF set: -4												* TOFF set: -4
+ 39:     ST  3,-1(1)	Store return address 								 39:     ST  3,-1(1)	Store return address 
+* COMPOUND												* COMPOUND
+* TOFF set: -6												* TOFF set: -6
+* Compound Body												* Compound Body
+* IF													* IF
+ 40:     LD  3,-2(1)	Load variable init								 40:     LD  3,-2(1)	Load variable init
+* THEN													* THEN
+* EXPRESSION												* EXPRESSION
+ 42:    LDC  3,0(6)	Load integer constant 								 42:    LDC  3,0(6)	Load integer constant 
+ 43:     ST  3,-1(0)	Store variable runningSum							 43:     ST  3,-1(0)	Store variable runningSum
+ 41:    JZR  3,2(7)	Jump around the THEN if false [backpatch] 					 41:    JZR  3,2(7)	Jump around the THEN if false [backpatch] 
+* END IF												* END IF
+* EXPRESSION												* EXPRESSION
+ 44:     LD  3,-3(1)	Load variable x									 44:     LD  3,-3(1)	Load variable x
+ 45:     LD  4,-1(0)	load lhs variable runningSum							 45:     LD  4,-1(0)	load lhs variable runningSum
+ 46:    ADD  3,4,3	op += 										 46:    ADD  3,4,3	op += 
+ 47:     ST  3,-1(0)	Store variable runningSum							 47:     ST  3,-1(0)	Store variable runningSum
+* RETURN												* RETURN
+ 48:     LD  3,-1(0)	Load variable runningSum							 48:     LD  3,-1(0)	Load variable runningSum
+ 49:    LDA  2,0(3)	Copy result to return register 							 49:    LDA  2,0(3)	Copy result to return register 
+ 50:     LD  3,-1(1)	Load return address 								 50:     LD  3,-1(1)	Load return address 
+ 51:     LD  1,0(1)	Adjust fp 									 51:     LD  1,0(1)	Adjust fp 
+ 52:    JMP  7,0(3)	Return 										 52:    JMP  7,0(3)	Return 
+* TOFF set: -4												* TOFF set: -4
+* END COMPOUND												* END COMPOUND
+* Add standard closing in case there is no return statement						* Add standard closing in case there is no return statement
+ 53:    LDC  2,0(6)	Set return value to 0 								 53:    LDC  2,0(6)	Set return value to 0 
+ 54:     LD  3,-1(1)	Load return address 								 54:     LD  3,-1(1)	Load return address 
+ 55:     LD  1,0(1)	Adjust fp 									 55:     LD  1,0(1)	Adjust fp 
+ 56:    JMP  7,0(3)	Return 										 56:    JMP  7,0(3)	Return 
+* END FUNCTION sum											* END FUNCTION sum
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION main												* FUNCTION main
+* TOFF set: -2												* TOFF set: -2
+ 57:     ST  3,-1(1)	Store return address 								 57:     ST  3,-1(1)	Store return address 
+* COMPOUND												* COMPOUND
+* TOFF set: -2												* TOFF set: -2
+* Compound Body												* Compound Body
+* EXPRESSION												* EXPRESSION
+ 58:    LDC  3,7000(6)	Load integer constant 								 58:    LDC  3,7000(6)	Load integer constant 
+ 59:     ST  3,0(0)	Store variable runningSum							 59:     ST  3,0(0)	Store variable runningSum
+* EXPRESSION												* EXPRESSION
+* CALL output												* CALL output
+ 60:     ST  1,-2(1)	Store fp in ghost frame for output						 60:     ST  1,-2(1)	Store fp in ghost frame for output
+* TOFF dec: -3												* TOFF dec: -3
+* TOFF dec: -4												* TOFF dec: -4
+* Param 1												* Param 1
+ 61:     LD  3,0(0)	Load variable runningSum							 61:     LD  3,0(0)	Load variable runningSum
+ 62:     ST  3,-4(1)	Push parameter 									 62:     ST  3,-4(1)	Push parameter 
+* TOFF dec: -5												* TOFF dec: -5
+* Param end output											* Param end output
+ 63:    LDA  1,-2(1)	Ghost frame becomes new active frame 						 63:    LDA  1,-2(1)	Ghost frame becomes new active frame 
+ 64:    LDA  3,1(7)	Return address in ac 								 64:    LDA  3,1(7)	Return address in ac 
+ 65:    JMP  7,-60(7)	CALL output									 65:    JMP  7,-60(7)	CALL output
+ 66:    LDA  3,0(2)	Save the result in ac 								 66:    LDA  3,0(2)	Save the result in ac 
+* Call end output											* Call end output
+* TOFF set: -2												* TOFF set: -2
+* EXPRESSION												* EXPRESSION
+* CALL sum												* CALL sum
+ 67:     ST  1,-2(1)	Store fp in ghost frame for sum							 67:     ST  1,-2(1)	Store fp in ghost frame for sum
+* TOFF dec: -3												* TOFF dec: -3
+* TOFF dec: -4												* TOFF dec: -4
+* Param 1												* Param 1
+ 68:    LDC  3,1(6)	Load Boolean constant 								 68:    LDC  3,1(6)	Load Boolean constant 
+ 69:     ST  3,-4(1)	Push parameter 									 69:     ST  3,-4(1)	Push parameter 
+* TOFF dec: -5												* TOFF dec: -5
+* Param 2												* Param 2
+ 70:    LDC  3,666(6)	Load integer constant 								 70:    LDC  3,666(6)	Load integer constant 
+ 71:     ST  3,-5(1)	Push parameter 									 71:     ST  3,-5(1)	Push parameter 
+* TOFF dec: -6												* TOFF dec: -6
+* Param end sum												* Param end sum
+ 72:    LDA  1,-2(1)	Ghost frame becomes new active frame 						 72:    LDA  1,-2(1)	Ghost frame becomes new active frame 
+ 73:    LDA  3,1(7)	Return address in ac 								 73:    LDA  3,1(7)	Return address in ac 
+ 74:    JMP  7,-36(7)	CALL sum									 74:    JMP  7,-36(7)	CALL sum
+ 75:    LDA  3,0(2)	Save the result in ac 								 75:    LDA  3,0(2)	Save the result in ac 
+* Call end sum												* Call end sum
+* TOFF set: -2												* TOFF set: -2
+* EXPRESSION												* EXPRESSION
+* CALL sum												* CALL sum
+ 76:     ST  1,-2(1)	Store fp in ghost frame for sum							 76:     ST  1,-2(1)	Store fp in ghost frame for sum
+* TOFF dec: -3												* TOFF dec: -3
+* TOFF dec: -4												* TOFF dec: -4
+* Param 1												* Param 1
+ 77:    LDC  3,0(6)	Load Boolean constant 								 77:    LDC  3,0(6)	Load Boolean constant 
+ 78:     ST  3,-4(1)	Push parameter 									 78:     ST  3,-4(1)	Push parameter 
+* TOFF dec: -5												* TOFF dec: -5
+* Param 2												* Param 2
+ 79:    LDC  3,3(6)	Load integer constant 								 79:    LDC  3,3(6)	Load integer constant 
+ 80:     ST  3,-5(1)	Push parameter 									 80:     ST  3,-5(1)	Push parameter 
+* TOFF dec: -6												* TOFF dec: -6
+* Param end sum												* Param end sum
+ 81:    LDA  1,-2(1)	Ghost frame becomes new active frame 						 81:    LDA  1,-2(1)	Ghost frame becomes new active frame 
+ 82:    LDA  3,1(7)	Return address in ac 								 82:    LDA  3,1(7)	Return address in ac 
+ 83:    JMP  7,-45(7)	CALL sum									 83:    JMP  7,-45(7)	CALL sum
+ 84:    LDA  3,0(2)	Save the result in ac 								 84:    LDA  3,0(2)	Save the result in ac 
+* Call end sum												* Call end sum
+* TOFF set: -2												* TOFF set: -2
+* EXPRESSION												* EXPRESSION
+* CALL output												* CALL output
+ 85:     ST  1,-2(1)	Store fp in ghost frame for output						 85:     ST  1,-2(1)	Store fp in ghost frame for output
+* TOFF dec: -3												* TOFF dec: -3
+* TOFF dec: -4												* TOFF dec: -4
+* Param 1												* Param 1
+* CALL sum												* CALL sum
+ 86:     ST  1,-4(1)	Store fp in ghost frame for sum							 86:     ST  1,-4(1)	Store fp in ghost frame for sum
+* TOFF dec: -5												* TOFF dec: -5
+* TOFF dec: -6												* TOFF dec: -6
+* Param 1												* Param 1
+ 87:    LDC  3,0(6)	Load Boolean constant 								 87:    LDC  3,0(6)	Load Boolean constant 
+ 88:     ST  3,-6(1)	Push parameter 									 88:     ST  3,-6(1)	Push parameter 
+* TOFF dec: -7												* TOFF dec: -7
+* Param 2												* Param 2
+ 89:    LDC  3,0(6)	Load integer constant 								 89:    LDC  3,0(6)	Load integer constant 
+ 90:     ST  3,-7(1)	Push parameter 									 90:     ST  3,-7(1)	Push parameter 
+* TOFF dec: -8												* TOFF dec: -8
+* Param end sum												* Param end sum
+ 91:    LDA  1,-4(1)	Ghost frame becomes new active frame 						 91:    LDA  1,-4(1)	Ghost frame becomes new active frame 
+ 92:    LDA  3,1(7)	Return address in ac 								 92:    LDA  3,1(7)	Return address in ac 
+ 93:    JMP  7,-55(7)	CALL sum									 93:    JMP  7,-55(7)	CALL sum
+ 94:    LDA  3,0(2)	Save the result in ac 								 94:    LDA  3,0(2)	Save the result in ac 
+* Call end sum												* Call end sum
+* TOFF set: -4												* TOFF set: -4
+ 95:     ST  3,-4(1)	Push parameter 									 95:     ST  3,-4(1)	Push parameter 
+* TOFF dec: -5												* TOFF dec: -5
+* Param end output											* Param end output
+ 96:    LDA  1,-2(1)	Ghost frame becomes new active frame 						 96:    LDA  1,-2(1)	Ghost frame becomes new active frame 
+ 97:    LDA  3,1(7)	Return address in ac 								 97:    LDA  3,1(7)	Return address in ac 
+ 98:    JMP  7,-93(7)	CALL output									 98:    JMP  7,-93(7)	CALL output
+ 99:    LDA  3,0(2)	Save the result in ac 								 99:    LDA  3,0(2)	Save the result in ac 
+* Call end output											* Call end output
+* TOFF set: -2												* TOFF set: -2
+* EXPRESSION												* EXPRESSION
+* CALL output												* CALL output
+100:     ST  1,-2(1)	Store fp in ghost frame for output						100:     ST  1,-2(1)	Store fp in ghost frame for output
+* TOFF dec: -3												* TOFF dec: -3
+* TOFF dec: -4												* TOFF dec: -4
+* Param 1												* Param 1
+101:     LD  3,0(0)	Load variable runningSum							101:     LD  3,0(0)	Load variable runningSum
+102:     ST  3,-4(1)	Push parameter 									102:     ST  3,-4(1)	Push parameter 
+* TOFF dec: -5												* TOFF dec: -5
+* Param end output											* Param end output
+103:    LDA  1,-2(1)	Ghost frame becomes new active frame 						103:    LDA  1,-2(1)	Ghost frame becomes new active frame 
+104:    LDA  3,1(7)	Return address in ac 								104:    LDA  3,1(7)	Return address in ac 
+105:    JMP  7,-100(7)	CALL output									105:    JMP  7,-100(7)	CALL output
+106:    LDA  3,0(2)	Save the result in ac 								106:    LDA  3,0(2)	Save the result in ac 
+* Call end output											* Call end output
+* TOFF set: -2												* TOFF set: -2
+* TOFF set: -2												* TOFF set: -2
+* END COMPOUND												* END COMPOUND
+* Add standard closing in case there is no return statement						* Add standard closing in case there is no return statement
+107:    LDC  2,0(6)	Set return value to 0 								107:    LDC  2,0(6)	Set return value to 0 
+108:     LD  3,-1(1)	Load return address 								108:     LD  3,-1(1)	Load return address 
+109:     LD  1,0(1)	Adjust fp 									109:     LD  1,0(1)	Adjust fp 
+110:    JMP  7,0(3)	Return 										110:    JMP  7,0(3)	Return 
+* END FUNCTION main											* END FUNCTION main
+  0:    JMP  7,110(7)	Jump to init [backpatch] 							  0:    JMP  7,110(7)	Jump to init [backpatch] 
+* INIT													* INIT
+111:    LDA  1,-2(0)	set first frame at end of globals 						111:    LDA  1,-2(0)	set first frame at end of globals 
+112:     ST  1,0(1)	store old fp (point to self) 							112:     ST  1,0(1)	store old fp (point to self) 
+* INIT GLOBALS AND STATICS										* INIT GLOBALS AND STATICS
+* runningSum isn't a function									   <
+* END INIT GLOBALS AND STATICS										* END INIT GLOBALS AND STATICS
+113:    LDA  3,1(7)	Return address in ac 								113:    LDA  3,1(7)	Return address in ac 
+114:    JMP  7,-58(7)	Jump to main 									114:    JMP  7,-58(7)	Jump to main 
+115:   HALT  0,0,0	DONE! 										115:   HALT  0,0,0	DONE! 
+* END INIT												* END INIT
+---- OUTPUT DIFF ----
+WARNING(7): The variable 'localGal' seems not to be used.						WARNING(7): The variable 'localGal' seems not to be used.
+WARNING(9): The variable 'localGuy' seems not to be used.						WARNING(9): The variable 'localGuy' seems not to be used.
+Number of warnings: 2											Number of warnings: 2
+Number of errors: 0											Number of errors: 0
+Loading file: data/UnitTests/s02.tm								   |	------------------------------------
+Enter command: command: a 200000								   |	Loading file: UnitTests/s02.tm
+command: o 500											   |	7000 669 7000
+command: g											   <
+7000 669 7000 											   <
+Status: Halted											   <
+Last executed cmd:  115: HALT  0,  0, 0  |  r[0]:9999 r[1]:9997 r[2]:0   r[3]:115 r[4]:669 r[5]:   <
+PC was 115, PC is now 116									   <
+command: x											   <
+Bye.													Bye.

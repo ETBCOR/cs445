@@ -1,0 +1,1178 @@
+====================================
+FILE: aamain2.c-
+-rw-------. 1 corg7983 domain_users  101 Nov 17 15:35 aamain2.c-
+-rw-------. 1 corg7983 domain_users  101 Nov 17 15:35 aamain2.c-.f21
+-rw-------. 1 corg7983 domain_users  101 Nov 17 15:35 aamain2.c-.f22
+-rw-------. 1 corg7983 domain_users   71 Nov 17 15:35 aamain2.expected
+-rw-------. 1 corg7983 domain_users   20 Nov 17 15:35 aamain2.in
+-rw-------. 1 corg7983 domain_users 1428 Dec  1 20:54 aamain2.mem
+-rw-------. 1 corg7983 domain_users    0 Nov 17 15:35 aamain2.mem.diffs
+-rw-------. 1 corg7983 domain_users 1470 Nov 17 15:35 aamain2.mem.f21
+-rw-------. 1 corg7983 domain_users   71 Dec  1 20:54 aamain2.out
+-rw-------. 1 corg7983 domain_users 4821 Dec  1 20:54 aamain2.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 aamain2.tm.diffs
+-rw-------. 1 corg7983 domain_users 4834 Nov 17 15:35 aamain2.tm.f21
+aamain2 (Output OK)
+====================================
+FILE: array0.c-
+-rw-------. 1 corg7983 domain_users   525 Nov 17 15:35 array0.c-
+-rw-------. 1 corg7983 domain_users   527 Nov 17 15:35 array0.c-.f21
+-rw-------. 1 corg7983 domain_users   525 Nov 17 15:35 array0.c-.f22
+-rw-------. 1 corg7983 domain_users    88 Nov 17 15:35 array0.expected
+-rw-------. 1 corg7983 domain_users  6293 Dec  1 20:54 array0.mem
+-rw-------. 1 corg7983 domain_users   238 Nov 17 15:35 array0.mem.diffs
+-rw-------. 1 corg7983 domain_users  6335 Nov 17 15:35 array0.mem.f21
+-rw-------. 1 corg7983 domain_users    88 Dec  1 20:54 array0.out
+-rw-------. 1 corg7983 domain_users 15092 Dec  1 20:54 array0.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 array0.tm.diffs
+-rw-------. 1 corg7983 domain_users 15056 Nov 17 15:35 array0.tm.f21
+array0 (Output OK)
+====================================
+FILE: array1.c-
+-rw-------. 1 corg7983 domain_users  209 Nov 17 15:35 array1.c-
+-rw-------. 1 corg7983 domain_users  212 Nov 17 15:35 array1.c-.f21
+-rw-------. 1 corg7983 domain_users  209 Nov 17 15:35 array1.c-.f22
+-rw-------. 1 corg7983 domain_users   96 Nov 17 15:35 array1.expected
+-rw-------. 1 corg7983 domain_users 3318 Dec  1 20:54 array1.mem
+-rw-------. 1 corg7983 domain_users  355 Nov 17 15:35 array1.mem.diffs
+-rw-------. 1 corg7983 domain_users 3360 Nov 17 15:35 array1.mem.f21
+-rw-------. 1 corg7983 domain_users   96 Dec  1 20:54 array1.out
+-rw-------. 1 corg7983 domain_users 6348 Dec  1 20:54 array1.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 array1.tm.diffs
+-rw-------. 1 corg7983 domain_users 6361 Nov 17 15:35 array1.tm.f21
+array1 (Output OK)
+====================================
+FILE: array2.c-
+-rw-------. 1 corg7983 domain_users  195 Nov 17 15:35 array2.c-
+-rw-------. 1 corg7983 domain_users  198 Nov 17 15:35 array2.c-.f21
+-rw-------. 1 corg7983 domain_users  195 Nov 17 15:35 array2.c-.f22
+-rw-------. 1 corg7983 domain_users   48 Nov 17 15:35 array2.expected
+-rw-------. 1 corg7983 domain_users 3073 Dec  1 20:54 array2.mem
+-rw-------. 1 corg7983 domain_users  351 Nov 17 15:35 array2.mem.diffs
+-rw-------. 1 corg7983 domain_users 3115 Nov 17 15:35 array2.mem.f21
+-rw-------. 1 corg7983 domain_users   48 Dec  1 20:54 array2.out
+-rw-------. 1 corg7983 domain_users 6189 Dec  1 20:54 array2.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 array2.tm.diffs
+-rw-------. 1 corg7983 domain_users 6198 Nov 17 15:35 array2.tm.f21
+array2 (Output OK)
+====================================
+FILE: array.c-
+-rw-------. 1 corg7983 domain_users   703 Nov 17 15:35 array.c-
+-rw-------. 1 corg7983 domain_users   715 Nov 17 15:35 array.c-.f21
+-rw-------. 1 corg7983 domain_users   703 Nov 17 15:35 array.c-.f22
+-rw-------. 1 corg7983 domain_users    75 Nov 17 15:35 array.expected
+-rw-------. 1 corg7983 domain_users  9747 Dec  1 20:54 array.mem
+-rw-------. 1 corg7983 domain_users  1464 Nov 17 15:35 array.mem.diffs
+-rw-------. 1 corg7983 domain_users  9789 Nov 17 15:35 array.mem.f21
+-rw-------. 1 corg7983 domain_users    75 Dec  1 20:54 array.out
+-rw-------. 1 corg7983 domain_users 19148 Dec  1 20:54 array.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 array.tm.diffs
+-rw-------. 1 corg7983 domain_users 19086 Nov 17 15:35 array.tm.f21
+array (Output OK)
+====================================
+FILE: arraysize.c-
+-rw-------. 1 corg7983 domain_users   487 Nov 17 15:35 arraysize.c-
+-rw-------. 1 corg7983 domain_users   490 Nov 17 15:35 arraysize.c-.f21
+-rw-------. 1 corg7983 domain_users   487 Nov 17 15:35 arraysize.c-.f22
+-rw-------. 1 corg7983 domain_users   205 Nov 17 15:35 arraysize.expected
+-rw-------. 1 corg7983 domain_users  6091 Dec  1 20:54 arraysize.mem
+-rw-------. 1 corg7983 domain_users   355 Nov 17 15:35 arraysize.mem.diffs
+-rw-------. 1 corg7983 domain_users  6133 Nov 17 15:35 arraysize.mem.f21
+-rw-------. 1 corg7983 domain_users   205 Dec  1 20:54 arraysize.out
+-rw-------. 1 corg7983 domain_users 13846 Dec  1 20:54 arraysize.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 arraysize.tm.diffs
+-rw-------. 1 corg7983 domain_users 13860 Nov 17 15:35 arraysize.tm.f21
+arraysize (Output OK)
+====================================
+FILE: assign1.c-
+-rw-------. 1 corg7983 domain_users   499 Nov 17 15:35 assign1.c-
+-rw-------. 1 corg7983 domain_users   511 Nov 17 15:35 assign1.c-.f21
+-rw-------. 1 corg7983 domain_users   499 Nov 17 15:35 assign1.c-.f22
+-rw-------. 1 corg7983 domain_users    77 Nov 17 15:35 assign1.expected
+-rw-------. 1 corg7983 domain_users  5957 Dec  1 20:54 assign1.mem
+-rw-------. 1 corg7983 domain_users  1472 Nov 17 15:35 assign1.mem.diffs
+-rw-------. 1 corg7983 domain_users  5999 Nov 17 15:35 assign1.mem.f21
+-rw-------. 1 corg7983 domain_users    77 Dec  1 20:54 assign1.out
+-rw-------. 1 corg7983 domain_users 10820 Dec  1 20:54 assign1.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 assign1.tm.diffs
+-rw-------. 1 corg7983 domain_users 10729 Nov 17 15:35 assign1.tm.f21
+assign1 (Output OK)
+====================================
+FILE: assign2.c-
+-rw-------. 1 corg7983 domain_users   607 Nov 17 15:35 assign2.c-
+-rw-------. 1 corg7983 domain_users   619 Nov 17 15:35 assign2.c-.f21
+-rw-------. 1 corg7983 domain_users   607 Nov 17 15:35 assign2.c-.f22
+-rw-------. 1 corg7983 domain_users    77 Nov 17 15:35 assign2.expected
+-rw-------. 1 corg7983 domain_users  9458 Dec  1 20:54 assign2.mem
+-rw-------. 1 corg7983 domain_users  1478 Nov 17 15:35 assign2.mem.diffs
+-rw-------. 1 corg7983 domain_users  9500 Nov 17 15:35 assign2.mem.f21
+-rw-------. 1 corg7983 domain_users    77 Dec  1 20:54 assign2.out
+-rw-------. 1 corg7983 domain_users 18515 Dec  1 20:54 assign2.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 assign2.tm.diffs
+-rw-------. 1 corg7983 domain_users 18528 Nov 17 15:35 assign2.tm.f21
+assign2 (Output OK)
+====================================
+FILE: assign3.c-
+-rw-------. 1 corg7983 domain_users   628 Nov 17 15:35 assign3.c-
+-rw-------. 1 corg7983 domain_users   628 Nov 17 15:35 assign3.c-.f21
+-rw-------. 1 corg7983 domain_users   628 Nov 17 15:35 assign3.c-.f22
+-rw-------. 1 corg7983 domain_users    85 Nov 17 15:35 assign3.expected
+-rw-------. 1 corg7983 domain_users  9270 Dec  1 20:54 assign3.mem
+-rw-------. 1 corg7983 domain_users     0 Nov 17 15:35 assign3.mem.diffs
+-rw-------. 1 corg7983 domain_users  9312 Nov 17 15:35 assign3.mem.f21
+-rw-------. 1 corg7983 domain_users    85 Dec  1 20:54 assign3.out
+-rw-------. 1 corg7983 domain_users 20317 Dec  1 20:54 assign3.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 assign3.tm.diffs
+-rw-------. 1 corg7983 domain_users 20330 Nov 17 15:35 assign3.tm.f21
+assign3 (Output OK)
+====================================
+FILE: assign4.c-
+-rw-------. 1 corg7983 domain_users   532 Nov 17 15:35 assign4.c-
+-rw-------. 1 corg7983 domain_users   532 Nov 17 15:35 assign4.c-.f21
+-rw-------. 1 corg7983 domain_users   532 Nov 17 15:35 assign4.c-.f22
+-rw-------. 1 corg7983 domain_users    85 Nov 17 15:35 assign4.expected
+-rw-------. 1 corg7983 domain_users  5834 Dec  1 20:54 assign4.mem
+-rw-------. 1 corg7983 domain_users     0 Nov 17 15:35 assign4.mem.diffs
+-rw-------. 1 corg7983 domain_users  5876 Nov 17 15:35 assign4.mem.f21
+-rw-------. 1 corg7983 domain_users    85 Dec  1 20:54 assign4.out
+-rw-------. 1 corg7983 domain_users 12853 Dec  1 20:54 assign4.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 assign4.tm.diffs
+-rw-------. 1 corg7983 domain_users 12866 Nov 17 15:35 assign4.tm.f21
+assign4 (Output OK)
+====================================
+FILE: assign5.c-
+-rw-------. 1 corg7983 domain_users   578 Nov 17 15:35 assign5.c-
+-rw-------. 1 corg7983 domain_users   589 Nov 17 15:35 assign5.c-.f21
+-rw-------. 1 corg7983 domain_users   578 Nov 17 15:35 assign5.c-.f22
+-rw-------. 1 corg7983 domain_users   137 Nov 17 15:35 assign5.expected
+-rw-------. 1 corg7983 domain_users  8453 Dec  1 20:54 assign5.mem
+-rw-------. 1 corg7983 domain_users  1339 Nov 17 15:35 assign5.mem.diffs
+-rw-------. 1 corg7983 domain_users  8495 Nov 17 15:35 assign5.mem.f21
+-rw-------. 1 corg7983 domain_users   137 Dec  1 20:54 assign5.out
+-rw-------. 1 corg7983 domain_users 18149 Dec  1 20:54 assign5.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 assign5.tm.diffs
+-rw-------. 1 corg7983 domain_users 18082 Nov 17 15:35 assign5.tm.f21
+assign5 (Output OK)
+====================================
+FILE: assign6.c-
+-rw-------. 1 corg7983 domain_users  1609 Nov 17 15:35 assign6.c-
+-rw-------. 1 corg7983 domain_users  1627 Nov 17 15:35 assign6.c-.f21
+-rw-------. 1 corg7983 domain_users  1609 Nov 17 15:35 assign6.c-.f22
+-rw-------. 1 corg7983 domain_users   173 Nov 17 15:35 assign6.expected
+-rw-------. 1 corg7983 domain_users 19970 Dec  1 20:54 assign6.mem
+-rw-------. 1 corg7983 domain_users  2226 Nov 17 15:35 assign6.mem.diffs
+-rw-------. 1 corg7983 domain_users 20012 Nov 17 15:35 assign6.mem.f21
+-rw-------. 1 corg7983 domain_users   173 Dec  1 20:54 assign6.out
+-rw-------. 1 corg7983 domain_users 37396 Dec  1 20:54 assign6.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 assign6.tm.diffs
+-rw-------. 1 corg7983 domain_users 37409 Nov 17 15:35 assign6.tm.f21
+assign6 (Output OK)
+====================================
+FILE: break2.c-
+-rw-------. 1 corg7983 domain_users  318 Nov 17 15:35 break2.c-
+-rw-------. 1 corg7983 domain_users  320 Nov 17 15:35 break2.c-.f21
+-rw-------. 1 corg7983 domain_users  318 Nov 17 15:35 break2.c-.f22
+-rw-------. 1 corg7983 domain_users   64 Nov 17 15:35 break2.expected
+-rw-------. 1 corg7983 domain_users 3656 Dec  1 20:54 break2.mem
+-rw-------. 1 corg7983 domain_users  246 Nov 17 15:35 break2.mem.diffs
+-rw-------. 1 corg7983 domain_users 3698 Nov 17 15:35 break2.mem.f21
+-rw-------. 1 corg7983 domain_users   64 Dec  1 20:54 break2.out
+-rw-------. 1 corg7983 domain_users 6228 Dec  1 20:54 break2.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 break2.tm.diffs
+-rw-------. 1 corg7983 domain_users 6241 Nov 17 15:35 break2.tm.f21
+break2 (Output OK)
+====================================
+FILE: call2.c-
+-rw-------. 1 corg7983 domain_users  227 Nov 17 15:35 call2.c-
+-rw-------. 1 corg7983 domain_users  233 Nov 17 15:35 call2.c-.f21
+-rw-------. 1 corg7983 domain_users  227 Nov 17 15:35 call2.c-.f22
+-rw-------. 1 corg7983 domain_users   43 Nov 17 15:35 call2.expected
+-rw-------. 1 corg7983 domain_users 3743 Dec  1 20:54 call2.mem
+-rw-------. 1 corg7983 domain_users  718 Nov 17 15:35 call2.mem.diffs
+-rw-------. 1 corg7983 domain_users 3785 Nov 17 15:35 call2.mem.f21
+-rw-------. 1 corg7983 domain_users   43 Dec  1 20:54 call2.out
+-rw-------. 1 corg7983 domain_users 6032 Dec  1 20:54 call2.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 call2.tm.diffs
+-rw-------. 1 corg7983 domain_users 6045 Nov 17 15:35 call2.tm.f21
+call2 (Output OK)
+====================================
+FILE: call5.c-
+-rw-------. 1 corg7983 domain_users   370 Nov 17 15:35 call5.c-
+-rw-------. 1 corg7983 domain_users   375 Nov 17 15:35 call5.c-.f21
+-rw-------. 1 corg7983 domain_users   370 Nov 17 15:35 call5.c-.f22
+-rw-------. 1 corg7983 domain_users    71 Nov 17 15:35 call5.expected
+-rw-------. 1 corg7983 domain_users  5136 Dec  1 20:54 call5.mem
+-rw-------. 1 corg7983 domain_users   581 Nov 17 15:35 call5.mem.diffs
+-rw-------. 1 corg7983 domain_users  5178 Nov 17 15:35 call5.mem.f21
+-rw-------. 1 corg7983 domain_users    71 Dec  1 20:54 call5.out
+-rw-------. 1 corg7983 domain_users 11326 Dec  1 20:54 call5.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 call5.tm.diffs
+-rw-------. 1 corg7983 domain_users 11339 Nov 17 15:35 call5.tm.f21
+call5 (Output OK)
+====================================
+FILE: call.c-
+-rw-------. 1 corg7983 domain_users  1267 Nov 17 15:35 call.c-
+-rw-------. 1 corg7983 domain_users  1285 Nov 17 15:35 call.c-.f21
+-rw-------. 1 corg7983 domain_users  1267 Nov 17 15:35 call.c-.f22
+-rw-------. 1 corg7983 domain_users   115 Nov 17 15:35 call.expected
+-rw-------. 1 corg7983 domain_users 16728 Dec  1 20:54 call.mem
+-rw-------. 1 corg7983 domain_users  2220 Nov 17 15:35 call.mem.diffs
+-rw-------. 1 corg7983 domain_users 16770 Nov 17 15:35 call.mem.f21
+-rw-------. 1 corg7983 domain_users   115 Dec  1 20:54 call.out
+-rw-------. 1 corg7983 domain_users 32334 Dec  1 20:54 call.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 call.tm.diffs
+-rw-------. 1 corg7983 domain_users 32315 Nov 17 15:35 call.tm.f21
+call (Output OK)
+====================================
+FILE: charout.c-
+-rw-------. 1 corg7983 domain_users  267 Nov 17 15:35 charout.c-
+-rw-------. 1 corg7983 domain_users  268 Nov 17 15:35 charout.c-.f21
+-rw-------. 1 corg7983 domain_users  267 Nov 17 15:35 charout.c-.f22
+-rw-------. 1 corg7983 domain_users  840 Nov 17 15:35 charout.expected
+-rw-------. 1 corg7983 domain_users   15 Nov 17 15:35 charout.in
+-rw-------. 1 corg7983 domain_users 3716 Dec  1 20:54 charout.mem
+-rw-------. 1 corg7983 domain_users  397 Nov 17 15:35 charout.mem.diffs
+-rw-------. 1 corg7983 domain_users 3758 Nov 17 15:35 charout.mem.f21
+-rw-------. 1 corg7983 domain_users  840 Dec  1 20:54 charout.out
+-rw-------. 1 corg7983 domain_users 6083 Dec  1 20:54 charout.tm
+-rw-------. 1 corg7983 domain_users  212 Nov 17 15:35 charout.tm.diffs
+-rw-------. 1 corg7983 domain_users 6102 Nov 17 15:35 charout.tm.f21
+charout (Output OK)
+====================================
+FILE: comb.c-
+-rw-------. 1 corg7983 domain_users  503 Nov 17 15:35 comb.c-
+-rw-------. 1 corg7983 domain_users  510 Nov 17 15:35 comb.c-.f21
+-rw-------. 1 corg7983 domain_users  503 Nov 17 15:35 comb.c-.f22
+-rw-------. 1 corg7983 domain_users  450 Nov 17 15:35 comb.expected
+-rw-------. 1 corg7983 domain_users   17 Nov 17 15:35 comb.in
+-rw-------. 1 corg7983 domain_users 6825 Dec  1 20:54 comb.mem
+-rw-------. 1 corg7983 domain_users  857 Nov 17 15:35 comb.mem.diffs
+-rw-------. 1 corg7983 domain_users 6867 Nov 17 15:35 comb.mem.f21
+-rw-------. 1 corg7983 domain_users  450 Dec  1 20:54 comb.out
+-rw-------. 1 corg7983 domain_users 9276 Dec  1 20:54 comb.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 comb.tm.diffs
+-rw-------. 1 corg7983 domain_users 9263 Nov 17 15:35 comb.tm.f21
+comb (Output OK)
+====================================
+FILE: combslow.c-
+-rw-------. 1 corg7983 domain_users   632 Nov 17 15:35 combslow.c-
+-rw-------. 1 corg7983 domain_users   631 Nov 17 15:35 combslow.c-.f21
+-rw-------. 1 corg7983 domain_users   632 Nov 17 15:35 combslow.c-.f22
+-rw-------. 1 corg7983 domain_users   372 Nov 17 15:35 combslow.expected
+-rw-------. 1 corg7983 domain_users    24 Nov 17 15:35 combslow.in
+-rw-------. 1 corg7983 domain_users  6170 Dec  1 20:54 combslow.mem
+-rw-------. 1 corg7983 domain_users   921 Nov 17 15:35 combslow.mem.diffs
+-rw-------. 1 corg7983 domain_users  6212 Nov 17 15:35 combslow.mem.f21
+-rw-------. 1 corg7983 domain_users   372 Dec  1 20:54 combslow.out
+-rw-------. 1 corg7983 domain_users 10085 Dec  1 20:54 combslow.tm
+-rw-------. 1 corg7983 domain_users   411 Nov 17 15:35 combslow.tm.diffs
+-rw-------. 1 corg7983 domain_users 10098 Nov 17 15:35 combslow.tm.f21
+combslow (Output OK)
+====================================
+FILE: compare.c-
+-rw-------. 1 corg7983 domain_users   424 Nov 17 15:35 compare.c-
+-rw-------. 1 corg7983 domain_users   421 Nov 17 15:35 compare.c-.f21
+-rw-------. 1 corg7983 domain_users   424 Nov 17 15:35 compare.c-.f22
+-rw-------. 1 corg7983 domain_users    77 Nov 17 15:35 compare.expected
+-rw-------. 1 corg7983 domain_users  5028 Dec  1 20:54 compare.mem
+-rw-------. 1 corg7983 domain_users   711 Nov 17 15:35 compare.mem.diffs
+-rw-------. 1 corg7983 domain_users  5070 Nov 17 15:35 compare.mem.f21
+-rw-------. 1 corg7983 domain_users    77 Dec  1 20:54 compare.out
+-rw-------. 1 corg7983 domain_users 14115 Dec  1 20:54 compare.tm
+-rw-------. 1 corg7983 domain_users   550 Nov 17 15:35 compare.tm.diffs
+-rw-------. 1 corg7983 domain_users 14128 Nov 17 15:35 compare.tm.f21
+compare (Output OK)
+====================================
+FILE: control2.c-
+-rw-------. 1 corg7983 domain_users  310 Nov 17 15:35 control2.c-
+-rw-------. 1 corg7983 domain_users  316 Nov 17 15:35 control2.c-.f21
+-rw-------. 1 corg7983 domain_users  310 Nov 17 15:35 control2.c-.f22
+-rw-------. 1 corg7983 domain_users  112 Nov 17 15:35 control2.expected
+-rw-------. 1 corg7983 domain_users 5161 Dec  1 20:54 control2.mem
+-rw-------. 1 corg7983 domain_users 1004 Nov 17 15:35 control2.mem.diffs
+-rw-------. 1 corg7983 domain_users 5203 Nov 17 15:35 control2.mem.f21
+-rw-------. 1 corg7983 domain_users  112 Dec  1 20:54 control2.out
+-rw-------. 1 corg7983 domain_users 8408 Dec  1 20:54 control2.tm
+-rw-------. 1 corg7983 domain_users  212 Nov 17 15:35 control2.tm.diffs
+-rw-------. 1 corg7983 domain_users 8430 Nov 17 15:35 control2.tm.f21
+control2 (Output OK)
+====================================
+FILE: e.c-
+-rw-------. 1 corg7983 domain_users  233 Nov 17 15:35 e.c-
+-rw-------. 1 corg7983 domain_users  233 Nov 17 15:35 e.c-.f21
+-rw-------. 1 corg7983 domain_users  233 Nov 17 15:35 e.c-.f22
+-rw-------. 1 corg7983 domain_users   60 Nov 17 15:35 e.expected
+-rw-------. 1 corg7983 domain_users 3628 Dec  1 20:54 e.mem
+-rw-------. 1 corg7983 domain_users    0 Nov 17 15:35 e.mem.diffs
+-rw-------. 1 corg7983 domain_users 3670 Nov 17 15:35 e.mem.f21
+-rw-------. 1 corg7983 domain_users   60 Dec  1 20:54 e.out
+-rw-------. 1 corg7983 domain_users 9385 Dec  1 20:54 e.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 e.tm.diffs
+-rw-------. 1 corg7983 domain_users 9398 Nov 17 15:35 e.tm.f21
+e (Output OK)
+====================================
+FILE: examplearray3.c-
+-rw-------. 1 corg7983 domain_users  183 Nov 17 15:35 examplearray3.c-
+-rw-------. 1 corg7983 domain_users  184 Nov 17 15:35 examplearray3.c-.f21
+-rw-------. 1 corg7983 domain_users  183 Nov 17 15:35 examplearray3.c-.f22
+-rw-------. 1 corg7983 domain_users  205 Nov 17 15:35 examplearray3.expected
+-rw-------. 1 corg7983 domain_users 2952 Dec  1 20:54 examplearray3.mem
+-rw-------. 1 corg7983 domain_users  117 Nov 17 15:35 examplearray3.mem.diffs
+-rw-------. 1 corg7983 domain_users 2994 Nov 17 15:35 examplearray3.mem.f21
+-rw-------. 1 corg7983 domain_users  205 Dec  1 20:54 examplearray3.out
+-rw-------. 1 corg7983 domain_users 5873 Dec  1 20:54 examplearray3.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 examplearray3.tm.diffs
+-rw-------. 1 corg7983 domain_users 5886 Nov 17 15:35 examplearray3.tm.f21
+examplearray3 (Output OK)
+====================================
+FILE: exp3.c-
+-rw-------. 1 corg7983 domain_users   883 Nov 17 15:35 exp3.c-
+-rw-------. 1 corg7983 domain_users   895 Nov 17 15:35 exp3.c-.f21
+-rw-------. 1 corg7983 domain_users   883 Nov 17 15:35 exp3.c-.f22
+-rw-------. 1 corg7983 domain_users    85 Nov 17 15:35 exp3.expected
+-rw-------. 1 corg7983 domain_users  8808 Dec  1 20:54 exp3.mem
+-rw-------. 1 corg7983 domain_users  1462 Nov 17 15:35 exp3.mem.diffs
+-rw-------. 1 corg7983 domain_users  8850 Nov 17 15:35 exp3.mem.f21
+-rw-------. 1 corg7983 domain_users    85 Dec  1 20:54 exp3.out
+-rw-------. 1 corg7983 domain_users 12635 Dec  1 20:54 exp3.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 exp3.tm.diffs
+-rw-------. 1 corg7983 domain_users 12562 Nov 17 15:35 exp3.tm.f21
+exp3 (Output OK)
+====================================
+FILE: factor2.c-
+-rw-------. 1 corg7983 domain_users  431 Nov 17 15:35 factor2.c-
+-rw-------. 1 corg7983 domain_users  431 Nov 17 15:35 factor2.c-.f21
+-rw-------. 1 corg7983 domain_users  431 Nov 17 15:35 factor2.c-.f22
+-rw-------. 1 corg7983 domain_users  249 Nov 17 15:35 factor2.expected
+-rw-------. 1 corg7983 domain_users   63 Nov 17 15:35 factor2.in
+-rw-------. 1 corg7983 domain_users 5162 Dec  1 20:54 factor2.mem
+-rw-------. 1 corg7983 domain_users  415 Nov 17 15:35 factor2.mem.diffs
+-rw-------. 1 corg7983 domain_users 5204 Nov 17 15:35 factor2.mem.f21
+-rw-------. 1 corg7983 domain_users  249 Dec  1 20:54 factor2.out
+-rw-------. 1 corg7983 domain_users 8588 Dec  1 20:54 factor2.tm
+-rw-------. 1 corg7983 domain_users  279 Nov 17 15:35 factor2.tm.diffs
+-rw-------. 1 corg7983 domain_users 8601 Nov 17 15:35 factor2.tm.f21
+factor2 (Output OK)
+====================================
+FILE: factor.c-
+-rw-------. 1 corg7983 domain_users   825 Nov 17 15:35 factor.c-
+-rw-------. 1 corg7983 domain_users   834 Nov 17 15:35 factor.c-.f21
+-rw-------. 1 corg7983 domain_users   825 Nov 17 15:35 factor.c-.f22
+-rw-------. 1 corg7983 domain_users   330 Nov 17 15:35 factor.expected
+-rw-------. 1 corg7983 domain_users    77 Nov 17 15:35 factor.in
+-rw-------. 1 corg7983 domain_users 10056 Dec  1 20:54 factor.mem
+-rw-------. 1 corg7983 domain_users  2091 Nov 17 15:35 factor.mem.diffs
+-rw-------. 1 corg7983 domain_users 10098 Nov 17 15:35 factor.mem.f21
+-rw-------. 1 corg7983 domain_users   330 Dec  1 20:54 factor.out
+-rw-------. 1 corg7983 domain_users 13130 Dec  1 20:54 factor.tm
+-rw-------. 1 corg7983 domain_users   344 Nov 17 15:35 factor.tm.diffs
+-rw-------. 1 corg7983 domain_users 13143 Nov 17 15:35 factor.tm.f21
+factor (Output OK)
+====================================
+FILE: factorial2.c-
+-rw-------. 1 corg7983 domain_users  320 Nov 17 15:35 factorial2.c-
+-rw-------. 1 corg7983 domain_users  325 Nov 17 15:35 factorial2.c-.f21
+-rw-------. 1 corg7983 domain_users  320 Nov 17 15:35 factorial2.c-.f22
+-rw-------. 1 corg7983 domain_users  106 Nov 17 15:35 factorial2.expected
+-rw-------. 1 corg7983 domain_users   17 Nov 17 15:35 factorial2.in
+-rw-------. 1 corg7983 domain_users 3639 Dec  1 20:54 factorial2.mem
+-rw-------. 1 corg7983 domain_users  611 Nov 17 15:35 factorial2.mem.diffs
+-rw-------. 1 corg7983 domain_users 3681 Nov 17 15:35 factorial2.mem.f21
+-rw-------. 1 corg7983 domain_users  106 Dec  1 20:54 factorial2.out
+-rw-------. 1 corg7983 domain_users 6496 Dec  1 20:54 factorial2.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 factorial2.tm.diffs
+-rw-------. 1 corg7983 domain_users 6509 Nov 17 15:35 factorial2.tm.f21
+factorial2 (Output OK)
+====================================
+FILE: factorial.c-
+-rw-------. 1 corg7983 domain_users  317 Nov 17 15:35 factorial.c-
+-rw-------. 1 corg7983 domain_users  322 Nov 17 15:35 factorial.c-.f21
+-rw-------. 1 corg7983 domain_users  317 Nov 17 15:35 factorial.c-.f22
+-rw-------. 1 corg7983 domain_users  105 Nov 17 15:35 factorial.expected
+-rw-------. 1 corg7983 domain_users   17 Nov 17 15:35 factorial.in
+-rw-------. 1 corg7983 domain_users 3576 Dec  1 20:54 factorial.mem
+-rw-------. 1 corg7983 domain_users  611 Nov 17 15:35 factorial.mem.diffs
+-rw-------. 1 corg7983 domain_users 3618 Nov 17 15:35 factorial.mem.f21
+-rw-------. 1 corg7983 domain_users  105 Dec  1 20:54 factorial.out
+-rw-------. 1 corg7983 domain_users 6467 Dec  1 20:54 factorial.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 factorial.tm.diffs
+-rw-------. 1 corg7983 domain_users 6480 Nov 17 15:35 factorial.tm.f21
+factorial (Output OK)
+====================================
+FILE: factorialr.c-
+-rw-------. 1 corg7983 domain_users  245 Nov 17 15:35 factorialr.c-
+-rw-------. 1 corg7983 domain_users  247 Nov 17 15:35 factorialr.c-.f21
+-rw-------. 1 corg7983 domain_users  245 Nov 17 15:35 factorialr.c-.f22
+-rw-------. 1 corg7983 domain_users   70 Nov 17 15:35 factorialr.expected
+-rw-------. 1 corg7983 domain_users   17 Nov 17 15:35 factorialr.in
+-rw-------. 1 corg7983 domain_users 2767 Dec  1 20:54 factorialr.mem
+-rw-------. 1 corg7983 domain_users  238 Nov 17 15:35 factorialr.mem.diffs
+-rw-------. 1 corg7983 domain_users 2809 Nov 17 15:35 factorialr.mem.f21
+-rw-------. 1 corg7983 domain_users   70 Dec  1 20:54 factorialr.out
+-rw-------. 1 corg7983 domain_users 6380 Dec  1 20:54 factorialr.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 factorialr.tm.diffs
+-rw-------. 1 corg7983 domain_users 6391 Nov 17 15:35 factorialr.tm.f21
+factorialr (Output OK)
+====================================
+FILE: fib.c-
+-rw-------. 1 corg7983 domain_users  236 Nov 17 15:35 fib.c-
+-rw-------. 1 corg7983 domain_users  236 Nov 17 15:35 fib.c-.f21
+-rw-------. 1 corg7983 domain_users  236 Nov 17 15:35 fib.c-.f22
+-rw-------. 1 corg7983 domain_users   80 Nov 17 15:35 fib.expected
+-rw-------. 1 corg7983 domain_users   16 Nov 17 15:35 fib.in
+-rw-------. 1 corg7983 domain_users 2640 Dec  1 20:54 fib.mem
+-rw-------. 1 corg7983 domain_users    0 Nov 17 15:35 fib.mem.diffs
+-rw-------. 1 corg7983 domain_users 2682 Nov 17 15:35 fib.mem.f21
+-rw-------. 1 corg7983 domain_users   80 Dec  1 20:54 fib.out
+-rw-------. 1 corg7983 domain_users 7459 Dec  1 20:54 fib.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 fib.tm.diffs
+-rw-------. 1 corg7983 domain_users 7470 Nov 17 15:35 fib.tm.f21
+fib (Output OK)
+====================================
+FILE: fractal.c-
+-rw-------. 1 corg7983 domain_users  3509 Nov 17 15:35 fractal.c-
+-rw-------. 1 corg7983 domain_users  3557 Nov 17 15:35 fractal.c-.f21
+-rw-------. 1 corg7983 domain_users  3509 Nov 17 15:35 fractal.c-.f22
+-rw-------. 1 corg7983 domain_users  6004 Nov 17 15:35 fractal.expected
+-rw-------. 1 corg7983 domain_users    26 Nov 17 15:35 fractal.in
+-rw-------. 1 corg7983 domain_users 33246 Dec  1 20:54 fractal.mem
+-rw-------. 1 corg7983 domain_users  8016 Nov 17 15:35 fractal.mem.diffs
+-rw-------. 1 corg7983 domain_users 33288 Nov 17 15:35 fractal.mem.f21
+-rw-------. 1 corg7983 domain_users  6004 Dec  1 20:54 fractal.out
+-rw-------. 1 corg7983 domain_users 30653 Dec  1 20:54 fractal.tm
+-rw-------. 1 corg7983 domain_users   279 Nov 17 15:35 fractal.tm.diffs
+-rw-------. 1 corg7983 domain_users 30627 Nov 17 15:35 fractal.tm.f21
+fractal (Output OK)
+====================================
+FILE: fromroman.c-
+-rw-------. 1 corg7983 domain_users  1362 Nov 17 15:35 fromroman.c-
+-rw-------. 1 corg7983 domain_users  1360 Nov 17 15:35 fromroman.c-.f21
+-rw-------. 1 corg7983 domain_users  1362 Nov 17 15:35 fromroman.c-.f22
+-rw-------. 1 corg7983 domain_users   347 Nov 17 15:35 fromroman.expected
+-rw-------. 1 corg7983 domain_users   150 Nov 17 15:35 fromroman.in
+-rw-------. 1 corg7983 domain_users 14166 Dec  1 20:54 fromroman.mem
+-rw-------. 1 corg7983 domain_users  2176 Nov 17 15:35 fromroman.mem.diffs
+-rw-------. 1 corg7983 domain_users 14208 Nov 17 15:35 fromroman.mem.f21
+-rw-------. 1 corg7983 domain_users   347 Dec  1 20:54 fromroman.out
+-rw-------. 1 corg7983 domain_users 21556 Dec  1 20:54 fromroman.tm
+-rw-------. 1 corg7983 domain_users   748 Nov 17 15:35 fromroman.tm.diffs
+-rw-------. 1 corg7983 domain_users 21556 Nov 17 15:35 fromroman.tm.f21
+fromroman (Output OK)
+====================================
+FILE: gcd.c-
+-rw-------. 1 corg7983 domain_users  313 Nov 17 15:35 gcd.c-
+-rw-------. 1 corg7983 domain_users  315 Nov 17 15:35 gcd.c-.f21
+-rw-------. 1 corg7983 domain_users  313 Nov 17 15:35 gcd.c-.f22
+-rw-------. 1 corg7983 domain_users  310 Nov 17 15:35 gcd.expected
+-rw-------. 1 corg7983 domain_users   74 Nov 17 15:35 gcd.in
+-rw-------. 1 corg7983 domain_users 3597 Dec  1 20:54 gcd.mem
+-rw-------. 1 corg7983 domain_users  476 Nov 17 15:35 gcd.mem.diffs
+-rw-------. 1 corg7983 domain_users 3639 Nov 17 15:35 gcd.mem.f21
+-rw-------. 1 corg7983 domain_users  310 Dec  1 20:54 gcd.out
+-rw-------. 1 corg7983 domain_users 7044 Dec  1 20:54 gcd.tm
+-rw-------. 1 corg7983 domain_users  210 Nov 17 15:35 gcd.tm.diffs
+-rw-------. 1 corg7983 domain_users 7044 Nov 17 15:35 gcd.tm.f21
+gcd (Output OK)
+====================================
+FILE: gcdsm.c-
+-rw-------. 1 corg7983 domain_users  160 Nov 17 15:35 gcdsm.c-
+-rw-------. 1 corg7983 domain_users  161 Nov 17 15:35 gcdsm.c-.f21
+-rw-------. 1 corg7983 domain_users  160 Nov 17 15:35 gcdsm.c-.f22
+-rw-------. 1 corg7983 domain_users  320 Nov 17 15:35 gcdsm.expected
+-rw-------. 1 corg7983 domain_users   74 Nov 17 15:35 gcdsm.in
+-rw-------. 1 corg7983 domain_users 3234 Dec  1 20:54 gcdsm.mem
+-rw-------. 1 corg7983 domain_users  351 Nov 17 15:35 gcdsm.mem.diffs
+-rw-------. 1 corg7983 domain_users 3276 Nov 17 15:35 gcdsm.mem.f21
+-rw-------. 1 corg7983 domain_users  320 Dec  1 20:54 gcdsm.out
+-rw-------. 1 corg7983 domain_users 6614 Dec  1 20:54 gcdsm.tm
+-rw-------. 1 corg7983 domain_users  210 Nov 17 15:35 gcdsm.tm.diffs
+-rw-------. 1 corg7983 domain_users 6621 Nov 17 15:35 gcdsm.tm.f21
+gcdsm (Output OK)
+====================================
+FILE: globalArray.c-
+-rw-------. 1 corg7983 domain_users  115 Nov 17 15:35 globalArray.c-
+-rw-------. 1 corg7983 domain_users  117 Nov 17 15:35 globalArray.c-.f21
+-rw-------. 1 corg7983 domain_users  115 Nov 17 15:35 globalArray.c-.f22
+-rw-------. 1 corg7983 domain_users   51 Nov 17 15:35 globalArray.expected
+-rw-------. 1 corg7983 domain_users 2337 Dec  1 20:54 globalArray.mem
+-rw-------. 1 corg7983 domain_users  236 Nov 17 15:35 globalArray.mem.diffs
+-rw-------. 1 corg7983 domain_users 2379 Nov 17 15:35 globalArray.mem.f21
+-rw-------. 1 corg7983 domain_users   51 Dec  1 20:54 globalArray.out
+-rw-------. 1 corg7983 domain_users 5124 Dec  1 20:54 globalArray.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 globalArray.tm.diffs
+-rw-------. 1 corg7983 domain_users 5137 Nov 17 15:35 globalArray.tm.f21
+globalArray (Output OK)
+====================================
+FILE: global.c-
+-rw-------. 1 corg7983 domain_users  102 Nov 17 15:35 global.c-
+-rw-------. 1 corg7983 domain_users  104 Nov 17 15:35 global.c-.f21
+-rw-------. 1 corg7983 domain_users  102 Nov 17 15:35 global.c-.f22
+-rw-------. 1 corg7983 domain_users   46 Nov 17 15:35 global.expected
+-rw-------. 1 corg7983 domain_users 1836 Dec  1 20:54 global.mem
+-rw-------. 1 corg7983 domain_users  236 Nov 17 15:35 global.mem.diffs
+-rw-------. 1 corg7983 domain_users 1878 Nov 17 15:35 global.mem.f21
+-rw-------. 1 corg7983 domain_users   46 Dec  1 20:54 global.out
+-rw-------. 1 corg7983 domain_users 3976 Dec  1 20:54 global.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 global.tm.diffs
+-rw-------. 1 corg7983 domain_users 3989 Nov 17 15:35 global.tm.f21
+global (Output OK)
+====================================
+FILE: if.c-
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 if.c-
+-rw-------. 1 corg7983 domain_users  149 Nov 17 15:35 if.c-.f21
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 if.c-.f22
+-rw-------. 1 corg7983 domain_users   43 Nov 17 15:35 if.expected
+-rw-------. 1 corg7983 domain_users 2902 Dec  1 20:54 if.mem
+-rw-------. 1 corg7983 domain_users  724 Nov 17 15:35 if.mem.diffs
+-rw-------. 1 corg7983 domain_users 2944 Nov 17 15:35 if.mem.f21
+-rw-------. 1 corg7983 domain_users   43 Dec  1 20:54 if.out
+-rw-------. 1 corg7983 domain_users 5057 Dec  1 20:54 if.tm
+-rw-------. 1 corg7983 domain_users  212 Nov 17 15:35 if.tm.diffs
+-rw-------. 1 corg7983 domain_users 5081 Nov 17 15:35 if.tm.f21
+if (Output OK)
+====================================
+FILE: inc.c-
+-rw-------. 1 corg7983 domain_users   423 Nov 17 15:35 inc.c-
+-rw-------. 1 corg7983 domain_users   428 Nov 17 15:35 inc.c-.f21
+-rw-------. 1 corg7983 domain_users   423 Nov 17 15:35 inc.c-.f22
+-rw-------. 1 corg7983 domain_users    85 Nov 17 15:35 inc.expected
+-rw-------. 1 corg7983 domain_users  5813 Dec  1 20:54 inc.mem
+-rw-------. 1 corg7983 domain_users   601 Nov 17 15:35 inc.mem.diffs
+-rw-------. 1 corg7983 domain_users  5855 Nov 17 15:35 inc.mem.f21
+-rw-------. 1 corg7983 domain_users    85 Dec  1 20:54 inc.out
+-rw-------. 1 corg7983 domain_users 11574 Dec  1 20:54 inc.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 inc.tm.diffs
+-rw-------. 1 corg7983 domain_users 11555 Nov 17 15:35 inc.tm.f21
+inc (Output OK)
+====================================
+FILE: initbig.c-
+-rw-------. 1 corg7983 domain_users   735 Nov 17 15:35 initbig.c-
+-rw-------. 1 corg7983 domain_users   735 Nov 17 15:35 initbig.c-.f21
+-rw-------. 1 corg7983 domain_users   735 Nov 17 15:35 initbig.c-.f22
+-rw-------. 1 corg7983 domain_users   210 Nov 17 15:35 initbig.expected
+-rw-------. 1 corg7983 domain_users  7078 Dec  1 20:54 initbig.mem
+-rw-------. 1 corg7983 domain_users     0 Nov 17 15:35 initbig.mem.diffs
+-rw-------. 1 corg7983 domain_users  7120 Nov 17 15:35 initbig.mem.f21
+-rw-------. 1 corg7983 domain_users   210 Dec  1 20:54 initbig.out
+-rw-------. 1 corg7983 domain_users 17367 Dec  1 20:54 initbig.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 initbig.tm.diffs
+-rw-------. 1 corg7983 domain_users 17368 Nov 17 15:35 initbig.tm.f21
+initbig (Output OK)
+====================================
+FILE: io.c-
+-rw-------. 1 corg7983 domain_users   617 Nov 17 15:35 io.c-
+-rw-------. 1 corg7983 domain_users   620 Nov 17 15:35 io.c-.f21
+-rw-------. 1 corg7983 domain_users   617 Nov 17 15:35 io.c-.f22
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 io.expected
+-rw-------. 1 corg7983 domain_users    28 Nov 17 15:35 io.in
+-rw-------. 1 corg7983 domain_users  4748 Dec  1 20:54 io.mem
+-rw-------. 1 corg7983 domain_users   369 Nov 17 15:35 io.mem.diffs
+-rw-------. 1 corg7983 domain_users  4790 Nov 17 15:35 io.mem.f21
+-rw-------. 1 corg7983 domain_users   145 Dec  1 20:54 io.out
+-rw-------. 1 corg7983 domain_users 14064 Dec  1 20:54 io.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 io.tm.diffs
+-rw-------. 1 corg7983 domain_users 14071 Nov 17 15:35 io.tm.f21
+io (Output OK)
+====================================
+FILE: localArray.c-
+-rw-------. 1 corg7983 domain_users  128 Nov 17 15:35 localArray.c-
+-rw-------. 1 corg7983 domain_users  130 Nov 17 15:35 localArray.c-.f21
+-rw-------. 1 corg7983 domain_users  128 Nov 17 15:35 localArray.c-.f22
+-rw-------. 1 corg7983 domain_users   50 Nov 17 15:35 localArray.expected
+-rw-------. 1 corg7983 domain_users 2345 Dec  1 20:54 localArray.mem
+-rw-------. 1 corg7983 domain_users  236 Nov 17 15:35 localArray.mem.diffs
+-rw-------. 1 corg7983 domain_users 2387 Nov 17 15:35 localArray.mem.f21
+-rw-------. 1 corg7983 domain_users   50 Dec  1 20:54 localArray.out
+-rw-------. 1 corg7983 domain_users 5154 Dec  1 20:54 localArray.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 localArray.tm.diffs
+-rw-------. 1 corg7983 domain_users 5167 Nov 17 15:35 localArray.tm.f21
+localArray (Output OK)
+====================================
+FILE: local.c-
+-rw-------. 1 corg7983 domain_users  103 Nov 17 15:35 local.c-
+-rw-------. 1 corg7983 domain_users  105 Nov 17 15:35 local.c-.f21
+-rw-------. 1 corg7983 domain_users  103 Nov 17 15:35 local.c-.f22
+-rw-------. 1 corg7983 domain_users   45 Nov 17 15:35 local.expected
+-rw-------. 1 corg7983 domain_users 1846 Dec  1 20:54 local.mem
+-rw-------. 1 corg7983 domain_users  236 Nov 17 15:35 local.mem.diffs
+-rw-------. 1 corg7983 domain_users 1888 Nov 17 15:35 local.mem.f21
+-rw-------. 1 corg7983 domain_users   45 Dec  1 20:54 local.out
+-rw-------. 1 corg7983 domain_users 3976 Dec  1 20:54 local.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 local.tm.diffs
+-rw-------. 1 corg7983 domain_users 3989 Nov 17 15:35 local.tm.f21
+local (Output OK)
+====================================
+FILE: logic2.c-
+-rw-------. 1 corg7983 domain_users   319 Nov 17 15:35 logic2.c-
+-rw-------. 1 corg7983 domain_users   320 Nov 17 15:35 logic2.c-.f21
+-rw-------. 1 corg7983 domain_users   319 Nov 17 15:35 logic2.c-.f22
+-rw-------. 1 corg7983 domain_users    62 Nov 17 15:35 logic2.expected
+-rw-------. 1 corg7983 domain_users  3972 Dec  1 20:54 logic2.mem
+-rw-------. 1 corg7983 domain_users   489 Nov 17 15:35 logic2.mem.diffs
+-rw-------. 1 corg7983 domain_users  4014 Nov 17 15:35 logic2.mem.f21
+-rw-------. 1 corg7983 domain_users    62 Dec  1 20:54 logic2.out
+-rw-------. 1 corg7983 domain_users 10343 Dec  1 20:54 logic2.tm
+-rw-------. 1 corg7983 domain_users   280 Nov 17 15:35 logic2.tm.diffs
+-rw-------. 1 corg7983 domain_users 10356 Nov 17 15:35 logic2.tm.f21
+logic2 (Output OK)
+====================================
+FILE: logic.c-
+-rw-------. 1 corg7983 domain_users  266 Nov 17 15:35 logic.c-
+-rw-------. 1 corg7983 domain_users  266 Nov 17 15:35 logic.c-.f21
+-rw-------. 1 corg7983 domain_users  266 Nov 17 15:35 logic.c-.f22
+-rw-------. 1 corg7983 domain_users   55 Nov 17 15:35 logic.expected
+-rw-------. 1 corg7983 domain_users 2970 Dec  1 20:54 logic.mem
+-rw-------. 1 corg7983 domain_users    0 Nov 17 15:35 logic.mem.diffs
+-rw-------. 1 corg7983 domain_users 3012 Nov 17 15:35 logic.mem.f21
+-rw-------. 1 corg7983 domain_users   55 Dec  1 20:54 logic.out
+-rw-------. 1 corg7983 domain_users 8504 Dec  1 20:54 logic.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 logic.tm.diffs
+-rw-------. 1 corg7983 domain_users 8517 Nov 17 15:35 logic.tm.f21
+logic (Output OK)
+====================================
+FILE: main2.c-
+-rw-------. 1 corg7983 domain_users  101 Nov 17 15:35 main2.c-
+-rw-------. 1 corg7983 domain_users  101 Nov 17 15:35 main2.c-.f21
+-rw-------. 1 corg7983 domain_users  101 Nov 17 15:35 main2.c-.f22
+-rw-------. 1 corg7983 domain_users   69 Nov 17 15:35 main2.expected
+-rw-------. 1 corg7983 domain_users   20 Nov 17 15:35 main2.in
+-rw-------. 1 corg7983 domain_users 1428 Dec  1 20:54 main2.mem
+-rw-------. 1 corg7983 domain_users    0 Nov 17 15:35 main2.mem.diffs
+-rw-------. 1 corg7983 domain_users 1470 Nov 17 15:35 main2.mem.f21
+-rw-------. 1 corg7983 domain_users   69 Dec  1 20:54 main2.out
+-rw-------. 1 corg7983 domain_users 4819 Dec  1 20:54 main2.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 main2.tm.diffs
+-rw-------. 1 corg7983 domain_users 4832 Nov 17 15:35 main2.tm.f21
+main2 (Output OK)
+====================================
+FILE: mastermind.c-
+-rw-------. 1 corg7983 domain_users  4008 Nov 17 15:35 mastermind.c-
+-rw-------. 1 corg7983 domain_users  4023 Nov 17 15:35 mastermind.c-.f21
+-rw-------. 1 corg7983 domain_users  4008 Nov 17 15:35 mastermind.c-.f22
+-rw-------. 1 corg7983 domain_users  1102 Nov 17 15:35 mastermind.expected
+-rw-------. 1 corg7983 domain_users   252 Nov 17 15:35 mastermind.in
+-rw-------. 1 corg7983 domain_users 19063 Dec  1 20:54 mastermind.mem
+-rw-------. 1 corg7983 domain_users  2735 Nov 17 15:35 mastermind.mem.diffs
+-rw-------. 1 corg7983 domain_users 19105 Nov 17 15:35 mastermind.mem.f21
+-rw-------. 1 corg7983 domain_users  1102 Dec  1 20:54 mastermind.out
+-rw-------. 1 corg7983 domain_users 28231 Dec  1 20:54 mastermind.tm
+-rw-------. 1 corg7983 domain_users   346 Nov 17 15:35 mastermind.tm.diffs
+-rw-------. 1 corg7983 domain_users 28232 Nov 17 15:35 mastermind.tm.f21
+mastermind (Output OK)
+====================================
+FILE: miller.c-
+-rw-------. 1 corg7983 domain_users  1606 Nov 17 15:35 miller.c-
+-rw-------. 1 corg7983 domain_users  1652 Nov 17 15:35 miller.c-.f21
+-rw-------. 1 corg7983 domain_users  1606 Nov 17 15:35 miller.c-.f22
+-rw-------. 1 corg7983 domain_users   119 Nov 17 15:35 miller.expected
+-rw-------. 1 corg7983 domain_users 26975 Dec  1 20:54 miller.mem
+-rw-------. 1 corg7983 domain_users  5758 Nov 17 15:35 miller.mem.diffs
+-rw-------. 1 corg7983 domain_users 27017 Nov 17 15:35 miller.mem.f21
+-rw-------. 1 corg7983 domain_users   119 Dec  1 20:54 miller.out
+-rw-------. 1 corg7983 domain_users 38380 Dec  1 20:54 miller.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 miller.tm.diffs
+-rw-------. 1 corg7983 domain_users 38393 Nov 17 15:35 miller.tm.f21
+miller (Output OK)
+====================================
+FILE: nest.c-
+-rw-------. 1 corg7983 domain_users  1333 Nov 17 15:35 nest.c-
+-rw-------. 1 corg7983 domain_users  1360 Nov 17 15:35 nest.c-.f21
+-rw-------. 1 corg7983 domain_users  1333 Nov 17 15:35 nest.c-.f22
+-rw-------. 1 corg7983 domain_users   158 Nov 17 15:35 nest.expected
+-rw-------. 1 corg7983 domain_users 13416 Dec  1 20:54 nest.mem
+-rw-------. 1 corg7983 domain_users  3433 Nov 17 15:35 nest.mem.diffs
+-rw-------. 1 corg7983 domain_users 13458 Nov 17 15:35 nest.mem.f21
+-rw-------. 1 corg7983 domain_users   158 Dec  1 20:54 nest.out
+-rw-------. 1 corg7983 domain_users 24187 Dec  1 20:54 nest.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 nest.tm.diffs
+-rw-------. 1 corg7983 domain_users 24085 Nov 17 15:35 nest.tm.f21
+nest (Output OK)
+====================================
+FILE: op1.c-
+-rw-------. 1 corg7983 domain_users  1058 Nov 17 15:35 op1.c-
+-rw-------. 1 corg7983 domain_users  1055 Nov 17 15:35 op1.c-.f21
+-rw-------. 1 corg7983 domain_users  1058 Nov 17 15:35 op1.c-.f22
+-rw-------. 1 corg7983 domain_users   126 Nov 17 15:35 op1.expected
+-rw-------. 1 corg7983 domain_users  9944 Dec  1 20:54 op1.mem
+-rw-------. 1 corg7983 domain_users  1079 Nov 17 15:35 op1.mem.diffs
+-rw-------. 1 corg7983 domain_users  9986 Nov 17 15:35 op1.mem.f21
+-rw-------. 1 corg7983 domain_users   126 Dec  1 20:54 op1.out
+-rw-------. 1 corg7983 domain_users 29306 Dec  1 20:54 op1.tm
+-rw-------. 1 corg7983 domain_users   754 Nov 17 15:35 op1.tm.diffs
+-rw-------. 1 corg7983 domain_users 29320 Nov 17 15:35 op1.tm.f21
+op1 (Output OK)
+====================================
+FILE: ops.c-
+-rw-------. 1 corg7983 domain_users  2931 Nov 17 15:35 ops.c-
+-rw-------. 1 corg7983 domain_users  2944 Nov 17 15:35 ops.c-.f21
+-rw-------. 1 corg7983 domain_users  2931 Nov 17 15:35 ops.c-.f22
+-rw-------. 1 corg7983 domain_users   185 Nov 17 15:35 ops.expected
+-rw-------. 1 corg7983 domain_users 23056 Dec  1 20:54 ops.mem
+-rw-------. 1 corg7983 domain_users  2885 Nov 17 15:35 ops.mem.diffs
+-rw-------. 1 corg7983 domain_users 23098 Nov 17 15:35 ops.mem.f21
+-rw-------. 1 corg7983 domain_users   185 Dec  1 20:54 ops.out
+-rw-------. 1 corg7983 domain_users 53021 Dec  1 20:54 ops.tm
+-rw-------. 1 corg7983 domain_users   618 Nov 17 15:35 ops.tm.diffs
+-rw-------. 1 corg7983 domain_users 52229 Nov 17 15:35 ops.tm.f21
+ops (Output OK)
+====================================
+FILE: permlist.c-
+-rw-------. 1 corg7983 domain_users   795 Nov 17 15:35 permlist.c-
+-rw-------. 1 corg7983 domain_users   818 Nov 17 15:35 permlist.c-.f21
+-rw-------. 1 corg7983 domain_users   795 Nov 17 15:35 permlist.c-.f22
+-rw-------. 1 corg7983 domain_users   773 Nov 17 15:35 permlist.expected
+-rw-------. 1 corg7983 domain_users    19 Nov 17 15:35 permlist.in
+-rw-------. 1 corg7983 domain_users 13706 Dec  1 20:54 permlist.mem
+-rw-------. 1 corg7983 domain_users  3161 Nov 17 15:35 permlist.mem.diffs
+-rw-------. 1 corg7983 domain_users 13748 Nov 17 15:35 permlist.mem.f21
+-rw-------. 1 corg7983 domain_users   773 Dec  1 20:54 permlist.out
+-rw-------. 1 corg7983 domain_users 15032 Dec  1 20:54 permlist.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 permlist.tm.diffs
+-rw-------. 1 corg7983 domain_users 15070 Nov 17 15:35 permlist.tm.f21
+permlist (Output OK)
+====================================
+FILE: pi.c-
+-rw-------. 1 corg7983 domain_users  1058 Nov 17 15:35 pi.c-
+-rw-------. 1 corg7983 domain_users  1072 Nov 17 15:35 pi.c-.f21
+-rw-------. 1 corg7983 domain_users  1058 Nov 17 15:35 pi.c-.f22
+-rw-------. 1 corg7983 domain_users   289 Nov 17 15:35 pi.expected
+-rw-------. 1 corg7983 domain_users    17 Nov 17 15:35 pi.in
+-rw-------. 1 corg7983 domain_users 13732 Dec  1 20:54 pi.mem
+-rw-------. 1 corg7983 domain_users  2488 Nov 17 15:35 pi.mem.diffs
+-rw-------. 1 corg7983 domain_users 13774 Nov 17 15:35 pi.mem.f21
+-rw-------. 1 corg7983 domain_users   289 Dec  1 20:54 pi.out
+-rw-------. 1 corg7983 domain_users 16503 Dec  1 20:54 pi.tm
+-rw-------. 1 corg7983 domain_users   279 Nov 17 15:35 pi.tm.diffs
+-rw-------. 1 corg7983 domain_users 16512 Nov 17 15:35 pi.tm.f21
+pi (Output OK)
+====================================
+FILE: poker.c-
+-rw-------. 1 corg7983 domain_users  2980 Nov 17 15:35 poker.c-
+-rw-------. 1 corg7983 domain_users  2980 Nov 17 15:35 poker.c-.f21
+-rw-------. 1 corg7983 domain_users  2980 Nov 17 15:35 poker.c-.f22
+-rw-------. 1 corg7983 domain_users   162 Nov 17 15:35 poker.expected
+-rw-------. 1 corg7983 domain_users    19 Nov 17 15:35 poker.in
+-rw-------. 1 corg7983 domain_users 38672 Dec  1 20:54 poker.mem
+-rw-------. 1 corg7983 domain_users  5556 Nov 17 15:35 poker.mem.diffs
+-rw-------. 1 corg7983 domain_users 38714 Nov 17 15:35 poker.mem.f21
+-rw-------. 1 corg7983 domain_users   162 Dec  1 20:54 poker.out
+-rw-------. 1 corg7983 domain_users 55618 Dec  1 20:54 poker.tm
+-rw-------. 1 corg7983 domain_users  1363 Nov 17 15:35 poker.tm.diffs
+-rw-------. 1 corg7983 domain_users 55587 Nov 17 15:35 poker.tm.f21
+poker (Output OK)
+====================================
+FILE: polynum.c-
+-rw-------. 1 corg7983 domain_users   793 Nov 17 15:35 polynum.c-
+-rw-------. 1 corg7983 domain_users   808 Nov 17 15:35 polynum.c-.f21
+-rw-------. 1 corg7983 domain_users   793 Nov 17 15:35 polynum.c-.f22
+-rw-------. 1 corg7983 domain_users    41 Nov 17 15:35 polynum.expected
+-rw-------. 1 corg7983 domain_users 11026 Dec  1 20:54 polynum.mem
+-rw-------. 1 corg7983 domain_users  2443 Nov 17 15:35 polynum.mem.diffs
+-rw-------. 1 corg7983 domain_users 11068 Nov 17 15:35 polynum.mem.f21
+-rw-------. 1 corg7983 domain_users    41 Dec  1 20:54 polynum.out
+-rw-------. 1 corg7983 domain_users 11456 Dec  1 20:54 polynum.tm
+-rw-------. 1 corg7983 domain_users   212 Nov 17 15:35 polynum.tm.diffs
+-rw-------. 1 corg7983 domain_users 11469 Nov 17 15:35 polynum.tm.f21
+polynum (Output OK)
+====================================
+FILE: proc.c-
+-rw-------. 1 corg7983 domain_users   749 Nov 17 15:35 proc.c-
+-rw-------. 1 corg7983 domain_users   750 Nov 17 15:35 proc.c-.f21
+-rw-------. 1 corg7983 domain_users   749 Nov 17 15:35 proc.c-.f22
+-rw-------. 1 corg7983 domain_users   166 Nov 17 15:35 proc.expected
+-rw-------. 1 corg7983 domain_users  8507 Dec  1 20:54 proc.mem
+-rw-------. 1 corg7983 domain_users   361 Nov 17 15:35 proc.mem.diffs
+-rw-------. 1 corg7983 domain_users  8549 Nov 17 15:35 proc.mem.f21
+-rw-------. 1 corg7983 domain_users   166 Dec  1 20:54 proc.out
+-rw-------. 1 corg7983 domain_users 18356 Dec  1 20:54 proc.tm
+-rw-------. 1 corg7983 domain_users   212 Nov 17 15:35 proc.tm.diffs
+-rw-------. 1 corg7983 domain_users 18335 Nov 17 15:35 proc.tm.f21
+proc (Output OK)
+====================================
+FILE: ptriangle.c-
+-rw-------. 1 corg7983 domain_users   590 Nov 17 15:35 ptriangle.c-
+-rw-------. 1 corg7983 domain_users   589 Nov 17 15:35 ptriangle.c-.f21
+-rw-------. 1 corg7983 domain_users   590 Nov 17 15:35 ptriangle.c-.f22
+-rw-------. 1 corg7983 domain_users   201 Nov 17 15:35 ptriangle.expected
+-rw-------. 1 corg7983 domain_users    22 Nov 17 15:35 ptriangle.in
+-rw-------. 1 corg7983 domain_users  6164 Dec  1 20:54 ptriangle.mem
+-rw-------. 1 corg7983 domain_users   919 Nov 17 15:35 ptriangle.mem.diffs
+-rw-------. 1 corg7983 domain_users  6206 Nov 17 15:35 ptriangle.mem.f21
+-rw-------. 1 corg7983 domain_users   201 Dec  1 20:54 ptriangle.out
+-rw-------. 1 corg7983 domain_users 10086 Dec  1 20:54 ptriangle.tm
+-rw-------. 1 corg7983 domain_users   411 Nov 17 15:35 ptriangle.tm.diffs
+-rw-------. 1 corg7983 domain_users 10099 Nov 17 15:35 ptriangle.tm.f21
+ptriangle (Output OK)
+====================================
+FILE: pushpoparray.c-
+-rw-------. 1 corg7983 domain_users   605 Nov 17 15:35 pushpoparray.c-
+-rw-------. 1 corg7983 domain_users   616 Nov 17 15:35 pushpoparray.c-.f21
+-rw-------. 1 corg7983 domain_users   605 Nov 17 15:35 pushpoparray.c-.f22
+-rw-------. 1 corg7983 domain_users   147 Nov 17 15:35 pushpoparray.expected
+-rw-------. 1 corg7983 domain_users  9808 Dec  1 20:54 pushpoparray.mem
+-rw-------. 1 corg7983 domain_users  1331 Nov 17 15:35 pushpoparray.mem.diffs
+-rw-------. 1 corg7983 domain_users  9850 Nov 17 15:35 pushpoparray.mem.f21
+-rw-------. 1 corg7983 domain_users   147 Dec  1 20:54 pushpoparray.out
+-rw-------. 1 corg7983 domain_users 19621 Dec  1 20:54 pushpoparray.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 pushpoparray.tm.diffs
+-rw-------. 1 corg7983 domain_users 19634 Nov 17 15:35 pushpoparray.tm.f21
+pushpoparray (Output OK)
+====================================
+FILE: pushpopcall2.c-
+-rw-------. 1 corg7983 domain_users  204 Nov 17 15:35 pushpopcall2.c-
+-rw-------. 1 corg7983 domain_users  207 Nov 17 15:35 pushpopcall2.c-.f21
+-rw-------. 1 corg7983 domain_users  204 Nov 17 15:35 pushpopcall2.c-.f22
+-rw-------. 1 corg7983 domain_users  118 Nov 17 15:35 pushpopcall2.expected
+-rw-------. 1 corg7983 domain_users 3579 Dec  1 20:54 pushpopcall2.mem
+-rw-------. 1 corg7983 domain_users  377 Nov 17 15:35 pushpopcall2.mem.diffs
+-rw-------. 1 corg7983 domain_users 3621 Nov 17 15:35 pushpopcall2.mem.f21
+-rw-------. 1 corg7983 domain_users  118 Dec  1 20:54 pushpopcall2.out
+-rw-------. 1 corg7983 domain_users 7084 Dec  1 20:54 pushpopcall2.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 pushpopcall2.tm.diffs
+-rw-------. 1 corg7983 domain_users 7088 Nov 17 15:35 pushpopcall2.tm.f21
+pushpopcall2 (Output OK)
+====================================
+FILE: pushpopcall3.c-
+-rw-------. 1 corg7983 domain_users  298 Nov 17 15:35 pushpopcall3.c-
+-rw-------. 1 corg7983 domain_users  299 Nov 17 15:35 pushpopcall3.c-.f21
+-rw-------. 1 corg7983 domain_users  298 Nov 17 15:35 pushpopcall3.c-.f22
+-rw-------. 1 corg7983 domain_users  164 Nov 17 15:35 pushpopcall3.expected
+-rw-------. 1 corg7983 domain_users 5089 Dec  1 20:54 pushpopcall3.mem
+-rw-------. 1 corg7983 domain_users  125 Nov 17 15:35 pushpopcall3.mem.diffs
+-rw-------. 1 corg7983 domain_users 5131 Nov 17 15:35 pushpopcall3.mem.f21
+-rw-------. 1 corg7983 domain_users  164 Dec  1 20:54 pushpopcall3.out
+-rw-------. 1 corg7983 domain_users 8977 Dec  1 20:54 pushpopcall3.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 pushpopcall3.tm.diffs
+-rw-------. 1 corg7983 domain_users 8958 Nov 17 15:35 pushpopcall3.tm.f21
+pushpopcall3 (Output OK)
+====================================
+FILE: pushpopcall.c-
+-rw-------. 1 corg7983 domain_users   260 Nov 17 15:35 pushpopcall.c-
+-rw-------. 1 corg7983 domain_users   260 Nov 17 15:35 pushpopcall.c-.f21
+-rw-------. 1 corg7983 domain_users   260 Nov 17 15:35 pushpopcall.c-.f22
+-rw-------. 1 corg7983 domain_users   183 Nov 17 15:35 pushpopcall.expected
+-rw-------. 1 corg7983 domain_users  4250 Dec  1 20:54 pushpopcall.mem
+-rw-------. 1 corg7983 domain_users     0 Nov 17 15:35 pushpopcall.mem.diffs
+-rw-------. 1 corg7983 domain_users  4292 Nov 17 15:35 pushpopcall.mem.f21
+-rw-------. 1 corg7983 domain_users   183 Dec  1 20:54 pushpopcall.out
+-rw-------. 1 corg7983 domain_users 11853 Dec  1 20:54 pushpopcall.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 pushpopcall.tm.diffs
+-rw-------. 1 corg7983 domain_users 11866 Nov 17 15:35 pushpopcall.tm.f21
+pushpopcall (Output OK)
+====================================
+FILE: pushpopexp.c-
+-rw-------. 1 corg7983 domain_users   439 Nov 17 15:35 pushpopexp.c-
+-rw-------. 1 corg7983 domain_users   451 Nov 17 15:35 pushpopexp.c-.f21
+-rw-------. 1 corg7983 domain_users   439 Nov 17 15:35 pushpopexp.c-.f22
+-rw-------. 1 corg7983 domain_users   120 Nov 17 15:35 pushpopexp.expected
+-rw-------. 1 corg7983 domain_users  8799 Dec  1 20:54 pushpopexp.mem
+-rw-------. 1 corg7983 domain_users  1488 Nov 17 15:35 pushpopexp.mem.diffs
+-rw-------. 1 corg7983 domain_users  8841 Nov 17 15:35 pushpopexp.mem.f21
+-rw-------. 1 corg7983 domain_users   120 Dec  1 20:54 pushpopexp.out
+-rw-------. 1 corg7983 domain_users 12195 Dec  1 20:54 pushpopexp.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 pushpopexp.tm.diffs
+-rw-------. 1 corg7983 domain_users 12112 Nov 17 15:35 pushpopexp.tm.f21
+pushpopexp (Output OK)
+====================================
+FILE: pushpopparm.c-
+-rw-------. 1 corg7983 domain_users  292 Nov 17 15:35 pushpopparm.c-
+-rw-------. 1 corg7983 domain_users  297 Nov 17 15:35 pushpopparm.c-.f21
+-rw-------. 1 corg7983 domain_users  292 Nov 17 15:35 pushpopparm.c-.f22
+-rw-------. 1 corg7983 domain_users   73 Nov 17 15:35 pushpopparm.expected
+-rw-------. 1 corg7983 domain_users 4758 Dec  1 20:54 pushpopparm.mem
+-rw-------. 1 corg7983 domain_users  601 Nov 17 15:35 pushpopparm.mem.diffs
+-rw-------. 1 corg7983 domain_users 4800 Nov 17 15:35 pushpopparm.mem.f21
+-rw-------. 1 corg7983 domain_users   73 Dec  1 20:54 pushpopparm.out
+-rw-------. 1 corg7983 domain_users 9677 Dec  1 20:54 pushpopparm.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 pushpopparm.tm.diffs
+-rw-------. 1 corg7983 domain_users 9690 Nov 17 15:35 pushpopparm.tm.f21
+pushpopparm (Output OK)
+====================================
+FILE: pushpoptiny.c-
+-rw-------. 1 corg7983 domain_users  159 Nov 17 15:35 pushpoptiny.c-
+-rw-------. 1 corg7983 domain_users  162 Nov 17 15:35 pushpoptiny.c-.f21
+-rw-------. 1 corg7983 domain_users  159 Nov 17 15:35 pushpoptiny.c-.f22
+-rw-------. 1 corg7983 domain_users   58 Nov 17 15:35 pushpoptiny.expected
+-rw-------. 1 corg7983 domain_users 3043 Dec  1 20:54 pushpoptiny.mem
+-rw-------. 1 corg7983 domain_users  353 Nov 17 15:35 pushpoptiny.mem.diffs
+-rw-------. 1 corg7983 domain_users 3085 Nov 17 15:35 pushpoptiny.mem.f21
+-rw-------. 1 corg7983 domain_users   58 Dec  1 20:54 pushpoptiny.out
+-rw-------. 1 corg7983 domain_users 5723 Dec  1 20:54 pushpoptiny.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 pushpoptiny.tm.diffs
+-rw-------. 1 corg7983 domain_users 5704 Nov 17 15:35 pushpoptiny.tm.f21
+pushpoptiny (Output OK)
+====================================
+FILE: queens.c-
+-rw-------. 1 corg7983 domain_users  1100 Nov 17 15:35 queens.c-
+-rw-------. 1 corg7983 domain_users  1108 Nov 17 15:35 queens.c-.f21
+-rw-------. 1 corg7983 domain_users  1100 Nov 17 15:35 queens.c-.f22
+-rw-------. 1 corg7983 domain_users   654 Nov 17 15:35 queens.expected
+-rw-------. 1 corg7983 domain_users    22 Nov 17 15:35 queens.in
+-rw-------. 1 corg7983 domain_users 13864 Dec  1 20:54 queens.mem
+-rw-------. 1 corg7983 domain_users  2426 Nov 17 15:35 queens.mem.diffs
+-rw-------. 1 corg7983 domain_users 13906 Nov 17 15:35 queens.mem.f21
+-rw-------. 1 corg7983 domain_users   654 Dec  1 20:54 queens.out
+-rw-------. 1 corg7983 domain_users 17387 Dec  1 20:54 queens.tm
+-rw-------. 1 corg7983 domain_users   413 Nov 17 15:35 queens.tm.diffs
+-rw-------. 1 corg7983 domain_users 17398 Nov 17 15:35 queens.tm.f21
+queens (Output OK)
+====================================
+FILE: return.c-
+-rw-------. 1 corg7983 domain_users  128 Nov 17 15:35 return.c-
+-rw-------. 1 corg7983 domain_users  129 Nov 17 15:35 return.c-.f21
+-rw-------. 1 corg7983 domain_users  128 Nov 17 15:35 return.c-.f22
+-rw-------. 1 corg7983 domain_users   44 Nov 17 15:35 return.expected
+-rw-------. 1 corg7983 domain_users 1921 Dec  1 20:54 return.mem
+-rw-------. 1 corg7983 domain_users  121 Nov 17 15:35 return.mem.diffs
+-rw-------. 1 corg7983 domain_users 1963 Nov 17 15:35 return.mem.f21
+-rw-------. 1 corg7983 domain_users   44 Dec  1 20:54 return.out
+-rw-------. 1 corg7983 domain_users 5150 Dec  1 20:54 return.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 return.tm.diffs
+-rw-------. 1 corg7983 domain_users 5176 Nov 17 15:35 return.tm.f21
+return (Output OK)
+====================================
+FILE: righttri.c-
+-rw-------. 1 corg7983 domain_users   757 Nov 17 15:35 righttri.c-
+-rw-------. 1 corg7983 domain_users   768 Nov 17 15:35 righttri.c-.f21
+-rw-------. 1 corg7983 domain_users   757 Nov 17 15:35 righttri.c-.f22
+-rw-------. 1 corg7983 domain_users   186 Nov 17 15:35 righttri.expected
+-rw-------. 1 corg7983 domain_users    16 Nov 17 15:35 righttri.in
+-rw-------. 1 corg7983 domain_users  9924 Dec  1 20:54 righttri.mem
+-rw-------. 1 corg7983 domain_users  2177 Nov 17 15:35 righttri.mem.diffs
+-rw-------. 1 corg7983 domain_users  9966 Nov 17 15:35 righttri.mem.f21
+-rw-------. 1 corg7983 domain_users   186 Dec  1 20:54 righttri.out
+-rw-------. 1 corg7983 domain_users 10626 Dec  1 20:54 righttri.tm
+-rw-------. 1 corg7983 domain_users   279 Nov 17 15:35 righttri.tm.diffs
+-rw-------. 1 corg7983 domain_users 10634 Nov 17 15:35 righttri.tm.f21
+righttri (Output OK)
+====================================
+FILE: scope2.c-
+-rw-------. 1 corg7983 domain_users   638 Nov 17 15:35 scope2.c-
+-rw-------. 1 corg7983 domain_users   652 Nov 17 15:35 scope2.c-.f21
+-rw-------. 1 corg7983 domain_users   638 Nov 17 15:35 scope2.c-.f22
+-rw-------. 1 corg7983 domain_users   100 Nov 17 15:35 scope2.expected
+-rw-------. 1 corg7983 domain_users  7612 Dec  1 20:54 scope2.mem
+-rw-------. 1 corg7983 domain_users  1726 Nov 17 15:35 scope2.mem.diffs
+-rw-------. 1 corg7983 domain_users  7654 Nov 17 15:35 scope2.mem.f21
+-rw-------. 1 corg7983 domain_users   100 Dec  1 20:54 scope2.out
+-rw-------. 1 corg7983 domain_users 14228 Dec  1 20:54 scope2.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 scope2.tm.diffs
+-rw-------. 1 corg7983 domain_users 14216 Nov 17 15:35 scope2.tm.f21
+scope2 (Output OK)
+====================================
+FILE: sieve.c-
+-rw-------. 1 corg7983 domain_users  418 Nov 17 15:35 sieve.c-
+-rw-------. 1 corg7983 domain_users  430 Nov 17 15:35 sieve.c-.f21
+-rw-------. 1 corg7983 domain_users  418 Nov 17 15:35 sieve.c-.f22
+-rw-------. 1 corg7983 domain_users  194 Nov 17 15:35 sieve.expected
+-rw-------. 1 corg7983 domain_users   17 Nov 17 15:35 sieve.in
+-rw-------. 1 corg7983 domain_users 8140 Dec  1 20:54 sieve.mem
+-rw-------. 1 corg7983 domain_users 1604 Nov 17 15:35 sieve.mem.diffs
+-rw-------. 1 corg7983 domain_users 8182 Nov 17 15:35 sieve.mem.f21
+-rw-------. 1 corg7983 domain_users  194 Dec  1 20:54 sieve.out
+-rw-------. 1 corg7983 domain_users 9871 Dec  1 20:54 sieve.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 sieve.tm.diffs
+-rw-------. 1 corg7983 domain_users 9897 Nov 17 15:35 sieve.tm.f21
+sieve (Output OK)
+====================================
+FILE: sort2.c-
+-rw-------. 1 corg7983 domain_users   481 Nov 17 15:35 sort2.c-
+-rw-------. 1 corg7983 domain_users   493 Nov 17 15:35 sort2.c-.f21
+-rw-------. 1 corg7983 domain_users   481 Nov 17 15:35 sort2.c-.f22
+-rw-------. 1 corg7983 domain_users   456 Nov 17 15:35 sort2.expected
+-rw-------. 1 corg7983 domain_users    74 Nov 17 15:35 sort2.in
+-rw-------. 1 corg7983 domain_users  7983 Dec  1 20:54 sort2.mem
+-rw-------. 1 corg7983 domain_users   760 Nov 17 15:35 sort2.mem.diffs
+-rw-------. 1 corg7983 domain_users  8025 Nov 17 15:35 sort2.mem.f21
+-rw-------. 1 corg7983 domain_users   456 Dec  1 20:54 sort2.out
+-rw-------. 1 corg7983 domain_users 13347 Dec  1 20:54 sort2.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 sort2.tm.diffs
+-rw-------. 1 corg7983 domain_users 13373 Nov 17 15:35 sort2.tm.f21
+sort2 (Output OK)
+====================================
+FILE: sort.c-
+-rw-------. 1 corg7983 domain_users   702 Nov 17 15:35 sort.c-
+-rw-------. 1 corg7983 domain_users   715 Nov 17 15:35 sort.c-.f21
+-rw-------. 1 corg7983 domain_users   702 Nov 17 15:35 sort.c-.f22
+-rw-------. 1 corg7983 domain_users   188 Nov 17 15:35 sort.expected
+-rw-------. 1 corg7983 domain_users    44 Nov 17 15:35 sort.in
+-rw-------. 1 corg7983 domain_users 10143 Dec  1 20:54 sort.mem
+-rw-------. 1 corg7983 domain_users  1697 Nov 17 15:35 sort.mem.diffs
+-rw-------. 1 corg7983 domain_users 10185 Nov 17 15:35 sort.mem.f21
+-rw-------. 1 corg7983 domain_users   188 Dec  1 20:54 sort.out
+-rw-------. 1 corg7983 domain_users 12286 Dec  1 20:54 sort.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 sort.tm.diffs
+-rw-------. 1 corg7983 domain_users 12274 Nov 17 15:35 sort.tm.f21
+sort (Output OK)
+====================================
+FILE: sudoku.c-
+-rw-------. 1 corg7983 domain_users  5928 Nov 17 15:35 sudoku.c-
+-rw-------. 1 corg7983 domain_users  5947 Nov 17 15:35 sudoku.c-.f21
+-rw-------. 1 corg7983 domain_users  5928 Nov 17 15:35 sudoku.c-.f22
+-rw-------. 1 corg7983 domain_users   197 Nov 17 15:35 sudoku.expected
+-rw-------. 1 corg7983 domain_users   177 Nov 17 15:35 sudoku.in
+-rw-------. 1 corg7983 domain_users 40165 Dec  1 20:54 sudoku.mem
+-rw-------. 1 corg7983 domain_users  6583 Nov 17 15:35 sudoku.mem.diffs
+-rw-------. 1 corg7983 domain_users 40207 Nov 17 15:35 sudoku.mem.f21
+-rw-------. 1 corg7983 domain_users   197 Dec  1 20:54 sudoku.out
+-rw-------. 1 corg7983 domain_users 51410 Dec  1 20:54 sudoku.tm
+-rw-------. 1 corg7983 domain_users   953 Nov 17 15:35 sudoku.tm.diffs
+-rw-------. 1 corg7983 domain_users 51406 Nov 17 15:35 sudoku.tm.f21
+sudoku (Output OK)
+====================================
+FILE: tictactoe.c-
+-rw-------. 1 corg7983 domain_users  10512 Nov 17 15:35 tictactoe.c-
+-rw-------. 1 corg7983 domain_users  10425 Nov 17 15:35 tictactoe.c-.f21
+-rw-------. 1 corg7983 domain_users  10512 Nov 17 15:35 tictactoe.c-.f22
+-rw-------. 1 corg7983 domain_users    177 Nov 17 15:35 tictactoe.expected
+-rw-------. 1 corg7983 domain_users     22 Nov 17 15:35 tictactoe.in
+-rw-------. 1 corg7983 domain_users 125013 Dec  1 20:54 tictactoe.mem
+-rw-------. 1 corg7983 domain_users  38129 Nov 17 15:35 tictactoe.mem.diffs
+-rw-------. 1 corg7983 domain_users 125055 Nov 17 15:35 tictactoe.mem.f21
+-rw-------. 1 corg7983 domain_users    177 Dec  1 20:54 tictactoe.out
+-rw-------. 1 corg7983 domain_users 127538 Dec  1 20:54 tictactoe.tm
+-rw-------. 1 corg7983 domain_users  10387 Nov 17 15:35 tictactoe.tm.diffs
+-rw-------. 1 corg7983 domain_users 127537 Nov 17 15:35 tictactoe.tm.f21
+tictactoe (Output OK)
+====================================
+FILE: tiny3.c-
+-rw-------. 1 corg7983 domain_users  246 Nov 17 15:35 tiny3.c-
+-rw-------. 1 corg7983 domain_users  249 Nov 17 15:35 tiny3.c-.f21
+-rw-------. 1 corg7983 domain_users  246 Nov 17 15:35 tiny3.c-.f22
+-rw-------. 1 corg7983 domain_users  146 Nov 17 15:35 tiny3.expected
+-rw-------. 1 corg7983 domain_users 3207 Dec  1 20:54 tiny3.mem
+-rw-------. 1 corg7983 domain_users  359 Nov 17 15:35 tiny3.mem.diffs
+-rw-------. 1 corg7983 domain_users 3249 Nov 17 15:35 tiny3.mem.f21
+-rw-------. 1 corg7983 domain_users  146 Dec  1 20:54 tiny3.out
+-rw-------. 1 corg7983 domain_users 5864 Dec  1 20:54 tiny3.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 tiny3.tm.diffs
+-rw-------. 1 corg7983 domain_users 5877 Nov 17 15:35 tiny3.tm.f21
+tiny3 (Output OK)
+====================================
+FILE: tiny.c-
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 tiny.c-
+-rw-------. 1 corg7983 domain_users  147 Nov 17 15:35 tiny.c-.f21
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 tiny.c-.f22
+-rw-------. 1 corg7983 domain_users   98 Nov 17 15:35 tiny.expected
+-rw-------. 1 corg7983 domain_users 2100 Dec  1 20:54 tiny.mem
+-rw-------. 1 corg7983 domain_users  236 Nov 17 15:35 tiny.mem.diffs
+-rw-------. 1 corg7983 domain_users 2142 Nov 17 15:35 tiny.mem.f21
+-rw-------. 1 corg7983 domain_users   98 Dec  1 20:54 tiny.out
+-rw-------. 1 corg7983 domain_users 4749 Dec  1 20:54 tiny.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 tiny.tm.diffs
+-rw-------. 1 corg7983 domain_users 4762 Nov 17 15:35 tiny.tm.f21
+tiny (Output OK)
+====================================
+FILE: toroman.c-
+-rw-------. 1 corg7983 domain_users  1121 Nov 17 15:35 toroman.c-
+-rw-------. 1 corg7983 domain_users  1134 Nov 17 15:35 toroman.c-.f21
+-rw-------. 1 corg7983 domain_users  1121 Nov 17 15:35 toroman.c-.f22
+-rw-------. 1 corg7983 domain_users   529 Nov 17 15:35 toroman.expected
+-rw-------. 1 corg7983 domain_users   100 Nov 17 15:35 toroman.in
+-rw-------. 1 corg7983 domain_users 12242 Dec  1 20:54 toroman.mem
+-rw-------. 1 corg7983 domain_users  1907 Nov 17 15:35 toroman.mem.diffs
+-rw-------. 1 corg7983 domain_users 12284 Nov 17 15:35 toroman.mem.f21
+-rw-------. 1 corg7983 domain_users   529 Dec  1 20:54 toroman.out
+-rw-------. 1 corg7983 domain_users 15851 Dec  1 20:54 toroman.tm
+-rw-------. 1 corg7983 domain_users   280 Nov 17 15:35 toroman.tm.diffs
+-rw-------. 1 corg7983 domain_users 15877 Nov 17 15:35 toroman.tm.f21
+toroman (Output OK)
+====================================
+FILE: unary.c-
+-rw-------. 1 corg7983 domain_users   689 Nov 17 15:35 unary.c-
+-rw-------. 1 corg7983 domain_users   694 Nov 17 15:35 unary.c-.f21
+-rw-------. 1 corg7983 domain_users   689 Nov 17 15:35 unary.c-.f22
+-rw-------. 1 corg7983 domain_users   195 Nov 17 15:35 unary.expected
+-rw-------. 1 corg7983 domain_users  6696 Dec  1 20:54 unary.mem
+-rw-------. 1 corg7983 domain_users   617 Nov 17 15:35 unary.mem.diffs
+-rw-------. 1 corg7983 domain_users  6738 Nov 17 15:35 unary.mem.f21
+-rw-------. 1 corg7983 domain_users   195 Dec  1 20:54 unary.out
+-rw-------. 1 corg7983 domain_users 12124 Dec  1 20:54 unary.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 unary.tm.diffs
+-rw-------. 1 corg7983 domain_users 12144 Nov 17 15:35 unary.tm.f21
+unary (Output OK)
+====================================
+FILE: var2.c-
+-rw-------. 1 corg7983 domain_users   423 Nov 17 15:35 var2.c-
+-rw-------. 1 corg7983 domain_users   425 Nov 17 15:35 var2.c-.f21
+-rw-------. 1 corg7983 domain_users   423 Nov 17 15:35 var2.c-.f22
+-rw-------. 1 corg7983 domain_users    72 Nov 17 15:35 var2.expected
+-rw-------. 1 corg7983 domain_users  4586 Dec  1 20:54 var2.mem
+-rw-------. 1 corg7983 domain_users   242 Nov 17 15:35 var2.mem.diffs
+-rw-------. 1 corg7983 domain_users  4628 Nov 17 15:35 var2.mem.f21
+-rw-------. 1 corg7983 domain_users    72 Dec  1 20:54 var2.out
+-rw-------. 1 corg7983 domain_users 10922 Dec  1 20:54 var2.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 var2.tm.diffs
+-rw-------. 1 corg7983 domain_users 10935 Nov 17 15:35 var2.tm.f21
+var2 (Output OK)
+====================================
+FILE: vararray.c-
+-rw-------. 1 corg7983 domain_users   449 Nov 17 15:35 vararray.c-
+-rw-------. 1 corg7983 domain_users   454 Nov 17 15:35 vararray.c-.f21
+-rw-------. 1 corg7983 domain_users   449 Nov 17 15:35 vararray.c-.f22
+-rw-------. 1 corg7983 domain_users   150 Nov 17 15:35 vararray.expected
+-rw-------. 1 corg7983 domain_users  6350 Dec  1 20:54 vararray.mem
+-rw-------. 1 corg7983 domain_users   601 Nov 17 15:35 vararray.mem.diffs
+-rw-------. 1 corg7983 domain_users  6392 Nov 17 15:35 vararray.mem.f21
+-rw-------. 1 corg7983 domain_users   150 Dec  1 20:54 vararray.out
+-rw-------. 1 corg7983 domain_users 13190 Dec  1 20:54 vararray.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 vararray.tm.diffs
+-rw-------. 1 corg7983 domain_users 13203 Nov 17 15:35 vararray.tm.f21
+vararray (Output OK)
+====================================
+FILE: var.c-
+-rw-------. 1 corg7983 domain_users   527 Nov 17 15:35 var.c-
+-rw-------. 1 corg7983 domain_users   533 Nov 17 15:35 var.c-.f21
+-rw-------. 1 corg7983 domain_users   527 Nov 17 15:35 var.c-.f22
+-rw-------. 1 corg7983 domain_users    93 Nov 17 15:35 var.expected
+-rw-------. 1 corg7983 domain_users  7241 Dec  1 20:54 var.mem
+-rw-------. 1 corg7983 domain_users   722 Nov 17 15:35 var.mem.diffs
+-rw-------. 1 corg7983 domain_users  7283 Nov 17 15:35 var.mem.f21
+-rw-------. 1 corg7983 domain_users    93 Dec  1 20:54 var.out
+-rw-------. 1 corg7983 domain_users 16153 Dec  1 20:54 var.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 var.tm.diffs
+-rw-------. 1 corg7983 domain_users 16166 Nov 17 15:35 var.tm.f21
+var (Output OK)
+====================================
+FILE: varnovoid.c-
+-rw-------. 1 corg7983 domain_users   527 Nov 17 15:35 varnovoid.c-
+-rw-------. 1 corg7983 domain_users   533 Nov 17 15:35 varnovoid.c-.f21
+-rw-------. 1 corg7983 domain_users   527 Nov 17 15:35 varnovoid.c-.f22
+-rw-------. 1 corg7983 domain_users    99 Nov 17 15:35 varnovoid.expected
+-rw-------. 1 corg7983 domain_users  7241 Dec  1 20:54 varnovoid.mem
+-rw-------. 1 corg7983 domain_users   722 Nov 17 15:35 varnovoid.mem.diffs
+-rw-------. 1 corg7983 domain_users  7283 Nov 17 15:35 varnovoid.mem.f21
+-rw-------. 1 corg7983 domain_users    99 Dec  1 20:54 varnovoid.out
+-rw-------. 1 corg7983 domain_users 16159 Dec  1 20:54 varnovoid.tm
+-rw-------. 1 corg7983 domain_users   145 Nov 17 15:35 varnovoid.tm.diffs
+-rw-------. 1 corg7983 domain_users 16172 Nov 17 15:35 varnovoid.tm.f21
+varnovoid (Output OK)
+====================================
+FILE: walsh.c-
+-rw-------. 1 corg7983 domain_users  1445 Nov 17 15:35 walsh.c-
+-rw-------. 1 corg7983 domain_users  1466 Nov 17 15:35 walsh.c-.f21
+-rw-------. 1 corg7983 domain_users  1445 Nov 17 15:35 walsh.c-.f22
+-rw-------. 1 corg7983 domain_users   573 Nov 17 15:35 walsh.expected
+-rw-------. 1 corg7983 domain_users    92 Nov 17 15:35 walsh.in
+-rw-------. 1 corg7983 domain_users 19636 Dec  1 20:54 walsh.mem
+-rw-------. 1 corg7983 domain_users  3807 Nov 17 15:35 walsh.mem.diffs
+-rw-------. 1 corg7983 domain_users 19678 Nov 17 15:35 walsh.mem.f21
+-rw-------. 1 corg7983 domain_users   573 Dec  1 20:54 walsh.out
+-rw-------. 1 corg7983 domain_users 24587 Dec  1 20:54 walsh.tm
+-rw-------. 1 corg7983 domain_users   413 Nov 17 15:35 walsh.tm.diffs
+-rw-------. 1 corg7983 domain_users 24578 Nov 17 15:35 walsh.tm.f21
+walsh (Output OK)
+====================================
+FILE: while.c-
+-rw-------. 1 corg7983 domain_users  144 Nov 17 15:35 while.c-
+-rw-------. 1 corg7983 domain_users  146 Nov 17 15:35 while.c-.f21
+-rw-------. 1 corg7983 domain_users  144 Nov 17 15:35 while.c-.f22
+-rw-------. 1 corg7983 domain_users   63 Nov 17 15:35 while.expected
+-rw-------. 1 corg7983 domain_users 2624 Dec  1 20:54 while.mem
+-rw-------. 1 corg7983 domain_users  240 Nov 17 15:35 while.mem.diffs
+-rw-------. 1 corg7983 domain_users 2666 Nov 17 15:35 while.mem.f21
+-rw-------. 1 corg7983 domain_users   63 Dec  1 20:54 while.out
+-rw-------. 1 corg7983 domain_users 5306 Dec  1 20:54 while.tm
+-rw-------. 1 corg7983 domain_users  145 Nov 17 15:35 while.tm.diffs
+-rw-------. 1 corg7983 domain_users 5332 Nov 17 15:35 while.tm.f21
+while (Output OK)

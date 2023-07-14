@@ -1,0 +1,8 @@
+segfaulting on:
+c0e.c-
+c0f.c-
+c0g.c-
+c0h.c-
+c20.c-
+c21.c-
+

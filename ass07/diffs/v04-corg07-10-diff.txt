@@ -1,0 +1,525 @@
+SCRIPT RUNNING WITH "v04"
+outputs(char s[])
+{
+    int i;
+
+    i = 0;
+    while i<*s do {
+          if s[i]=='\0' then break;
+          outputc(s[i]);
+          i++;
+    }
+}
+
+main()
+{
+   char a[9]:"armadillo";
+   char b[3]:"bat";
+   char h[5]:"horse";
+   char big[10];
+   char small[2];
+
+   small = a;
+   outputs(small);
+   outnl();
+   big = a;
+   outputs(big);
+   outnl();
+   outnl();
+
+   small = b;
+   outputs(small);
+   outnl();
+   big = b;
+   outputs(big);
+   outnl();
+   outnl();
+
+   small = h;
+   outputs(small);
+   outnl();
+   big = h;
+   outputs(big);
+   outnl();
+   outnl();
+}   
+---- MEM DIFF ----
+---- TMCODE DIFF ----
+* C- compiler version 07-08									   |	* C- compiler version C-S21
+* Built: Wed Nov 30 14:46:36 2022								   |	* Built: Apr 18, 2021 (toffset telemetry)
+* Author: Ethan Corgatelli									   |	* Author: Robert B. Heckendorn
+* File compiled: v04.c-										   |	* File compiled:  v04.c-
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION input											* FUNCTION input
+  1:     ST  3,-1(1)	Store return address 								  1:     ST  3,-1(1)	Store return address 
+  2:     IN  2,2,2	Grab int input 									  2:     IN  2,2,2	Grab int input 
+  3:     LD  3,-1(1)	Load return address 								  3:     LD  3,-1(1)	Load return address 
+  4:     LD  1,0(1)	Adjust fp 									  4:     LD  1,0(1)	Adjust fp 
+  5:    JMP  7,0(3)	Return 										  5:    JMP  7,0(3)	Return 
+* END FUNCTION input											* END FUNCTION input
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION output											* FUNCTION output
+  6:     ST  3,-1(1)	Store return address 								  6:     ST  3,-1(1)	Store return address 
+  7:     LD  3,-2(1)	Load parameter 									  7:     LD  3,-2(1)	Load parameter 
+  8:    OUT  3,3,3	Output integer 									  8:    OUT  3,3,3	Output integer 
+  9:     LD  3,-1(1)	Load return address 								  9:     LD  3,-1(1)	Load return address 
+ 10:     LD  1,0(1)	Adjust fp 									 10:     LD  1,0(1)	Adjust fp 
+ 11:    JMP  7,0(3)	Return 										 11:    JMP  7,0(3)	Return 
+* END FUNCTION output											* END FUNCTION output
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION inputb											* FUNCTION inputb
+ 12:     ST  3,-1(1)	Store return address 								 12:     ST  3,-1(1)	Store return address 
+ 13:    INB  2,2,2	Grab bool input 								 13:    INB  2,2,2	Grab bool input 
+ 14:     LD  3,-1(1)	Load return address 								 14:     LD  3,-1(1)	Load return address 
+ 15:     LD  1,0(1)	Adjust fp 									 15:     LD  1,0(1)	Adjust fp 
+ 16:    JMP  7,0(3)	Return 										 16:    JMP  7,0(3)	Return 
+* END FUNCTION inputb											* END FUNCTION inputb
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION outputb											* FUNCTION outputb
+ 17:     ST  3,-1(1)	Store return address 								 17:     ST  3,-1(1)	Store return address 
+ 18:     LD  3,-2(1)	Load parameter 									 18:     LD  3,-2(1)	Load parameter 
+ 19:   OUTB  3,3,3	Output bool 									 19:   OUTB  3,3,3	Output bool 
+ 20:     LD  3,-1(1)	Load return address 								 20:     LD  3,-1(1)	Load return address 
+ 21:     LD  1,0(1)	Adjust fp 									 21:     LD  1,0(1)	Adjust fp 
+ 22:    JMP  7,0(3)	Return 										 22:    JMP  7,0(3)	Return 
+* END FUNCTION outputb											* END FUNCTION outputb
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION inputc											* FUNCTION inputc
+ 23:     ST  3,-1(1)	Store return address 								 23:     ST  3,-1(1)	Store return address 
+ 24:    INC  2,2,2	Grab char input 								 24:    INC  2,2,2	Grab char input 
+ 25:     LD  3,-1(1)	Load return address 								 25:     LD  3,-1(1)	Load return address 
+ 26:     LD  1,0(1)	Adjust fp 									 26:     LD  1,0(1)	Adjust fp 
+ 27:    JMP  7,0(3)	Return 										 27:    JMP  7,0(3)	Return 
+* END FUNCTION inputc											* END FUNCTION inputc
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION outputc											* FUNCTION outputc
+ 28:     ST  3,-1(1)	Store return address 								 28:     ST  3,-1(1)	Store return address 
+ 29:     LD  3,-2(1)	Load parameter 									 29:     LD  3,-2(1)	Load parameter 
+ 30:   OUTC  3,3,3	Output char 									 30:   OUTC  3,3,3	Output char 
+ 31:     LD  3,-1(1)	Load return address 								 31:     LD  3,-1(1)	Load return address 
+ 32:     LD  1,0(1)	Adjust fp 									 32:     LD  1,0(1)	Adjust fp 
+ 33:    JMP  7,0(3)	Return 										 33:    JMP  7,0(3)	Return 
+* END FUNCTION outputc											* END FUNCTION outputc
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION outnl											* FUNCTION outnl
+ 34:     ST  3,-1(1)	Store return address 								 34:     ST  3,-1(1)	Store return address 
+ 35:  OUTNL  3,3,3	Output a newline 								 35:  OUTNL  3,3,3	Output a newline 
+ 36:     LD  3,-1(1)	Load return address 								 36:     LD  3,-1(1)	Load return address 
+ 37:     LD  1,0(1)	Adjust fp 									 37:     LD  1,0(1)	Adjust fp 
+ 38:    JMP  7,0(3)	Return 										 38:    JMP  7,0(3)	Return 
+* END FUNCTION outnl											* END FUNCTION outnl
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION outputs											* FUNCTION outputs
+* TOFF set: -3												* TOFF set: -3
+ 39:     ST  3,-1(1)	Store return address 								 39:     ST  3,-1(1)	Store return address 
+* COMPOUND												* COMPOUND
+* TOFF set: -4												* TOFF set: -4
+* Compound Body												* Compound Body
+* EXPRESSION												* EXPRESSION
+ 40:    LDC  3,0(6)	Load integer constant 								 40:    LDC  3,0(6)	Load integer constant 
+ 41:     ST  3,-3(1)	Store variable i								 41:     ST  3,-3(1)	Store variable i
+* WHILE													* WHILE
+ 42:     LD  3,-3(1)	Load variable i									 42:     LD  3,-3(1)	Load variable i
+ 43:     ST  3,-4(1)	Push left side 									 43:     ST  3,-4(1)	Push left side 
+* TOFF dec: -5												* TOFF dec: -5
+ 44:     LD  3,-2(1)	Load address of base of array s							 44:     LD  3,-2(1)	Load address of base of array s
+ 45:     LD  3,1(3)	Load array size 								 45:     LD  3,1(3)	Load array size 
+* TOFF inc: -4												* TOFF inc: -4
+ 46:     LD  4,-4(1)	Pop left into ac1 								 46:     LD  4,-4(1)	Pop left into ac1 
+ 47:    TLT  3,4,3	Op < 										 47:    TLT  3,4,3	Op < 
+ 48:    JNZ  3,1(7)	Jump to while part 								 48:    JNZ  3,1(7)	Jump to while part 
+* DO													* DO
+* COMPOUND												* COMPOUND
+* TOFF set: -4												* TOFF set: -4
+* Compound Body												* Compound Body
+* IF													* IF
+ 50:     LD  3,-2(1)	Load address of base of array s							 50:     LD  3,-2(1)	Load address of base of array s
+ 51:     ST  3,-4(1)	Push left side 									 51:     ST  3,-4(1)	Push left side 
+* TOFF dec: -5												* TOFF dec: -5
+ 52:     LD  3,-3(1)	Load variable i									 52:     LD  3,-3(1)	Load variable i
+* TOFF inc: -4												* TOFF inc: -4
+ 53:     LD  4,-4(1)	Pop left into ac1 								 53:     LD  4,-4(1)	Pop left into ac1 
+ 54:    SUB  3,4,3	compute location from index 							 54:    SUB  3,4,3	compute location from index 
+ 55:     LD  3,0(3)	Load array element 								 55:     LD  3,0(3)	Load array element 
+ 56:     ST  3,-4(1)	Push left side 									 56:     ST  3,-4(1)	Push left side 
+* TOFF dec: -5												* TOFF dec: -5
+ 57:    LDC  3,0(6)	Load char constant 								 57:    LDC  3,0(6)	Load char constant 
+* TOFF inc: -4												* TOFF inc: -4
+ 58:     LD  4,-4(1)	Pop left into ac1 								 58:     LD  4,-4(1)	Pop left into ac1 
+ 59:    TEQ  3,4,3	Op = 										 59:    TEQ  3,4,3	Op = 
+* THEN													* THEN
+* BREAK													* BREAK
+ 61:    JMP  7,-13(7)	break 										 61:    JMP  7,-13(7)	break 
+ 60:    JZR  3,1(7)	Jump around the THEN if false [backpatch] 					 60:    JZR  3,1(7)	Jump around the THEN if false [backpatch] 
+* END IF												* END IF
+* EXPRESSION												* EXPRESSION
+* CALL outputc												* CALL outputc
+ 62:     ST  1,-4(1)	Store fp in ghost frame for outputc						 62:     ST  1,-4(1)	Store fp in ghost frame for outputc
+* TOFF dec: -5												* TOFF dec: -5
+* TOFF dec: -6												* TOFF dec: -6
+* Param 1												* Param 1
+ 63:     LD  3,-2(1)	Load address of base of array s							 63:     LD  3,-2(1)	Load address of base of array s
+ 64:     ST  3,-6(1)	Push left side 									 64:     ST  3,-6(1)	Push left side 
+* TOFF dec: -7												* TOFF dec: -7
+ 65:     LD  3,-3(1)	Load variable i									 65:     LD  3,-3(1)	Load variable i
+* TOFF inc: -6												* TOFF inc: -6
+ 66:     LD  4,-6(1)	Pop left into ac1 								 66:     LD  4,-6(1)	Pop left into ac1 
+ 67:    SUB  3,4,3	compute location from index 							 67:    SUB  3,4,3	compute location from index 
+ 68:     LD  3,0(3)	Load array element 								 68:     LD  3,0(3)	Load array element 
+ 69:     ST  3,-6(1)	Push parameter 									 69:     ST  3,-6(1)	Push parameter 
+* TOFF dec: -7												* TOFF dec: -7
+* Param end outputc											* Param end outputc
+ 70:    LDA  1,-4(1)	Ghost frame becomes new active frame 						 70:    LDA  1,-4(1)	Ghost frame becomes new active frame 
+ 71:    LDA  3,1(7)	Return address in ac 								 71:    LDA  3,1(7)	Return address in ac 
+ 72:    JMP  7,-45(7)	CALL outputc									 72:    JMP  7,-45(7)	CALL outputc
+ 73:    LDA  3,0(2)	Save the result in ac 								 73:    LDA  3,0(2)	Save the result in ac 
+* Call end outputc											* Call end outputc
+* TOFF set: -4												* TOFF set: -4
+* EXPRESSION												* EXPRESSION
+ 74:     LD  3,-3(1)	load lhs variable i								 74:     LD  3,-3(1)	load lhs variable i
+ 75:    LDA  3,1(3)	increment value of i								 75:    LDA  3,1(3)	increment value of i
+ 76:     ST  3,-3(1)	Store variable i								 76:     ST  3,-3(1)	Store variable i
+* TOFF set: -4												* TOFF set: -4
+* END COMPOUND												* END COMPOUND
+ 77:    JMP  7,-36(7)	go to beginning of loop 							 77:    JMP  7,-36(7)	go to beginning of loop 
+ 49:    JMP  7,28(7)	Jump past loop [backpatch] 							 49:    JMP  7,28(7)	Jump past loop [backpatch] 
+* END WHILE												* END WHILE
+* TOFF set: -3												* TOFF set: -3
+* END COMPOUND												* END COMPOUND
+* Add standard closing in case there is no return statement						* Add standard closing in case there is no return statement
+ 78:    LDC  2,0(6)	Set return value to 0 								 78:    LDC  2,0(6)	Set return value to 0 
+ 79:     LD  3,-1(1)	Load return address 								 79:     LD  3,-1(1)	Load return address 
+ 80:     LD  1,0(1)	Adjust fp 									 80:     LD  1,0(1)	Adjust fp 
+ 81:    JMP  7,0(3)	Return 										 81:    JMP  7,0(3)	Return 
+* END FUNCTION outputs											* END FUNCTION outputs
+* 													* 
+* ** ** ** ** ** ** ** ** ** ** ** **									* ** ** ** ** ** ** ** ** ** ** ** **
+* FUNCTION main												* FUNCTION main
+* TOFF set: -2												* TOFF set: -2
+ 82:     ST  3,-1(1)	Store return address 								 82:     ST  3,-1(1)	Store return address 
+* COMPOUND												* COMPOUND
+* TOFF set: -36												* TOFF set: -36
+ 83:    LDC  3,9(6)	load size of array a								 83:    LDC  3,9(6)	load size of array a
+ 84:     ST  3,-2(1)	save size of array a								 84:     ST  3,-2(1)	save size of array a
+ 85:     ST  3,-3(1)	Store variable a							   |	  1:    LIT  "armadillo"
+ 86:    LDC  3,3(6)	load size of array b							   |	 85:    LDA  3,-1(0)	Load address of char array 
+ 87:     ST  3,-12(1)	save size of array b							   |	 86:    LDA  4,-3(1)	address of lhs 
+ 88:     ST  3,-13(1)	Store variable b							   |	 87:     LD  5,1(3)	size of rhs 
+ 89:    LDC  3,5(6)	load size of array h							   |	 88:     LD  6,1(4)	size of lhs 
+ 90:     ST  3,-16(1)	save size of array h							   |	 89:    SWP  5,6,6	pick smallest size 
+ 91:     ST  3,-17(1)	Store variable h							   |	 90:    MOV  4,3,5	array op = 
+ 92:    LDC  3,10(6)	load size of array big							   |	 91:    LDC  3,3(6)	load size of array b
+ 93:     ST  3,-22(1)	save size of array big							   |	 92:     ST  3,-12(1)	save size of array b
+ 94:    LDC  3,2(6)	load size of array small						   |	 11:    LIT  "bat"
+ 95:     ST  3,-33(1)	save size of array small						   |	 93:    LDA  3,-11(0)	Load address of char array 
+												   >	 94:    LDA  4,-13(1)	address of lhs 
+												   >	 95:     LD  5,1(3)	size of rhs 
+												   >	 96:     LD  6,1(4)	size of lhs 
+												   >	 97:    SWP  5,6,6	pick smallest size 
+												   >	 98:    MOV  4,3,5	array op = 
+												   >	 99:    LDC  3,5(6)	load size of array h
+												   >	100:     ST  3,-16(1)	save size of array h
+												   >	 15:    LIT  "horse"
+												   >	101:    LDA  3,-15(0)	Load address of char array 
+												   >	102:    LDA  4,-17(1)	address of lhs 
+												   >	103:     LD  5,1(3)	size of rhs 
+												   >	104:     LD  6,1(4)	size of lhs 
+												   >	105:    SWP  5,6,6	pick smallest size 
+												   >	106:    MOV  4,3,5	array op = 
+												   >	107:    LDC  3,10(6)	load size of array big
+												   >	108:     ST  3,-22(1)	save size of array big
+												   >	109:    LDC  3,2(6)	load size of array small
+												   >	110:     ST  3,-33(1)	save size of array small
+* Compound Body												* Compound Body
+* EXPRESSION												* EXPRESSION
+ 96:    LDA  3,-3(1)	Load address of base of array a						   |	111:    LDA  3,-3(1)	Load address of base of array a
+ 97:     ST  3,-34(1)	Store variable small							   |	112:    LDA  4,-34(1)	address of lhs 
+												   >	113:     LD  5,1(3)	size of rhs 
+												   >	114:     LD  6,1(4)	size of lhs 
+												   >	115:    SWP  5,6,6	pick smallest size 
+												   >	116:    MOV  4,3,5	array op = 
+* EXPRESSION												* EXPRESSION
+* CALL outputs												* CALL outputs
+ 98:     ST  1,-36(1)	Store fp in ghost frame for outputs					   |	117:     ST  1,-36(1)	Store fp in ghost frame for outputs
+* TOFF dec: -37												* TOFF dec: -37
+* TOFF dec: -38												* TOFF dec: -38
+* Param 1												* Param 1
+ 99:    LDA  3,-34(1)	Load address of base of array small					   |	118:    LDA  3,-34(1)	Load address of base of array small
+100:     ST  3,-38(1)	Push parameter 								   |	119:     ST  3,-38(1)	Push parameter 
+* TOFF dec: -39												* TOFF dec: -39
+* Param end outputs											* Param end outputs
+101:    LDA  1,-36(1)	Ghost frame becomes new active frame 					   |	120:    LDA  1,-36(1)	Ghost frame becomes new active frame 
+102:    LDA  3,1(7)	Return address in ac 							   |	121:    LDA  3,1(7)	Return address in ac 
+103:    JMP  7,-65(7)	CALL outputs								   |	122:    JMP  7,-84(7)	CALL outputs
+104:    LDA  3,0(2)	Save the result in ac 							   |	123:    LDA  3,0(2)	Save the result in ac 
+* Call end outputs											* Call end outputs
+* TOFF set: -36												* TOFF set: -36
+* EXPRESSION												* EXPRESSION
+* CALL outnl												* CALL outnl
+105:     ST  1,-36(1)	Store fp in ghost frame for outnl					   |	124:     ST  1,-36(1)	Store fp in ghost frame for outnl
+* TOFF dec: -37												* TOFF dec: -37
+* TOFF dec: -38												* TOFF dec: -38
+* Param end outnl											* Param end outnl
+106:    LDA  1,-36(1)	Ghost frame becomes new active frame 					   |	125:    LDA  1,-36(1)	Ghost frame becomes new active frame 
+107:    LDA  3,1(7)	Return address in ac 							   |	126:    LDA  3,1(7)	Return address in ac 
+108:    JMP  7,-75(7)	CALL outnl								   |	127:    JMP  7,-94(7)	CALL outnl
+109:    LDA  3,0(2)	Save the result in ac 							   |	128:    LDA  3,0(2)	Save the result in ac 
+* Call end outnl											* Call end outnl
+* TOFF set: -36												* TOFF set: -36
+* EXPRESSION												* EXPRESSION
+110:    LDA  3,-3(1)	Load address of base of array a						   |	129:    LDA  3,-3(1)	Load address of base of array a
+111:     ST  3,-23(1)	Store variable big							   |	130:    LDA  4,-23(1)	address of lhs 
+												   >	131:     LD  5,1(3)	size of rhs 
+												   >	132:     LD  6,1(4)	size of lhs 
+												   >	133:    SWP  5,6,6	pick smallest size 
+												   >	134:    MOV  4,3,5	array op = 
+* EXPRESSION												* EXPRESSION
+* CALL outputs												* CALL outputs
+112:     ST  1,-36(1)	Store fp in ghost frame for outputs					   |	135:     ST  1,-36(1)	Store fp in ghost frame for outputs
+* TOFF dec: -37												* TOFF dec: -37
+* TOFF dec: -38												* TOFF dec: -38
+* Param 1												* Param 1
+113:    LDA  3,-23(1)	Load address of base of array big					   |	136:    LDA  3,-23(1)	Load address of base of array big
+114:     ST  3,-38(1)	Push parameter 								   |	137:     ST  3,-38(1)	Push parameter 
+* TOFF dec: -39												* TOFF dec: -39
+* Param end outputs											* Param end outputs
+115:    LDA  1,-36(1)	Ghost frame becomes new active frame 					   |	138:    LDA  1,-36(1)	Ghost frame becomes new active frame 
+116:    LDA  3,1(7)	Return address in ac 							   |	139:    LDA  3,1(7)	Return address in ac 
+117:    JMP  7,-79(7)	CALL outputs								   |	140:    JMP  7,-102(7)	CALL outputs
+118:    LDA  3,0(2)	Save the result in ac 							   |	141:    LDA  3,0(2)	Save the result in ac 
+* Call end outputs											* Call end outputs
+* TOFF set: -36												* TOFF set: -36
+* EXPRESSION												* EXPRESSION
+* CALL outnl												* CALL outnl
+119:     ST  1,-36(1)	Store fp in ghost frame for outnl					   |	142:     ST  1,-36(1)	Store fp in ghost frame for outnl
+* TOFF dec: -37												* TOFF dec: -37
+* TOFF dec: -38												* TOFF dec: -38
+* Param end outnl											* Param end outnl
+120:    LDA  1,-36(1)	Ghost frame becomes new active frame 					   |	143:    LDA  1,-36(1)	Ghost frame becomes new active frame 
+121:    LDA  3,1(7)	Return address in ac 							   |	144:    LDA  3,1(7)	Return address in ac 
+122:    JMP  7,-89(7)	CALL outnl								   |	145:    JMP  7,-112(7)	CALL outnl
+123:    LDA  3,0(2)	Save the result in ac 							   |	146:    LDA  3,0(2)	Save the result in ac 
+* Call end outnl											* Call end outnl
+* TOFF set: -36												* TOFF set: -36
+* EXPRESSION												* EXPRESSION
+* CALL outnl												* CALL outnl
+124:     ST  1,-36(1)	Store fp in ghost frame for outnl					   |	147:     ST  1,-36(1)	Store fp in ghost frame for outnl
+* TOFF dec: -37												* TOFF dec: -37
+* TOFF dec: -38												* TOFF dec: -38
+* Param end outnl											* Param end outnl
+125:    LDA  1,-36(1)	Ghost frame becomes new active frame 					   |	148:    LDA  1,-36(1)	Ghost frame becomes new active frame 
+126:    LDA  3,1(7)	Return address in ac 							   |	149:    LDA  3,1(7)	Return address in ac 
+127:    JMP  7,-94(7)	CALL outnl								   |	150:    JMP  7,-117(7)	CALL outnl
+128:    LDA  3,0(2)	Save the result in ac 							   |	151:    LDA  3,0(2)	Save the result in ac 
+* Call end outnl											* Call end outnl
+* TOFF set: -36												* TOFF set: -36
+* EXPRESSION												* EXPRESSION
+129:    LDA  3,-13(1)	Load address of base of array b						   |	152:    LDA  3,-13(1)	Load address of base of array b
+130:     ST  3,-34(1)	Store variable small							   |	153:    LDA  4,-34(1)	address of lhs 
+												   >	154:     LD  5,1(3)	size of rhs 
+												   >	155:     LD  6,1(4)	size of lhs 
+												   >	156:    SWP  5,6,6	pick smallest size 
+												   >	157:    MOV  4,3,5	array op = 
+* EXPRESSION												* EXPRESSION
+* CALL outputs												* CALL outputs
+131:     ST  1,-36(1)	Store fp in ghost frame for outputs					   |	158:     ST  1,-36(1)	Store fp in ghost frame for outputs
+* TOFF dec: -37												* TOFF dec: -37
+* TOFF dec: -38												* TOFF dec: -38
+* Param 1												* Param 1
+132:    LDA  3,-34(1)	Load address of base of array small					   |	159:    LDA  3,-34(1)	Load address of base of array small
+133:     ST  3,-38(1)	Push parameter 								   |	160:     ST  3,-38(1)	Push parameter 
+* TOFF dec: -39												* TOFF dec: -39
+* Param end outputs											* Param end outputs
+134:    LDA  1,-36(1)	Ghost frame becomes new active frame 					   |	161:    LDA  1,-36(1)	Ghost frame becomes new active frame 
+135:    LDA  3,1(7)	Return address in ac 							   |	162:    LDA  3,1(7)	Return address in ac 
+136:    JMP  7,-98(7)	CALL outputs								   |	163:    JMP  7,-125(7)	CALL outputs
+137:    LDA  3,0(2)	Save the result in ac 							   |	164:    LDA  3,0(2)	Save the result in ac 
+* Call end outputs											* Call end outputs
+* TOFF set: -36												* TOFF set: -36
+* EXPRESSION												* EXPRESSION
+* CALL outnl												* CALL outnl
+138:     ST  1,-36(1)	Store fp in ghost frame for outnl					   |	165:     ST  1,-36(1)	Store fp in ghost frame for outnl
+* TOFF dec: -37												* TOFF dec: -37
+* TOFF dec: -38												* TOFF dec: -38
+* Param end outnl											* Param end outnl
+139:    LDA  1,-36(1)	Ghost frame becomes new active frame 					   |	166:    LDA  1,-36(1)	Ghost frame becomes new active frame 
+140:    LDA  3,1(7)	Return address in ac 							   |	167:    LDA  3,1(7)	Return address in ac 
+141:    JMP  7,-108(7)	CALL outnl								   |	168:    JMP  7,-135(7)	CALL outnl
+142:    LDA  3,0(2)	Save the result in ac 							   |	169:    LDA  3,0(2)	Save the result in ac 
+* Call end outnl											* Call end outnl
+* TOFF set: -36												* TOFF set: -36
+* EXPRESSION												* EXPRESSION
+143:    LDA  3,-13(1)	Load address of base of array b						   |	170:    LDA  3,-13(1)	Load address of base of array b
+144:     ST  3,-23(1)	Store variable big							   |	171:    LDA  4,-23(1)	address of lhs 
+												   >	172:     LD  5,1(3)	size of rhs 
+												   >	173:     LD  6,1(4)	size of lhs 
+												   >	174:    SWP  5,6,6	pick smallest size 
+												   >	175:    MOV  4,3,5	array op = 
+* EXPRESSION												* EXPRESSION
+* CALL outputs												* CALL outputs
+145:     ST  1,-36(1)	Store fp in ghost frame for outputs					   |	176:     ST  1,-36(1)	Store fp in ghost frame for outputs
+* TOFF dec: -37												* TOFF dec: -37
+* TOFF dec: -38												* TOFF dec: -38
+* Param 1												* Param 1
+146:    LDA  3,-23(1)	Load address of base of array big					   |	177:    LDA  3,-23(1)	Load address of base of array big
+147:     ST  3,-38(1)	Push parameter 								   |	178:     ST  3,-38(1)	Push parameter 
+* TOFF dec: -39												* TOFF dec: -39
+* Param end outputs											* Param end outputs
+148:    LDA  1,-36(1)	Ghost frame becomes new active frame 					   |	179:    LDA  1,-36(1)	Ghost frame becomes new active frame 
+149:    LDA  3,1(7)	Return address in ac 							   |	180:    LDA  3,1(7)	Return address in ac 
+150:    JMP  7,-112(7)	CALL outputs								   |	181:    JMP  7,-143(7)	CALL outputs
+151:    LDA  3,0(2)	Save the result in ac 							   |	182:    LDA  3,0(2)	Save the result in ac 
+* Call end outputs											* Call end outputs
+* TOFF set: -36												* TOFF set: -36
+* EXPRESSION												* EXPRESSION
+* CALL outnl												* CALL outnl
+152:     ST  1,-36(1)	Store fp in ghost frame for outnl					   |	183:     ST  1,-36(1)	Store fp in ghost frame for outnl
+* TOFF dec: -37												* TOFF dec: -37
+* TOFF dec: -38												* TOFF dec: -38
+* Param end outnl											* Param end outnl
+153:    LDA  1,-36(1)	Ghost frame becomes new active frame 					   |	184:    LDA  1,-36(1)	Ghost frame becomes new active frame 
+154:    LDA  3,1(7)	Return address in ac 							   |	185:    LDA  3,1(7)	Return address in ac 
+155:    JMP  7,-122(7)	CALL outnl								   |	186:    JMP  7,-153(7)	CALL outnl
+156:    LDA  3,0(2)	Save the result in ac 							   |	187:    LDA  3,0(2)	Save the result in ac 
+* Call end outnl											* Call end outnl
+* TOFF set: -36												* TOFF set: -36
+* EXPRESSION												* EXPRESSION
+* CALL outnl												* CALL outnl
+157:     ST  1,-36(1)	Store fp in ghost frame for outnl					   |	188:     ST  1,-36(1)	Store fp in ghost frame for outnl
+* TOFF dec: -37												* TOFF dec: -37
+* TOFF dec: -38												* TOFF dec: -38
+* Param end outnl											* Param end outnl
+158:    LDA  1,-36(1)	Ghost frame becomes new active frame 					   |	189:    LDA  1,-36(1)	Ghost frame becomes new active frame 
+159:    LDA  3,1(7)	Return address in ac 							   |	190:    LDA  3,1(7)	Return address in ac 
+160:    JMP  7,-127(7)	CALL outnl								   |	191:    JMP  7,-158(7)	CALL outnl
+161:    LDA  3,0(2)	Save the result in ac 							   |	192:    LDA  3,0(2)	Save the result in ac 
+* Call end outnl											* Call end outnl
+* TOFF set: -36												* TOFF set: -36
+* EXPRESSION												* EXPRESSION
+162:    LDA  3,-17(1)	Load address of base of array h						   |	193:    LDA  3,-17(1)	Load address of base of array h
+163:     ST  3,-34(1)	Store variable small							   |	194:    LDA  4,-34(1)	address of lhs 
+												   >	195:     LD  5,1(3)	size of rhs 
+												   >	196:     LD  6,1(4)	size of lhs 
+												   >	197:    SWP  5,6,6	pick smallest size 
+												   >	198:    MOV  4,3,5	array op = 
+* EXPRESSION												* EXPRESSION
+* CALL outputs												* CALL outputs
+164:     ST  1,-36(1)	Store fp in ghost frame for outputs					   |	199:     ST  1,-36(1)	Store fp in ghost frame for outputs
+* TOFF dec: -37												* TOFF dec: -37
+* TOFF dec: -38												* TOFF dec: -38
+* Param 1												* Param 1
+165:    LDA  3,-34(1)	Load address of base of array small					   |	200:    LDA  3,-34(1)	Load address of base of array small
+166:     ST  3,-38(1)	Push parameter 								   |	201:     ST  3,-38(1)	Push parameter 
+* TOFF dec: -39												* TOFF dec: -39
+* Param end outputs											* Param end outputs
+167:    LDA  1,-36(1)	Ghost frame becomes new active frame 					   |	202:    LDA  1,-36(1)	Ghost frame becomes new active frame 
+168:    LDA  3,1(7)	Return address in ac 							   |	203:    LDA  3,1(7)	Return address in ac 
+169:    JMP  7,-131(7)	CALL outputs								   |	204:    JMP  7,-166(7)	CALL outputs
+170:    LDA  3,0(2)	Save the result in ac 							   |	205:    LDA  3,0(2)	Save the result in ac 
+* Call end outputs											* Call end outputs
+* TOFF set: -36												* TOFF set: -36
+* EXPRESSION												* EXPRESSION
+* CALL outnl												* CALL outnl
+171:     ST  1,-36(1)	Store fp in ghost frame for outnl					   |	206:     ST  1,-36(1)	Store fp in ghost frame for outnl
+* TOFF dec: -37												* TOFF dec: -37
+* TOFF dec: -38												* TOFF dec: -38
+* Param end outnl											* Param end outnl
+172:    LDA  1,-36(1)	Ghost frame becomes new active frame 					   |	207:    LDA  1,-36(1)	Ghost frame becomes new active frame 
+173:    LDA  3,1(7)	Return address in ac 							   |	208:    LDA  3,1(7)	Return address in ac 
+174:    JMP  7,-141(7)	CALL outnl								   |	209:    JMP  7,-176(7)	CALL outnl
+175:    LDA  3,0(2)	Save the result in ac 							   |	210:    LDA  3,0(2)	Save the result in ac 
+* Call end outnl											* Call end outnl
+* TOFF set: -36												* TOFF set: -36
+* EXPRESSION												* EXPRESSION
+176:    LDA  3,-17(1)	Load address of base of array h						   |	211:    LDA  3,-17(1)	Load address of base of array h
+177:     ST  3,-23(1)	Store variable big							   |	212:    LDA  4,-23(1)	address of lhs 
+												   >	213:     LD  5,1(3)	size of rhs 
+												   >	214:     LD  6,1(4)	size of lhs 
+												   >	215:    SWP  5,6,6	pick smallest size 
+												   >	216:    MOV  4,3,5	array op = 
+* EXPRESSION												* EXPRESSION
+* CALL outputs												* CALL outputs
+178:     ST  1,-36(1)	Store fp in ghost frame for outputs					   |	217:     ST  1,-36(1)	Store fp in ghost frame for outputs
+* TOFF dec: -37												* TOFF dec: -37
+* TOFF dec: -38												* TOFF dec: -38
+* Param 1												* Param 1
+179:    LDA  3,-23(1)	Load address of base of array big					   |	218:    LDA  3,-23(1)	Load address of base of array big
+180:     ST  3,-38(1)	Push parameter 								   |	219:     ST  3,-38(1)	Push parameter 
+* TOFF dec: -39												* TOFF dec: -39
+* Param end outputs											* Param end outputs
+181:    LDA  1,-36(1)	Ghost frame becomes new active frame 					   |	220:    LDA  1,-36(1)	Ghost frame becomes new active frame 
+182:    LDA  3,1(7)	Return address in ac 							   |	221:    LDA  3,1(7)	Return address in ac 
+183:    JMP  7,-145(7)	CALL outputs								   |	222:    JMP  7,-184(7)	CALL outputs
+184:    LDA  3,0(2)	Save the result in ac 							   |	223:    LDA  3,0(2)	Save the result in ac 
+* Call end outputs											* Call end outputs
+* TOFF set: -36												* TOFF set: -36
+* EXPRESSION												* EXPRESSION
+* CALL outnl												* CALL outnl
+185:     ST  1,-36(1)	Store fp in ghost frame for outnl					   |	224:     ST  1,-36(1)	Store fp in ghost frame for outnl
+* TOFF dec: -37												* TOFF dec: -37
+* TOFF dec: -38												* TOFF dec: -38
+* Param end outnl											* Param end outnl
+186:    LDA  1,-36(1)	Ghost frame becomes new active frame 					   |	225:    LDA  1,-36(1)	Ghost frame becomes new active frame 
+187:    LDA  3,1(7)	Return address in ac 							   |	226:    LDA  3,1(7)	Return address in ac 
+188:    JMP  7,-155(7)	CALL outnl								   |	227:    JMP  7,-194(7)	CALL outnl
+189:    LDA  3,0(2)	Save the result in ac 							   |	228:    LDA  3,0(2)	Save the result in ac 
+* Call end outnl											* Call end outnl
+* TOFF set: -36												* TOFF set: -36
+* EXPRESSION												* EXPRESSION
+* CALL outnl												* CALL outnl
+190:     ST  1,-36(1)	Store fp in ghost frame for outnl					   |	229:     ST  1,-36(1)	Store fp in ghost frame for outnl
+* TOFF dec: -37												* TOFF dec: -37
+* TOFF dec: -38												* TOFF dec: -38
+* Param end outnl											* Param end outnl
+191:    LDA  1,-36(1)	Ghost frame becomes new active frame 					   |	230:    LDA  1,-36(1)	Ghost frame becomes new active frame 
+192:    LDA  3,1(7)	Return address in ac 							   |	231:    LDA  3,1(7)	Return address in ac 
+193:    JMP  7,-160(7)	CALL outnl								   |	232:    JMP  7,-199(7)	CALL outnl
+194:    LDA  3,0(2)	Save the result in ac 							   |	233:    LDA  3,0(2)	Save the result in ac 
+* Call end outnl											* Call end outnl
+* TOFF set: -36												* TOFF set: -36
+* TOFF set: -2												* TOFF set: -2
+* END COMPOUND												* END COMPOUND
+* Add standard closing in case there is no return statement						* Add standard closing in case there is no return statement
+195:    LDC  2,0(6)	Set return value to 0 							   |	234:    LDC  2,0(6)	Set return value to 0 
+196:     LD  3,-1(1)	Load return address 							   |	235:     LD  3,-1(1)	Load return address 
+197:     LD  1,0(1)	Adjust fp 								   |	236:     LD  1,0(1)	Adjust fp 
+198:    JMP  7,0(3)	Return 									   |	237:    JMP  7,0(3)	Return 
+* END FUNCTION main											* END FUNCTION main
+  0:    JMP  7,198(7)	Jump to init [backpatch] 						   |	  0:    JMP  7,237(7)	Jump to init [backpatch] 
+* INIT													* INIT
+199:    LDA  1,-20(0)	set first frame at end of globals 					   |	238:    LDA  1,-20(0)	set first frame at end of globals 
+200:     ST  1,0(1)	store old fp (point to self) 						   |	239:     ST  1,0(1)	store old fp (point to self) 
+* INIT GLOBALS AND STATICS										* INIT GLOBALS AND STATICS
+* END INIT GLOBALS AND STATICS										* END INIT GLOBALS AND STATICS
+201:    LDA  3,1(7)	Return address in ac 							   |	240:    LDA  3,1(7)	Return address in ac 
+202:    JMP  7,-121(7)	Jump to main 								   |	241:    JMP  7,-160(7)	Jump to main 
+203:   HALT  0,0,0	DONE! 									   |	242:   HALT  0,0,0	DONE! 
+* END INIT												* END INIT
+---- OUTPUT DIFF ----
+Loading file: data/UnitTests/v04.tm								   |	Number of warnings: 0
+Enter command: command: a 200000								   |	Number of errors: 0
+command: o 500											   |	------------------------------------
+command: g											   |	Loading file: UnitTests/v04.tm
+ø												   |	ar
+ø												   |	armadillo
+												   |	ba
+î												   |	batadillo
+î												   |	ho
+												   |	horseillo
+ê												   <
+ê												   <
+												   <
+												   <
+Status: Halted											   <
+Last executed cmd:  203: HALT  0,  0, 0  |  r[0]:9999 r[1]:9979 r[2]:0   r[3]:203 r[4]:0   r[5]:   <
+PC was 203, PC is now 204									   <
+command: x											   <
+Bye.													Bye.
