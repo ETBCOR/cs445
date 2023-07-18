@@ -3,4 +3,4 @@ This is my implementation of **a compiler for C-** completed for [CS445 Compiler
 
 See [c-grammar.pdf](c-grammar.pdf) for the grammar specification relevant to the semester I took the class.
 
-See **/final_build/** for my final implementation.
+See [/final_build/](https://github.com/ETBCOR/cs445/tree/main/final_build) for my final implementation.
